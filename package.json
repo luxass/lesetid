@@ -31,6 +31,11 @@
       "import": "./dist/stream.mjs",
       "require": "./dist/stream.cjs"
     },
+    "./utils": {
+      "types": "./dist/utils.d.ts",
+      "import": "./dist/utils.mjs",
+      "require": "./dist/utils.cjs"
+    },
     "./package.json": "./package.json"
   },
   "main": "./dist/index.cjs",

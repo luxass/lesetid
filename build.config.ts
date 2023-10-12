@@ -4,6 +4,7 @@ export default defineBuildConfig({
   entries: [
     "./src/index",
     "./src/stream",
+    "./src/utils",
   ],
   outDir: "dist",
   declaration: true,

@@ -2,22 +2,29 @@
 
 `/leːsətiːd/`, Norwegian: "lesetid"
 
+## ✨ Features
+
+- ESM Support
+- Tree Shakeable
+- Using `CPM` (Characters Per Minute) to estimate for CJK languages
+- Streaming support
+
 ## 📦 Installation
 
 ```sh
-npm install lesetid
+pnpm install lesetid
 ```
 
 ## 📚 Usage
 
 ```ts
-import { readingTime } from "lesetid";
+import { estimate } from "lesetid";
 
 const {
   minutes,
   rawMinutes,
   words
-} = readingTime("Hello World!");
+} = estimate("Hello World!");
 ```
 
 or you can use the streaming approach
@@ -37,6 +44,12 @@ fetch("https://luxass.dev/projects/eslint-config/raw")
     console.log("Reading time:", minutes, "minutes");
   });
 ```
+
+## credits
+> Credit is given where credit is due. 
+
+This project is heavily inspired by [reading-time](https://github.com/ngryman/reading-time).
+
 
 ## 💻 Development
 
