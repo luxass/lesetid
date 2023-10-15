@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import {
-  estimate,
-} from "lesetid";
+import { estimate } from "lesetid";
 
 const props = withDefaults(
   defineProps<{
@@ -21,16 +19,18 @@ const time = computed(() => {
   return estimate(text.value);
 });
 
-const {
-  data,
-  error,
-} = await useFetch("/api/texts");
+const { data, error } = await useFetch("/api/texts");
 
 const selectedText = ref("");
 
 watch(selectedText, () => {
-  text.value = data?.value?.texts.find((text) => text.key === selectedText.value)?.file || "";
+  // @ts-expect-error - How will i fix this?
+  text.value
+    = data?.value?.texts.find((text) => text.key === selectedText.value)?.file
+    || "";
 });
+
+// TODO: Maybe add different clocks, based on estimated time?
 </script>
 
 <template>
@@ -38,6 +38,14 @@ watch(selectedText, () => {
     <div class="flex items-center gap-2">
       <Icon name="🕑" size="24" />
       <span>{{ time.text }}</span>
+    </div>
+    <div class="flex items-center gap-2">
+      chars <span class="text-gray/70 dark:text-gray/50">·</span> {{
+        time.chars
+      }}
+      <span class="text-gray/70 dark:text-gray/50">|</span> words<span class="text-gray/70 dark:text-gray/50">·</span>{{
+        time.words
+      }}
     </div>
     <Select v-if="data && !error" v-model="selectedText">
       <option disabled selected value="">

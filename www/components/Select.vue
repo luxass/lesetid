@@ -15,13 +15,15 @@ const props = withDefaults(
     icon: "",
   },
 );
-const emit = defineEmits<{ (...args: any): void }>();
+const emit = defineEmits<{
+  (e: "update:modelValue", value: any): void
+}>();
 const input = useVModel(props, "modelValue", emit, { passive: true });
 </script>
 
 <template>
   <div
-    class="flex flex items-center border rounded px-2 py-1 focus-within:(ring-2 ring-blue-600/50) focus-within:border-blue-600 bg-base"
+    class="flex flex items-center border rounded px-2 py-1 focus-within:ring-2 focus-within:ring-blue-600 focus-within:border-blue-600 bg-base"
     :class="disabled ? 'border-gray:10' : 'border-base'"
   >
     <slot name="icon">
