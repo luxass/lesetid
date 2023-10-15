@@ -1,30 +1,22 @@
 <script setup lang="ts">
-import {
-  estimate,
-} from "lesetid";
-
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
 const text = ref("");
-
-watch(text, () => {
-  console.log("LESETID", estimate(text.value));
-});
 </script>
 
 <template>
-  <nav flex items-center justify-between flex-wrap>
+  <nav class="flex items-center justify-between flex-wrap">
     <div class="flex gap-2 items-center">
       <Icon name="📖" size="32" />
       <h1>lesetid</h1>
     </div>
 
-    <div flex items-center justify-between gap-2>
+    <div class="flex items-center justify-between gap-2">
       <NuxtLink href="https://github.com/luxass/lesetid">
         <Icon name="octicon:mark-github" size="24" />
       </NuxtLink>
 
-      <button title="Toggle Dark Mode" ml1 text-lg op="50 hover:75" @click="toggleDark()">
+      <button title="Toggle Dark Mode" class="ml1 text-lg op-50 hover:op-75" @click="toggleDark()">
         <ClientOnly>
           <Icon :name="isDark ? 'carbon:sun' : 'carbon:moon'" size="24" />
 
@@ -37,6 +29,7 @@ watch(text, () => {
   </nav>
 
   <main class="mt-8 flex flex-col">
-    <Toolbar />
+    <Toolbar :model-value="text" @update:model-value="(str) => text = str" />
+    <textarea v-model="text" />
   </main>
 </template>

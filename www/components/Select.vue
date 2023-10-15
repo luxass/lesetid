@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useVModel } from "@vueuse/core";
+
 const props = withDefaults(
   defineProps<{
     modelValue?: any
@@ -19,13 +21,13 @@ const input = useVModel(props, "modelValue", emit, { passive: true });
 
 <template>
   <div
-    class="n-select flex flex items-center border rounded px-2 py-1 focus-within:n-focus-base focus-within:border-context n-bg-base"
-    :class="disabled ? 'border-gray:10' : 'n-border-base'"
+    class="flex flex items-center border rounded px-2 py-1 focus-within:(ring-2 ring-blue-600/50) focus-within:border-blue-600 bg-base"
+    :class="disabled ? 'border-gray:10' : 'border-base'"
   >
     <slot name="icon">
       <Icon v-if="icon" :name="icon" class="mr-0.4em text-1.1em op50" />
     </slot>
-    <select v-model="input" :disabled="disabled" class="w-full flex-auto n-bg-base !outline-none" :class="disabled ? 'appearance-none' : ''">
+    <select v-model="input" :disabled="disabled" class="w-full flex-auto bg-base !outline-none" :class="disabled ? 'appearance-none' : ''">
       <option v-if="placeholder" value="" disabled hidden>
         {{ placeholder }}
       </option>

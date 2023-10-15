@@ -82,9 +82,10 @@ function isPunctuationOrWord(char: string = "", isWordFn: WordFN): boolean {
  * @returns {Estimation} the estimation result.
  */
 export function estimate(
-  text: string,
+  text?: string,
   options: Options = DEFAULT_OPTIONS,
 ): Estimation {
+  if (!text) return { minutes: 0, time: 0, words: 0, chars: 0, text: "0 min read" };
   const { words, chars } = count(text);
   const { wordsPerMinute = 200, charsPerMinute = 500 } = options;
   const charMinutes = chars / charsPerMinute;

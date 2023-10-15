@@ -19,7 +19,7 @@ defineOgImage({
 </script>
 
 <template>
-  <div md:px14 py3 md:py10>
+  <div class="md:px14 py3 md:py10">
     <NuxtPage />
   </div>
 </template>

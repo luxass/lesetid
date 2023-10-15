@@ -1,4 +1,6 @@
-export default defineCachedEventHandler(async (event) => {
+import process from "node:process";
+
+export default defineCachedEventHandler(async () => {
   const storage = useStorage("assets:texts");
   let keys = await storage.getKeys();
 
@@ -16,5 +18,6 @@ export default defineCachedEventHandler(async (event) => {
     texts,
   };
 }, {
-  // maxAge: 60 * 60,
+  shouldBypassCache: () => process.env.NODE_ENV === "development",
+  maxAge: 60 * 60,
 });
