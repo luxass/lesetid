@@ -1,7 +1,15 @@
 <script setup lang="ts">
+import {
+  estimate,
+} from "lesetid";
+
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
 const text = ref("");
+
+watch(text, () => {
+  console.log("LESETID", estimate(text.value));
+});
 </script>
 
 <template>

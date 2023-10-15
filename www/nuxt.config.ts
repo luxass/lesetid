@@ -45,4 +45,13 @@ export default defineNuxtConfig({
       },
     ],
   },
+  vite: {
+    resolve: {
+      alias: {
+        "lesetid": "../src/index.ts",
+        "lesetid/stream": "../src/stream.ts",
+        "lesetid/utils": "../src/utils.ts",
+      },
+    },
+  },
 });
