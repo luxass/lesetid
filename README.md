@@ -58,4 +58,4 @@ This project is heavily inspired by [reading-time](https://github.com/ngryman/re
 - Install dependencies using `pnpm install`
 - Run tests using `pnpm dev`
 
-Published under [MIT License](./LICENCE).
+Published under [MIT License](./LICENSE).

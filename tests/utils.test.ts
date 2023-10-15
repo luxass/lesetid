@@ -1,5 +1,5 @@
-import { expect, expectTypeOf, test } from "vitest";
-import { PUNCTATION_CODE_RANGES, isAnsi, isCJK, isPunctuation } from "../src/utils";
+import { expect, test } from "vitest";
+import { isAnsi, isCJK, isPunctuation } from "../src/utils";
 
 test("returns true for punctuation characters", () => {
   expect(isPunctuation(".")).toBe(true);

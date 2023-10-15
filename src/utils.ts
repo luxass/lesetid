@@ -14,9 +14,18 @@ export const CJK_CODE_RANGES = [
   [0x20000, 0x2EBE0],
 ];
 
-export const isCJK: WordFN = (c) => {
-  if (!c) return false;
-  const charCode = c.charCodeAt(0);
+/**
+ * Checks if a character is a CJK character.
+ *
+ * NOTE: That the ranges are maybe not complete.
+ * You can see the full list of code ranges in `CJK_CODE_RANGES` export.
+ *
+ * @param {string | undefined} char - the character to check.
+ * @returns {boolean} - true if the character is a CJK character, false otherwise.
+ */
+export const isCJK: WordFN = (char?: string): boolean => {
+  if (!char) return false;
+  const charCode = char.charCodeAt(0);
 
   for (const [start, end] of CJK_CODE_RANGES) {
     if (!start || !end) return false;
@@ -39,9 +48,18 @@ export const PUNCTATION_CODE_RANGES = [
   [0xFF00, 0xFFEF],
 ];
 
-export const isPunctuation: WordFN = (c) => {
-  if (!c) return false;
-  const charCode = c.charCodeAt(0);
+/**
+ * Checks if a character is a punctuation character.
+ *
+ * NOTE: That the ranges are maybe not complete.
+ * You can see the full list of code ranges in `PUNCTATION_CODE_RANGES` export.
+ *
+ * @param {string | undefined} char - the character to check.
+ * @returns {boolean} - true if the character is a punctuation character, false otherwise.
+ */
+export const isPunctuation: WordFN = (char?: string): boolean => {
+  if (!char) return false;
+  const charCode = char.charCodeAt(0);
 
   for (const [start, end] of PUNCTATION_CODE_RANGES) {
     if (!start || !end) return false;
@@ -53,7 +71,12 @@ export const isPunctuation: WordFN = (c) => {
   return false;
 };
 
-export const isAnsi: WordFN = (c) => {
-  if (!c) return false;
-  return " \n\r\t".includes(c);
+/**
+ * Checks if a character is a ansi character.
+ * @param {string | undefined} char - the character to check.
+ * @returns {boolean} - true if the character is a word character, false otherwise.
+ */
+export const isAnsi: WordFN = (char?: string): boolean => {
+  if (!char) return false;
+  return " \n\r\t".includes(char);
 };

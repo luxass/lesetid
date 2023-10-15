@@ -1,19 +1,17 @@
-import type { Buffer } from "node:buffer";
 import { describe, expect, test } from "vitest";
+import {
+  createVolapykChunks as createVolapykChunks2,
+} from "volapyk";
 import {
   createReadingTimeStream,
 } from "../src/stream";
-
-import {
-  createVolapykChunks,
-} from "./shared";
 
 interface Expected {
   words: number
   chars: number
 };
 
-function $estimate(chunks: Buffer[], expected: Expected) {
+function $estimate(chunks: (string)[], expected: Expected) {
   const stream = createReadingTimeStream();
 
   stream.on("data", (data) => {
@@ -26,7 +24,10 @@ function $estimate(chunks: Buffer[], expected: Expected) {
 
 describe("should handle small texts", () => {
   test("one word texts", () => {
-    const chunks = createVolapykChunks("preset:ansi", 1);
+    const chunks = createVolapykChunks2({
+      chars: "preset:ansi",
+      words: 1,
+    });
 
     $estimate(chunks, {
       words: 1,
@@ -35,7 +36,10 @@ describe("should handle small texts", () => {
   });
 
   test("less than 1 minute text", () => {
-    const chunks = createVolapykChunks("preset:ansi", 2);
+    const chunks = createVolapykChunks2({
+      chars: "preset:ansi",
+      words: 2,
+    });
 
     $estimate(chunks, {
       words: 2,
@@ -44,7 +48,10 @@ describe("should handle small texts", () => {
   });
 
   test("less than 1 minute text", () => {
-    const chunks = createVolapykChunks("preset:ansi", 50);
+    const chunks = createVolapykChunks2({
+      chars: "preset:ansi",
+      words: 50,
+    });
 
     $estimate(chunks, {
       words: 50,
@@ -53,7 +60,10 @@ describe("should handle small texts", () => {
   });
 
   test("1 minute text", () => {
-    const chunks = createVolapykChunks("preset:ansi", 100);
+    const chunks = createVolapykChunks2({
+      chars: "preset:ansi",
+      words: 100,
+    });
 
     $estimate(chunks, {
       words: 100,
@@ -62,7 +72,11 @@ describe("should handle small texts", () => {
   });
 
   test("less than 3 minute text", () => {
-    const chunks = createVolapykChunks("preset:ansi", 500);
+    const chunks = createVolapykChunks2({
+      chars: "preset:ansi",
+      words: 500,
+    });
+
     $estimate(chunks, {
       words: 500,
       chars: 0,
@@ -70,7 +84,11 @@ describe("should handle small texts", () => {
   });
 
   test("less than 5 minute text", () => {
-    const chunks = createVolapykChunks("preset:ansi", 967);
+    const chunks = createVolapykChunks2({
+      chars: "preset:ansi",
+      words: 967,
+    });
+
     $estimate(chunks, {
       words: 967,
       chars: 0,

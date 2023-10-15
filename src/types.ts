@@ -17,7 +17,7 @@ export interface Options {
   isWord?: WordFN
 }
 
-export interface WordResult {
+export interface CountResult {
   words: number
   chars: number
 }
