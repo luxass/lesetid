@@ -1,4 +1,5 @@
 <script setup lang="ts">
+useDark();
 useHead({
   title: "lesetid | playground",
 });
@@ -12,14 +13,14 @@ useSeoMeta({
 
 <template>
   <div class="h-100dvh flex gap-4 flex-col items-center justify-center">
-    <h1 class="text-8xl text-blue-500">
+    <h1 class="text-8xl text-blue-600">
       404
     </h1>
     <p class="mb-8 text-2xl">
       Page not found
     </p>
-    <Link href="/">
+    <NuxtLink href="/">
       Go back
-    </Link>
+    </NuxtLink>
   </div>
 </template>
