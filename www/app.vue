@@ -15,6 +15,7 @@ useSeoMeta({
 defineOgImage({
   title: "lesetid | playground",
   description: "A playground for lesetid, a tool to estimate reading time.",
+  component: "Base",
 });
 </script>
 

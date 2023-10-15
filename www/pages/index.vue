@@ -15,6 +15,9 @@ const text = ref("");
       <NuxtLink href="https://github.com/luxass/lesetid">
         <Icon name="octicon:mark-github" size="24" />
       </NuxtLink>
+      <!-- <NuxtLink href="https://npmjs.com/package/lesetid">
+        <Icon name="carbon:logo-npm" size="24" />
+      </NuxtLink> -->
 
       <button title="Toggle Dark Mode" class="ml1 text-lg op-50 hover:op-75" @click="toggleDark()">
         <ClientOnly>

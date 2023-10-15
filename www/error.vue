@@ -1,5 +1,13 @@
 <script setup lang="ts">
+useHead({
+  title: "lesetid | playground",
+});
 
+useSeoMeta({
+  description: "A playground for lesetid",
+  ogTitle: "lesetid | playground",
+  ogDescription: "A playground for lesetid",
+});
 </script>
 
 <template>
