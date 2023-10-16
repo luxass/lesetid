@@ -2,7 +2,7 @@
   "name": "lesetid",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@8.7.1",
+  "packageManager": "pnpm@8.9.2",
   "description": "A dead simple read time estimation",
   "author": {
     "name": "Lucas Nørgård",
@@ -58,10 +58,10 @@
   "devDependencies": {
     "@luxass/eslint-config": "^3.3.2",
     "@types/node": "^18.16.19",
-    "eslint": "^8.48.0",
+    "eslint": "^8.51.0",
     "typescript": "^5.2.2",
     "unbuild": "^2.0.0",
-    "vitest": "^0.34.3",
+    "vitest": "^0.34.6",
     "volapyk": "^1.3.2"
   }
 }

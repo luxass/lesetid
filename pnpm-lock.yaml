@@ -15,7 +15,7 @@ importers:
         specifier: ^18.16.19
         version: 18.18.5
       eslint:
-        specifier: ^8.48.0
+        specifier: ^8.51.0
         version: 8.51.0
       typescript:
         specifier: ^5.2.2
@@ -24,7 +24,7 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0(typescript@5.2.2)
       vitest:
-        specifier: ^0.34.3
+        specifier: ^0.34.6
         version: 0.34.6
       volapyk:
         specifier: ^1.3.2
@@ -36,7 +36,7 @@ importers:
         specifier: ^1.1.1
         version: 1.1.1
       '@vueuse/components':
-        specifier: ^10.4.1
+        specifier: ^10.5.0
         version: 10.5.0(vue@3.3.4)
       lesetid:
         specifier: workspace:*
@@ -46,10 +46,10 @@ importers:
         specifier: latest
         version: 1.0.0-beta.2(nuxt@3.7.4)(rollup@3.29.4)(vite@4.4.11)
       '@unocss/nuxt':
-        specifier: ^0.56.4
+        specifier: ^0.56.5
         version: 0.56.5(postcss@8.4.31)(rollup@3.29.4)(vite@4.4.11)(webpack@5.89.0)
       '@vueuse/nuxt':
-        specifier: ^10.4.1
+        specifier: ^10.5.0
         version: 10.5.0(nuxt@3.7.4)(rollup@3.29.4)(vue@3.3.4)
       floating-vue:
         specifier: ^2.0.0-beta.24
@@ -61,7 +61,7 @@ importers:
         specifier: ^0.5.0
         version: 0.5.0(rollup@3.29.4)(vue@3.3.4)
       nuxt-og-image:
-        specifier: ^2.1.1
+        specifier: ^2.1.3
         version: 2.1.3(rollup@3.29.4)(vue@3.3.4)
       vue:
         specifier: ^3.3.4
