@@ -23,7 +23,11 @@ export default defineConfig({
       scale: 1.2,
     }),
     presetTypography(),
-    presetWebFonts(),
+    presetWebFonts({
+      fonts: {
+        sans: "Lexend",
+      },
+    }),
   ],
   transformers: [
     transformerDirectives(),

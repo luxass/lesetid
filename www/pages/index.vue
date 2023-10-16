@@ -15,9 +15,9 @@ const text = ref("");
       <NuxtLink href="https://github.com/luxass/lesetid">
         <Icon name="octicon:mark-github" size="24" />
       </NuxtLink>
-      <!-- <NuxtLink href="https://npmjs.com/package/lesetid">
+      <NuxtLink href="https://npmjs.com/package/lesetid">
         <Icon name="carbon:logo-npm" size="24" />
-      </NuxtLink> -->
+      </NuxtLink>
 
       <button title="Toggle Dark Mode" class="ml1 text-lg op-50 hover:op-75" @click="toggleDark()">
         <ClientOnly>
@@ -33,6 +33,6 @@ const text = ref("");
 
   <main class="mt-8 flex flex-col gap-8">
     <Toolbar :model-value="text" @update:model-value="(str) => text = str" />
-    <textarea v-model="text" class="border border-base rounded bg-base shadow-sm h-2xl w-full of-auto p-4 text-sm font-mono outline-none focus-within:ring-2 focus-within:ring-blue-600 focus-within:border-blue-600 resize-none" />
+    <textarea v-model="text" class="border border-base rounded bg-base shadow-sm h-2xl w-full of-auto p-4 text-sm outline-none focus-within:ring-2 focus-within:ring-blue-600 focus-within:border-blue-600 resize-none" />
   </main>
 </template>
