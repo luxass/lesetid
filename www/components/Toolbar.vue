@@ -40,19 +40,17 @@ watch(selectedText, () => {
       <span>{{ time.text }}</span>
     </div>
     <div class="flex items-center gap-2">
-      chars <span class="text-gray/70 dark:text-gray/50">·</span> {{
-        time.chars
-      }}
+      chars <span class="text-gray/70 dark:text-gray/50">·</span>
+      {{ time.chars }}
       <span class="text-gray/70 dark:text-gray/50">|</span> words<span class="text-gray/70 dark:text-gray/50">·</span>{{
-        time.words
-      }}
+        time.words }}
     </div>
     <Select v-if="data && !error" v-model="selectedText">
       <option disabled selected value="">
         Select an example...
       </option>
-      <option v-for="text of data.texts" :key="text.key">
-        {{ text.key }}
+      <option v-for="{ key } of data.texts" :key="key">
+        {{ key }}
       </option>
     </Select>
   </div>

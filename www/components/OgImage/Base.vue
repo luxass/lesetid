@@ -10,7 +10,9 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="flex items-center text-center text-xl justify-center w-full h-full bg-blue-600">
+  <div
+    class="flex items-center text-center text-xl justify-center w-full h-full bg-blue-600"
+  >
     <h1 class="text-white">
       {{ props.title }}
     </h1>

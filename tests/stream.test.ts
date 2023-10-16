@@ -1,17 +1,13 @@
 import { describe, expect, test } from "vitest";
-import {
-  createVolapykChunks as createVolapykChunks2,
-} from "volapyk";
-import {
-  createReadingTimeStream,
-} from "../src/stream";
+import { createVolapykChunks as createVolapykChunks2 } from "volapyk";
+import { createReadingTimeStream } from "../src/stream";
 
 interface Expected {
   words: number
   chars: number
-};
+}
 
-function $estimate(chunks: (string)[], expected: Expected) {
+function $estimate(chunks: string[], expected: Expected) {
   const stream = createReadingTimeStream();
 
   stream.on("data", (data) => {

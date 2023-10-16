@@ -8,7 +8,13 @@ import {
   isPunctuation,
 } from "./utils";
 
-export { isAnsi, isCJK, isPunctuation, CJK_CODE_RANGES, PUNCTATION_CODE_RANGES };
+export {
+  isAnsi,
+  isCJK,
+  isPunctuation,
+  CJK_CODE_RANGES,
+  PUNCTATION_CODE_RANGES,
+};
 
 export type { Options, WordFN, CountResult, Estimation };
 
@@ -21,14 +27,18 @@ export const DEFAULT_OPTIONS = {
 /**
  * Counts the number of words and characters in the given text.
  *
- * @param {string} text - the text to count words and characters in.
+ * @param {string?} text - the text to count words and characters in.
  * @param {Options} [options=DEFAULT_OPTIONS] - the options to use.
  * @returns {CountResult} the result of words and characters.
  */
 export function count(
-  text: string,
+  text?: string,
   options: Options = DEFAULT_OPTIONS,
 ): CountResult {
+  if (!text) {
+    return { words: 0, chars: 0 };
+  }
+
   let words = 0;
   let chars = 0;
   let start = 0;
@@ -85,7 +95,9 @@ export function estimate(
   text?: string,
   options: Options = DEFAULT_OPTIONS,
 ): Estimation {
-  if (!text) return { minutes: 0, time: 0, words: 0, chars: 0, text: "0 min read" };
+  if (!text) {
+    return { minutes: 0, time: 0, words: 0, chars: 0, text: "0 min read" };
+  }
   const { words, chars } = count(text);
   const { wordsPerMinute = 200, charsPerMinute = 500 } = options;
   const charMinutes = chars / charsPerMinute;

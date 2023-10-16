@@ -29,7 +29,12 @@ const input = useVModel(props, "modelValue", emit, { passive: true });
     <slot name="icon">
       <Icon v-if="icon" :name="icon" class="mr-0.4em text-1.1em op50" />
     </slot>
-    <select v-model="input" :disabled="disabled" class="w-full flex-auto bg-base !outline-none" :class="disabled ? 'appearance-none' : ''">
+    <select
+      v-model="input"
+      :disabled="disabled"
+      class="w-full flex-auto bg-base !outline-none"
+      :class="disabled ? 'appearance-none' : ''"
+    >
       <option v-if="placeholder" value="" disabled hidden>
         {{ placeholder }}
       </option>

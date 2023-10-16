@@ -44,9 +44,7 @@ export default defineNuxtConfig({
     payloadExtraction: true,
     typedPages: true,
   },
-  css: [
-    "@unocss/reset/tailwind.css",
-  ],
+  css: ["@unocss/reset/tailwind.css"],
   nitro: {
     serverAssets: [
       {

@@ -1,11 +1,7 @@
 import { defineBuildConfig } from "unbuild";
 
 export default defineBuildConfig({
-  entries: [
-    "./src/index",
-    "./src/stream",
-    "./src/utils",
-  ],
+  entries: ["./src/index", "./src/stream", "./src/utils"],
   outDir: "dist",
   declaration: true,
   clean: true,
