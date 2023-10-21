@@ -8,6 +8,7 @@
 - Tree Shakeable
 - Using `CPM` (Characters Per Minute) to estimate for CJK languages
 - Streaming support
+- Implements [Medium's reading time algorithm](https://help.medium.com/hc/en-us/articles/214991667-Read-time). 
 
 ## 📦 Installation
 
@@ -44,6 +45,7 @@ readingTimeStream.on("data", (data) => {
 });
 ```
 
+
 ## 🙌 Acknowledgements
 I would like to thank [ngryman](https://github.com/ngryman) for his work on [reading-time](https://github.com/ngryman/reading-time) which inspired me to create this package.
 
@@ -54,5 +56,8 @@ I would like to thank [ngryman](https://github.com/ngryman) for his work on [rea
 - Enable [Corepack](https://github.com/nodejs/corepack) using `corepack enable` (use `npm i -g corepack` for Node.js < 16.10)
 - Install dependencies using `pnpm install`
 - Run tests using `pnpm dev`
+
+
+## 📄 License
 
 Published under [MIT License](./LICENSE).
