@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
-const text = ref("");
+const text = ref("Write your article here!");
 </script>
 
 <template>
