@@ -3,11 +3,11 @@ import { Transform } from "node:stream";
 import type { TransformCallback } from "node:stream";
 import { DEFAULT_OPTIONS, type Options, count } from "./";
 
-export function createReadingTimeStream() {
-  return new ReadingTimeStream();
+export function createReadingTimeStream(options: Options = DEFAULT_OPTIONS) {
+  return new ReadingTimeStream(options);
 }
 
-class ReadingTimeStream extends Transform {
+export class ReadingTimeStream extends Transform {
   private reading = {
     words: 0,
     chars: 0,
