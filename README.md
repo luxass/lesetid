@@ -30,25 +30,22 @@ const {
 or you can use the streaming approach
 
 ```ts
+import { Readable } from "node:stream";
 import { createReadingTimeStream } from "lesetid/stream";
 
-fetch("https://luxass.dev/projects/eslint-config/raw")
-  .then((res) => res.body.pipe(createReadingTimeStream()))
-  .then((res) => {
-    const {
-      minutes,
-      rawMinutes,
-      words
-    } = res;
+const readingTimeStream = await fetch("https://next.luxass.dev/projects/eslint-config/raw")
+  .then((res) => Readable.from(res.body, {
+    encoding: "utf-8",
+  }))
+  .then((body) => body.pipe(createReadingTimeStream()));
 
-    console.log("Reading time:", minutes, "minutes");
-  });
+readingTimeStream.on("data", (data) => {
+  console.info(data);
+});
 ```
 
-## credits
-> Credit is given where credit is due. 
-
-This project is heavily inspired by [reading-time](https://github.com/ngryman/reading-time).
+## 🙌 Acknowledgements
+I would like to thank [ngryman](https://github.com/ngryman) for his work on [reading-time](https://github.com/ngryman/reading-time) which inspired me to create this package.
 
 
 ## 💻 Development
