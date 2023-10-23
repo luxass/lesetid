@@ -1,18 +1,24 @@
-import { visit } from "unist-util-visit";
-import type * as mdast from "mdast";
-import type * as unified from "unified";
-import { estimate } from "lesetid";
+// import { visit } from "unist-util-visit";
+// import { estimate } from "lesetid";
+import type { Root } from "mdast";
+import type { Plugin } from "unified";
 
-export type RemarkPlugin<PluginParameters extends any[] = any[]> = unified.Plugin<
-  PluginParameters,
-  mdast.Root
->;
+export interface Options {
 
-export function remarkLesetid(): RemarkPlugin {
-  return function (tree) {
-    visit(tree, "text", (node) => {
-      const textOnPage = node.value;
-      const estimation = estimate(textOnPage);
-    });
+}
+
+export function remarkLesetid(): Plugin<
+  [(Readonly<Options> | null | undefined)?],
+  Root,
+  string
+> {
+  return function (options) {
+    console.info("options", options);
+
+    // visit(tree, "text", (node) => {
+    //   const textOnPage = node.value;
+    //   const estimation = estimate(textOnPage);
+    //   console.info("estimation", estimation);
+    // });
   };
 }
