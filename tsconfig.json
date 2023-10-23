@@ -14,6 +14,9 @@
     "lib": ["es2022"],
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*"],
+  "include": [
+    "packages/**/src/**/*",
+    "apps/**/src/**/*",
+    "packages/cli/src/cli.ts"],
   "exclude": ["node_modules", "dist"]
 }

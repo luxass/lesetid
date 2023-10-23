@@ -1,0 +1,83 @@
+{
+  "name": "lesetid",
+  "type": "module",
+  "version": "1.0.0",
+  "packageManager": "pnpm@8.9.2",
+  "description": "A dead simple read time estimation",
+  "author": {
+    "name": "Lucas Nørgård",
+    "email": "lucasnrgaard@gmail.com",
+    "url": "https://luxass.dev"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/luxass/lesetid",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luxass/lesetid",
+    "directory": "packages/lesetid"
+  },
+  "bugs": {
+    "url": "https://github.com/luxass/lesetid/issues"
+  },
+  "keywords": [
+    "read time",
+    "reading time",
+    "words per minute"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./stream": {
+      "import": {
+        "types": "./dist/stream.d.ts",
+        "default": "./dist/stream.mjs"
+      },
+      "require": {
+        "types": "./dist/stream.d.cts",
+        "default": "./dist/stream.cjs"
+      }
+    },
+    "./utils": {
+      "import": {
+        "types": "./dist/utils.d.ts",
+        "default": "./dist/utils.mjs"
+      },
+      "require": {
+        "types": "./dist/utils.d.cts",
+        "default": "./dist/utils.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "vitest",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "cac": "^6.7.14",
+    "colorette": "^2.0.20",
+    "consola": "^3.2.3",
+    "volapyk": "^1.3.5"
+  }
+}

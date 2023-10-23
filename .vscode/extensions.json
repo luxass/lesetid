@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "astro-build.astro-vscode",
+    "dbaeumer.vscode-eslint",
+    "Nuxtr.nuxtr-vscode",
+    "Vue.volar",
+    "Vue.vscode-typescript-vue-plugin"
+  ],
+  "unwantedRecommendations": []
+}
