@@ -41,6 +41,6 @@ const formattedTitle = title.length > 30 ? `${title.slice(0, 30)}...` : title;
   </span>
   <span class="flex items-center gap-x-1">
     <AlarmIcon />
-    {remarkPluginFrontmatter.estimation.text}
+    {remarkPluginFrontmatter?.estimation?.text || "No estimation"}
   </span>
 </Card>
