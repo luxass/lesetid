@@ -15,8 +15,7 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "packages/**/src/**/*",
-    "apps/**/src/**/*",
-    "packages/cli/src/cli.ts"],
+    "packages/**/src/**/*"
+  ],
   "exclude": ["node_modules", "dist"]
 }
