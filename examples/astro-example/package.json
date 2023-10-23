@@ -1,5 +1,5 @@
 {
-  "name": "astro-example",
+  "name": "@lesetid/astro-example",
   "type": "module",
   "private": true,
   "scripts": {
