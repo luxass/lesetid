@@ -13,14 +13,13 @@ const {
   post: {
     data: { title, description, date, handle },
     slug,
-    render
+    render,
   },
 } = Astro.props;
 
 const {
-  remarkPluginFrontmatter
+  remarkPluginFrontmatter,
 } = await render();
-
 
 const formattedDate = new Date(date).toLocaleDateString("en-US", {
   year: "numeric",

@@ -14,3 +14,4 @@ logs
 .env.*
 !.env.example
 .turbo
+.astro
