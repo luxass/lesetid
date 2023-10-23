@@ -1,0 +1,65 @@
+{
+  "publisher": "luxass",
+  "name": "reading-time",
+  "displayName": "Reading Time",
+  "version": "0.3.1",
+  "description": "An extension that estimates the reading time of a markdown file.",
+  "author": {
+    "name": "Lucas Nørgård",
+    "url": "https://luxass.dev",
+    "email": "lucasnrgaard@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luxass/lesetid",
+    "directory": "packages/vscode"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/extension.js",
+  "icon": "media/icon.png",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "browser": "./dist/browser/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "reading-time.estimate",
+        "title": "Estimate Reading Time",
+        "category": "Reading Time"
+      },
+      {
+        "command": "reading-time.playground",
+        "title": "Open Playground",
+        "category": "Reading Time"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "tsup --minify",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "browser": "vscode-test-web --extensionDevelopmentPath=. --folder-uri=vscode-vfs://github/luxass/vscode-schemas",
+    "web:serve": "npx serve --cors -l 5000",
+    "web:tunnel": "npx localtunnel -p 5000",
+    "package": "pnpm vsce package --no-dependencies",
+    "release": "pnpm vsce publish --no-dependencies",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.70.0",
+    "@vscode/test-web": "^0.0.47",
+    "@vscode/vsce": "^2.21.1"
+  },
+  "capabilities": {
+    "virtualWorkspaces": true
+  }
+}
