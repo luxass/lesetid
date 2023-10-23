@@ -4,7 +4,8 @@
     "dbaeumer.vscode-eslint",
     "Nuxtr.nuxtr-vscode",
     "Vue.volar",
-    "Vue.vscode-typescript-vue-plugin"
+    "Vue.vscode-typescript-vue-plugin",
+    "luxass.tsup-problem-matchers"
   ],
   "unwantedRecommendations": []
 }
