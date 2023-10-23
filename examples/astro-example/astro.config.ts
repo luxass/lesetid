@@ -28,9 +28,7 @@ export default defineConfig({
         ],
       },
     }),
-    vue({
-      jsx: true,
-    }),
+    vue(),
     prefetch({
       throttle: 5,
     }),
