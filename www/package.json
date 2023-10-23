@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@unocss/nuxt": "^0.56.5",
+    "@unocss/nuxt": "^0.57.0",
     "@vueuse/nuxt": "^10.5.0",
     "floating-vue": "^2.0.0-beta.24",
     "nuxt": "^3.8.0",

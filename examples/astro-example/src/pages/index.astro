@@ -1,0 +1,100 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "../layouts/PageLayout.astro";
+import Link from "../components/Link.astro";
+import GitHubIcon from "~icons/carbon/LogoGithub";
+import LinkedInIcon from "~icons/carbon/LogoLinkedin";
+
+const posts = await getCollection("posts", ({ data }) => data.published).then(
+  (posts) => posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()),
+);
+
+function truncate(value: string, length: number): string {
+  if (value.length > length) {
+    return `${value.substring(0, length)}...`;
+  }
+
+  return value;
+}
+
+const latestPost = posts.slice(0, 1)[0];
+
+export const prerender = true;
+---
+
+<PageLayout
+  title="home"
+  description="With a background as a fullstack developer. Lucas Nørgård builds both modern and scalable applications"
+>
+  <div class="min-h-250px">
+    <h1>
+      Hey I&apos;m luxass <span
+        class="animate-wiggle inline-block animate-duration-2s animate-count-3"
+        >👋</span
+      >
+    </h1>
+    <p>
+      I&apos;m a self-taught developer based in Aarhus, Denmark. <br />
+       In my spare time, I enjoy learning new technologies and working on side
+      projects.
+      <br />
+      <br />
+       occasionally I also write some articles on my <Link underline href="/posts">blog.</Link>
+    </p>
+  </div>
+  <div class="mt-8 flex flex-wrap gap-2 sm:mt-14 sm:gap-4">
+    {
+      latestPost && (
+        <Link
+          href={`/posts/${latestPost.data.handle || latestPost.slug}`}
+          class="flex flex-nowrap gap-1 border border-neutral-300 rounded bg-neutral-300 px-3 py-2 font-normal text-neutral-800 transition-transform active:scale-95 dark:(border-neutral-800 bg-neutral-800 text-neutral-400)"
+        >
+          {latestPost.data.icon && <span>{latestPost.data.icon}</span>}
+          <span>{truncate(latestPost.data.title, 20)}</span>
+        </Link>
+      )
+    }
+
+    <Link
+      href="github:luxass"
+      aria-label="Github"
+      class="flex flex-nowrap gap-1 border border-neutral-300 rounded bg-neutral-300 px-3 py-2 font-normal text-neutral-800 transition-transform active:scale-95 dark:(border-neutral-800 bg-neutral-800 text-neutral-400)"
+    >
+      <GitHubIcon class="text-xl" />
+       GitHub
+    </Link>
+
+    <Link
+      href="linkedin:lucasnrgaard"
+      aria-label="LinkedIn"
+      class="flex flex-nowrap gap-1 border border-neutral-300 rounded bg-neutral-300 px-3 py-2 font-normal text-neutral-800 transition-transform active:scale-95 dark:(border-neutral-800 bg-neutral-800 text-neutral-400)"
+    >
+      <LinkedInIcon class="text-xl" />
+       LinkedIn
+    </Link>
+  </div>
+</PageLayout>
+
+<style>
+  @keyframes wiggle {
+    0% {
+      transform: rotate(2deg);
+    }
+
+    40% {
+      transform: rotate(8deg);
+    }
+
+    60% {
+      transform: rotate(1deg);
+    }
+
+    80% {
+      transform: rotate(6deg);
+    }
+
+    100% {
+      transform: rotate(3deg);
+    }
+  }
+</style>

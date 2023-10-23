@@ -1,0 +1,46 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import Card from "./Card.astro";
+import CalendarIcon from "~icons/carbon/Calendar";
+import AlarmIcon from "~icons/carbon/Alarm";
+
+export interface Props {
+  post: CollectionEntry<"posts">
+}
+
+const {
+  post: {
+    data: { title, description, date, handle },
+    slug,
+    render,
+  },
+} = Astro.props;
+
+const {
+  remarkPluginFrontmatter,
+} = await render();
+
+const formattedDate = new Date(date).toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+
+const formattedTitle = title.length > 30 ? `${title.slice(0, 30)}...` : title;
+---
+
+<Card href={`/posts/${handle || slug}`} class="flex flex-col">
+  <h3 class="!my-0">{formattedTitle}</h3>
+
+  <p class="flex-1">{description}</p>
+
+  <span class="flex items-center gap-x-1">
+    <CalendarIcon />
+    {formattedDate}
+  </span>
+  <span class="flex items-center gap-x-1">
+    <AlarmIcon />
+    {remarkPluginFrontmatter?.estimation?.text || "No estimation"}
+  </span>
+</Card>

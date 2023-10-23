@@ -1,9 +1,9 @@
 {
-  "name": "lesetid",
+  "name": "lesetid-monorepo",
   "type": "module",
-  "version": "1.0.0",
+  "private": true,
   "packageManager": "pnpm@8.9.2",
-  "description": "A dead simple read time estimation",
+  "description": "Monorepo for the lesetid packages",
   "author": {
     "name": "Lucas Nørgård",
     "email": "lucasnrgaard@gmail.com",
@@ -15,68 +15,29 @@
   "bugs": {
     "url": "https://github.com/luxass/lesetid/issues"
   },
-  "keywords": [
-    "read time",
-    "reading time",
-    "words per minute"
-  ],
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.mjs"
-      },
-      "require": {
-        "types": "./dist/index.d.cts",
-        "default": "./dist/index.cjs"
-      }
-    },
-    "./stream": {
-      "import": {
-        "types": "./dist/stream.d.ts",
-        "default": "./dist/stream.mjs"
-      },
-      "require": {
-        "types": "./dist/stream.d.cts",
-        "default": "./dist/stream.cjs"
-      }
-    },
-    "./utils": {
-      "import": {
-        "types": "./dist/utils.d.ts",
-        "default": "./dist/utils.mjs"
-      },
-      "require": {
-        "types": "./dist/utils.d.cts",
-        "default": "./dist/utils.cjs"
-      }
-    },
-    "./package.json": "./package.json"
-  },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "examples/*"
   ],
   "engines": {
     "node": ">=18"
   },
   "scripts": {
-    "build": "tsup",
-    "dev": "vitest",
-    "test": "vitest run",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "typecheck": "tsc --noEmit"
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "lint:fix": "turbo run lint:fix",
+    "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
     "@luxass/eslint-config": "^3.3.2",
     "@types/node": "^18.16.19",
     "eslint": "^8.52.0",
     "tsup": "^7.2.0",
+    "turbo": "^1.10.16",
     "typescript": "^5.2.2",
-    "vitest": "^0.34.6",
-    "volapyk": "^1.3.5"
+    "vitest": "^0.34.6"
   }
 }

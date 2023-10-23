@@ -1,0 +1,27 @@
+---
+import Link from "./Link.astro";
+---
+
+<header>
+  <nav class="flex flex-wrap items-center justify-between">
+    <Link href="/" class="transition-transform active:scale-95">
+      Lucas Nørgård
+    </Link>
+
+    <div class="flex items-center gap-4 sm:gap-6">
+      <Link class="transition-transform active:scale-95" href="/projects">
+        Projects
+      </Link>
+      <Link class="transition-transform active:scale-95" href="/posts">
+        Posts
+      </Link>
+      <Link class="transition-transform active:scale-95" href="/cv">CV</Link>
+      <Link
+        class="focus-visible:ring-ring h-9 inline-flex items-center justify-center border border-blue-500 rounded bg-blue-500 px-4 py-1 text-sm font-medium text-white transition-colors transition-transform disabled:pointer-events-none active:scale-95 hover:bg-blue-500/90 print:text-initial disabled:opacity-50 focus-visible:outline-none focus-visible:ring-1"
+        href="mailto:mail@luxass.dev"
+      >
+        Contact
+      </Link>
+    </div>
+  </nav>
+</header>

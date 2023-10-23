@@ -1,0 +1,139 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+
+export interface Props {
+  title: string
+  description: string
+  image?: string
+  class?: string
+}
+
+const {
+  title,
+  description,
+  image = new URL(
+    `https://image.luxass.dev/api/image/text?input=${encodeURIComponent(
+      JSON.stringify({
+        width: 300,
+        height: 300,
+      }),
+    )}`,
+  ),
+  class: clazz,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- global metadata -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- primary meta tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+
+    <!-- optional meta tags -->
+    <meta name="darkreader-lock" content="" />
+
+    <!-- open graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="luxass.dev" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+
+    <!-- twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+
+    <!-- links -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <link
+      rel="preload"
+      href="/fonts/lexend.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <ViewTransitions />
+  </head>
+  <body class="font-sans">
+    <Header transition:animate="none" />
+    <main class="prose flex-1 p-4" class:list={clazz} transition:animate="slide">
+      <slot />
+    </main>
+    <Footer />
+    <style is:global>
+      html {
+        @apply antialiased touch-manipulation scroll-smooth text-base;
+        text-rendering: optimizeLegibility;
+      }
+
+      body {
+        @apply text-neutral-800 bg-neutral-100 dark:(text-neutral-300 bg-neutral-900) py-8 min-h-screen max-w-2xl md:!mx-auto !mx-4 font-sans flex flex-col justify-between min-h-100dvh;
+      }
+
+      .prose {
+        @apply [&>:not(:last-child)]:mb-6;
+
+        & p {
+          @apply line-height-relaxed;
+        }
+
+        & h1,
+        & h2,
+        & h3,
+        & h4,
+        & h5,
+        & h6 {
+          @apply text-neutral-800 dark:text-neutral-100 font-semibold my-8;
+        }
+
+        & h1 {
+          @apply text-2xl;
+        }
+
+        & h2 {
+          @apply text-xl;
+        }
+
+        & h3 {
+          @apply text-lg;
+        }
+
+        & h4 {
+          @apply text-base;
+        }
+
+        & h5 {
+          @apply text-sm;
+        }
+
+        & h6 {
+          @apply text-xs;
+        }
+
+        & strong {
+          @apply font-medium text-neutral-800 dark:text-neutral-100;
+        }
+
+        & img {
+          @apply mx-auto rounded my-6;
+        }
+      }
+    </style>
+  </body>
+</html>

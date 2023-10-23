@@ -1,0 +1,75 @@
+{
+  "name": "remark-lesetid",
+  "type": "module",
+  "version": "1.0.0",
+  "packageManager": "pnpm@8.9.2",
+  "description": "A dead simple read time estimation",
+  "author": {
+    "name": "Lucas Nørgård",
+    "email": "lucasnrgaard@gmail.com",
+    "url": "https://luxass.dev"
+  },
+  "workspaces": [
+    "examples/**"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/luxass/remark-lesetid",
+  "repository": "https://github.com/luxass/remark-lesetid",
+  "bugs": {
+    "url": "https://github.com/luxass/remark-lesetid/issues"
+  },
+  "keywords": [
+    "read time",
+    "reading time",
+    "words per minute"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./astro": {
+      "import": {
+        "types": "./dist/astro.d.ts",
+        "default": "./dist/astro.mjs"
+      },
+      "require": {
+        "types": "./dist/astro.d.cts",
+        "default": "./dist/astro.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "vitest",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "lesetid": "workspace:*",
+    "mdast-util-to-string": "^4.0.0",
+    "unist-util-visit": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/mdast": "^4.0.2",
+    "unified": "^11.0.3"
+  }
+}

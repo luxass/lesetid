@@ -1,12 +1,4 @@
-# lesetid
-
-`/leːsətiːd/`, Norwegian: "lesetid"
-
-> This is a monorepo containing the following projects:
-> - [lesetid](./packages/lesetid)
-> - [playground](./www)
-> - [remark-lesetid](./packages/remark-lesetid)
-> - [vscode-reading-time](./packages/vscode)
+# vscode
 
 ## 💻 Development
 

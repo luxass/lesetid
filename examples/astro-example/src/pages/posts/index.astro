@@ -1,0 +1,31 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "../../layouts/PageLayout.astro";
+import PostCard from "../../components/PostCard.astro";
+
+const posts = await getCollection("posts", ({ data }) => data.published).then((posts) => posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()));
+
+export const prerender = true;
+---
+
+<PageLayout title="posts | luxass" description="luxass' blog">
+  <h1>Posts</h1>
+  <p>This is my blog, where I write about things I find interesting.</p>
+  <article>
+    {
+      posts.length > 0
+        ? (
+        <ul class="grid auto-cols-max grid-cols-1 mt-4 gap-4 sm:grid-cols-2 sm:gap-3">
+          {posts.map((post) => (
+            <li>
+              <PostCard post={post} />
+            </li>
+          ))}
+        </ul>
+          )
+        : (
+        <p>I didn't write any public available posts yet.</p>
+          )
+    }
+  </article>
+</PageLayout>
