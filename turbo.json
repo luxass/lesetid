@@ -2,7 +2,7 @@
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "build": {
-      "outputs": ["dist/**", ".nuxt/dist/**", ".output/**"],
+      "outputs": ["dist/**", ".nuxt/dist/**", ".output/**", ".next/**", "!.next/cache/**", ".vercel/**", ".svelte-kit/**"],
       "dependsOn": ["^build"]
     },
     "lint": {

@@ -13,7 +13,8 @@ export const prerender = true;
   <p>This is a blog</p>
   <article>
     {
-      posts.length > 0 ? (
+      posts.length > 0
+        ? (
         <ul class="grid auto-cols-max grid-cols-1 mt-4 gap-4 sm:grid-cols-2 sm:gap-3">
           {posts.map((post) => (
             <li>
@@ -21,9 +22,10 @@ export const prerender = true;
             </li>
           ))}
         </ul>
-      ) : (
+          )
+        : (
         <p>I didn't write any public available posts yet.</p>
-      )
+          )
     }
   </article>
 </PageLayout>

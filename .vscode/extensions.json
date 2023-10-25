@@ -2,10 +2,11 @@
   "recommendations": [
     "astro-build.astro-vscode",
     "dbaeumer.vscode-eslint",
-    "Nuxtr.nuxtr-vscode",
-    "Vue.volar",
-    "Vue.vscode-typescript-vue-plugin",
-    "luxass.tsup-problem-matchers"
+    "nuxtr.nuxtr-vscode",
+    "vue.volar",
+    "vue.vscode-typescript-vue-plugin",
+    "luxass.tsup-problem-matchers",
+    "svelte.svelte-vscode"
   ],
   "unwantedRecommendations": []
 }

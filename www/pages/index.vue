@@ -20,8 +20,7 @@ const text = ref("Write your article here!");
       </NuxtLink>
 
       <button
-        title="Toggle Dark Mode"
-        class="ml1 text-lg op-50 hover:op-75 flex items-center justify-center"
+        title="Toggle Dark Mode" class="ml1 text-lg op-50 hover:op-75 flex items-center justify-center"
         @click="toggleDark()"
       >
         <ClientOnly>
@@ -41,5 +40,13 @@ const text = ref("Write your article here!");
       v-model="text"
       class="border border-base rounded bg-base shadow-sm h-2xl w-full of-auto p-4 text-sm outline-none focus-within:ring-2 focus-within:ring-blue-600 focus-within:border-blue-600 resize-none"
     />
+
+    <section id="examples" class="grid auto-cols-max grid-cols-1 mt-4 gap-4 sm:grid-cols-2 sm:gap-3">
+      <ExampleCard icon-url="./astro.svg" title="Astro Example" url="https://astro-example.lesetid.dev" />
+      <ExampleCard icon-url="./vite.svg" title="Vite Example" url="https://vite-example.lesetid.dev" />
+      <ExampleCard icon-url="./nextjs.svg" title="NextJS Example" url="https://next-example.lesetid.dev" />
+      <ExampleCard icon-url="./nuxt.svg" title="Nuxt Example" url="https://nuxt-example.lesetid.dev" />
+      <ExampleCard icon-url="./svelte.svg" title="SvelteKit Example" url="https://sveltekit-example.lesetid.dev" />
+    </section>
   </main>
 </template>

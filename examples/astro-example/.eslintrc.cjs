@@ -15,12 +15,6 @@ const config = {
         extraFileExtensions: [".astro"],
       },
     },
-    {
-      files: [".github/workflows/*.yml"],
-      rules: {
-        "yml/no-empty-mapping-value": "off",
-      },
-    },
   ],
 };
 

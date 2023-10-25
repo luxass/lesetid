@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@unocss/nuxt",
     "nuxt-og-image",
+    "@nuxt/image",
   ],
   devtools: {
     enabled: true,
@@ -49,7 +50,7 @@ export default defineNuxtConfig({
     serverAssets: [
       {
         baseName: "texts",
-        dir: "../examples",
+        dir: "../example-texts",
       },
     ],
   },
