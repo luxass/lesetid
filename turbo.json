@@ -3,24 +3,31 @@
   "pipeline": {
     "build": {
       "outputs": ["dist/**", ".nuxt/dist/**", ".output/**", ".next/**", "!.next/cache/**", ".vercel/**", ".svelte-kit/**"],
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build"],
+      "outputMode": "new-only"
     },
     "lint": {
       "cache": false,
-      "outputs": []
+      "outputs": [],
+      "outputMode": "new-only"
     },
     "lint:fix": {
       "cache": false,
-      "outputs": []
+      "outputs": [],
+      "outputMode": "new-only"
     },
     "dev": {
       "cache": false,
-      "persistent": true
+      "persistent": true,
+      "outputMode": "new-only"
     },
     "test": {
       "outputs": [],
-      "dependsOn": []
+      "dependsOn": [],
+      "outputMode": "new-only"
     },
-    "typecheck": {}
+    "typecheck": {
+      "outputMode": "new-only"
+    }
   }
 }
