@@ -25,7 +25,7 @@
   },
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev --no-cache --continue",
+    "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "test": "turbo run test",
     "lint:fix": "turbo run lint:fix",
