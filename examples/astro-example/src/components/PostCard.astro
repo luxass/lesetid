@@ -11,7 +11,7 @@ export interface Props {
 
 const {
   post: {
-    data: { title, description, date, handle },
+    data: { title, description, date },
     slug,
     render,
   },
@@ -30,7 +30,7 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
 const formattedTitle = title.length > 30 ? `${title.slice(0, 30)}...` : title;
 ---
 
-<Card href={`/posts/${handle || slug}`} class="flex flex-col">
+<Card href={`/${slug}`} class="flex flex-col">
   <h3 class="!my-0">{formattedTitle}</h3>
 
   <p class="flex-1">{description}</p>

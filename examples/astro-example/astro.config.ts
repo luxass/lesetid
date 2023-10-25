@@ -13,6 +13,9 @@ import {
   remarkLesetid,
 } from "remark-lesetid/astro";
 
+import type * as mdast from "mdast";
+import type * as unified from "unified";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://astro-example.lesetid.dev",
@@ -43,7 +46,9 @@ export default defineConfig({
       target: "_blank",
       rel: ["noopener", "noreferrer"],
     }]],
-    remarkPlugins: [remarkLesetid],
+    remarkPlugins: [
+      remarkLesetid,
+    ],
   },
   compressHTML: false,
   output: "server",
@@ -62,3 +67,13 @@ export default defineConfig({
     ],
   },
 });
+
+export type RemarkPlugin<PluginParameters extends any[] = any[]> = unified.Plugin<
+	PluginParameters,
+	mdast.Root
+>;
+
+export function remarkPrism(): ReturnType<RemarkPlugin> {
+  return function (tree) {
+  };
+}

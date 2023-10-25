@@ -1,14 +1,14 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
-import PageLayout from "../../../layouts/PageLayout.astro";
-import Notification from "../../../components/Notification.astro";
-import Code from "../../../components/Code.vue";
+import PageLayout from "../layouts/PageLayout.astro";
+import Notification from "../components/Notification.astro";
+import Code from "../components/Code.vue";
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts");
   return posts.map((post) => ({
-    params: { handle: post.data.handle || post.slug },
+    params: { handle: post.slug },
     props: { post },
   }));
 }
@@ -24,7 +24,7 @@ const {
   },
 } = Astro.props;
 
-const { Content } = await render();
+const { Content, remarkPluginFrontmatter } = await render();
 
 export const prerender = true;
 ---
@@ -49,6 +49,10 @@ export const prerender = true;
         </Notification>
       )
     }
+
+    <Notification type="note">
+      This post will approximately take <strong>{remarkPluginFrontmatter.estimation.text}</strong> to read.
+    </Notification>
 
     <h1 class="mt-8">{title}</h1>
     <Content components={{

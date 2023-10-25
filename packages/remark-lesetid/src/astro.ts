@@ -1,25 +1,30 @@
-// import {
-//   estimate,
-// } from "lesetid";
-// import { toString } from "mdast-util-to-string";
+import {
+  estimate,
+} from "lesetid";
+import { toString } from "mdast-util-to-string";
 import type { Plugin } from "unified";
 import type { Root } from "mdast";
 
-export interface Options {
+export const remarkLesetid: Plugin<[], Root> = () => {
+  return (tree, file) => {
+    const textOnPage = toString(tree);
+    const estimation = estimate(textOnPage);
+    if (!file.data.astro) throw new Error("Missing astro data");
+    file.data.astro.frontmatter ||= {};
 
-}
-
-export function remarkLesetid(): Plugin<
-  [(Readonly<Options> | null | undefined)?],
-  Root,
-  string
-> {
-  return function (options) {
-    console.info("options", options);
-    // return function (tree, { data }) {
-    // const textOnPage = toString(tree);
-    // const estimation = estimate(textOnPage);
-
-    // data.astro.frontmatter.estimation = estimation;
+    file.data.astro.frontmatter.estimation = estimation;
   };
+};
+
+declare module "vfile" {
+  interface DataMap {
+    astro: {
+      frontmatter?: {
+        estimation?: {
+          minutes: number
+          words: number
+        }
+      }
+    }
+  }
 }
