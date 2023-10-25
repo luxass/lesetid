@@ -1,8 +1,9 @@
 {
   "publisher": "luxass",
-  "name": "reading-time",
+  "name": "vscode-reading-time",
   "displayName": "Reading Time",
   "version": "0.3.1",
+  "private": true,
   "description": "An extension that estimates the reading time of a markdown file.",
   "author": {
     "name": "Lucas Nørgård",
