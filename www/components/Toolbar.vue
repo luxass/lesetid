@@ -29,8 +29,6 @@ watch(selectedText, () => {
     = data?.value?.texts.find((text) => text.key === selectedText.value)?.file
     || "";
 });
-
-// TODO: Maybe add different clocks, based on estimated time?
 </script>
 
 <template>
