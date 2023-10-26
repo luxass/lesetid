@@ -1,8 +1,5 @@
-import { type Metadata } from "next";
 import { notFound } from "next/navigation";
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
 import { allPosts } from "~/contentlayer";
 import { MDXContent } from "~/components/mdx/MDXComponents";
 import {

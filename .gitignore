@@ -1,7 +1,7 @@
 # misc
 node_modules
 .DS_Store
-.tsbuildinfo
+*.tsbuildinfo
 
 # build outputs
 .output
