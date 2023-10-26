@@ -42,11 +42,11 @@ const text = ref("Write your article here!");
     />
 
     <section id="examples" class="grid grid-cols-1 mt-4 gap-4 sm:grid-cols-3 sm:gap-3">
-      <ExampleCard icon-url="./astro.svg" title="Astro Example" url="https://astro-example.lesetid.dev" />
-      <ExampleCard icon-url="./vite.svg" title="Vite Example" url="https://vite-example.lesetid.dev" />
-      <ExampleCard icon-url="./nextjs.svg" title="NextJS Example" url="https://next-example.lesetid.dev" />
-      <ExampleCard icon-url="./nuxt.svg" title="Nuxt Example" url="https://nuxt-example.lesetid.dev" />
-      <ExampleCard icon-url="./svelte.svg" title="SvelteKit Example" url="https://sveltekit-example.lesetid.dev" />
+      <ExampleCard icon-url="/astro.svg" title="Astro Example" url="https://astro-example.lesetid.dev" />
+      <ExampleCard icon-url="/vite.svg" title="Vite Example" url="https://vite-example.lesetid.dev" />
+      <ExampleCard icon-url="/nextjs.svg" title="NextJS Example" url="https://next-example.lesetid.dev" />
+      <ExampleCard icon-url="/nuxt.svg" title="Nuxt Example" url="https://nuxt-example.lesetid.dev" />
+      <ExampleCard icon-url="/svelte.svg" title="SvelteKit Example" url="https://sveltekit-example.lesetid.dev" />
     </section>
   </main>
 </template>
