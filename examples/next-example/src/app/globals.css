@@ -2,26 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  @apply antialiased touch-manipulation scroll-smooth text-base;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply text-neutral-800 bg-neutral-100 dark:text-neutral-300 dark:bg-neutral-900 py-8 min-h-screen max-w-2xl md:!mx-auto !mx-4 font-sans flex flex-col justify-between min-h-[100dvh];
+}
+
+.prose {
+  @apply [&>:not(:last-child)]:mb-6;
+
+  & p {
+    @apply leading-relaxed;
+  }
+
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    @apply text-neutral-800 dark:text-neutral-100 font-semibold my-8;
+  }
+
+  & h1 {
+    @apply text-2xl;
+  }
+
+  & h2 {
+    @apply text-xl;
+  }
+
+  & h3 {
+    @apply text-lg;
+  }
+
+  & h4 {
+    @apply text-base;
+  }
+
+  & h5 {
+    @apply text-sm;
+  }
+
+  & h6 {
+    @apply text-xs;
+  }
+
+  & strong {
+    @apply font-medium text-neutral-800 dark:text-neutral-100;
+  }
+
+  & img {
+    @apply mx-auto rounded my-6;
+  }
 }
