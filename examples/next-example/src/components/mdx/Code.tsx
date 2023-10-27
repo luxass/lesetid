@@ -7,13 +7,13 @@ export type CodeBlockProps = React.DetailedHTMLProps<
 
 export function CodeBlock({ children, raw, ...props }: CodeBlockProps) {
   return (
-    <>
+    <div className="codeblock">
       <pre
-        className="relative mb-4 mt-6 max-h-[640px] overflow-x-auto rounded-lg border bg-muted p-4 font-mono text-sm font-semibold text-muted-foreground"
+        className="[tab-size:2] overflow-x-auto rounded p-4 text-sm [&code]:text-base [&code]:after:content-none [&code]:before:content-none [letter-spacing:unset]"
         {...props}
       >
         {children}
       </pre>
-    </>
+    </div>
   );
 }

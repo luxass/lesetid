@@ -1,3 +1,3 @@
 # NextJS Example
 
-> This is an example of how to use the `remark-lesetid` with [`NextJS`](https://nextjs.org).
+> This is an example of how to use the `lesetid` with [`NextJS`](https://nextjs.org).

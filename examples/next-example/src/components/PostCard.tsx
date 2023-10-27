@@ -27,7 +27,7 @@ export function PostCard({ post }: PostCardProps) {
       </span>
       <span className="flex items-center gap-x-1">
         <CarbonAlarm />
-        {/* {remarkPluginFrontmatter?.estimation?.text || "No estimation"} */}
+        {post.readingTime || "No estimation"}
       </span>
     </Link>
   );

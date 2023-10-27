@@ -18,8 +18,6 @@ export const remarkLesetid: Plugin<[Options], Root> = (options: Options) => {
     visit(tree, "text", (node) => {
       const textOnPage = node.value;
       const estimation = estimate(textOnPage);
-      if (!file.data[options.dataKey]) throw new Error("Missing data");
-
       file.data[options.dataKey] ||= estimation;
     });
   };
