@@ -1,5 +1,5 @@
 {
-  "name": "sveltekit-example",
+  "name": "@lesetid/sveltekit-example",
   "type": "module",
   "version": "0.0.1",
   "scripts": {

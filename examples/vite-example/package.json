@@ -1,5 +1,5 @@
 {
-  "name": "vite-example",
+  "name": "@lesetid/vite-example",
   "type": "module",
   "version": "0.0.0",
   "private": true,
@@ -12,7 +12,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "solid-js": "^1.8.3"
+    "solid-js": "^1.8.4"
   },
   "devDependencies": {
     "typescript": "^5.2.2",
