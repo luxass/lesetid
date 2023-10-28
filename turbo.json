@@ -10,7 +10,8 @@
         "!.next/cache/**",
         ".vercel/**",
         ".svelte-kit/**",
-        ".contentlayer/**"
+        ".contentlayer/**",
+        ".wrangler"
       ],
       "dependsOn": ["^build"],
       "outputMode": "new-only"

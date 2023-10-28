@@ -1,0 +1,6 @@
+{
+  "$schema": "https://examples.lesetid.dev/schema",
+  "iconUrl": "/nuxt.svg",
+  "title": "Nuxt Example",
+  "url": "https://nuxt-example.lesetid.dev"
+}

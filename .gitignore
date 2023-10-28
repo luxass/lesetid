@@ -17,8 +17,10 @@ dist
 build
 .contentlayer
 out
+.wrangler
 
 # env
 .env
 .env.*
 !.env.example
+.dev.vars

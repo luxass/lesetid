@@ -1,0 +1,9 @@
+{
+  "$schema": "https://examples.lesetid.dev/schema",
+  "iconUrl": {
+    "dark": "/astro-dark.svg",
+    "light": "/astro-light.svg"
+  },
+  "title": "Astro Example",
+  "url": "https://astro-example.lesetid.dev"
+}

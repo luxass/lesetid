@@ -5,3 +5,15 @@
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/luxass/lesetid?devcontainer_path=.devcontainer/next-example/devcontainer.json)
 
 <samp>This is an example of how to use the `lesetid` with [`NextJS`](https://nextjs.org).</samp>
+
+## 💻 Development
+
+- Clone this repository
+- Install latest LTS version of [Node.js](https://nodejs.org/en/)
+- Enable [Corepack](https://github.com/nodejs/corepack) using `corepack enable`
+- Install dependencies using `pnpm install`
+- Run development build using `pnpm dev`
+
+## 📄 License
+
+Published under [MIT License](./LICENSE).

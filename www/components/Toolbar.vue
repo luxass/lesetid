@@ -45,7 +45,7 @@ watch(selectedText, () => {
     </div>
     <Select v-if="data && !error" v-model="selectedText">
       <option disabled selected value="">
-        Select an example...
+        Select an example text...
       </option>
       <option v-for="{ key } of data.texts" :key="key">
         {{ key }}

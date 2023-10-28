@@ -1,0 +1,6 @@
+{
+  "$schema": "https://examples.lesetid.dev/schema",
+  "iconUrl": "/svelte.svg",
+  "title": "SvelteKit Example",
+  "url": "https://sveltekit-example.lesetid.dev"
+}
