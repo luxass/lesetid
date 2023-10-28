@@ -1,6 +1,6 @@
 name: Example Missing
 description: If there is an example missing you can use this template to request it.
-title: "missing example for "
+title: "missing example for [EXAMPLE]"
 labels: [example]
 body:
   - type: markdown
