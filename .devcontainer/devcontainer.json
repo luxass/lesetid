@@ -1,0 +1,35 @@
+{
+  "name": "Contribute to lesetid",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {}
+  },
+
+  "postCreateCommand": "pnpm install && pnpm run build",
+
+  "waitFor": "postCreateCommand",
+
+  "postAttachCommand": {
+    "Astro tests": "pnpm run test"
+  },
+
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["README.md"]
+    },
+    "vscode": {
+      "extensions": [
+        "astro-build.astro-vscode",
+        "dbaeumer.vscode-eslint",
+        "nuxtr.nuxtr-vscode",
+        "vue.volar",
+        "vue.vscode-typescript-vue-plugin",
+        "luxass.tsup-problem-matchers",
+        "svelte.svelte-vscode"
+      ]
+    }
+  }
+}
