@@ -1,0 +1,25 @@
+name: Example Missing
+description: If there is an example missing you can use this template to request it.
+title: "missing example for "
+labels: [example]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: framework-name
+    attributes:
+      label: What framework is missing an example?
+      description: Please tell us the name of the framework.
+      placeholder: ex. nuxt, next, astro
+    validations:
+      required: true
+  - type: input
+    id: framework-url
+    attributes:
+      label: What is the URL of the framework's homepage?
+      description: Please tell us the URL of the framework's homepage.
+      placeholder: ex. https://nuxt.com, https://nextjs.org, https://astro.build
+    validations:
+      required: true

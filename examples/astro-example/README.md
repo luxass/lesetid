@@ -5,4 +5,4 @@
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/luxass/lesetid?devcontainer_path=.devcontainer/astro-example/devcontainer.json)
 
 
-> This is an example of how to use the `remark-lesetid` with [`astro`](https://astro.build).
+<samp>This is an example of how to use the `remark-lesetid` with [`astro`](https://astro.build).</samp>

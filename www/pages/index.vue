@@ -2,6 +2,46 @@
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
 const text = ref("Write your article here!");
+
+interface Example {
+  iconUrl: string | {
+    dark: string
+    light: string
+  }
+  title: string
+  url: string
+}
+
+const examples: Example[] = [
+  {
+    iconUrl: {
+      dark: "/astro-dark.svg",
+      light: "/astro-light.svg",
+    },
+    title: "Astro Example",
+    url: "https://astro-example.lesetid.dev",
+  },
+  {
+    iconUrl: "/vite.svg",
+    title: "Vite Example",
+    url: "https://vite-example.lesetid.dev",
+  },
+  {
+    iconUrl: "/nextjs.svg",
+    title: "NextJS Example",
+    url: "https://next-example.lesetid.dev",
+  },
+  {
+    iconUrl: "/nuxt.svg",
+    title: "Nuxt Example",
+    url: "https://nuxt-example.lesetid.dev",
+  },
+  {
+    iconUrl: "/svelte.svg",
+    title: "SvelteKit Example",
+    url: "https://sveltekit-example.lesetid.dev",
+  },
+];
 </script>
 
 <template>
@@ -42,11 +82,18 @@ const text = ref("Write your article here!");
     />
 
     <section id="examples" class="grid grid-cols-1 mt-4 gap-4 sm:grid-cols-3 sm:gap-3">
-      <ExampleCard icon-url="/astro.svg" title="Astro Example" url="https://astro-example.lesetid.dev" />
-      <ExampleCard icon-url="/vite.svg" title="Vite Example" url="https://vite-example.lesetid.dev" />
-      <ExampleCard icon-url="/nextjs.svg" title="NextJS Example" url="https://next-example.lesetid.dev" />
-      <ExampleCard icon-url="/nuxt.svg" title="Nuxt Example" url="https://nuxt-example.lesetid.dev" />
-      <ExampleCard icon-url="/svelte.svg" title="SvelteKit Example" url="https://sveltekit-example.lesetid.dev" />
+      <ExampleCard
+        v-for="example in examples" :key="example.url" :icon-url="example.iconUrl" :title="example.title"
+        :url="example.url"
+      />
+      <NuxtLink
+        href="https://github.com/luxass/lesetid/issues/new?title=missing%20example%20for%20[EXAMPLE]&labels=example&body=aaa"
+        target="_blank" rel="noopener noreferrer"
+        class="border border-base border-dashed rounded p-4 flex items-center gap-2"
+      >
+        <Icon name="material-symbols:crop-square-outline" size="24" />
+        Missing an example?
+      </NuxtLink>
     </section>
   </main>
 </template>
