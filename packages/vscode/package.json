@@ -56,8 +56,8 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@types/vscode": "^1.70.0",
-    "@vscode/test-web": "^0.0.47",
+    "@types/vscode": "^1.80.0",
+    "@vscode/test-web": "^0.0.48",
     "@vscode/vsce": "^2.21.1"
   },
   "capabilities": {

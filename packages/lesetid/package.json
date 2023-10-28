@@ -2,7 +2,7 @@
   "name": "lesetid",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@8.9.2",
+  "packageManager": "pnpm@8.10.0",
   "description": "A dead simple read time estimation",
   "author": {
     "name": "Lucas Nørgård",

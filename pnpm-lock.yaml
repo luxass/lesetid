@@ -57,7 +57,7 @@ importers:
         specifier: ^3.4.0
         version: 3.4.0(@types/node@18.18.7)(typescript@5.2.2)
       github-schema:
-        specifier: ^1.0.0
+        specifier: ^1.1.0
         version: 1.1.0
       rehype-autolink-headings:
         specifier: ^7.0.0
@@ -343,11 +343,11 @@ importers:
   packages/vscode:
     devDependencies:
       '@types/vscode':
-        specifier: ^1.70.0
+        specifier: ^1.80.0
         version: 1.83.1
       '@vscode/test-web':
-        specifier: ^0.0.47
-        version: 0.0.47
+        specifier: ^0.0.48
+        version: 0.0.48
       '@vscode/vsce':
         specifier: ^2.21.1
         version: 2.21.1
@@ -2801,6 +2801,7 @@ packages:
     dependencies:
       is-glob: 4.0.3
       micromatch: 4.0.5
+      napi-wasm: 1.1.0
     dev: true
     bundledDependencies:
       - napi-wasm
@@ -4352,8 +4353,8 @@ packages:
     resolution: {integrity: sha512-JT5CvrIYYCrmB+dCana8sUqJEcGB1ZDXNLMQ2+42bW995WmNoenijWMUdZfwmuQUTQcEVVIa2OecZzTYWUW9Cg==}
     dev: false
 
-  /@vscode/test-web@0.0.47:
-    resolution: {integrity: sha512-p1ym6+h30ecTLCrOcAlD7k3tq/AMVWzZjolbU3jcP0QJV0JSj9hp/Pnmfkrw8s2Xo5ywdbABSFSlNPUpZoicOA==}
+  /@vscode/test-web@0.0.48:
+    resolution: {integrity: sha512-AyNBvhEnhPhrcgPadEJysAPkHsQdTA4vomhKx54CCvEde/VPnuzj86a32gjvHuwJ9zF3QIb4+F5R/AiweaX0Fg==}
     engines: {node: '>=16'}
     hasBin: true
     dependencies:
@@ -10715,6 +10716,10 @@ packages:
     resolution: {integrity: sha512-ONmRUqK7zj7DWX0D9ADe03wbwOBZxNAfF20PlGfCWQcD3+/MakShIHrMqx9YwPTfxDdF1zLeL+RGZiR9kGMLdg==}
     requiresBuild: true
     optional: true
+
+  /napi-wasm@1.1.0:
+    resolution: {integrity: sha512-lHwIAJbmLSjF9VDRm9GoVOy9AGp3aIvkjv+Kvz9h16QR3uSVYH78PNQUnT2U4X53mhlnV2M7wrhibQ3GHicDmg==}
+    dev: true
 
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}

@@ -2,7 +2,7 @@
   "name": "lesetid-monorepo",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@8.9.2",
+  "packageManager": "pnpm@8.10.0",
   "description": "Monorepo for the lesetid packages",
   "author": {
     "name": "Lucas Nørgård",
