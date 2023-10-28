@@ -3,7 +3,6 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "postinstall": "astro sync",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
