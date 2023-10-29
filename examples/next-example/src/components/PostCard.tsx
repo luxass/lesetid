@@ -16,7 +16,7 @@ export function PostCard({ post }: PostCardProps) {
 
   const formattedTitle = post.title.length > 30 ? `${post.title.slice(0, 30)}...` : post.title;
   return (
-    <Link href={post.slug.slice(5)} className="h-full min-h-36 border border-transparent hover:(border-neutral-700) rounded p-4 text-neutral-800 dark:text-neutral-200 flex flex-col">
+    <Link href={post.url} className="h-full min-h-36 border border-transparent hover:border-neutral-700 rounded p-4 text-neutral-800 dark:text-neutral-200 flex flex-col">
       <h3 className="!my-0">{formattedTitle}</h3>
 
       <p className="flex-1">{post.description}</p>
@@ -27,7 +27,7 @@ export function PostCard({ post }: PostCardProps) {
       </span>
       <span className="flex items-center gap-x-1">
         <CarbonAlarm />
-        {post.readingTime || "No estimation"}
+        {post.estimation || "No estimation"}
       </span>
     </Link>
   );

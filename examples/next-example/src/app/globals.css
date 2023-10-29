@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  @apply text-neutral-800 bg-neutral-100 dark:text-neutral-300 dark:bg-neutral-900 py-8 min-h-screen max-w-2xl md:!mx-auto !mx-4 font-sans flex flex-col justify-between min-h-[100dvh];
+  @apply text-neutral-800 bg-neutral-100 dark:text-neutral-300 dark:bg-neutral-900 py-8 max-w-2xl md:!mx-auto !mx-4 font-sans flex flex-col justify-between min-h-[100dvh];
 }
 
 .prose {
@@ -60,8 +60,10 @@ body {
   }
 }
 
-.codeblock {
-  & code::before, & code::after {
+[data-rehype-pretty-code-fragment] {
+
+  code::before,
+  code::after {
     content: "`";
   }
 
@@ -71,6 +73,6 @@ body {
   }
 
   pre {
-    --at-apply: "[tab-size:2] overflow-x-auto rounded p-4 text-sm [&code]:(text-base after:content-none before:content-none) [letter-spacing:unset]";
+    @apply [tab-size:2] overflow-x-auto rounded p-4 text-sm [&code]:text-base [&code]:after:content-none [&code]:before:content-none [letter-spacing:unset];
   }
 }

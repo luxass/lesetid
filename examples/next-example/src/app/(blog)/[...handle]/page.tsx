@@ -15,7 +15,7 @@ interface PostPageProps {
 
 async function getPostFromParams(params: PostPageProps["params"]) {
   const slug = params?.handle?.join("/");
-  const post = allPosts.find((post) => post.slugAsParams === slug);
+  const post = allPosts.find((post) => post.url === slug);
 
   if (!post) {
     return null;
@@ -48,7 +48,7 @@ export async function generateMetadata({
       title: post.title,
       description: post.description,
       type: "article",
-      url: `https://next-example.lesetid.dev/${post.slug}`,
+      url: `https://next-example.lesetid.dev/${post.url}`,
       images: [
         {
           url: ogUrl.toString(),
@@ -71,7 +71,7 @@ export async function generateStaticParams(): Promise<
   PostPageProps["params"][]
 > {
   return allPosts.map((post) => ({
-    handle: post.slugAsParams.split("/"),
+    handle: post.url.split("/"),
   }));
 }
 
@@ -94,7 +94,7 @@ export default async function PostPage({ params }: PostPageProps) {
       }
 
       <Notification type="note">
-        This post will approximately take <strong>{"remarkPluginFrontmatter.estimation.text"}</strong> to read.
+        This post will approximately take <strong>{post.estimation}</strong> to read.
       </Notification>
       <h1 className="mt-8">{post.title}</h1>
       <MDXContent code={post.body.code} />

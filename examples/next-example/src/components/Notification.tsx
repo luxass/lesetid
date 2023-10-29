@@ -29,10 +29,10 @@ export function Notification({ printable, type, icon, multiline, children }: Pro
           "text-blue-400": type === "note" || type === "tip",
           "text-purple-400": type === "important",
           "text-rose-400": type === "caution",
-          "i-octicon-alert-16": !icon && type === "warning",
-          "i-octicon-info-16": !icon && (type === "note" || type === "tip"),
-          "i-octicon-report-16": !icon && type === "important",
-          "i-octicon-shield-16": !icon && type === "caution",
+          "icon-[octicon--alert-16]": !icon && type === "warning",
+          "icon-[octicon--info-16]": !icon && (type === "note" || type === "tip"),
+          "icon-[octicon--report-16]": !icon && type === "important",
+          "icon-[octicon--shield-16]": !icon && type === "caution",
         })}
       >
         {icon}
