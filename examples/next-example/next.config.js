@@ -12,6 +12,7 @@ const nextConfig = {
   },
   experimental: {
     mdxRs: true,
+    webpackBuildWorker: true,
   },
   webpack(config) {
     config.plugins.push(

@@ -1,19 +1,17 @@
-export type CodeBlockProps = React.DetailedHTMLProps<
-  React.HTMLAttributes<HTMLPreElement>,
-  HTMLPreElement
-> & {
-  raw?: string
-};
+type HTMLCodeElement = HTMLElement;
 
-export function CodeBlock({ children, raw, ...props }: CodeBlockProps) {
+export type CodeBlockProps = React.DetailedHTMLProps<
+  React.HTMLAttributes<HTMLCodeElement>,
+  HTMLCodeElement
+>;
+
+export function CodeBlock({ children, ...props }: CodeBlockProps) {
   return (
-    <div className="codeblock">
-      <pre
-        className="[tab-size:2] overflow-x-auto rounded p-4 text-sm [&code]:text-base [&code]:after:content-none [&code]:before:content-none [letter-spacing:unset]"
-        {...props}
-      >
-        {children}
-      </pre>
-    </div>
+    <code
+    className="[letter-spacing:-0.02em] rounded text-sm after:(font-black text-blue-600) before:font-black before:text-blue-600"
+      {...props}
+    >
+      {children}
+    </code>
   );
 }

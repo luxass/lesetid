@@ -5,26 +5,7 @@ import remarkGfm from "remark-gfm";
 import {
   estimate,
 } from "lesetid";
-
-/** @type {import('contentlayer/source-files').ComputedFields} */
-const computedFields = {
-  slug: {
-    type: "string",
-    resolve: (doc) => `/${doc._raw.flattenedPath}`,
-  },
-  slugAsParams: {
-    type: "string",
-    resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
-  },
-  readingTime: {
-    type: "string",
-    resolve: (doc) => {
-      const content = doc.body.raw;
-      const estimation = estimate(content);
-      return estimation.text;
-    },
-  },
-};
+import rehypePrettyCode from "rehype-pretty-code";
 
 export const Post = defineDocumentType(() => ({
   name: "Post",
@@ -51,17 +32,34 @@ export const Post = defineDocumentType(() => ({
       default: true,
     },
   },
-  computedFields,
+  computedFields: {
+    url: {
+      type: "string",
+      resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
+    },
+    estimation: {
+      type: "string",
+      resolve: (doc) => {
+        const content = doc.body.raw;
+        const estimation = estimate(content);
+        return estimation.text;
+      },
+    },
+  },
 }));
 
 export default makeSource({
   contentDirPath: "./src/content",
   documentTypes: [Post],
-  filePathPattern: "/**/*.mdx",
   mdx: {
-    remarkPlugins: [remarkGfm],
+    remarkPlugins: [
+      remarkGfm,
+    ],
     rehypePlugins: [
       rehypeSlug,
+      [rehypePrettyCode, {
+        theme: "vitesse-dark",
+      }],
       [
         rehypeAutolinkHeadings,
         {
