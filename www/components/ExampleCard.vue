@@ -1,10 +1,12 @@
 <script setup lang="ts">
 const {
+  big = false,
   title,
   url,
   iconUrl,
 }
   = defineProps<{
+    big?: boolean
     title: string
     iconUrl?: string | {
       dark: string
@@ -18,7 +20,11 @@ const isDark = useDark();
 <template>
   <NuxtLink
     :href="url" target="_blank" rel="noopener noreferrer"
-    class="border border-base rounded p-4 flex items-center gap-2"
+    class="border border-base rounded flex items-center gap-2"
+    :class="{
+      'flex-col p-8 justify-center': big,
+      'flex-row p-4': !big,
+    }"
   >
     <NuxtImg v-if="(iconUrl && typeof iconUrl === 'object') && isDark" width="32" height="32" src="/astro-dark.svg" />
     <NuxtImg v-if="(iconUrl && typeof iconUrl === 'object') && !isDark" width="32" height="32" src="/astro-light.svg" />
