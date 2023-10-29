@@ -1,0 +1,19 @@
+# See https://github.com/actions/labeler
+
+example:
+  - examples/**/*
+
+🚨 action:
+  - .github/workflows/**
+
+package/lesetid:
+  - packages/lesetid/**
+
+package/vscode:
+  - packages/vscode/**
+
+package/remark-lesetid:
+  - packages/remark-lesetid/**
+
+www:
+  - www/**
