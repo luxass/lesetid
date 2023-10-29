@@ -3,7 +3,7 @@ import { allPosts } from "~/contentlayer";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = allPosts.map((post) => ({
-    url: `https://next-example.lesetid.dev/${post.slug}`,
+    url: `https://next-example.lesetid.dev/${post.url}`,
     lastModified: new Date().toISOString(),
   }));
 
