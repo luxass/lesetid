@@ -2,5 +2,8 @@
   "$schema": "https://examples.lesetid.dev/schema",
   "iconUrl": "/vite.svg",
   "title": "Vite Example",
-  "url": "https://vite-example.lesetid.dev"
+  "url": "https://vite-example.lesetid.dev",
+  "stackblitz": "https://stackblitz.com/github/luxass/lesetid/tree/main/examples/vite-example",
+  "codesandbox": "https://codesandbox.io/p/sandbox/github/luxass/lesetid/tree/main/examples/vite-example",
+  "codespaces": "https://codespaces.new/luxass/lesetid?devcontainer_path=.devcontainer/vite-example/devcontainer.json"
 }

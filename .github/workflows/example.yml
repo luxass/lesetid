@@ -1,0 +1,28 @@
+name: Examples CI
+
+on:
+  push:
+    branches:
+      - main
+    paths: 
+      - "examples/*/.lesetid"
+
+env:
+  FORCE_COLOR: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: corepack enable
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: pnpm
+
+      - name: 📦 Install dependencies
+        run: pnpm install
+
+      - name: 👋 Say Hello
+        run: echo "Hello, world!"

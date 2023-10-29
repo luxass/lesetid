@@ -23,7 +23,7 @@ const issueUrl = "https://github.com/luxass/lesetid/issues/new?assignees=&labels
   <main class="mt-8 flex flex-col gap-8">
     <h2>
       Examples
-      <span class="text-sm text-gray-500">
+      <span class="text-sm op25">
         {{ data?.examples?.length }} examples
       </span>
     </h2>
@@ -42,7 +42,7 @@ const issueUrl = "https://github.com/luxass/lesetid/issues/new?assignees=&labels
       />
       <NuxtLink
         :href="issueUrl" target="_blank" rel="noopener noreferrer"
-        class="border border-base border-dashed hover:border-solid rounded flex-col p-8 flex justify-center items-center gap-2"
+        class="text-center border border-base border-dashed hover:border-solid rounded flex-col p-8 flex justify-center items-center gap-2"
       >
         <Icon name="material-symbols:crop-square-outline" size="24" />
         Missing an example?

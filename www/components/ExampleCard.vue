@@ -20,7 +20,7 @@ const isDark = useDark();
 <template>
   <NuxtLink
     :href="url" target="_blank" rel="noopener noreferrer"
-    class="border border-base rounded flex items-center gap-2"
+    class="border border-base rounded flex gap-2 items-center text-center"
     :class="{
       'flex-col p-8 justify-center': big,
       'flex-row p-4': !big,
