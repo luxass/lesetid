@@ -3,6 +3,8 @@
 
 <template>
   <Header />
-  <main className="prose flex-1 p-4">{children}</main>
+  <main className="prose flex-1 p-4">
+    {children}
+  </main>
   <Footer />
 </template>

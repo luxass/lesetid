@@ -6,12 +6,11 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "typecheck": "tsc --noEmit",
     "check": "astro check",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@astrojs/check": "^0.2.1",
