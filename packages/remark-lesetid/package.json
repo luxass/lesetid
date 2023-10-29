@@ -60,7 +60,6 @@
     "dev": "tsup --watch",
     "test": "vitest run",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
