@@ -15,14 +15,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: corepack enable
-      - uses: actions/setup-node@v4
+
+      - name: Corepack enable
+        run: corepack enable
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: pnpm
+          cache: "pnpm"
 
-      - name: 📦 Install dependencies
-        run: pnpm install
-
-      - name: 👋 Say Hello
-        run: echo "Hello, world!"
+      - name: Update README Links
+        run: pnpx tsx ./scripts/update-example-links.ts

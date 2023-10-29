@@ -17,22 +17,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: corepack enable
-      - uses: actions/setup-node@v4
+
+      - name: Corepack enable
+        run: corepack enable
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: pnpm
+          cache: "pnpm"
 
-      - name: 📦 Install dependencies
+      - name: Install depdencies
         run: pnpm install
 
-      - name: 🛠 Build project
+      - name: Build
         run: pnpm build
 
-      - name: 🔠 Lint project
+      - name: Lint
         run: pnpm lint
 
-      - name: ✅ TypeCheck project
+      - name: Typecheck
         run: pnpm typecheck
 
   test:
@@ -42,14 +49,21 @@ jobs:
         node-version: [18, 20]
     steps:
       - uses: actions/checkout@v4
-      - run: corepack enable
-      - uses: actions/setup-node@v4
+
+      - name: Corepack enable
+        run: corepack enable
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: pnpm
+          cache: "pnpm"
 
-      - name: 📦 Install dependencies
+      - name: Install dependencies
         run: pnpm install
 
-      - name: 🧪 Test project
+      - name: Test
         run: pnpm test
