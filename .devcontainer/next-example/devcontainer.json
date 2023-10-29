@@ -1,9 +1,9 @@
 {
-  "name": "playground",
+  "name": "pLAYGROUND",
   "build": {
     "dockerfile": "../examples.Dockerfile"
   },
-  "workspaceFolder": "/workspaces/lesetid/www",
+  "workspaceFolder": "/workspaces/lesetid/examples/next-example",
   "portsAttributes": {
     "3000": {
       "label": "Application",
@@ -21,18 +21,12 @@
   "customizations": {
     "codespaces": {
       "openFiles": [
-        "pages/index.vue"
+        "src/app/layout.tsx"
       ]
     },
     "vscode": {
       "extensions": [
-        "astro-build.astro-vscode",
-        "dbaeumer.vscode-eslint",
-        "nuxtr.nuxtr-vscode",
-        "vue.volar",
-        "vue.vscode-typescript-vue-plugin",
-        "luxass.tsup-problem-matchers",
-        "svelte.svelte-vscode"
+        "dbaeumer.vscode-eslint"
       ]
     }
   }
