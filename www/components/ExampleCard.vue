@@ -26,8 +26,8 @@ const isDark = useDark();
       'flex-row p-4': !big,
     }"
   >
-    <NuxtImg v-if="(iconUrl && typeof iconUrl === 'object') && isDark" width="32" height="32" src="/astro-dark.svg" />
-    <NuxtImg v-if="(iconUrl && typeof iconUrl === 'object') && !isDark" width="32" height="32" src="/astro-light.svg" />
+    <NuxtImg v-if="(iconUrl && typeof iconUrl === 'object') && isDark" width="32" height="32" :src="iconUrl.dark" />
+    <NuxtImg v-if="(iconUrl && typeof iconUrl === 'object') && !isDark" width="32" height="32" :src="iconUrl.light" />
     <NuxtImg v-if="iconUrl && typeof iconUrl === 'string'" :src="iconUrl" width="32" height="32" />
     {{ title }}
   </NuxtLink>
