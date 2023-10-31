@@ -12,7 +12,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "solid-js": "^1.8.4"
+    "solid-js": "^1.8.5"
   },
   "devDependencies": {
     "typescript": "^5.2.2",

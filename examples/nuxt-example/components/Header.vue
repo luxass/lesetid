@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+const posts = await queryContent().limit(3).sort({ createdAt: -1 }).find();
 </script>
 
 <template>
@@ -9,13 +9,11 @@
         Nuxt Example
       </NuxtLink>
 
-      <!-- <div className="flex items-center gap-4 sm:gap-6">
-        {posts.map((post) => (
-          <NuxtLink class="transition-transform active:scale-95" href={`/${post.slug}`} key={post._id}>
-          {post.shortTitle}
-          </NuxtLink>
-        ))}
-      </div> -->
+      <div className="flex items-center gap-4 sm:gap-6">
+        <NuxtLink v-for="post in posts" :key="post._id" class="transition-transform active:scale-95" :href="post._path">
+          {{ post.shortTitle }}
+        </NuxtLink>
+      </div>
     </nav>
   </header>
 </template>

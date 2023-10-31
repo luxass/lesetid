@@ -42,6 +42,11 @@ export default defineNuxtConfig({
     payloadExtraction: true,
     typedPages: true,
   },
+  content: {
+    highlight: {
+      theme: "vitesse-dark",
+    },
+  },
   css: ["@unocss/reset/tailwind.css"],
   devServer: {
     port: 3001,
