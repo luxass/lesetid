@@ -20,7 +20,7 @@
 Published under [MIT License](./LICENSE).
 
 <!-- providers:start -->
-[stackblitz]: https://stackblitz.com/github/luxass/lesetid/tree/main/examples/astro-example
+[stackblitz]: https://stackblitz.com/github/luxass/lesetid/tree/main/examples/astro-example?title=astro%20example%20|%20lesetid
 [codesandbox]: https://codesandbox.io/p/sandbox/github/luxass/lesetid/tree/main/examples/astro-example
 [codespaces]: https://codespaces.new/luxass/lesetid?devcontainer_path=.devcontainer/astro-example/devcontainer.json
 <!-- providers:end -->

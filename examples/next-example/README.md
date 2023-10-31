@@ -19,7 +19,7 @@
 Published under [MIT License](./LICENSE).
 
 <!-- providers:start -->
-[stackblitz]: https://stackblitz.com/github/luxass/lesetid/tree/main/examples/next-example
+[stackblitz]: https://stackblitz.com/github/luxass/lesetid/tree/main/examples/next-example?title=next%20example%20|%20lesetid
 [codesandbox]: https://codesandbox.io/p/sandbox/github/luxass/lesetid/tree/main/examples/next-example
 [codespaces]: https://codespaces.new/luxass/lesetid?devcontainer_path=.devcontainer/next-example/devcontainer.json
 <!-- providers:end -->
