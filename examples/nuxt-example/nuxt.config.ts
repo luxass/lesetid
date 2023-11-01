@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "nuxt-og-image",
     "@nuxt/image",
     "@nuxt/content",
+    "@nuxtjs/fontaine",
   ],
   devtools: {
     enabled: true,
@@ -15,8 +16,11 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
-  plugins: [
-  ],
+  fontMetrics: {
+    fonts: [
+      { family: "Lexend", src: "./public/fonts/lexend.woff2" },
+    ],
+  },
   sourcemap: false,
   app: {
     head: {

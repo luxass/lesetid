@@ -1,30 +1,38 @@
 <script setup lang="ts">
-// import "floating-vue/dist/style.css";
 import "./styles/global.css";
 
 useHead({
-  title: "lesetid | playground",
+  title: "lesetid | nuxt example",
+  meta: [
+    {
+      name: "description",
+      content: "A example nuxt app using lesetid.dev",
+    },
+    {
+      // disable darkreader
+      name: "darkreader-lock",
+      content: "",
+    },
+  ],
 });
 
 useSeoMeta({
-  description: "A playground for lesetid",
-  ogTitle: "lesetid | playground",
-  ogDescription: "A playground for lesetid",
+  description: "A example nuxt app using lesetid.dev",
+  ogTitle: "lesetid | nuxt example",
+  ogDescription: "A example nuxt app using lesetid.dev",
 });
 
 defineOgImage({
-  title: "lesetid | playground",
-  description: "A playground for lesetid, a tool to estimate reading time.",
+  title: "lesetid | nuxt example",
+  description: "A example nuxt app using lesetid.dev",
   component: "Base",
 });
 </script>
 
 <template>
-  <div class="md:px14 py3 md:py10 flex flex-col">
-    <Header />
-    <main className="prose flex-1 p-4">
-      <NuxtPage />
-    </main>
-    <Footer />
-  </div>
+  <Header />
+  <main class="prose flex-1 p-4">
+    <NuxtPage />
+  </main>
+  <Footer />
 </template>

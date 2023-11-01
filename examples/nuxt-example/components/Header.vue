@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const posts = await queryContent().limit(3).sort({ createdAt: -1 }).find();
+const { data: posts } = await useAsyncData(
+  () => queryContent().limit(3).sort({ createdAt: -1 }).find(),
+);
 </script>
 
 <template>

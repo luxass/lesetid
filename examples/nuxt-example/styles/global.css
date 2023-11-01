@@ -1,16 +1,61 @@
-html, body , #__nuxt {
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  @apply: font-sans;
+html {
+  @apply antialiased touch-manipulation scroll-smooth text-base;
+  text-rendering: optimizeLegibility;
 }
 
-html.dark {
-  background: #111;
-  color: white;
-  color-scheme: dark;
+body {
+  @apply text-neutral-800 bg-neutral-100 dark:text-neutral-300 dark:bg-neutral-900 py-8 max-w-2xl md:!mx-auto !mx-4 min-h-100dvh;
 }
 
 #__nuxt {
-  @apply: max-w-4xl lg:!mx-auto !mx-4;
+  @apply: flex flex-col;
+}
+
+.prose {
+  @apply [&>:not(:last-child)]:mb-6;
+
+  & p {
+    @apply leading-relaxed;
+  }
+
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    @apply text-neutral-800 dark:text-neutral-100 font-semibold my-8;
+  }
+
+  & h1 {
+    @apply text-2xl;
+  }
+
+  & h2 {
+    @apply text-xl;
+  }
+
+  & h3 {
+    @apply text-lg;
+  }
+
+  & h4 {
+    @apply text-base;
+  }
+
+  & h5 {
+    @apply text-sm;
+  }
+
+  & h6 {
+    @apply text-xs;
+  }
+
+  & strong {
+    @apply font-medium text-neutral-800 dark:text-neutral-100;
+  }
+
+  & img {
+    @apply mx-auto rounded my-6;
+  }
 }

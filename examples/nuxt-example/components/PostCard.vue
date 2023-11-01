@@ -1,44 +1,41 @@
 <script setup lang="ts">
-import type { ParsedContent as DefaultParsedContent } from "@nuxt/content/dist/runtime/types";
+import {
+  estimate,
+} from "lesetid";
+import type { CustomParsedContent } from "~/types";
 
 const props
-  = defineProps<{
-    // TODO: FIX THIS PLEASE...................................
-    post: DefaultParsedContent
-  }>();
+= defineProps<{
+  post: CustomParsedContent
+}>();
 
-const formattedDate = new Date(props.post).toLocaleDateString("en-US", {
+const formattedDate = new Date(props.post.date).toLocaleDateString("en-US", {
   year: "numeric",
   month: "long",
   day: "numeric",
 });
 
-// const formattedDate = new Date(date).toLocaleDateString("en-US", {
-//   year: "numeric",
-//   month: "long",
-//   day: "numeric",
-// });
-
-// const formattedTitle = title.length > 30 ? `${title.slice(0, 30)}...` : title;
+const formattedTitle = props.post.title.length > 30 ? `${props.post.title.slice(0, 30)}...` : props.post.title;
 </script>
 
 <template>
-  <NuxtLink :href="{ post.}" class="flex flex-col">
+  <NuxtLink :href="post._path" class="h-full min-h-36 border border-transparent hover:(border-neutral-700) rounded p-4 text-neutral-800 dark:text-neutral-200 flex flex-col">
     <h3 class="!my-0">
-      {formattedTitle}
+      {{ formattedTitle }}
     </h3>
 
     <p class="flex-1">
-      {description}
+      {{ post.description }}
     </p>
 
     <span class="flex items-center gap-x-1">
-      <CalendarIcon />
-      {formattedDate}
+      <Icon name="carbon:calendar" />
+
+      {{ formattedDate }}
     </span>
     <span class="flex items-center gap-x-1">
-      <AlarmIcon />
-      {remarkPluginFrontmatter?.estimation?.text || "No estimation"}
+      <Icon name="carbon:alarm" />
+      <!-- {{ estimate(post.).text || "No estimation" }} -->
     </span>
   </NuxtLink>
 </template>
