@@ -2,5 +2,6 @@
   "$schema": "https://projectrc.luxass.dev/schema",
   "npm": true,
   "readme": true,
-  "website": "https://lesetid.dev"
+  "website": "https://lesetid.dev",
+  "monorepo": true
 }
