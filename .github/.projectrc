@@ -3,5 +3,7 @@
   "npm": true,
   "readme": true,
   "website": "https://lesetid.dev",
-  "monorepo": true
+  "monorepo": {
+    "enabled": true
+  }
 }
