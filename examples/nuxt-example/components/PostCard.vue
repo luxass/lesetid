@@ -23,7 +23,7 @@ const formattedDate = new Date(props.post).toLocaleDateString("en-US", {
 </script>
 
 <template>
-  <NuxtLink :href="{ post.}" class="flex flex-col">
+  <NuxtLink :href="{ }" class="flex flex-col">
     <h3 class="!my-0">
       {formattedTitle}
     </h3>
