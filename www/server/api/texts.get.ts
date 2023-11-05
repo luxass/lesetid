@@ -9,7 +9,7 @@ export default defineCachedEventHandler(
 
     const texts = await Promise.all(
       keys.map(async (key) => {
-        const file = await storage.getItem(key);
+        const file = await storage.getItem<string>(key);
         return {
           key,
           file,
