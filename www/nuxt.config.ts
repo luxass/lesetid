@@ -7,12 +7,14 @@ export default defineNuxtConfig({
     "@unocss/nuxt",
     "nuxt-og-image",
     "@nuxt/image",
+    "@nuxtjs/color-mode",
+    "@nuxtjs/fontaine",
   ],
+  site: {
+    url: "https://lesetid.dev",
+  },
   devtools: {
     enabled: true,
-    timeline: {
-      enabled: true,
-    },
   },
   plugins: [
     "~/plugins/floating-vue.ts",
@@ -21,6 +23,11 @@ export default defineNuxtConfig({
       mode: "client",
     },
   ],
+  colorMode: {
+    fallback: "dark",
+    preference: "dark",
+    classSuffix: "",
+  },
   sourcemap: false,
   app: {
     head: {
