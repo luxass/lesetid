@@ -1,19 +1,31 @@
 # See https://github.com/actions/labeler
 
+"pkg: lesetid":
+  - packages/lesetid/**
+
+"pkg: vscode":
+  - packages/vscode/**
+
+"pkg: remark-lesetid":
+  - packages/remark-lesetid/**
+
+"apps: www":
+  - www/**
+
 example:
   - examples/**/*
 
-🚨 action:
-  - .github/workflows/**
+"example: next":
+  - examples/next-example/*
 
-package/lesetid:
-  - packages/lesetid/**
+"example: nuxt":
+  - examples/nuxt-example/*
 
-package/vscode:
-  - packages/vscode/**
+"example: astro":
+  - examples/astro-example/*
 
-package/remark-lesetid:
-  - packages/remark-lesetid/**
+"example: sveltekit":
+  - examples/sveltekit-example/*
 
-www:
-  - www/**
+"example: vite":
+  - examples/vite-example/*
