@@ -4,6 +4,7 @@
   "readme": true,
   "website": "https://lesetid.dev",
   "monorepo": {
-    "enabled": true
+    "enabled": true,
+    "packages": [] 
   }
 }
