@@ -1,4 +1,25 @@
 <script setup lang="ts">
+const mode = useColorMode();
+const isDark = computed<boolean>({
+  get() {
+    return mode.value === "dark";
+  },
+  set() {
+    mode.preference = isDark.value ? "light" : "dark";
+  },
+});
+
+function toggle() {
+  isDark.value = !isDark.value;
+}
+
+const { state, next } = useCycleList([
+  "📋",
+  "📖",
+  "📚",
+  "🇩🇰",
+]);
+
 const text = ref("Write your article here!");
 
 interface Example {
@@ -18,7 +39,42 @@ const {
 </script>
 
 <template>
-  <Header />
+  <header>
+    <nav class="flex items-center justify-between flex-wrap">
+      <div class="flex gap-2 items-center">
+        <Icon :name="state" size="32" class="select-none cursor-pointer" @click="next()" />
+        <NuxtLink href="/">
+          <h1>lesetid</h1>
+        </NuxtLink>
+      </div>
+
+      <div class="flex items-center justify-between gap-2">
+        <NuxtLink href="https://github.com/luxass/lesetid">
+          <Icon name="octicon:mark-github" size="24" />
+        </NuxtLink>
+        <NuxtLink href="https://npmjs.com/package/lesetid">
+          <Icon name="carbon:logo-npm" size="24" />
+        </NuxtLink>
+
+        <ClientOnly>
+          <ColorScheme tag="span">
+            <button
+              title="Toggle Dark Mode" class="ml1 text-lg op-50 hover:op-75 flex items-center justify-center"
+              @click="toggle"
+            >
+              <Icon :name="isDark ? 'carbon:moon' : 'carbon:sun'" size="24" />
+            </button>
+          </ColorScheme>
+
+          <template #fallback>
+            <button title="Toggle Dark Mode" class="ml1 text-lg op-50 hover:op-75 flex items-center justify-center">
+              <Icon name="carbon:moon" size="24" />
+            </button>
+          </template>
+        </ClientOnly>
+      </div>
+    </nav>
+  </header>
 
   <main class="mt-8 flex flex-col gap-8">
     <Toolbar :model-value="text" @update:model-value="(str) => (text = str)" />
@@ -37,8 +93,8 @@ const {
         target="_blank" rel="noopener noreferrer"
         class="text-center border border-base border-dashed hover:border-solid rounded p-4 flex items-center gap-2"
       >
-        <Icon name="material-symbols:crop-square-outline" size="24" />
-        Missing an example?
+        <Icon name="material-symbols:crop-square-outline" size="32" />
+        <span class="flex-1 text-left">Missing an example?</span>
       </NuxtLink>
     </section>
   </main>
