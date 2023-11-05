@@ -2,7 +2,7 @@
   "name": "lesetid-monorepo",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@8.10.0",
+  "packageManager": "pnpm@8.10.2",
   "description": "Monorepo for the lesetid packages",
   "author": {
     "name": "Lucas Nørgård",
@@ -33,7 +33,7 @@
   "devDependencies": {
     "@luxass/eslint-config": "^3.3.2",
     "@types/node": "^18.16.19",
-    "eslint": "^8.52.0",
+    "eslint": "^8.53.0",
     "tsup": "^7.2.0",
     "turbo": "^1.10.16",
     "typescript": "^5.2.2",

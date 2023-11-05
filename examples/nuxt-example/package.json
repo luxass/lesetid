@@ -20,7 +20,7 @@
     "@nuxt/devtools": "latest",
     "@nuxt/image": "^1.0.0",
     "@nuxtjs/fontaine": "^0.4.1",
-    "@unocss/nuxt": "^0.57.1",
+    "@unocss/nuxt": "^0.57.2",
     "@vueuse/nuxt": "^10.5.0",
     "floating-vue": "^2.0.0-beta.24",
     "nuxt": "^3.8.0",
