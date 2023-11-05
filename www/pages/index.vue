@@ -35,7 +35,7 @@ interface Example {
 const {
   data,
   error,
-} = await useFetch<{ examples: Example[] }>("https://examples.lesetid.dev");
+} = await useAsyncData<{ examples: Example[] }>(() => $fetch("https://examples.lesetid.dev"));
 </script>
 
 <template>
@@ -91,7 +91,7 @@ const {
       <NuxtLink
         href="https://github.com/luxass/lesetid/issues/new?assignees=&labels=example&projects=&template=missing-example.yml&title=missing+example+for+%5BEXAMPLE%5D"
         target="_blank" rel="noopener noreferrer"
-        class="text-center border border-base border-dashed hover:border-solid rounded p-4 flex items-center gap-2"
+        class="text-center border border-base border-dashed hover:border-solid rounded h-20 p-4 flex items-center gap-2"
       >
         <Icon name="material-symbols:crop-square-outline" size="32" />
         <span class="flex-1 text-left">Missing an example?</span>

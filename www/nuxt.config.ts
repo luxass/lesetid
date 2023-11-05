@@ -17,7 +17,6 @@ export default defineNuxtConfig({
     enabled: true,
   },
   plugins: [
-    "~/plugins/floating-vue.ts",
     {
       src: "~/plugins/vercel-analytics.ts",
       mode: "client",
