@@ -29,3 +29,6 @@ example:
 
 "example: vite":
   - examples/vite-example/*
+
+article:
+  - www/example-texts/*
