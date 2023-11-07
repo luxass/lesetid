@@ -16,16 +16,16 @@ example:
   - examples/**/*
 
 "example: next":
-  - examples/next-example/*
+  - examples/next/*
 
 "example: nuxt":
-  - examples/nuxt-example/*
+  - examples/nuxt/*
 
 "example: astro":
-  - examples/astro-example/*
+  - examples/astro/*
 
 "example: sveltekit":
-  - examples/sveltekit-example/*
+  - examples/sveltekit/*
 
 "example: vite":
-  - examples/vite-example/*
+  - examples/vite/*
