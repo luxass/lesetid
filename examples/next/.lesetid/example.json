@@ -1,0 +1,9 @@
+{
+  "$schema": "https://examples.lesetid.dev/schema",
+  "iconUrl": "/nextjs.svg",
+  "title": "NextJS Example",
+  "url": "https://next-example.lesetid.dev",
+  "stackblitz": "https://stackblitz.com/github/luxass/lesetid/tree/main/examples/next?title=next%20example%20|%20lesetid",
+  "codesandbox": "https://codesandbox.io/p/sandbox/github/luxass/lesetid/tree/main/examples/next",
+  "codespaces": "https://codespaces.new/luxass/lesetid?devcontainer_path=.devcontainer/next/devcontainer.json"
+}

@@ -1,0 +1,71 @@
+html, body , #__nuxt {
+  margin: 0;
+  padding: 0;
+  @apply: font-sans;
+}
+
+body {
+  height: 100dvh;
+}
+
+html {
+  @apply antialiased touch-manipulation scroll-smooth text-base;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  @apply text-neutral-800 bg-neutral-100 dark:text-neutral-300 dark:bg-neutral-900 py-8 max-w-2xl md:!mx-auto !mx-4 min-h-100dvh;
+}
+
+#__nuxt {
+  @apply: flex flex-col h-full;
+}
+
+.prose {
+  @apply: [&>:not(:last-child)]:mb-6;
+
+  & p {
+    @apply leading-relaxed;
+  }
+
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    @apply text-neutral-800 dark:text-neutral-100 font-semibold my-8;
+  }
+
+  & h1 {
+    @apply text-2xl;
+  }
+
+  & h2 {
+    @apply text-xl;
+  }
+
+  & h3 {
+    @apply text-lg;
+  }
+
+  & h4 {
+    @apply text-base;
+  }
+
+  & h5 {
+    @apply text-sm;
+  }
+
+  & h6 {
+    @apply text-xs;
+  }
+
+  & strong {
+    @apply font-medium text-neutral-800 dark:text-neutral-100;
+  }
+
+  & img {
+    @apply mx-auto rounded my-6;
+  }
+}

@@ -1,3 +1,4 @@
 {
-  "nuxtr.monorepoMode.DirectoryName": "apps/www"
+  "nuxtr.monorepoMode.DirectoryName": "www",
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

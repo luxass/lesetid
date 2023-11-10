@@ -3,6 +3,8 @@ import { estimate } from "lesetid";
 import type { Root } from "mdast";
 import type { Plugin } from "unified";
 
+export type { Estimation } from "lesetid";
+
 export interface Options {
   dataKey: string
 }
@@ -22,3 +24,5 @@ export const remarkLesetid: Plugin<[Options], Root> = (options: Options) => {
     });
   };
 };
+
+export default remarkLesetid;

@@ -1,8 +1,7 @@
 {
-  "name": "www",
+  "name": "@lesetid/nuxt-example",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@8.10.2",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -13,17 +12,17 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@vercel/analytics": "^1.1.1",
     "@vueuse/components": "^10.6.0",
-    "lesetid": "workspace:*"
+    "remark-lesetid": "latest"
   },
   "devDependencies": {
+    "@nuxt/content": "^2.9.0",
     "@nuxt/devtools": "latest",
     "@nuxt/image": "^1.0.0",
-    "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/fontaine": "^0.4.1",
     "@unocss/nuxt": "^0.57.3",
     "@vueuse/nuxt": "^10.6.0",
+    "floating-vue": "^2.0.0-beta.24",
     "nuxt": "^3.8.1",
     "nuxt-icon": "^0.6.5",
     "nuxt-og-image": "^2.2.3",
