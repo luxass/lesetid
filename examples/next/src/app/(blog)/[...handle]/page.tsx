@@ -83,7 +83,7 @@ export default async function PostPage({ params }: PostPageProps) {
   }
 
   return (
-    <div className="tracking-wide">
+    <article className="prose tracking-wide">
       {
         !post.published && (
           <Notification type="important">
@@ -98,6 +98,6 @@ export default async function PostPage({ params }: PostPageProps) {
       </Notification>
       <h1 className="mt-8">{post.title}</h1>
       <MDXContent code={post.body.code} />
-    </div>
+    </article>
   );
 }

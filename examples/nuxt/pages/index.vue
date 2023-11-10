@@ -1,10 +1,13 @@
 <script setup lang="ts">
-const posts = await queryContent().sort({ createdAt: -1 }).find();
+import type { CustomParsedContent } from "~/types";
+
+const posts = await queryContent<CustomParsedContent>().sort({ createdAt: -1 }).find();
 </script>
 
 <template>
-  <h1>Posts</h1>
-  <p>This is a blog</p>
+  <h1 class="mb-6 text-neutral-800 dark:text-neutral-100 font-semibold my-8 text-2xl">
+    Posts
+  </h1>
   <article>
     <ul v-if="posts.length > 0" class="grid auto-cols-max grid-cols-1 mt-4 gap-4 sm:grid-cols-2 sm:gap-3">
       <li v-for="post in posts" :key="post._id">

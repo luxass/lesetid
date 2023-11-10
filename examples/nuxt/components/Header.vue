@@ -11,7 +11,7 @@ const { data: posts } = await useAsyncData(
         Nuxt Example
       </NuxtLink>
 
-      <div className="flex items-center gap-4 sm:gap-6">
+      <div class="flex items-center gap-4 sm:gap-6">
         <NuxtLink v-for="post in posts" :key="post._id" class="transition-transform active:scale-95" :href="post._path">
           {{ post.shortTitle }}
         </NuxtLink>

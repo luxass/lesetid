@@ -31,7 +31,7 @@ defineOgImage({
 
 <template>
   <Header />
-  <main class="prose flex-1 p-4">
+  <main class="flex-1 p-4">
     <NuxtPage />
   </main>
   <Footer />

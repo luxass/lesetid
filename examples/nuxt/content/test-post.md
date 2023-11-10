@@ -6,11 +6,7 @@ published: true
 shortTitle: Cool Post
 ---
 
-## This is a cool post. React
-Vue
-React
-REACT
-VUE
+## This is a cool post.
 
 It is really cool.
 

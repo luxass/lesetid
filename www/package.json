@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@vercel/analytics": "^1.1.1",
-    "@vueuse/components": "^10.5.0",
+    "@vueuse/components": "^10.6.0",
     "lesetid": "workspace:*"
   },
   "devDependencies": {
@@ -22,8 +22,8 @@
     "@nuxt/image": "^1.0.0",
     "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/fontaine": "^0.4.1",
-    "@unocss/nuxt": "^0.57.2",
-    "@vueuse/nuxt": "^10.5.0",
+    "@unocss/nuxt": "^0.57.3",
+    "@vueuse/nuxt": "^10.6.0",
     "nuxt": "^3.8.1",
     "nuxt-icon": "^0.6.5",
     "nuxt-og-image": "^2.2.4",

@@ -1,8 +1,8 @@
-// TODO: FIX THIS PLEASE...................................
-// import type { ParsedContent as DefaultParsedContent } from "@nuxt/content/dist/runtime/types";
-// WE CAN'T UTILIZE THIS **** BECAUSE IT'S WE CAN'T IMPORT IT??!?!
+// import type { ParsedContent } from "@nuxt/content/dist/runtime/types";
+// We cannot use this import atm, because it typescript will error.
+// So we are just copying the types from the package.
 
-import type { StorageValue } from "unstorage";
+import type { Estimation } from "remark-lesetid";
 import type { LayoutKey } from "#build/types/layouts";
 
 export interface ParsedContentInternalMeta {
@@ -68,7 +68,6 @@ export interface ParsedContent extends ParsedContentMeta {
   body: MarkdownRoot | null
 }
 
-//
 export interface MarkdownNode {
   type: string
   tag?: string
@@ -154,4 +153,5 @@ export interface CustomParsedContent extends ParsedContent {
   date: string
   published: boolean
   shortTitle: string
+  estimation: Estimation
 }

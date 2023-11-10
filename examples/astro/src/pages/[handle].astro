@@ -40,7 +40,7 @@ export const prerender = true;
     }),
   )}`}
 >
-  <div class="tracking-wide">
+  <article class="prose tracking-wide">
     {
       !published && (
         <Notification type="important">
@@ -58,5 +58,5 @@ export const prerender = true;
     <Content components={{
       code: Code,
     }} />
-  </div>
+  </article>
 </PageLayout>

@@ -6,7 +6,7 @@ export default function BlogLayout({ children }: PropsWithChildren) {
   return (
     <>
       <Header />
-      <main className="prose flex-1 p-4">{children}</main>
+      <main className="flex-1 p-4">{children}</main>
       <Footer />
     </>
   );

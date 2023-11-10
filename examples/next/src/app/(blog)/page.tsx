@@ -6,8 +6,7 @@ export default function IndexPage() {
 
   return (
     <>
-      <h1>Posts</h1>
-      <p>This is a blog</p>
+      <h1 className="mb-6 text-neutral-800 dark:text-neutral-100 font-semibold my-8 text-2xl">Posts</h1>
       <article>
         {
           posts.length > 0

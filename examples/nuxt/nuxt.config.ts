@@ -16,11 +16,6 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
-  fontMetrics: {
-    fonts: [
-      { family: "Lexend", src: "./public/fonts/lexend.woff2" },
-    ],
-  },
   sourcemap: false,
   app: {
     head: {
@@ -49,6 +44,13 @@ export default defineNuxtConfig({
   content: {
     highlight: {
       theme: "vitesse-dark",
+    },
+    markdown: {
+      remarkPlugins: {
+        "remark-lesetid": {
+          dataKey: "estimation",
+        },
+      },
     },
   },
   css: ["@unocss/reset/tailwind.css"],

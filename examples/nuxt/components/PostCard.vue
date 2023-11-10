@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import {
-  estimate,
-} from "lesetid";
 import type { CustomParsedContent } from "~/types";
 
 const props
@@ -35,7 +32,7 @@ const formattedTitle = props.post.title.length > 30 ? `${props.post.title.slice(
     </span>
     <span class="flex items-center gap-x-1">
       <Icon name="carbon:alarm" />
-      <!-- {{ estimate(post.).text || "No estimation" }} -->
+      {{ props.post.estimation.text || "No estimation" }}
     </span>
   </NuxtLink>
 </template>
