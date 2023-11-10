@@ -1,9 +1,9 @@
 {
-  "name": "pLAYGROUND",
+  "name": "Playground",
   "build": {
     "dockerfile": "../examples.Dockerfile"
   },
-  "workspaceFolder": "/workspaces/lesetid/examples/next-example",
+  "workspaceFolder": "/workspaces/lesetid/examples/next",
   "portsAttributes": {
     "3000": {
       "label": "Application",

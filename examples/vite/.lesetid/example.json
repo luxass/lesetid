@@ -1,9 +1,0 @@
-{
-  "$schema": "https://examples.lesetid.dev/schema",
-  "iconUrl": "/vite.svg",
-  "title": "Vite Example",
-  "url": "https://vite-example.lesetid.dev",
-  "stackblitz": "https://stackblitz.com/github/luxass/lesetid/tree/main/examples/vite?title=astro%20example%20|%20lesetid",
-  "codesandbox": "https://codesandbox.io/p/sandbox/github/luxass/lesetid/tree/main/examples/vite",
-  "codespaces": "https://codespaces.new/luxass/lesetid?devcontainer_path=.devcontainer/vite/devcontainer.json"
-}
