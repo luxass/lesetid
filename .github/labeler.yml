@@ -24,8 +24,5 @@ example:
 "example: astro":
   - examples/astro/*
 
-"example: sveltekit":
-  - examples/sveltekit/*
-
 "example: vite":
   - examples/vite/*
