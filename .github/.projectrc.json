@@ -12,7 +12,7 @@
     "packages": [
       {
         "name": "lesetid",
-        "path": "./packages/lesetid"
+        "ignore": true
       }
     ] 
   }
