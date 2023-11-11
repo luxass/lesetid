@@ -57,7 +57,7 @@ export default defineNuxtConfig({
     serverAssets: [
       {
         baseName: "texts",
-        dir: "../example-texts",
+        dir: "../../example-articles",
       },
     ],
   },

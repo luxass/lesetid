@@ -1,8 +1,8 @@
 {
   "publisher": "luxass",
-  "name": "vscode-reading-time",
+  "name": "reading-time",
   "displayName": "Reading Time",
-  "version": "0.3.1",
+  "version": "0.1.0",
   "private": true,
   "description": "An extension that estimates the reading time of a markdown file.",
   "author": {
@@ -25,34 +25,55 @@
     "vscode": "^1.70.0"
   },
   "activationEvents": [
-    "onStartupFinished"
+    "onStartupFinished",
+    "onCommand:reading-time.estimate"
   ],
-  "browser": "./dist/browser/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "reading-time.estimate",
         "title": "Estimate Reading Time",
         "category": "Reading Time"
-      },
-      {
-        "command": "reading-time.playground",
-        "title": "Open Playground",
-        "category": "Reading Time"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Reading Time",
+      "properties": {
+        "reading-time.wpm": {
+          "type": "number",
+          "default": 200,
+          "description": "Words per minute"
+        },
+        "reading-time.cpm": {
+          "type": "number",
+          "default": 500,
+          "description": "Characters per minute (used for chinese texts)"
+        },
+        "reading-time.files": {
+          "type": "array",
+          "default": [
+            "markdown"
+          ],
+          "description": "Glob patterns for files to estimate reading time for"
+        }
+      }
+    }
   },
+  "browser": "./dist/web/extension.js",
   "scripts": {
     "vscode:prepublish": "tsup --minify",
     "build": "tsup",
     "dev": "tsup --watch",
-    "browser": "vscode-test-web --extensionDevelopmentPath=. --folder-uri=vscode-vfs://github/luxass/vscode-schemas",
+    "browser": "vscode-test-web --extensionDevelopmentPath=. --folder-uri=vscode-vfs://github/luxass/luxass.dev",
     "web:serve": "npx serve --cors -l 5000",
     "web:tunnel": "npx localtunnel -p 5000",
     "package": "pnpm vsce package --no-dependencies",
     "release": "pnpm vsce publish --no-dependencies",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "lesetid": "workspace:*"
   },
   "devDependencies": {
     "@types/vscode": "^1.80.0",
@@ -61,5 +82,9 @@
   },
   "capabilities": {
     "virtualWorkspaces": true
-  }
+  },
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ]
 }
