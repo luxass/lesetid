@@ -9,7 +9,7 @@
       "examples/*",
       "www"
     ],
-    "packages": [
+    "overrides": [
       {
         "name": "lesetid",
         "ignore": true
