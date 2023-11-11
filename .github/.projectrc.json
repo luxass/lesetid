@@ -5,6 +5,9 @@
   "website": "https://lesetid.dev",
   "monorepo": {
     "enabled": true,
+    "ignores": [
+      "examples/*"
+    ],
     "packages": [] 
   }
 }
