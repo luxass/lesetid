@@ -8,12 +8,6 @@
     "ignores": [
       "examples/*",
       "www"
-    ],
-    "overrides": [
-      {
-        "name": "lesetid",
-        "ignore": true
-      }
-    ] 
+    ]
   }
 }
