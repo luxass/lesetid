@@ -8,6 +8,16 @@
     "ignores": [
       "examples/*",
       "www"
+    ],
+    "overrides": [
+      {
+        "name": "vscode-reading-time",
+        "ignore": true
+      },
+      {
+        "name": "remark-lesetid",
+        "ignore": true
+      }
     ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "publisher": "luxass",
-  "name": "reading-time",
+  "name": "vscode-reading-time",
   "displayName": "Reading Time",
   "version": "0.1.0",
   "private": true,
