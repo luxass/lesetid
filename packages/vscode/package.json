@@ -22,7 +22,7 @@
   "main": "./dist/extension.js",
   "icon": "media/icon.png",
   "engines": {
-    "vscode": "^1.70.0"
+    "vscode": "^2023.0.0"
   },
   "activationEvents": [
     "onStartupFinished",
