@@ -3,7 +3,7 @@ import { window } from "vscode";
 const _log = window.createOutputChannel("Reading Time");
 export const log = {
   info: (...args: any[]) => {
-    console.info(...args);
+    console.warn(...args);
     const time = new Date().toLocaleTimeString();
     _log.appendLine(`[INFO ${time}] ${args.join(" ")}`);
   },

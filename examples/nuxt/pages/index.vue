@@ -5,7 +5,7 @@ const posts = await queryContent<CustomParsedContent>().sort({ createdAt: -1 }).
 </script>
 
 <template>
-  <h1 class="mb-6 text-neutral-800 dark:text-neutral-100 font-semibold my-8 text-2xl">
+  <h1 class="my-8 mb-6 text-2xl font-semibold text-neutral-800 dark:text-neutral-100">
     Posts
   </h1>
   <article>

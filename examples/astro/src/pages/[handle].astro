@@ -44,8 +44,7 @@ export const prerender = true;
     {
       !published && (
         <Notification type="important">
-          This post is a <strong>draft</strong>. It may be incomplete or contain
-          inaccuracies.
+          This post is a <strong>draft</strong>. It may be incomplete or contain inaccuracies.
         </Notification>
       )
     }
@@ -55,8 +54,10 @@ export const prerender = true;
     </Notification>
 
     <h1 class="mt-8">{title}</h1>
-    <Content components={{
-      code: Code,
-    }} />
+    <Content
+      components={{
+        code: Code,
+      }}
+    />
   </article>
 </PageLayout>

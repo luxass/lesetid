@@ -31,7 +31,7 @@ watch(selectedText, () => {
 </script>
 
 <template>
-  <div class="rounded border border-base p-2 flex flex-wrap justify-between gap-2">
+  <div class="flex flex-wrap justify-between gap-2 border border-base rounded p-2">
     <div class="flex items-center gap-2">
       <Icon name="🕑" size="24" />
       <span>{{ time.text }}</span>

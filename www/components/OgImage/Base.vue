@@ -11,13 +11,13 @@ const props = defineProps({
 
 <template>
   <div
-    class="flex items-center text-center text-xl justify-center w-full h-full bg-blue-600"
+    class="h-full w-full flex items-center justify-center bg-blue-600 text-center text-xl"
   >
     <h1 class="text-white">
       {{ props.title }}
     </h1>
 
-    <p class="text-white text-lg">
+    <p class="text-lg text-white">
       {{ props.description }}
     </p>
   </div>

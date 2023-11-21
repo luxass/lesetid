@@ -5,7 +5,7 @@ import { toString } from "mdast-util-to-string";
 import type { Plugin } from "unified";
 import type { Root } from "mdast";
 
-export const remarkLesetid: Plugin<[], Root> = () => {
+export const remarkLesetid: Plugin<any[], Root> = () => {
   return (tree, file) => {
     const textOnPage = toString(tree);
     const estimation = estimate(textOnPage);

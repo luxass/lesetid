@@ -1,4 +1,5 @@
-import { describe, expect, test } from "vitest";
+/* eslint-disable test/no-identical-title */
+import { describe, expect, it } from "vitest";
 import { createVolapyk } from "volapyk";
 import { count, estimate } from "../src";
 
@@ -6,7 +7,7 @@ import { CJK_CHARACTERS } from "./shared";
 
 describe("estimate", () => {
   describe("should handle small texts", () => {
-    test("one word texts", () => {
+    it("one word texts", () => {
       const volapyk = createVolapyk({
         chars: "preset:ansi",
         type: "text",
@@ -19,7 +20,7 @@ describe("estimate", () => {
       expect(time).toBe(300);
     });
 
-    test("less than 1 minute text", () => {
+    it("less than 1 minute text", () => {
       const volapyk = createVolapyk({
         chars: "preset:ansi",
         type: "text",
@@ -31,7 +32,7 @@ describe("estimate", () => {
       expect(time).toBe(600);
     });
 
-    test("less than 1 minute text", () => {
+    it("less than 1 minute text", () => {
       const volapyk = createVolapyk({
         chars: "preset:ansi",
         type: "text",
@@ -43,7 +44,7 @@ describe("estimate", () => {
       expect(time).toBe(15000);
     });
 
-    test("1 minute text", () => {
+    it("1 minute text", () => {
       const volapyk = createVolapyk({
         chars: "preset:ansi",
         type: "text",
@@ -55,7 +56,7 @@ describe("estimate", () => {
       expect(time).toBe(30000);
     });
 
-    test("less than 3 minute text", () => {
+    it("less than 3 minute text", () => {
       const volapyk = createVolapyk({
         chars: "preset:ansi",
         type: "text",
@@ -67,7 +68,7 @@ describe("estimate", () => {
       expect(time).toBe(150000);
     });
 
-    test("less than 5 minute text", () => {
+    it("less than 5 minute text", () => {
       const volapyk = createVolapyk({
         chars: "preset:ansi",
         type: "text",
@@ -81,7 +82,7 @@ describe("estimate", () => {
   });
 
   describe("handle texts with successive whitespaces", () => {
-    test("containing multiple successive whitespaces", () => {
+    it("containing multiple successive whitespaces", () => {
       const text = "this text  has    whitespaces   placed randomly.";
       const { minutes, time } = estimate(text);
 
@@ -89,7 +90,7 @@ describe("estimate", () => {
       expect(time).toBe(1800);
     });
 
-    test("starting with whitespaces", () => {
+    it("starting with whitespaces", () => {
       const text = "     this text starts with whitespaces.";
       const { minutes, time } = estimate(text);
 
@@ -97,7 +98,7 @@ describe("estimate", () => {
       expect(time).toBe(1500);
     });
 
-    test("ending with whitespaces", () => {
+    it("ending with whitespaces", () => {
       const text = "this text starts with whitespaces.         ";
       const { minutes, time } = estimate(text);
 
@@ -107,7 +108,7 @@ describe("estimate", () => {
   });
 
   describe("handle texts with successive punctuation marks", () => {
-    test("containing multiple successive punctuation marks", () => {
+    it("containing multiple successive punctuation marks", () => {
       const text = "this text has punctuation marks placed randomly...?!";
 
       const { minutes, time } = estimate(text);
@@ -118,7 +119,7 @@ describe("estimate", () => {
   });
 
   describe("handle texts with links", () => {
-    test("containing a normal url", () => {
+    it("containing a normal url", () => {
       const text = "this text has a link https://luxass.dev";
 
       const { minutes, time } = estimate(text);
@@ -127,7 +128,7 @@ describe("estimate", () => {
       expect(time).toBe(2400);
     });
 
-    test("containing a url with a path", () => {
+    it("containing a url with a path", () => {
       const text = "this text has a link https://luxass.dev/projects/lesetid";
 
       const { minutes, time } = estimate(text);
@@ -136,7 +137,7 @@ describe("estimate", () => {
       expect(time).toBe(3000);
     });
 
-    test("handle markdown links", () => {
+    it("handle markdown links", () => {
       const text
         = "this text has a markdown link to my [projects](https://luxass.dev/projects)";
 
@@ -147,7 +148,7 @@ describe("estimate", () => {
     });
   });
 
-  test("handle texts with emojis", () => {
+  it("handle texts with emojis", () => {
     const text
       = "this text has emojis 😎🤓🤩🥳🤯🤬🤮🤢🤧🥵🥶🥴😵🤪🤠🥳🥸🤏🤞🤟🤘🤙👈👉👆👇👍👎👊👋🤚🖐️✋🖖";
 
@@ -157,7 +158,7 @@ describe("estimate", () => {
     expect(time).toBe(1500);
   });
 
-  test("handle empty texts", () => {
+  it("handle empty texts", () => {
     const text = " ";
 
     const { minutes, time } = estimate(text);
@@ -166,7 +167,7 @@ describe("estimate", () => {
     expect(time).toBe(0);
   });
 
-  test("handle texts with only punctuation marks", () => {
+  it("handle texts with only punctuation marks", () => {
     const text = "....";
 
     const { minutes, time } = estimate(text);
@@ -175,7 +176,7 @@ describe("estimate", () => {
     expect(time).toBe(0);
   });
 
-  test("use custom words per minute", () => {
+  it("use custom words per minute", () => {
     const volapyk = createVolapyk({
       chars: "preset:ansi",
       type: "text",
@@ -192,7 +193,7 @@ describe("estimate", () => {
 
   describe("handle texts with cjk characters", () => {
     describe("should handle small texts", () => {
-      test("one word texts", () => {
+      it("one word texts", () => {
         const volapyk = createVolapyk({
           chars: CJK_CHARACTERS,
           type: "text",
@@ -205,7 +206,7 @@ describe("estimate", () => {
         expect(time).toBe(12000);
       });
 
-      test("less than 1 minute text", () => {
+      it("less than 1 minute text", () => {
         const volapyk = createVolapyk({
           chars: CJK_CHARACTERS,
           type: "text",
@@ -217,7 +218,7 @@ describe("estimate", () => {
         expect(time).toBe(240);
       });
 
-      test("less than 1 minute text", () => {
+      it("less than 1 minute text", () => {
         const volapyk = createVolapyk({
           chars: CJK_CHARACTERS,
           type: "text",
@@ -229,7 +230,7 @@ describe("estimate", () => {
         expect(time).toBe(6000);
       });
 
-      test("1 minute text", () => {
+      it("1 minute text", () => {
         const volapyk = createVolapyk({
           chars: CJK_CHARACTERS,
           type: "text",
@@ -242,7 +243,7 @@ describe("estimate", () => {
         expect(time).toBe(12000);
       });
 
-      test("less than 3 minute text", () => {
+      it("less than 3 minute text", () => {
         const volapyk = createVolapyk({
           chars: CJK_CHARACTERS,
           type: "text",
@@ -255,7 +256,7 @@ describe("estimate", () => {
         expect(time).toBe(60000);
       });
 
-      test("less than 5 minute text", () => {
+      it("less than 5 minute text", () => {
         const volapyk = createVolapyk({
           chars: CJK_CHARACTERS,
           type: "text",
@@ -272,7 +273,7 @@ describe("estimate", () => {
 
 describe("count", () => {
   describe("should handle small texts", () => {
-    test("one word texts", () => {
+    it("one word texts", () => {
       const wordCount = 1;
       const volapyk = createVolapyk({
         chars: "preset:ansi",
@@ -286,7 +287,7 @@ describe("count", () => {
       expect(chars).toBe(0);
     });
 
-    test("less than 1 minute text", () => {
+    it("less than 1 minute text", () => {
       const wordCount = 2;
       const volapyk = createVolapyk({
         chars: "preset:ansi",
@@ -300,7 +301,7 @@ describe("count", () => {
       expect(chars).toBe(0);
     });
 
-    test("less than 1 minute text", () => {
+    it("less than 1 minute text", () => {
       const wordCount = 50;
       const volapyk = createVolapyk({
         chars: "preset:ansi",
@@ -314,7 +315,7 @@ describe("count", () => {
       expect(chars).toBe(0);
     });
 
-    test("1 minute text", () => {
+    it("1 minute text", () => {
       const wordCount = 100;
       const volapyk = createVolapyk({
         chars: "preset:ansi",
@@ -328,7 +329,7 @@ describe("count", () => {
       expect(chars).toBe(0);
     });
 
-    test("less than 3 minute text", () => {
+    it("less than 3 minute text", () => {
       const wordCount = 500;
       const volapyk = createVolapyk({
         chars: "preset:ansi",
@@ -342,7 +343,7 @@ describe("count", () => {
       expect(chars).toBe(0);
     });
 
-    test("less than 5 minute text", () => {
+    it("less than 5 minute text", () => {
       const wordCount = 967;
       const volapyk = createVolapyk({
         chars: "preset:ansi",
@@ -358,7 +359,7 @@ describe("count", () => {
   });
 
   describe("handle texts with successive whitespaces", () => {
-    test("containing multiple successive whitespaces", () => {
+    it("containing multiple successive whitespaces", () => {
       const text = "this text  has    whitespaces   placed randomly.";
       const { chars, words } = count(text);
 
@@ -366,7 +367,7 @@ describe("count", () => {
       expect(chars).toBe(0);
     });
 
-    test("starting with whitespaces", () => {
+    it("starting with whitespaces", () => {
       const text = "     this text starts with whitespaces.";
       const { chars, words } = count(text);
 
@@ -374,7 +375,7 @@ describe("count", () => {
       expect(chars).toBe(0);
     });
 
-    test("ending with whitespaces", () => {
+    it("ending with whitespaces", () => {
       const text = "this text starts with whitespaces.         ";
       const { chars, words } = count(text);
 
@@ -384,7 +385,7 @@ describe("count", () => {
   });
 
   describe("handle texts with successive punctuation marks", () => {
-    test("containing multiple successive punctuation marks", () => {
+    it("containing multiple successive punctuation marks", () => {
       const text = "this text has punctuation marks placed randomly...?!";
 
       const { chars, words } = count(text);
@@ -395,7 +396,7 @@ describe("count", () => {
   });
 
   describe("handle texts with links", () => {
-    test("containing a normal url", () => {
+    it("containing a normal url", () => {
       const text = "this text has a link https://luxass.dev";
 
       const { chars, words } = count(text);
@@ -404,7 +405,7 @@ describe("count", () => {
       expect(chars).toBe(0);
     });
 
-    test("containing a url with a path", () => {
+    it("containing a url with a path", () => {
       const text = "this text has a link https://luxass.dev/projects/lesetid";
 
       const { chars, words } = count(text);
@@ -413,7 +414,7 @@ describe("count", () => {
       expect(chars).toBe(0);
     });
 
-    test("handle markdown links", () => {
+    it("handle markdown links", () => {
       const text
         = "this text has a markdown link to my [projects](https://luxass.dev/projects)";
 
@@ -424,7 +425,7 @@ describe("count", () => {
     });
   });
 
-  test("handle texts with emojis", () => {
+  it("handle texts with emojis", () => {
     const text
       = "this text has emojis 😎🤓🤩🥳🤯🤬🤮🤢🤧🥵🥶🥴😵🤪🤠🥳🥸🤏🤞🤟🤘🤙👈👉👆👇👍👎👊👋🤚🖐️✋🖖";
 
@@ -434,7 +435,7 @@ describe("count", () => {
     expect(chars).toBe(0);
   });
 
-  test("handle empty texts", () => {
+  it("handle empty texts", () => {
     const text = " ";
 
     const { chars, words } = count(text);
@@ -443,7 +444,7 @@ describe("count", () => {
     expect(chars).toBe(0);
   });
 
-  test("handle texts with only punctuation marks", () => {
+  it("handle texts with only punctuation marks", () => {
     const text = "....";
 
     const { chars, words } = count(text);
@@ -452,7 +453,7 @@ describe("count", () => {
     expect(chars).toBe(0);
   });
 
-  test("use custom words per minute", () => {
+  it("use custom words per minute", () => {
     const wordCount = 200;
     const volapyk = createVolapyk({
       chars: "preset:ansi",
@@ -470,7 +471,7 @@ describe("count", () => {
 
   describe("handle texts with cjk characters", () => {
     describe("should handle small texts", () => {
-      test("one word texts", () => {
+      it("one word texts", () => {
         const wordCount = 100;
         const volapyk = createVolapyk({
           chars: CJK_CHARACTERS,
@@ -484,7 +485,7 @@ describe("count", () => {
         expect(chars).toBe(wordCount);
       });
 
-      test("less than 1 minute text", () => {
+      it("less than 1 minute text", () => {
         const wordCount = 2;
         const volapyk = createVolapyk({
           chars: CJK_CHARACTERS,
@@ -498,7 +499,7 @@ describe("count", () => {
         expect(chars).toBe(wordCount);
       });
 
-      test("less than 1 minute text", () => {
+      it("less than 1 minute text", () => {
         const wordCount = 50;
         const volapyk = createVolapyk({
           chars: CJK_CHARACTERS,
@@ -512,7 +513,7 @@ describe("count", () => {
         expect(chars).toBe(wordCount);
       });
 
-      test("1 minute text", () => {
+      it("1 minute text", () => {
         const wordCount = 100;
         const volapyk = createVolapyk({
           chars: CJK_CHARACTERS,
@@ -526,7 +527,7 @@ describe("count", () => {
         expect(chars).toBe(wordCount);
       });
 
-      test("less than 3 minute text", () => {
+      it("less than 3 minute text", () => {
         const wordCount = 500;
         const volapyk = createVolapyk({
           chars: CJK_CHARACTERS,
@@ -540,7 +541,7 @@ describe("count", () => {
         expect(chars).toBe(wordCount);
       });
 
-      test("less than 5 minute text", () => {
+      it("less than 5 minute text", () => {
         const wordCount = 967;
         const volapyk = createVolapyk({
           chars: CJK_CHARACTERS,

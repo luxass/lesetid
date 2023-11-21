@@ -28,7 +28,7 @@ export const DEFAULT_OPTIONS = {
  * Counts the number of words and characters in the given text.
  *
  * @param {string?} text - the text to count words and characters in.
- * @param {Options} [options=DEFAULT_OPTIONS] - the options to use.
+ * @param {Options} [options] - the options to use.
  * @returns {CountResult} the result of words and characters.
  */
 export function count(
@@ -71,7 +71,7 @@ export function count(
     } else if (
       isPunctuationOrWord(char, options.isWord || isAnsi)
       && (!isPunctuationOrWord(nextChar, options.isWord || isAnsi)
-        || isCJK(nextChar))
+      || isCJK(nextChar))
     ) {
       words++;
     }
@@ -88,7 +88,7 @@ function isPunctuationOrWord(char: string = "", isWordFn: WordFN): boolean {
  * Estimate a text's reading time.
  *
  * @param {string} text - the text to estimate.
- * @param {Options} [options=DEFAULT_OPTIONS] - the options to use.
+ * @param {Options} [options] - the options to use.
  * @returns {Estimation} the estimation result.
  */
 export function estimate(

@@ -1,5 +1,5 @@
 {
-  "name": "@lesetid/nuxt-example",
+  "name": "@lesetid-example/nuxt",
   "type": "module",
   "private": true,
   "scripts": {
@@ -12,19 +12,19 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@vueuse/components": "^10.6.0",
+    "@vueuse/components": "^10.6.1",
     "remark-lesetid": "latest"
   },
   "devDependencies": {
     "@nuxt/content": "^2.9.0",
     "@nuxt/devtools": "latest",
-    "@nuxt/image": "^1.0.0",
+    "@nuxt/image": "^1.1.0",
     "@nuxtjs/fontaine": "^0.4.1",
-    "@unocss/nuxt": "^0.57.3",
-    "@vueuse/nuxt": "^10.6.0",
+    "@unocss/nuxt": "^0.57.7",
+    "@vueuse/nuxt": "^10.6.1",
     "floating-vue": "^2.0.0-beta.24",
-    "nuxt": "^3.8.1",
-    "nuxt-icon": "^0.6.5",
+    "nuxt": "^3.8.2",
+    "nuxt-icon": "^0.6.6",
     "nuxt-og-image": "^2.2.3",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"

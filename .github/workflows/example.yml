@@ -13,10 +13,10 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.ROBOBUB_TOKEN }}
 
       - name: Corepack enable
         run: corepack enable
@@ -38,5 +38,3 @@ jobs:
         with:
           commit_message: "chore: update example links"
           branch: ${{ github.head_ref }}
-          commit_user_name: robobub
-          commit_user_email: bot@luxass.dev

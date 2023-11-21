@@ -1,34 +1,32 @@
 name: CI
 
 on:
-  pull_request:
+  push:
     branches:
       - main
-  push:
+  pull_request:
     branches:
       - main
 
 env:
   FORCE_COLOR: true
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18, 20]
     steps:
       - uses: actions/checkout@v4
 
-      - name: Corepack enable
-        run: corepack enable
-
-      - name: Setup PNPM
+      - name: Setup pnpm
         uses: pnpm/action-setup@v2
 
-      - name: Setup Node
+      - name: Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
-          cache: "pnpm"
+          node-version: ${{ matrix.node-version}}
 
       - name: Install dependencies
         run: pnpm install
@@ -39,31 +37,8 @@ jobs:
       - name: Lint
         run: pnpm lint
 
-      - name: Typecheck
-        run: pnpm typecheck
-
-  test:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18, 20]
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Corepack enable
-        run: corepack enable
-
-      - name: Setup PNPM
-        uses: pnpm/action-setup@v2
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: "pnpm"
-
-      - name: Install dependencies
-        run: pnpm install
-
       - name: Test
         run: pnpm test
+
+      - name: Typecheck
+        run: pnpm typecheck

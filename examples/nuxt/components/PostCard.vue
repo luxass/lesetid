@@ -16,7 +16,7 @@ const formattedTitle = props.post.title.length > 30 ? `${props.post.title.slice(
 </script>
 
 <template>
-  <NuxtLink :href="post._path" class="h-full min-h-36 border border-transparent hover:(border-neutral-700) rounded p-4 text-neutral-800 dark:text-neutral-200 flex flex-col">
+  <NuxtLink :href="post._path" class="h-full min-h-36 flex flex-col border border-transparent rounded p-4 text-neutral-800 hover:(border-neutral-700) dark:text-neutral-200">
     <h3 class="!my-0">
       {{ formattedTitle }}
     </h3>

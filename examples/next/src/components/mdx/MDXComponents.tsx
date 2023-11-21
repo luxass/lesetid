@@ -11,6 +11,7 @@ export function MDXContent({ code }: MdxProps) {
   return (
     <Component components={{
       code: CodeBlock,
-    }} />
+    }}
+    />
   );
 }

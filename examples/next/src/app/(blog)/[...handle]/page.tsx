@@ -87,14 +87,21 @@ export default async function PostPage({ params }: PostPageProps) {
       {
         !post.published && (
           <Notification type="important">
-            This post is a <strong>draft</strong>. It may be incomplete or contain
+            This post is a
+            {" "}
+            <strong>draft</strong>
+            . It may be incomplete or contain
             inaccuracies.
           </Notification>
         )
       }
 
       <Notification type="note">
-        This post will approximately take <strong>{post.estimation}</strong> to read.
+        This post will approximately take
+        {" "}
+        <strong>{post.estimation}</strong>
+        {" "}
+        to read.
       </Notification>
       <h1 className="mt-8">{post.title}</h1>
       <MDXContent code={post.body.code} />

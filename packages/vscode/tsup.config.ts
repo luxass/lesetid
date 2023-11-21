@@ -1,4 +1,3 @@
-import { copyFile } from "node:fs/promises";
 import {
   defineConfig,
 } from "tsup";

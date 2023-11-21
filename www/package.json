@@ -1,8 +1,8 @@
 {
-  "name": "www",
+  "name": "@lesetid/www",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@8.10.2",
+  "packageManager": "pnpm@8.10.5",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -14,18 +14,18 @@
   },
   "dependencies": {
     "@vercel/analytics": "^1.1.1",
-    "@vueuse/components": "^10.6.0",
+    "@vueuse/components": "^10.6.1",
     "lesetid": "workspace:*"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@nuxt/image": "^1.0.0",
-    "@nuxtjs/color-mode": "^3.3.0",
+    "@nuxt/image": "^1.1.0",
+    "@nuxtjs/color-mode": "^3.3.2",
     "@nuxtjs/fontaine": "^0.4.1",
-    "@unocss/nuxt": "^0.57.3",
-    "@vueuse/nuxt": "^10.6.0",
-    "nuxt": "^3.8.1",
-    "nuxt-icon": "^0.6.5",
+    "@unocss/nuxt": "^0.57.7",
+    "@vueuse/nuxt": "^10.6.1",
+    "nuxt": "^3.8.2",
+    "nuxt-icon": "^0.6.6",
     "nuxt-og-image": "^2.2.3",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"

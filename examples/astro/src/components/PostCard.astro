@@ -17,9 +17,7 @@ const {
   },
 } = Astro.props;
 
-const {
-  remarkPluginFrontmatter,
-} = await render();
+const { remarkPluginFrontmatter } = await render();
 
 const formattedDate = new Date(date).toLocaleDateString("en-US", {
   year: "numeric",

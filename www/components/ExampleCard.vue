@@ -21,7 +21,7 @@ const mode = useColorMode();
 <template>
   <NuxtLink
     :href="url" target="_blank" rel="noopener noreferrer"
-    class="border border-base rounded h-20 flex gap-2 items-center text-center"
+    class="h-20 flex items-center gap-2 border border-base rounded text-center"
     :class="{
       'flex-col p-8 justify-center': big,
       'flex-row p-4': !big,

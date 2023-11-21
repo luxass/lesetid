@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import type { CustomParsedContent } from "~/types";
-
-console.info("Hello!");
 </script>
 
 <template>

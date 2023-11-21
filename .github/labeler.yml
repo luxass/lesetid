@@ -14,15 +14,3 @@
 
 example:
   - examples/**/*
-
-"example: next":
-  - examples/next/*
-
-"example: nuxt":
-  - examples/nuxt/*
-
-"example: astro":
-  - examples/astro/*
-
-"example: vite":
-  - examples/vite/*

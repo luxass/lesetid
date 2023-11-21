@@ -1,4 +1,5 @@
-import { describe, expect, test } from "vitest";
+/* eslint-disable test/no-identical-title */
+import { describe, expect, it } from "vitest";
 import { createVolapykChunks } from "volapyk";
 import { createReadingTimeStream } from "../src/stream";
 
@@ -19,7 +20,7 @@ function $estimate(chunks: string[], expected: Expected) {
 }
 
 describe("should handle small texts", () => {
-  test("one word texts", () => {
+  it("one word texts", () => {
     const chunks = createVolapykChunks({
       chars: "preset:ansi",
       words: 1,
@@ -31,7 +32,7 @@ describe("should handle small texts", () => {
     });
   });
 
-  test("less than 1 minute text", () => {
+  it("less than 1 minute text", () => {
     const chunks = createVolapykChunks({
       chars: "preset:ansi",
       words: 2,
@@ -43,7 +44,7 @@ describe("should handle small texts", () => {
     });
   });
 
-  test("less than 1 minute text", () => {
+  it("less than 1 minute text", () => {
     const chunks = createVolapykChunks({
       chars: "preset:ansi",
       words: 50,
@@ -55,7 +56,7 @@ describe("should handle small texts", () => {
     });
   });
 
-  test("1 minute text", () => {
+  it("1 minute text", () => {
     const chunks = createVolapykChunks({
       chars: "preset:ansi",
       words: 100,
@@ -67,7 +68,7 @@ describe("should handle small texts", () => {
     });
   });
 
-  test("less than 3 minute text", () => {
+  it("less than 3 minute text", () => {
     const chunks = createVolapykChunks({
       chars: "preset:ansi",
       words: 500,
@@ -79,7 +80,7 @@ describe("should handle small texts", () => {
     });
   });
 
-  test("less than 5 minute text", () => {
+  it("less than 5 minute text", () => {
     const chunks = createVolapykChunks({
       chars: "preset:ansi",
       words: 967,

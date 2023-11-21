@@ -6,7 +6,6 @@
     "vue.volar",
     "vue.vscode-typescript-vue-plugin",
     "luxass.tsup-problem-matchers",
-    "svelte.svelte-vscode"
   ],
   "unwantedRecommendations": []
 }

@@ -6,12 +6,12 @@ export default function IndexPage() {
 
   return (
     <>
-      <h1 className="mb-6 text-neutral-800 dark:text-neutral-100 font-semibold my-8 text-2xl">Posts</h1>
+      <h1 className="my-8 mb-6 text-2xl font-semibold text-neutral-800 dark:text-neutral-100">Posts</h1>
       <article>
         {
           posts.length > 0
             ? (
-              <ul className="grid auto-cols-max grid-cols-1 mt-4 gap-4 sm:grid-cols-2 sm:gap-3">
+              <ul className="mt-4 grid auto-cols-max grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-3">
                 {posts.map((post) => (
                   <li key={post._id}>
                     <PostCard post={post} />

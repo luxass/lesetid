@@ -14,22 +14,22 @@ export function activate(context: ExtensionContext) {
 
       const document = editor.document;
 
-      const text = document.getText();
-      console.info("window#onDidChangeActiveTextEditor", document.languageId);
+      // const text = document.getText();
+      console.error("window#onDidChangeActiveTextEditor", document.languageId);
     }),
     workspace.onDidChangeTextDocument((event) => {
       const document = event.document;
 
-      const text = document.getText();
+      // const text = document.getText();
 
-      console.info("workspace#onDidChangeTextDocument", document.languageId);
+      console.error("workspace#onDidChangeTextDocument", document.languageId);
     }),
     workspace.onDidOpenTextDocument((document) => {
       if (!document) return;
-      console.info("workspace#onDidOpenTextDocument", document, document.languageId);
+      console.error("workspace#onDidOpenTextDocument", document, document.languageId);
     }),
     workspace.onDidChangeConfiguration((event) => {
-      console.info("workspace#onDidChangeConfiguration", event);
+      console.error("workspace#onDidChangeConfiguration", event);
     }),
   );
 }

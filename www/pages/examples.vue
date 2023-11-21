@@ -42,7 +42,7 @@ const issueUrl = "https://github.com/luxass/lesetid/issues/new?assignees=&labels
       />
       <NuxtLink
         :href="issueUrl" target="_blank" rel="noopener noreferrer"
-        class="text-center border border-base border-dashed hover:border-solid rounded flex-col p-8 flex justify-center items-center gap-2"
+        class="flex flex-col items-center justify-center gap-2 border border-base rounded border-dashed p-8 text-center hover:border-solid"
       >
         <Icon name="material-symbols:crop-square-outline" size="24" />
         Missing an example?

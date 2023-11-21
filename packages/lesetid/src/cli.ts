@@ -1,7 +1,9 @@
 import process from "node:process";
 import cac from "cac";
 import {
-  bold, inverse, red,
+  bold,
+  inverse,
+  red,
 } from "colorette";
 import { consola } from "consola";
 import {
