@@ -1,5 +1,5 @@
 {
-  "name": "playground",
+  "name": "Nuxt Example",
   "build": {
     "dockerfile": "../examples.Dockerfile"
   },

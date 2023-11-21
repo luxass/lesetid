@@ -1,5 +1,5 @@
 {
-  "name": "Playground",
+  "name": "NextJS Example",
   "build": {
     "dockerfile": "../examples.Dockerfile"
   },
