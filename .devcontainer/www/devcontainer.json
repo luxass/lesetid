@@ -16,7 +16,7 @@
   "postCreateCommand": "pnpm install && cd /workspaces/lesetid && pnpm run build",
   "waitFor": "postCreateCommand",
   "postAttachCommand": {
-    "Server": "pnpm start --host"
+    "Server": "pnpm dev"
   },
   "customizations": {
     "codespaces": {
@@ -26,13 +26,10 @@
     },
     "vscode": {
       "extensions": [
-        "astro-build.astro-vscode",
         "dbaeumer.vscode-eslint",
         "nuxtr.nuxtr-vscode",
         "vue.volar",
-        "vue.vscode-typescript-vue-plugin",
-        "luxass.tsup-problem-matchers",
-        "svelte.svelte-vscode"
+        "vue.vscode-typescript-vue-plugin"
       ]
     }
   }

@@ -5,7 +5,7 @@
     "nuxtr.nuxtr-vscode",
     "vue.volar",
     "vue.vscode-typescript-vue-plugin",
-    "luxass.tsup-problem-matchers",
+    "luxass.tsup-problem-matchers"
   ],
   "unwantedRecommendations": []
 }

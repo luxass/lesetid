@@ -3,7 +3,7 @@
   "build": {
     "dockerfile": "../examples.Dockerfile"
   },
-  "workspaceFolder": "/workspaces/lesetid/examples/next",
+  "workspaceFolder": "/workspaces/lesetid/examples/astro",
   "portsAttributes": {
     "3000": {
       "label": "Application",
@@ -16,17 +16,18 @@
   "postCreateCommand": "pnpm install && cd /workspaces/lesetid && pnpm run build",
   "waitFor": "postCreateCommand",
   "postAttachCommand": {
-    "Server": "pnpm start"
+    "Server": "pnpm start --host"
   },
   "customizations": {
     "codespaces": {
       "openFiles": [
-        "src/app/layout.tsx"
+        "src/pages/index.astro"
       ]
     },
     "vscode": {
       "extensions": [
-        "dbaeumer.vscode-eslint"
+        "dbaeumer.vscode-eslint",
+        "astro-build.astro-vscode"
       ]
     }
   }

@@ -1,9 +1,9 @@
 {
-  "name": "Playground",
+  "name": "playground",
   "build": {
     "dockerfile": "../examples.Dockerfile"
   },
-  "workspaceFolder": "/workspaces/lesetid/examples/next",
+  "workspaceFolder": "/workspaces/lesetid/examples/nuxt",
   "portsAttributes": {
     "3000": {
       "label": "Application",
@@ -16,17 +16,20 @@
   "postCreateCommand": "pnpm install && cd /workspaces/lesetid && pnpm run build",
   "waitFor": "postCreateCommand",
   "postAttachCommand": {
-    "Server": "pnpm start"
+    "Server": "pnpm dev"
   },
   "customizations": {
     "codespaces": {
       "openFiles": [
-        "src/app/layout.tsx"
+        "pages/index.vue"
       ]
     },
     "vscode": {
       "extensions": [
-        "dbaeumer.vscode-eslint"
+        "dbaeumer.vscode-eslint",
+        "nuxtr.nuxtr-vscode",
+        "vue.volar",
+        "vue.vscode-typescript-vue-plugin"
       ]
     }
   }
