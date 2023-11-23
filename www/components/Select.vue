@@ -30,7 +30,7 @@ const input = useVModel(props, "modelValue", emit, { passive: true });
     <select
       v-model="input"
       :disabled="disabled"
-      class="w-full flex-auto bg-base !outline-none"
+      class="w-full flex-auto appearance-none bg-base !outline-none"
       :class="disabled ? 'appearance-none' : ''"
     >
       <option v-if="placeholder" value="" disabled hidden>

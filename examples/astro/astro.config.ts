@@ -4,7 +4,6 @@ import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
-import vercel from "@astrojs/vercel/serverless";
 import Icons from "unplugin-icons/vite";
 import vue from "@astrojs/vue";
 import rehypeExternalLinks from "rehype-external-links";
@@ -52,14 +51,6 @@ export default defineConfig({
     ],
   },
   compressHTML: false,
-  output: "server",
-  adapter: vercel({
-    webAnalytics: {
-      enabled: true,
-    },
-    edgeMiddleware: true,
-    functionPerRoute: false,
-  }),
   vite: {
     plugins: [
       Icons({
