@@ -23,16 +23,6 @@
         {
           "type": "host",
           "value": "examples.lesetid.dev"
-        }
-      ],
-      "destination": "/examples"
-    },
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "examples.lesetid.dev"
         },
         {
           "type": "query",
@@ -41,6 +31,16 @@
         }
       ],
       "destination": "/api/examples"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "examples.lesetid.dev"
+        }
+      ],
+      "destination": "/examples"
     },
     {
       "source": "/schema",
