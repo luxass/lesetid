@@ -1,3 +1,5 @@
 export default defineEventHandler(async () => {
-  return "Hello Nitro";
+  return {
+    date: Date.now(),
+  };
 });

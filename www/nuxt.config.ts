@@ -10,9 +10,6 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@nuxtjs/fontaine",
   ],
-  site: {
-    url: "https://lesetid.dev",
-  },
   devtools: {
     enabled: true,
   },
@@ -60,6 +57,11 @@ export default defineNuxtConfig({
         dir: "../../example-articles",
       },
     ],
+    routeRules: {
+      "/api/examples": {
+        isr: 3600,
+      },
+    },
   },
   alias: {
     "lesetid": "../packages/lesetid/src/index.ts",
