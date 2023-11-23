@@ -12,6 +12,37 @@
       ]
     }
   ],
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "examples.lesetid.dev"
+        }
+      ],
+      "destination": "/examples"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "examples.lesetid.dev"
+        },
+        {
+          "type": "query",
+          "key": "json",
+          "value": ""
+        }
+      ],
+      "destination": "/api/examples"
+    },
+    {
+      "source": "/schema",
+      "destination": "/api/example-schema"
+    }
+  ],
   "redirects": [
     {
       "source": "/view-source",
