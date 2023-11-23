@@ -12,7 +12,11 @@
       ]
     }
   ],
-  "rewrites": [
+  "redirects": [
+    {
+      "source": "/view-source",
+      "destination": "https://github.com/luxass/lesetid"
+    },
     {
       "source": "/",
       "has": [
@@ -41,12 +45,6 @@
     {
       "source": "/schema",
       "destination": "/api/example-schema"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/view-source",
-      "destination": "https://github.com/luxass/lesetid"
     }
   ]
 }
