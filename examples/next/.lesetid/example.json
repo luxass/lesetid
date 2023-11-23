@@ -1,5 +1,5 @@
 {
-  "$schema": "https://examples.lesetid.dev/schema",
+  "$schema": "https://lesetid.dev/schema",
   "iconUrl": "/nextjs.svg",
   "title": "NextJS Example",
   "url": "https://next-example.lesetid.dev",

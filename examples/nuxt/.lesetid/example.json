@@ -1,5 +1,5 @@
 {
-  "$schema": "https://examples.lesetid.dev/schema",
+  "$schema": "https://lesetid.dev/schema",
   "iconUrl": "/nuxt.svg",
   "title": "Nuxt Example",
   "url": "https://nuxt-example.lesetid.dev",
