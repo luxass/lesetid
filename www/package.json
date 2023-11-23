@@ -26,7 +26,6 @@
     "@vueuse/nuxt": "^10.6.1",
     "nuxt": "^3.8.2",
     "nuxt-icon": "^0.6.6",
-    "nuxt-og-image": "^2.2.3",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"
   }

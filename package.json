@@ -34,7 +34,7 @@
     "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "^4.0.0-beta.7",
+    "@luxass/eslint-config": "^4.0.0-beta.8",
     "@types/node": "^18.16.19",
     "eslint": "^8.54.0",
     "eslint-plugin-astro": "^0.29.1",
