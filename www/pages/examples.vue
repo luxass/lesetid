@@ -24,7 +24,7 @@ const issueUrl = "https://github.com/luxass/lesetid/issues/new?assignees=&labels
     <h2>
       Examples
       <span class="text-sm op25">
-        {{ data?.examples?.length }} examples
+        {{ data?.examples?.length || 0 }} examples
       </span>
     </h2>
     <p>
