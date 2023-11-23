@@ -1,20 +1,10 @@
 <script setup lang="ts">
 const text = ref("Write your article here!");
 
-interface Example {
-  key: string
-  iconUrl: string | {
-    dark: string
-    light: string
-  }
-  title: string
-  url: string
-}
-
 const {
   data,
   error,
-} = await useAsyncData<{ examples: Example[] }>(() => $fetch("https://examples.lesetid.dev"));
+} = await useExamples();
 </script>
 
 <template>

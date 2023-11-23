@@ -1,18 +1,8 @@
 <script setup lang="ts">
-interface Example {
-  key: string
-  iconUrl: string | {
-    dark: string
-    light: string
-  }
-  title: string
-  url: string
-}
-
 const {
   data,
   error,
-} = await useFetch<{ examples: Example[] }>("https://examples.lesetid.dev");
+} = await useExamples();
 
 const issueUrl = "https://github.com/luxass/lesetid/issues/new?assignees=&labels=example&projects=&template=missing-example.yml&title=missing+example+for+%5BEXAMPLE%5D";
 </script>
