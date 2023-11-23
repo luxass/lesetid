@@ -18,16 +18,11 @@
       "destination": "https://github.com/luxass/lesetid"
     },
     {
-      "source": "/",
+      "source": "/json",
       "has": [
         {
           "type": "host",
           "value": "examples.lesetid.dev"
-        },
-        {
-          "type": "query",
-          "key": "json",
-          "value": ""
         }
       ],
       "destination": "/api/examples"
