@@ -15,7 +15,8 @@
   "dependencies": {
     "@vercel/analytics": "^1.1.1",
     "@vueuse/components": "^10.6.1",
-    "lesetid": "workspace:*"
+    "lesetid": "workspace:*",
+    "valibot": "^0.21.0"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
