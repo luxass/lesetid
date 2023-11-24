@@ -1,12 +1,9 @@
-import process from "node:process";
-
 export default defineNuxtConfig({
   modules: [
     "@nuxt/devtools",
     "@vueuse/nuxt",
     "nuxt-icon",
     "@unocss/nuxt",
-    // "nuxt-og-image",
     "@nuxt/image",
     "@nuxtjs/color-mode",
     "@nuxtjs/fontaine",
