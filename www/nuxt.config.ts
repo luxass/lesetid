@@ -60,12 +60,7 @@ export default defineNuxtConfig({
     ],
     routeRules: {
       "/api/examples": {
-        isr: 3600,
-      },
-    },
-    vercel: {
-      config: {
-        bypassToken: process.env.VERCEL_BYPASS_TOKEN,
+        swr: 600,
       },
     },
   },
