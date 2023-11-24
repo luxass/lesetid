@@ -1,4 +1,5 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import process from "node:process";
+
 export default defineNuxtConfig({
   modules: [
     "@nuxt/devtools",
@@ -60,6 +61,11 @@ export default defineNuxtConfig({
     routeRules: {
       "/api/examples": {
         isr: 3600,
+      },
+    },
+    vercel: {
+      config: {
+        bypassToken: process.env.VERCEL_BYPASS_TOKEN,
       },
     },
   },
