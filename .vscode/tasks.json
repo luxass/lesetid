@@ -9,8 +9,8 @@
         {
           "base": "$tsup-watch",
           "background": {
-            "beginsPattern": "^reading-time:(.*): CJS Build start$",
-            "endsPattern": "^reading-time:(.*): CJS .* Build success|^reading-time:(.*): CJS Build failed"
+            "beginsPattern": "^vscode-reading-time:(.*): CJS Build start$",
+            "endsPattern": "^vscode-reading-time:(.*): CJS .* Build success|^vscode-reading-time:(.*): CJS Build failed"
           }
         }
       ],
