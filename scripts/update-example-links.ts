@@ -23,38 +23,31 @@ async function run() {
     }
 
     const exampleConfigParsed = JSON.parse(exampleConfig);
-    console.log(exampleConfigParsed);
 
-    // if (!PROVIDERS.every((provider) => provider in exampleConfigParsed)) {
-    //   throw new Error(`Missing provider in ${exampleName}`);
-    // }
+    const readme = await readFile(`./examples/${exampleName}/README.md`, {
+      encoding: "utf-8",
+    });
 
-    // const readme = await readFile(`./examples/${exampleName}/README.md`, {
-    //   encoding: "utf-8",
-    // });
+    const providersStart = readme.indexOf("<!-- providers:start -->");
 
-    // const providersStart = readme.indexOf("<!-- providers:start -->");
+    const providersEnd = readme.indexOf("<!-- providers:end -->");
 
-    // const providersEnd = readme.indexOf("<!-- providers:end -->");
+    const readmeLinks = readme.slice(providersStart, providersEnd + "<!-- providers:end -->".length);
 
-    // const readmeLinks = readme.slice(providersStart, providersEnd + "<!-- providers:end -->".length);
+    let newReadmeLinks = "<!-- providers:start -->\n";
 
-    // let newReadmeLinks = "<!-- providers:start -->\n";
+    newReadmeLinks += Object.entries(exampleConfigParsed.providers).map(([provider, providerLink]) => {
+      if (!providerLink) {
+        throw new Error(`Missing provider config for ${provider} in ${exampleName}`);
+      }
 
-    // newReadmeLinks += PROVIDERS.map((provider) => {
-    //   const providerLink = exampleConfigParsed[provider];
+      return `[${provider}]: ${providerLink}`;
+    }).join("\n");
 
-    //   if (!providerLink) {
-    //     throw new Error(`Missing provider config for ${provider} in ${exampleName}`);
-    //   }
+    newReadmeLinks += "\n<!-- providers:end -->";
 
-    //   return `[${provider}]: ${providerLink}`;
-    // }).join("\n");
-
-    // newReadmeLinks += "\n<!-- providers:end -->";
-
-    // await writeFile(`./examples/${exampleName}/README.md`, readme.replace(readmeLinks, newReadmeLinks));
-    // console.log(`updated \`README\` for ${exampleName}`);
+    await writeFile(`./examples/${exampleName}/README.md`, readme.replace(readmeLinks, newReadmeLinks));
+    console.log(`updated \`README\` for ${exampleName}`);
   }));
 }
 
