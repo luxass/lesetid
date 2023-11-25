@@ -43,7 +43,8 @@
       "source": "/json",
       "has": [
         {
-          "type": "host",
+          "type": "header",
+          "key": "host",
           "value": "examples.lesetid.dev"
         }
       ],
