@@ -2,7 +2,6 @@ export default defineEventHandler(() => {
   return {
     $schema: "http://json-schema.org/draft-07/schema",
     description: "Configuration for examples on lesetid.dev",
-    additionalProperties: false,
     type: "object",
     properties: {
       iconUrl: {
@@ -37,13 +36,13 @@ export default defineEventHandler(() => {
         description: "The title of the example",
         type: "string",
       },
+      handle: {
+        description: "The handle of the example",
+        type: "string",
+      },
       url: {
         description: "The url to the example",
         format: "uri",
-        type: "string",
-      },
-      $schema: {
-        description: "The schema uri to use, this is only here to make additionalProperties not warn.",
         type: "string",
       },
       stackblitz: {
@@ -65,8 +64,8 @@ export default defineEventHandler(() => {
     required: [
       "title",
       "url",
-      "$schema",
       "stackblitz",
+      "handle",
       "codesandbox",
       "codespaces",
     ],

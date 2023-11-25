@@ -5,6 +5,7 @@
     "light": "/astro-light.svg"
   },
   "title": "Astro Example",
+  "handle": "astro",
   "url": "https://lesetid.dev/examples/astro",
   "stackblitz": "https://stackblitz.com/github/luxass/lesetid/tree/main/examples/astro?title=astro%20example%20|%20lesetid",
   "codesandbox": "https://codesandbox.io/p/sandbox/github/luxass/lesetid/tree/main/examples/astro",

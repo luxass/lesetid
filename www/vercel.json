@@ -40,16 +40,6 @@
   ],
   "rewrites": [
     {
-      "source": "/(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "examples.lesetid.dev"
-        }
-      ],
-      "destination": "/examples"
-    },
-    {
       "source": "/json",
       "has": [
         {
@@ -57,7 +47,7 @@
           "value": "examples.lesetid.dev"
         }
       ],
-      "destination": "/"
+      "destination": "/examples"
     }
   ]
 }

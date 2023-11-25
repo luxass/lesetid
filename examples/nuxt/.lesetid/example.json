@@ -2,6 +2,7 @@
   "$schema": "https://lesetid.dev/schema",
   "iconUrl": "/nuxt.svg",
   "title": "Nuxt Example",
+  "handle": "nuxt",
   "url": "https://lesetid.dev/examples/nuxt",
   "stackblitz": "https://stackblitz.com/github/luxass/lesetid/tree/main/examples/nuxt?title=nuxt%20example%20|%20lesetid",
   "codesandbox": "https://codesandbox.io/p/sandbox/github/luxass/lesetid/tree/main/examples/nuxt",
