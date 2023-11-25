@@ -36,7 +36,9 @@
         }
       ],
       "destination": "/examples"
-    },
+    }
+  ],
+  "rewrites": [
     {
       "source": "/schema",
       "destination": "/api/example-schema"
