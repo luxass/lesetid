@@ -2,7 +2,7 @@
   "name": "@lesetid/www",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@8.10.5",
+  "packageManager": "pnpm@8.11.0",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -27,7 +27,7 @@
     "@vueuse/nuxt": "^10.6.1",
     "nuxt": "^3.8.2",
     "nuxt-icon": "^0.6.6",
-    "vue": "^3.3.8",
+    "vue": "^3.3.9",
     "vue-router": "^4.2.5"
   }
 }

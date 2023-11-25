@@ -8,9 +8,6 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@nuxtjs/fontaine",
   ],
-  devtools: {
-    enabled: true,
-  },
   plugins: [
     {
       src: "~/plugins/vercel-analytics.ts",

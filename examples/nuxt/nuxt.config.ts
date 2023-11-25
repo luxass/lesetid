@@ -5,17 +5,10 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "nuxt-icon",
     "@unocss/nuxt",
-    "nuxt-og-image",
     "@nuxt/image",
     "@nuxt/content",
     "@nuxtjs/fontaine",
   ],
-  devtools: {
-    enabled: true,
-    timeline: {
-      enabled: true,
-    },
-  },
   sourcemap: false,
   app: {
     head: {
@@ -23,11 +16,23 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "en",
       },
+      title: "lesetid | nuxt example",
       link: [
         {
           rel: "icon",
           type: "image/svg+xml",
           href: "/favicon.svg",
+        },
+      ],
+      meta: [
+        {
+          name: "description",
+          content: "A example nuxt app using lesetid",
+        },
+        {
+          // disable darkreader
+          name: "darkreader-lock",
+          content: "",
         },
       ],
     },

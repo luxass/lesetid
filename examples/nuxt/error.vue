@@ -1,9 +1,4 @@
 <script setup lang="ts">
-useDark();
-useHead({
-  title: "lesetid | playground",
-});
-
 useSeoMeta({
   description: "A playground for lesetid",
   ogTitle: "lesetid | playground",

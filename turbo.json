@@ -30,6 +30,7 @@
       "outputMode": "new-only"
     },
     "typecheck": {
+      "dependsOn": ["remark-lesetid#build"],
       "outputMode": "new-only"
     }
   }
