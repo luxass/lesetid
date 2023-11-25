@@ -23,6 +23,7 @@ const PROVIDER_ICONS: Record<string, string> = {
   stackblitz: "logos:stackblitz-icon",
   codesandbox: "logos:codesandbox-icon",
   codespaces: "octicon:mark-github-16",
+  gitpod: "devicon:gitpod",
 };
 </script>
 

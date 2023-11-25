@@ -49,17 +49,22 @@ export default defineEventHandler(() => {
         type: "object",
         properties: {
           stackblitz: {
-            description: "The url to the stackblitz",
+            description: "The url to StackBlitz",
             format: "uri",
             type: "string",
           },
           codesandbox: {
-            description: "The url to the codesandbox",
+            description: "The url to CodeSandbox",
             format: "uri",
             type: "string",
           },
           codespaces: {
-            description: "The url to the codespaces",
+            description: "The url to GitHub Codespaces",
+            format: "uri",
+            type: "string",
+          },
+          gitpod: {
+            description: "The url to Gitpod",
             format: "uri",
             type: "string",
           },
