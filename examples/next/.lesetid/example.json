@@ -4,7 +4,9 @@
   "title": "NextJS Example",
   "handle": "next",
   "url": "/examples/next",
-  "stackblitz": "https://stackblitz.com/github/luxass/lesetid/tree/main/examples/next?title=next%20example%20|%20lesetid",
-  "codesandbox": "https://codesandbox.io/p/sandbox/github/luxass/lesetid/tree/main/examples/next",
-  "codespaces": "https://codespaces.new/luxass/lesetid?devcontainer_path=.devcontainer/next/devcontainer.json"
+  "providers": {
+    "stackblitz": "https://stackblitz.com/github/luxass/lesetid/tree/main/examples/next?title=next%20example%20|%20lesetid",
+    "codesandbox": "https://codesandbox.io/p/sandbox/github/luxass/lesetid/tree/main/examples/next",
+    "codespaces": "https://codespaces.new/luxass/lesetid?devcontainer_path=.devcontainer/next/devcontainer.json"
+  }
 }

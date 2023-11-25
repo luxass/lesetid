@@ -45,29 +45,32 @@ export default defineEventHandler(() => {
         pattern: "^/",
         type: "string",
       },
-      stackblitz: {
-        description: "The url to the stackblitz",
-        format: "uri",
-        type: "string",
-      },
-      codesandbox: {
-        description: "The url to the codesandbox",
-        format: "uri",
-        type: "string",
-      },
-      codespaces: {
-        description: "The url to the codespaces",
-        format: "uri",
-        type: "string",
+      providers: {
+        type: "object",
+        properties: {
+          stackblitz: {
+            description: "The url to the stackblitz",
+            format: "uri",
+            type: "string",
+          },
+          codesandbox: {
+            description: "The url to the codesandbox",
+            format: "uri",
+            type: "string",
+          },
+          codespaces: {
+            description: "The url to the codespaces",
+            format: "uri",
+            type: "string",
+          },
+        },
+        required: [],
       },
     },
     required: [
       "title",
       "url",
-      "stackblitz",
       "handle",
-      "codesandbox",
-      "codespaces",
     ],
   };
 });

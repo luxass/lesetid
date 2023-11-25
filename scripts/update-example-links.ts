@@ -4,12 +4,6 @@ import {
 
 import { readFile, readdir, writeFile } from "node:fs/promises";
 
-const PROVIDERS = [
-  "stackblitz",
-  "codesandbox",
-  "codespaces",
-];
-
 async function run() {
   const exampleFolders = await readdir("./examples", {
     withFileTypes: true,
@@ -29,37 +23,38 @@ async function run() {
     }
 
     const exampleConfigParsed = JSON.parse(exampleConfig);
+    console.log(exampleConfigParsed);
 
-    if (!PROVIDERS.every((provider) => provider in exampleConfigParsed)) {
-      throw new Error(`Missing provider in ${exampleName}`);
-    }
+    // if (!PROVIDERS.every((provider) => provider in exampleConfigParsed)) {
+    //   throw new Error(`Missing provider in ${exampleName}`);
+    // }
 
-    const readme = await readFile(`./examples/${exampleName}/README.md`, {
-      encoding: "utf-8",
-    });
+    // const readme = await readFile(`./examples/${exampleName}/README.md`, {
+    //   encoding: "utf-8",
+    // });
 
-    const providersStart = readme.indexOf("<!-- providers:start -->");
+    // const providersStart = readme.indexOf("<!-- providers:start -->");
 
-    const providersEnd = readme.indexOf("<!-- providers:end -->");
+    // const providersEnd = readme.indexOf("<!-- providers:end -->");
 
-    const readmeLinks = readme.slice(providersStart, providersEnd + "<!-- providers:end -->".length);
+    // const readmeLinks = readme.slice(providersStart, providersEnd + "<!-- providers:end -->".length);
 
-    let newReadmeLinks = "<!-- providers:start -->\n";
+    // let newReadmeLinks = "<!-- providers:start -->\n";
 
-    newReadmeLinks += PROVIDERS.map((provider) => {
-      const providerLink = exampleConfigParsed[provider];
+    // newReadmeLinks += PROVIDERS.map((provider) => {
+    //   const providerLink = exampleConfigParsed[provider];
 
-      if (!providerLink) {
-        throw new Error(`Missing provider config for ${provider} in ${exampleName}`);
-      }
+    //   if (!providerLink) {
+    //     throw new Error(`Missing provider config for ${provider} in ${exampleName}`);
+    //   }
 
-      return `[${provider}]: ${providerLink}`;
-    }).join("\n");
+    //   return `[${provider}]: ${providerLink}`;
+    // }).join("\n");
 
-    newReadmeLinks += "\n<!-- providers:end -->";
+    // newReadmeLinks += "\n<!-- providers:end -->";
 
-    await writeFile(`./examples/${exampleName}/README.md`, readme.replace(readmeLinks, newReadmeLinks));
-    console.log(`updated \`README\` for ${exampleName}`);
+    // await writeFile(`./examples/${exampleName}/README.md`, readme.replace(readmeLinks, newReadmeLinks));
+    // console.log(`updated \`README\` for ${exampleName}`);
   }));
 }
 
