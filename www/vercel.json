@@ -40,15 +40,24 @@
   ],
   "rewrites": [
     {
-      "source": "/json",
+      "source": "/(.*)",
       "has": [
         {
-          "type": "header",
-          "key": "host",
+          "type": "host",
           "value": "examples.lesetid.dev"
         }
       ],
-      "destination": "/api/examples"
+      "destination": "/examples"
+    },
+    {
+      "source": "/json",
+      "has": [
+        {
+          "type": "host",
+          "value": "examples.lesetid.dev"
+        }
+      ],
+      "destination": "/"
     }
   ]
 }
