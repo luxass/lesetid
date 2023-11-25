@@ -2,11 +2,11 @@ import {
   estimate,
 } from "lesetid";
 import { toString } from "mdast-util-to-string";
-import type { Plugin } from "unified";
+import type { Transformer } from "unified";
 import type { Root } from "mdast";
 
-export const remarkLesetid: Plugin<any[], Root> = () => {
-  return (tree, file) => {
+export function remarkLesetid(): Transformer<Root> {
+  const transformer: Transformer<Root> = (tree, file) => {
     const textOnPage = toString(tree);
     const estimation = estimate(textOnPage);
     if (!file.data.astro) throw new Error("Missing astro data");
@@ -14,7 +14,9 @@ export const remarkLesetid: Plugin<any[], Root> = () => {
 
     file.data.astro.frontmatter.estimation = estimation;
   };
-};
+
+  return transformer;
+}
 
 declare module "vfile" {
   interface DataMap {

@@ -9,12 +9,9 @@ import vue from "@astrojs/vue";
 import rehypeExternalLinks from "rehype-external-links";
 import prefetch from "@astrojs/prefetch";
 
-// import {
-//   remarkLesetid,
-// } from "remark-lesetid/astro";
 import {
   remarkLesetid,
-} from "../../packages/remark-lesetid/src/astro.ts";
+} from "remark-lesetid/astro";
 
 // https://astro.build/config
 export default defineConfig({
@@ -47,7 +44,7 @@ export default defineConfig({
       rel: ["noopener", "noreferrer"],
     }]],
     remarkPlugins: [
-      [remarkLesetid],
+      remarkLesetid,
     ],
   },
   compressHTML: false,

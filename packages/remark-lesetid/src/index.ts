@@ -1,7 +1,7 @@
 import { visit } from "unist-util-visit";
 import { estimate } from "lesetid";
 import type { Root } from "mdast";
-import type { Plugin, Transformer } from "unified";
+import type { Transformer } from "unified";
 
 export type { Estimation } from "lesetid";
 
@@ -9,7 +9,7 @@ export interface Options {
   dataKey?: string
 }
 
-export const remarkLesetid: Plugin<[Options?], Root> = (options) => {
+export function remarkLesetid(options?: Readonly<Options> | null | undefined): Transformer<Root> {
   if (!options) {
     options = {
       dataKey: "estimation",
@@ -28,7 +28,6 @@ export const remarkLesetid: Plugin<[Options?], Root> = (options) => {
     });
   };
   return transformer;
-};
+}
 
 export default remarkLesetid;
-export type RemarkPlugin<PluginParameters extends any[] = any[]> = Plugin<PluginParameters, Root>;
