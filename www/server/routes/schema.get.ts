@@ -42,7 +42,7 @@ export default defineEventHandler(() => {
       },
       url: {
         description: "The url to the example",
-        format: "uri",
+        pattern: "^/",
         type: "string",
       },
       stackblitz: {

@@ -3,7 +3,7 @@
   "iconUrl": "/nuxt.svg",
   "title": "Nuxt Example",
   "handle": "nuxt",
-  "url": "https://lesetid.dev/examples/nuxt",
+  "url": "/examples/nuxt",
   "stackblitz": "https://stackblitz.com/github/luxass/lesetid/tree/main/examples/nuxt?title=nuxt%20example%20|%20lesetid",
   "codesandbox": "https://codesandbox.io/p/sandbox/github/luxass/lesetid/tree/main/examples/nuxt",
   "codespaces": "https://codespaces.new/luxass/lesetid?devcontainer_path=.devcontainer/nuxt/devcontainer.json"
