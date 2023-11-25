@@ -5,7 +5,7 @@
     "light": "/astro-light.svg"
   },
   "title": "Astro Example",
-  "url": "https://astro-example.lesetid.dev",
+  "url": "https://lesetid.dev/examples/astro",
   "stackblitz": "https://stackblitz.com/github/luxass/lesetid/tree/main/examples/astro?title=astro%20example%20|%20lesetid",
   "codesandbox": "https://codesandbox.io/p/sandbox/github/luxass/lesetid/tree/main/examples/astro",
   "codespaces": "https://codespaces.new/luxass/lesetid?devcontainer_path=.devcontainer/astro/devcontainer.json"
