@@ -317,7 +317,7 @@ importers:
         version: link:../lesetid
     devDependencies:
       '@types/vscode':
-        specifier: ^1.80.0
+        specifier: ^1.70.0
         version: 1.83.1
       '@vscode/test-web':
         specifier: ^0.0.48
