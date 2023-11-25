@@ -1,13 +1,9 @@
-export interface Example {
-  key: string
-  iconUrl: string | {
-    dark: string
-    light: string
-  }
-  title: string
-  url: string
-}
+import type { Example } from "~/types/example";
 
 export async function useExamples() {
-  return useAsyncData<{ examples: Example[] }>(() => $fetch("https://examples.lesetid.dev/json"));
+  const url = useCorrectUrl({
+    path: "/api/examples",
+  });
+
+  return await useAsyncData<Example[]>(() => $fetch(url));
 };

@@ -1,16 +1,11 @@
 <script setup lang="ts">
-import "floating-vue/dist/style.css";
 import "./styles/global.css";
 
 useHead({
   title: "lesetid | playground",
 });
 
-const ogUrl = process.env.NODE_ENV === "production"
-  ? process.env.VERCEL_ENV === "production"
-    ? "https://lesetid.dev"
-    : `https://${process.env.VERCEL_URL}`
-  : "http://localhost:3000";
+const ogUrl = useCorrectUrl();
 
 useSeoMeta({
   description: "A playground for lesetid",

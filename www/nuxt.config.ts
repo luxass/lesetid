@@ -59,6 +59,9 @@ export default defineNuxtConfig({
       "/api/examples": {
         swr: 600,
       },
+      "/api/examples/:example": {
+        swr: 600,
+      },
     },
   },
   alias: {

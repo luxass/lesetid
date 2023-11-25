@@ -1,26 +1,31 @@
 <script setup lang="ts">
+import type { Example } from "~/types/example";
+
 const {
   big = false,
-  title,
-  url,
-  iconUrl,
+  example,
 }
   = defineProps<{
     big?: boolean
-    title: string
-    iconUrl?: string | {
-      dark: string
-      light: string
-    }
-    url: string
+    example: Example
   }>();
 
 const mode = useColorMode();
+
+const {
+  url: _url,
+  title,
+  iconUrl,
+} = example;
+
+const url = useCorrectUrl({
+  path: _url.replace("https://lesetid.dev", ""),
+});
 </script>
 
 <template>
   <NuxtLink
-    :href="url" target="_blank" rel="noopener noreferrer"
+    :href="url"
     class="h-20 flex items-center gap-2 border border-base rounded text-center"
     :class="{
       'flex-col p-8 justify-center': big,

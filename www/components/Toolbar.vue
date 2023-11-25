@@ -19,7 +19,7 @@ const time = computed(() => {
   return estimate(text.value);
 });
 
-const { data, error } = await useFetch("/api/texts");
+const { data, error } = await useAsyncData(() => $fetch("/api/texts"));
 
 const selectedText = ref("");
 

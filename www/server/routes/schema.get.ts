@@ -71,6 +71,7 @@ export default defineEventHandler(() => {
       "title",
       "url",
       "handle",
+      "providers",
     ],
   };
 });
