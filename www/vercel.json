@@ -18,7 +18,7 @@
       "destination": "https://github.com/luxass/lesetid"
     },
     {
-      "source": "/json",
+      "source": "/json2",
       "has": [
         {
           "type": "host",
@@ -40,8 +40,14 @@
   ],
   "rewrites": [
     {
-      "source": "/schema",
-      "destination": "/api/example-schema"
+      "source": "/json",
+      "has": [
+        {
+          "type": "host",
+          "value": "examples.lesetid.dev"
+        }
+      ],
+      "destination": "/api/examples"
     }
   ]
 }
