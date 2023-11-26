@@ -25,6 +25,7 @@
   },
   "scripts": {
     "build": "turbo run build --filter=\"!@lesetid-example/*\"",
+    "build:all": "turbo run build",
     "build:examples": "turbo run build --filter=\"@lesetid-example/*\"",
     "dev": "turbo run dev --concurrency=40 --parallel --filter=\"!@lesetid-example/*\"",
     "dev:all": "turbo run dev --concurrency=40 --parallel",

@@ -83,7 +83,7 @@ importers:
     devDependencies:
       '@iconify-json/carbon':
         specifier: ^1.1.21
-        version: 1.1.21
+        version: 1.1.22
       '@iconify-json/logos':
         specifier: 1.1.37
         version: 1.1.37
@@ -159,7 +159,7 @@ importers:
     devDependencies:
       '@iconify-json/carbon':
         specifier: ^1.1.21
-        version: 1.1.21
+        version: 1.1.22
       '@iconify-json/logos':
         specifier: 1.1.37
         version: 1.1.37
@@ -1590,7 +1590,7 @@ packages:
     engines: {node: ^8.13.0 || >=10.10.0}
     dependencies:
       '@grpc/proto-loader': 0.7.10
-      '@types/node': 20.10.0
+      '@types/node': 18.18.13
     dev: false
 
   /@grpc/proto-loader@0.7.10:
@@ -1624,8 +1624,8 @@ packages:
     resolution: {integrity: sha512-dvuCeX5fC9dXgJn9t+X5atfmgQAzUOWqS1254Gh0m6i8wKd10ebXkfNKiRK+1GWi/yTvvLDHpoxLr0xxxeslWw==}
     dev: true
 
-  /@iconify-json/carbon@1.1.21:
-    resolution: {integrity: sha512-bK2cMVM4noBU+FGlay433flpXLRzQu0ED095iAnoO6ka3yb4uz0lvb8acpN5gthyGLJ89C4HpfIbQZLQnMKQww==}
+  /@iconify-json/carbon@1.1.22:
+    resolution: {integrity: sha512-kQqCxiRkXtT7RO612GosIgvmQ8M8Ltgwl8LZZ4LKO8jip77W4rLK2PFjuS1uXRM1Lu879uzH73mMUClqFLsA0Q==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
@@ -1642,8 +1642,8 @@ packages:
       '@iconify/types': 2.0.0
     dev: true
 
-  /@iconify/collections@1.0.360:
-    resolution: {integrity: sha512-fcifV9VZ32rPnFa0NAB/Cpfb3UQtLJGda8ywX7NBuZ4XlDiLdNQP6bZnI7KxBok0PLrLOVKnEcJXH3J5HDXo8Q==}
+  /@iconify/collections@1.0.361:
+    resolution: {integrity: sha512-9pNOo/RgVMPs6U952DYMKXaSBw+gW7NWJIDIhuukE/rat9xbY7KmUsyp7DnLOuYd9XR8oDbK5/JvMAHditX5kg==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
@@ -2846,7 +2846,6 @@ packages:
     dependencies:
       is-glob: 4.0.3
       micromatch: 4.0.5
-      napi-wasm: 1.1.0
     dev: true
     bundledDependencies:
       - napi-wasm
@@ -2975,8 +2974,8 @@ packages:
     resolution: {integrity: sha512-Vvn3zZrhQZkkBE8LSuW3em98c0FwgO4nxzv6OdSxPKJIEKY2bGbHn+mhGIPerzI4twdxaP8/0+06HBpwf345Lw==}
     dev: false
 
-  /@rollup/plugin-alias@5.0.1(rollup@4.5.2):
-    resolution: {integrity: sha512-JObvbWdOHoMy9W7SU0lvGhDtWq9PllP5mjpAy+TUslZG/WzOId9u80Hsqq1vCUn9pFJ0cxpdcnAv+QzU2zFH3Q==}
+  /@rollup/plugin-alias@5.1.0(rollup@4.5.2):
+    resolution: {integrity: sha512-lpA3RZ9PdIG7qqhEfv79tBffNaoDuukFDrmhLqg9ifv99u/ehn+lOg30x2zmhf8AQqQUZaMk/B9fZraQ6/acDQ==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
@@ -3561,7 +3560,7 @@ packages:
   /@types/http-proxy@1.17.14:
     resolution: {integrity: sha512-SSrD0c1OQzlFX7pGu1eXxSEjemej64aaNPRhhVYUGqXh0BtldAAx37MG8btcumvpgKyZp1F5Gn3JkktdxiFv6w==}
     dependencies:
-      '@types/node': 20.10.0
+      '@types/node': 18.18.13
     dev: true
 
   /@types/json-schema@7.0.15:
@@ -3619,11 +3618,6 @@ packages:
     dependencies:
       undici-types: 5.26.5
 
-  /@types/node@20.10.0:
-    resolution: {integrity: sha512-D0WfRmU9TQ8I9PFx9Yc+EBHw+vSpIub4IDvQivcp26PtPrdMGAq5SDcpXEo/epqa/DXotVpekHiLNTg3iaKXBQ==}
-    dependencies:
-      undici-types: 5.26.5
-
   /@types/normalize-package-data@2.4.4:
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
     dev: true
@@ -3666,7 +3660,7 @@ packages:
   /@types/sax@1.2.7:
     resolution: {integrity: sha512-rO73L89PJxeYM3s3pPPjiPgVVcymqU490g0YO5n5By0k2Erzj6tay/4lr1CHAAU4JyOWd1rpQ8bCf6cZfHU96A==}
     dependencies:
-      '@types/node': 20.10.0
+      '@types/node': 18.18.13
     dev: false
 
   /@types/scheduler@0.16.8:
@@ -10644,10 +10638,6 @@ packages:
     requiresBuild: true
     optional: true
 
-  /napi-wasm@1.1.0:
-    resolution: {integrity: sha512-lHwIAJbmLSjF9VDRm9GoVOy9AGp3aIvkjv+Kvz9h16QR3uSVYH78PNQUnT2U4X53mhlnV2M7wrhibQ3GHicDmg==}
-    dev: true
-
   /natural-compare-lite@1.4.0:
     resolution: {integrity: sha512-Tj+HTDSJJKaZnfiuw+iaF9skdPpTo2GtEly5JHnWV/hfv2Qj/9RKsGISQtLh2ox3l5EAGw487hnBee0sIJ6v2g==}
     dev: true
@@ -10750,7 +10740,7 @@ packages:
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.0
       '@netlify/functions': 2.4.0
-      '@rollup/plugin-alias': 5.0.1(rollup@4.5.2)
+      '@rollup/plugin-alias': 5.1.0(rollup@4.5.2)
       '@rollup/plugin-commonjs': 25.0.7(rollup@4.5.2)
       '@rollup/plugin-inject': 5.0.5(rollup@4.5.2)
       '@rollup/plugin-json': 6.0.1(rollup@4.5.2)
@@ -11079,7 +11069,7 @@ packages:
   /nuxt-icon@0.6.6(nuxt@3.8.2)(vite@4.5.0)(vue@3.3.9):
     resolution: {integrity: sha512-rTRUIjYVlYAyj6ZPVVwGxyyiINNudhC6r9vF96Ec5ZaLOC6mSdUBnJ3oV6sJgViYrIkDLwbIjviFvRcZzvgu3g==}
     dependencies:
-      '@iconify/collections': 1.0.360
+      '@iconify/collections': 1.0.361
       '@iconify/vue': 4.1.1(vue@3.3.9)
       '@nuxt/devtools-kit': 1.0.3(nuxt@3.8.2)(vite@4.5.0)
       '@nuxt/kit': 3.8.2
@@ -12212,7 +12202,7 @@ packages:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
-      '@types/node': 20.10.0
+      '@types/node': 18.18.13
       long: 5.2.3
     dev: false
 
