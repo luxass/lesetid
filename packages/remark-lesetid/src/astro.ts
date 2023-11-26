@@ -18,6 +18,8 @@ export function remarkLesetid(): Transformer<Root> {
   return transformer;
 }
 
+export default remarkLesetid;
+
 declare module "vfile" {
   interface DataMap {
     astro: {

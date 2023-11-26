@@ -3,22 +3,24 @@
   "type": "module",
   "version": "1.0.0",
   "packageManager": "pnpm@8.11.0",
-  "description": "A dead simple read time estimation",
+  "description": "A remark plugin to add reading time to your markdown files",
   "author": {
     "name": "Lucas Nørgård",
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "workspaces": [
-    "examples/**"
-  ],
   "license": "MIT",
   "homepage": "https://github.com/luxass/remark-lesetid",
-  "repository": "https://github.com/luxass/remark-lesetid",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luxass/lesetid",
+    "directory": "packages/remark-lesetid"
+  },
   "bugs": {
     "url": "https://github.com/luxass/remark-lesetid/issues"
   },
   "keywords": [
+    "remark-plugin",
     "read time",
     "reading time",
     "words per minute"
