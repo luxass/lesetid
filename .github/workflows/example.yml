@@ -1,4 +1,4 @@
-name: Examples CI
+name: Update Example Provider Links
 
 on:
   push:
