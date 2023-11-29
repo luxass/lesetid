@@ -32,7 +32,11 @@
     "dev:examples": "turbo run dev --concurrency=40 --parallel --filter=\"@lesetid-example/*\"",
     "lint": "turbo run lint",
     "test": "turbo run test",
-    "typecheck": "turbo run typecheck"
+    "typecheck": "turbo run typecheck",
+    "version": "pnpx changeset version && node ./scripts/update-examples.mjs && pnpm install --no-frozen-lockfile"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.27.1"
   },
   "devDependencies": {
     "@luxass/eslint-config": "^4.0.0-beta.12",
@@ -42,8 +46,5 @@
     "turbo": "^1.10.16",
     "typescript": "^5.3.2",
     "vitest": "^0.34.6"
-  },
-  "dependencies": {
-    "@changesets/cli": "^2.27.1"
   }
 }
