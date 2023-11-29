@@ -92,7 +92,7 @@ importers:
         version: 1.1.49
       '@luxass/eslint-config':
         specifier: ^4.0.0-beta.12
-        version: 4.0.0-beta.12(eslint-plugin-astro@0.29.1)(eslint@8.54.0)(typescript@5.3.2)(vitest@0.34.6)
+        version: 4.0.0-beta.12(eslint-plugin-astro@0.30.0)(eslint@8.54.0)(typescript@5.3.2)(vitest@0.34.6)
       '@octokit/graphql':
         specifier: ^7.0.2
         version: 7.0.2
@@ -106,8 +106,8 @@ importers:
         specifier: ^8.54.0
         version: 8.54.0
       eslint-plugin-astro:
-        specifier: ^0.29.1
-        version: 0.29.1(eslint@8.54.0)
+        specifier: ^0.30.0
+        version: 0.30.0(eslint@8.54.0)
       typescript:
         specifier: ^5.3.2
         version: 5.3.2
@@ -115,8 +115,8 @@ importers:
         specifier: ^0.57.7
         version: 0.57.7(postcss@8.4.31)(vite@5.0.3)
       unplugin-icons:
-        specifier: ^0.17.4
-        version: 0.17.4(@svgr/core@8.1.0)
+        specifier: ^0.18.0
+        version: 0.18.0(@svgr/core@8.1.0)
 
   examples/next:
     dependencies:
@@ -212,8 +212,8 @@ importers:
         specifier: ^5.3.2
         version: 5.3.2
       unplugin-icons:
-        specifier: ^0.17.4
-        version: 0.17.4(@svgr/core@8.1.0)
+        specifier: ^0.18.0
+        version: 0.18.0(@svgr/core@8.1.0)
 
   examples/nuxt:
     dependencies:
@@ -1833,7 +1833,7 @@ packages:
       - vitest
     dev: true
 
-  /@luxass/eslint-config@4.0.0-beta.12(eslint-plugin-astro@0.29.1)(eslint@8.54.0)(typescript@5.3.2)(vitest@0.34.6):
+  /@luxass/eslint-config@4.0.0-beta.12(eslint-plugin-astro@0.30.0)(eslint@8.54.0)(typescript@5.3.2)(vitest@0.34.6):
     resolution: {integrity: sha512-eF8OOhUhaxeXci7vMTyvKZ7Rihz/9+Ud6dIwUJsnDSXaWwE6hPHQjQKljBG/koALL/kKC9hxcOk10Ei9BvEREA==}
     engines: {node: '>=18.18.0'}
     peerDependencies:
@@ -1872,7 +1872,7 @@ packages:
       eslint: 8.54.0
       eslint-config-flat-gitignore: 0.1.1
       eslint-plugin-antfu: 1.0.11(eslint@8.54.0)
-      eslint-plugin-astro: 0.29.1(eslint@8.54.0)
+      eslint-plugin-astro: 0.30.0(eslint@8.54.0)
       eslint-plugin-eslint-comments: 3.2.0(eslint@8.54.0)
       eslint-plugin-i: 2.29.0(@typescript-eslint/parser@6.13.1)(eslint@8.54.0)
       eslint-plugin-jsdoc: 46.9.0(eslint@8.54.0)
@@ -6875,8 +6875,8 @@ packages:
       eslint: 8.54.0
     dev: true
 
-  /eslint-plugin-astro@0.29.1(eslint@8.54.0):
-    resolution: {integrity: sha512-ffuUc7zFz8HavaAVaS5iRUzWqBf3/YbrFWUhx0GxXW3gVtnbri5UyvkN8EMOkZWkNXG1zqD2y9dlEsAezhbC0w==}
+  /eslint-plugin-astro@0.30.0(eslint@8.54.0):
+    resolution: {integrity: sha512-LDbbs836SiHqhuiuAF4CPqSSWsfa7R8vfX5lckphCUD/kBFIsobViI8fuTyMktQ9isCg+Q86LIQAHTFl3PWKTA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=7.0.0'
@@ -6886,6 +6886,7 @@ packages:
       '@typescript-eslint/types': 5.62.0
       astro-eslint-parser: 0.16.0
       eslint: 8.54.0
+      eslint-compat-utils: 0.1.2(eslint@8.54.0)
       postcss: 8.4.31
       postcss-selector-parser: 6.0.13
     transitivePeerDependencies:
@@ -14578,8 +14579,8 @@ packages:
       - supports-color
     dev: true
 
-  /unplugin-icons@0.17.4(@svgr/core@8.1.0):
-    resolution: {integrity: sha512-PHLxjBx3ZV8RUBvfMafFl8uWH88jHeZgOijcRpkwgne7y2Ovx7WI0Ltzzw3fjZQ7dGaDhB8udyKVdm9N2S6BIw==}
+  /unplugin-icons@0.18.0(@svgr/core@8.1.0):
+    resolution: {integrity: sha512-/HEkomWitqf8QLY8FgUqNNjuM24kw+FS7YRGxHa5XyamboW+HnbvLU5ztIBOYY5rtBO1+cHPntzBsln2nX3f+A==}
     peerDependencies:
       '@svgr/core': '>=7.0.0'
       '@svgx/core': ^1.0.1
@@ -14598,7 +14599,7 @@ packages:
       vue-template-es2015-compiler:
         optional: true
     dependencies:
-      '@antfu/install-pkg': 0.1.1
+      '@antfu/install-pkg': 0.3.0
       '@antfu/utils': 0.7.6
       '@iconify/utils': 2.1.12
       '@svgr/core': 8.1.0(typescript@5.3.2)
