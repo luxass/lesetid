@@ -19,6 +19,11 @@
       "persistent": true,
       "outputMode": "new-only"
     },
+    "lint": {
+      "cache": true,
+      "persistent": true,
+      "outputMode": "new-only"
+    },
     "test": {
       "outputs": [],
       "dependsOn": [],

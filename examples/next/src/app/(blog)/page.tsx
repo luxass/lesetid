@@ -11,7 +11,7 @@ export default function IndexPage() {
         {
           posts.length > 0
             ? (
-              <ul className="grid auto-cols-max grid-cols-1 mt-4 gap-4 sm:grid-cols-2 sm:gap-3">
+              <ul className="mt-4 grid auto-cols-max grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-3">
                 {posts.map((post) => (
                   <li key={post._id}>
                     <PostCard post={post} />

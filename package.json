@@ -30,7 +30,7 @@
     "dev": "turbo run dev --concurrency=40 --parallel --filter=\"!@lesetid-example/*\"",
     "dev:all": "turbo run dev --concurrency=40 --parallel",
     "dev:examples": "turbo run dev --concurrency=40 --parallel --filter=\"@lesetid-example/*\"",
-    "lint": "eslint . --report-unused-disable-directives",
+    "lint": "turbo run lint",
     "test": "turbo run test",
     "typecheck": "turbo run typecheck"
   },

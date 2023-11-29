@@ -83,7 +83,7 @@ export default async function PostPage({ params }: PostPageProps) {
   }
 
   return (
-    <article className="tracking-wide prose">
+    <article className="prose tracking-wide">
       {
         !post.published && (
           <Notification type="important">

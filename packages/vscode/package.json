@@ -81,6 +81,7 @@
     "web:tunnel": "npx localtunnel -p 5000",
     "package": "pnpm vsce package --no-dependencies",
     "release": "pnpm vsce publish --no-dependencies",
+    "lint": "eslint . --report-unused-disable-directives",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -91,7 +92,6 @@
     "@vscode/test-web": "^0.0.48",
     "@vscode/vsce": "^2.22.0"
   },
-
   "extensionKind": [
     "ui",
     "workspace"

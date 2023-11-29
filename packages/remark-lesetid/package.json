@@ -61,6 +61,7 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "test": "vitest run",
+    "lint": "eslint . --report-unused-disable-directives",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
