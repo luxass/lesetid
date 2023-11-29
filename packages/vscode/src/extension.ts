@@ -49,7 +49,7 @@ export function activate(context: ExtensionContext) {
       const text = document.getText();
 
       const files = config.get("files");
-      console.log(files, document.languageId);
+      log.info(files, document.languageId);
       if (files.includes(document.languageId)) {
         const estimation = estimate(text, {
           charsPerMinute: config.get("cpm"),
@@ -72,7 +72,7 @@ export function activate(context: ExtensionContext) {
       const text = document.getText();
 
       const files = config.get("files");
-      console.log(files, document.languageId);
+      log.info(files, document.languageId);
       if (files.includes(document.languageId)) {
         const estimation = estimate(text, {
           charsPerMinute: config.get("cpm"),
@@ -94,7 +94,7 @@ export function activate(context: ExtensionContext) {
       const text = document.getText();
 
       const files = config.get("files");
-      console.log(files, document.languageId);
+      log.info(files, document.languageId);
       if (files.includes(document.languageId)) {
         const estimation = estimate(text, {
           charsPerMinute: config.get("cpm"),
