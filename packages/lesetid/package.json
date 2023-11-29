@@ -22,7 +22,12 @@
   "keywords": [
     "read time",
     "reading time",
-    "words per minute"
+    "words per minute",
+    "read",
+    "time",
+    "medium",
+    "character count",
+    "characters per minute"
   ],
   "exports": {
     ".": {
@@ -74,9 +79,6 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "cac": "^6.7.14",
-    "colorette": "^2.0.20",
-    "consola": "^3.2.3",
     "volapyk": "^1.3.9"
   }
 }
