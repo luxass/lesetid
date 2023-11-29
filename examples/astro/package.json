@@ -19,7 +19,6 @@
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.3",
     "@astrojs/vue": "^3.0.4",
-    "@vercel/analytics": "^1.1.1",
     "astro": "^3.6.3",
     "github-schema": "^1.2.5",
     "rehype-autolink-headings": "^7.1.0",

@@ -2,17 +2,10 @@ export default defineNuxtConfig({
   modules: [
     "@nuxt/devtools",
     "@vueuse/nuxt",
-    "nuxt-icon",
     "@unocss/nuxt",
-    "@nuxt/image",
+    "nuxt-icon",
     "@nuxtjs/color-mode",
     "@nuxtjs/fontaine",
-  ],
-  plugins: [
-    {
-      src: "~/plugins/vercel-analytics.ts",
-      mode: "client",
-    },
   ],
   colorMode: {
     fallback: "dark",
@@ -54,10 +47,10 @@ export default defineNuxtConfig({
     ],
     routeRules: {
       "/api/examples": {
-        swr: 600,
+        isr: 600,
       },
       "/api/examples/:example": {
-        swr: 600,
+        isr: 600,
       },
     },
   },

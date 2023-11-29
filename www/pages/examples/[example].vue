@@ -33,18 +33,18 @@ const PROVIDER_ICONS: Record<string, string> = {
       <div class="flex items-center gap-2">
         <ClientOnly>
           <ColorScheme tag="span">
-            <NuxtImg
+            <img
               v-if="(example.iconUrl && typeof example.iconUrl === 'object') && mode.value === 'dark'" width="32"
               height="32" :src="example.iconUrl.dark"
-            />
-            <NuxtImg
+            >
+            <img
               v-if="(example.iconUrl && typeof example.iconUrl === 'object') && mode.value !== 'dark'" width="32"
               height="32" :src="example.iconUrl.light"
-            />
-            <NuxtImg
+            >
+            <img
               v-if="example.iconUrl && typeof example.iconUrl === 'string'" :src="example.iconUrl" width="32"
               height="32"
-            />
+            >
           </ColorScheme>
 
           <template #fallback>
