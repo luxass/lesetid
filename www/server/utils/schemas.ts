@@ -3,6 +3,7 @@ import {
   literal,
   object,
   optional,
+  record,
   startsWith,
   string,
   union,
@@ -23,11 +24,7 @@ export const ExampleSchema = object({
   title: string(),
   url: string(),
   handle: string(),
-  providers: object({
-    stackblitz: string(),
-    codesandbox: string(),
-    codespaces: string(),
-  }),
+  providers: record(string()),
 });
 
 export const ExamplesSchema = array(object({
