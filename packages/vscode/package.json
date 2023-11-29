@@ -26,7 +26,8 @@
   },
   "activationEvents": [
     "onStartupFinished",
-    "onCommand:reading-time.estimate"
+    "onCommand:reading-time.estimate",
+    "onCommand:reading-time.toggle"
   ],
   "contributes": {
     "commands": [
@@ -34,11 +35,21 @@
         "command": "reading-time.estimate",
         "title": "Estimate Reading Time",
         "category": "Reading Time"
+      },
+      {
+        "command": "reading-time.togge",
+        "title": "Toggle Reading Time",
+        "category": "Reading Time"
       }
     ],
     "configuration": {
       "title": "Reading Time",
       "properties": {
+        "reading-time.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable reading time estimation"
+        },
         "reading-time.wpm": {
           "type": "number",
           "default": 200,
@@ -52,7 +63,8 @@
         "reading-time.files": {
           "type": "array",
           "default": [
-            "markdown"
+            "markdown",
+            "mdx"
           ],
           "description": "Glob patterns for files to estimate reading time for"
         }
@@ -80,9 +92,7 @@
     "@vscode/test-web": "^0.0.48",
     "@vscode/vsce": "^2.22.0"
   },
-  "capabilities": {
-    "virtualWorkspaces": true
-  },
+
   "extensionKind": [
     "ui",
     "workspace"
