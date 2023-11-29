@@ -9,7 +9,6 @@
     "check": "astro check",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint .",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

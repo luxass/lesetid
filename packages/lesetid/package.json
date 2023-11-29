@@ -70,7 +70,6 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "test": "vitest run",
-    "lint": "eslint .",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {

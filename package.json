@@ -30,13 +30,12 @@
     "dev": "turbo run dev --concurrency=40 --parallel --filter=\"!@lesetid-example/*\"",
     "dev:all": "turbo run dev --concurrency=40 --parallel",
     "dev:examples": "turbo run dev --concurrency=40 --parallel --filter=\"@lesetid-example/*\"",
-    "lint": "turbo run lint",
-    "lint:examples": "turbo run lint --filter=\"@lesetid-example/*\"",
+    "lint": "eslint . --report-unused-disable-directives",
     "test": "turbo run test",
     "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "^4.0.0-beta.8",
+    "@luxass/eslint-config": "^4.0.0-beta.12",
     "@types/node": "^18.16.19",
     "eslint": "^8.54.0",
     "tsup": "^8.0.1",

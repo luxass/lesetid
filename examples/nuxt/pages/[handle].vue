@@ -4,7 +4,7 @@ import type { CustomParsedContent } from "~/types";
 
 <template>
   <ContentDoc v-slot="{ doc }">
-    <article class="prose tracking-wide">
+    <article class="tracking-wide prose">
       <Notification v-if="!(doc as CustomParsedContent).published" type="important">
         This post is a <strong>draft</strong>. It may be incomplete or contain
         inaccuracies.

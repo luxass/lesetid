@@ -13,7 +13,7 @@ jobs:
       pull-requests: write
     if: github.repository_owner == 'luxass'
     steps:
-    - uses: actions/labeler@v4
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        sync-labels: true
+      - uses: actions/labeler@v4
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          sync-labels: true

@@ -81,7 +81,6 @@
     "web:tunnel": "npx localtunnel -p 5000",
     "package": "pnpm vsce package --no-dependencies",
     "release": "pnpm vsce publish --no-dependencies",
-    "lint": "eslint .",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
