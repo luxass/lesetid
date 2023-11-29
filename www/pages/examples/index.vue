@@ -32,22 +32,25 @@ const mode = useColorMode();
       >
         <ClientOnly>
           <ColorScheme tag="span">
-            <NuxtImg
+            <img
               v-if="(example.iconUrl && typeof example.iconUrl === 'object') && mode.value === 'dark'" width="32"
               height="32" :src="example.iconUrl.dark"
-            />
-            <NuxtImg
+              :alt="`Icon for ${example.title}`"
+            >
+            <img
               v-if="(example.iconUrl && typeof example.iconUrl === 'object') && mode.value !== 'dark'" width="32"
               height="32" :src="example.iconUrl.light"
-            />
-            <NuxtImg
+              :alt="`Icon for ${example.title}`"
+            >
+            <img
               v-if="example.iconUrl && typeof example.iconUrl === 'string'" :src="example.iconUrl" width="32"
               height="32"
-            />
+              :alt="`Icon for ${example.title}`"
+            >
           </ColorScheme>
 
           <template #fallback>
-            <Icon name="octicon:question" size="32" />
+            <Icon name="ph:question" size="32" />
           </template>
         </ClientOnly>
         <span class="flex-1 text-left">{{ example.title }}</span>
@@ -57,7 +60,7 @@ const mode = useColorMode();
         target="_blank" rel="noopener noreferrer"
         class="h-20 flex items-center gap-2 border border-base rounded border-dashed p-4 text-center hover:border-solid"
       >
-        <Icon name="material-symbols:crop-square-outline" size="32" />
+        <Icon name="octicon:package-24" size="32" />
         <span class="flex-1 text-left">Missing an example?</span>
       </NuxtLink>
     </div>

@@ -14,13 +14,13 @@
       "dependsOn": ["^build"],
       "outputMode": "new-only"
     },
-    "lint": {
-      "cache": false,
-      "outputs": [],
-      "outputMode": "new-only"
-    },
     "dev": {
       "cache": false,
+      "persistent": true,
+      "outputMode": "new-only"
+    },
+    "lint": {
+      "cache": true,
       "persistent": true,
       "outputMode": "new-only"
     },
