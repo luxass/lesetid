@@ -15,7 +15,7 @@
     "remark-lesetid": "latest"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "^4.0.0-beta.12",
+    "@luxass/eslint-config": "^4.0.0-beta.13",
     "@nuxt/content": "^2.9.0",
     "@nuxt/devtools": "latest",
     "@nuxt/image": "^1.1.0",

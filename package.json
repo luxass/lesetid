@@ -39,7 +39,7 @@
     "@changesets/cli": "^2.27.1"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "^4.0.0-beta.12",
+    "@luxass/eslint-config": "^4.0.0-beta.13",
     "@types/node": "^18.16.19",
     "eslint": "^8.54.0",
     "tsup": "^8.0.1",

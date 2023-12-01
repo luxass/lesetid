@@ -1,15 +1,15 @@
 {
-  "publisher": "luxass",
   "name": "vscode-reading-time",
   "displayName": "Reading Time",
   "version": "0.1.0",
-  "private": true,
   "description": "An extension that estimates the reading time of a markdown file.",
+  "private": true,
   "author": {
     "name": "Lucas Nørgård",
     "url": "https://luxass.dev",
     "email": "lucasnrgaard@gmail.com"
   },
+  "publisher": "luxass",
   "license": "MIT",
   "repository": {
     "type": "git",
