@@ -3,7 +3,7 @@
   "npm": true,
   "readme": true,
   "website": "https://lesetid.dev",
-  "workspaces": {
+  "workspace": {
     "enabled": true,
     "ignores": [
       "examples/*",
