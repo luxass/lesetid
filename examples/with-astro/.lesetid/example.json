@@ -1,0 +1,16 @@
+{
+  "$schema": "https://lesetid.dev/schema",
+  "iconUrl": {
+    "dark": "/astro-dark.svg",
+    "light": "/astro-light.svg"
+  },
+  "title": "Astro Example",
+  "handle": "astro",
+  "url": "/examples/astro",
+  "providers": {
+    "stackblitz": "https://stackblitz.com/github/luxass/lesetid/tree/main/examples/with-astro?title=astro%20example%20|%20lesetid",
+    "codesandbox": "https://codesandbox.io/p/sandbox/github/luxass/lesetid/tree/main/examples/with-astro",
+    "codespaces": "https://codespaces.new/luxass/lesetid?devcontainer_path=.devcontainer/examples/with-astro/devcontainer.json",
+    "gitpod": "https://gitpod.io/#https://github.com/luxass/lesetid/tree/main/examples/with-astro"
+  }
+}

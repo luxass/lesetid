@@ -1,16 +1,22 @@
 # See https://github.com/actions/labeler
 
 "pkg: lesetid":
-  - packages/lesetid/**
+  - any:
+      - packages/lesetid/**
 
 "pkg: vscode":
-  - packages/vscode/**
+  - any:
+      - packages/vscode/**
 
 "pkg: remark-lesetid":
-  - packages/remark-lesetid/**
+  - any:
+      - packages/remark-lesetid/**
 
 "apps: www":
-  - www/**
+  - any:
+      - apps/www
 
 example:
-  - examples/**/*
+  - any:
+      - "examples/**/*"
+      - "!examples/**/package.json"

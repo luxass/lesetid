@@ -7,4 +7,5 @@ export default await luxass({
   astro: {
     a11y: true,
   },
+  formatters: true,
 });

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://lesetid.dev/schema",
+  "iconUrl": "/nextjs.svg",
+  "title": "NextJS Example",
+  "handle": "next",
+  "url": "/examples/next",
+  "providers": {
+    "stackblitz": "https://stackblitz.com/github/luxass/lesetid/tree/main/examples/with-next?title=next%20example%20|%20lesetid",
+    "codesandbox": "https://codesandbox.io/p/sandbox/github/luxass/lesetid/tree/main/examples/with-next",
+    "codespaces": "https://codespaces.new/luxass/lesetid?devcontainer_path=.devcontainer/examples/with-next/devcontainer.json",
+    "gitpod": "https://gitpod.io/#https://github.com/luxass/lesetid/tree/main/examples/with-next"
+  }
+}

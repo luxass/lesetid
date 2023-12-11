@@ -1,0 +1,13 @@
+{
+  "$schema": "https://lesetid.dev/schema",
+  "iconUrl": "/nuxt.svg",
+  "title": "Nuxt Example",
+  "handle": "nuxt",
+  "url": "/examples/nuxt",
+  "providers": {
+    "stackblitz": "https://stackblitz.com/github/luxass/lesetid/tree/main/examples/with-nuxt?title=nuxt%20example%20|%20lesetid",
+    "codesandbox": "https://codesandbox.io/p/sandbox/github/luxass/lesetid/tree/main/examples/with-nuxt",
+    "codespaces": "https://codespaces.new/luxass/lesetid?devcontainer_path=.devcontainer/examples/with-nuxt/devcontainer.json",
+    "gitpod": "https://gitpod.io/#https://github.com/luxass/lesetid/tree/main/examples/with-nuxt"
+  }
+}
