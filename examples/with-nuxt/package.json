@@ -2,6 +2,18 @@
   "name": "@lesetid-example/nuxt",
   "type": "module",
   "private": true,
+  "author": {
+    "name": "Lucas Nørgård",
+    "email": "lucasnrgaard@gmail.com",
+    "url": "https://luxass.dev"
+  },
+  "packageManager": "pnpm@8.12.0",
+  "license": "MIT",
+  "homepage": "https://github.com/luxass/lesetid",
+  "repository": "https://github.com/luxass/lesetid/tree/master/examples/with-nuxt",
+  "bugs": {
+    "url": "https://github.com/luxass/lesetid/issues"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -12,7 +24,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "remark-lesetid": "latest"
+    "remark-lesetid": "1.0.0"
   },
   "devDependencies": {
     "@luxass/eslint-config": "^4.0.0-beta.16",

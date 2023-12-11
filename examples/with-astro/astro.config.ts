@@ -7,7 +7,6 @@ import rehypeSlug from "rehype-slug";
 import Icons from "unplugin-icons/vite";
 import vue from "@astrojs/vue";
 import rehypeExternalLinks from "rehype-external-links";
-import prefetch from "@astrojs/prefetch";
 
 import {
   remarkLesetid,
@@ -29,10 +28,8 @@ export default defineConfig({
       },
     }),
     vue(),
-    prefetch({
-      throttle: 5,
-    }),
   ],
+  prefetch: true,
   markdown: {
     shikiConfig: {
       theme: "vitesse-dark",

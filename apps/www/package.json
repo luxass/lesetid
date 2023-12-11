@@ -2,7 +2,18 @@
   "name": "@lesetid/www",
   "type": "module",
   "private": true,
+  "author": {
+    "name": "Lucas Nørgård",
+    "email": "lucasnrgaard@gmail.com",
+    "url": "https://luxass.dev"
+  },
   "packageManager": "pnpm@8.12.0",
+  "license": "MIT",
+  "homepage": "https://github.com/luxass/lesetid",
+  "repository": "https://github.com/luxass/lesetid/tree/master/apps/www",
+  "bugs": {
+    "url": "https://github.com/luxass/lesetid/issues"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -13,7 +24,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "lesetid": "workspace:*",
+    "lesetid": "1.0.0",
     "nuxt-icon": "^0.6.7",
     "valibot": "^0.24.1"
   },

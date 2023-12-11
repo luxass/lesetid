@@ -36,7 +36,7 @@ watch(selectedText, () => {
       <Icon name="🕑" size="24" />
       <span>{{ time.text }}</span>
     </div>
-    <Select v-if="data && !error" v-model="selectedText">
+    <Select v-if="data && !error" v-model="selectedText" aria-label="Select a article to look at.">
       <option disabled selected value="">
         Select an example text...
       </option>

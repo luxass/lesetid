@@ -29,6 +29,7 @@ const input = useVModel(props, "modelValue", emit, { passive: true });
     </slot>
     <select
       v-model="input"
+      aria-label="Select a article to look at."
       :disabled="disabled"
       class="w-full flex-auto appearance-none bg-base !outline-none"
       :class="disabled ? 'appearance-none' : ''"

@@ -29,6 +29,11 @@
       "dependsOn": [],
       "outputMode": "new-only"
     },
+    "test:watch": {
+      "outputs": [],
+      "dependsOn": [],
+      "outputMode": "new-only"
+    },
     "typecheck": {
       "dependsOn": ["remark-lesetid#build", "lesetid#build"],
       "outputMode": "new-only"

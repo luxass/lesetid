@@ -34,18 +34,15 @@ const mode = useColorMode();
           <ColorScheme tag="span">
             <img
               v-if="(example.iconUrl && typeof example.iconUrl === 'object') && mode.value === 'dark'" width="32"
-              height="32" :src="example.iconUrl.dark"
-              :alt="`Icon for ${example.title}`"
+              height="32" :src="example.iconUrl.dark" :alt="`Icon for ${example.title}`"
             >
             <img
               v-if="(example.iconUrl && typeof example.iconUrl === 'object') && mode.value !== 'dark'" width="32"
-              height="32" :src="example.iconUrl.light"
-              :alt="`Icon for ${example.title}`"
+              height="32" :src="example.iconUrl.light" :alt="`Icon for ${example.title}`"
             >
             <img
               v-if="example.iconUrl && typeof example.iconUrl === 'string'" :src="example.iconUrl" width="32"
-              height="32"
-              :alt="`Icon for ${example.title}`"
+              height="32" :alt="`Icon for ${example.title}`"
             >
           </ColorScheme>
 

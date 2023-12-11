@@ -11,11 +11,7 @@
   },
   "publisher": "luxass",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/luxass/lesetid",
-    "directory": "packages/vscode"
-  },
+  "repository": "https://github.com/luxass/lesetid/tree/master/packages/vscode",
   "categories": [
     "Other"
   ],
@@ -85,7 +81,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "lesetid": "workspace:*"
+    "lesetid": "1.0.0"
   },
   "devDependencies": {
     "@types/vscode": "^1.70.0",

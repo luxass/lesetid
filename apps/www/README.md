@@ -6,7 +6,6 @@
 
 <samp>this is the playground for (lesetid.dev)[https://lesetid.dev]</samp>
 
-
 ## If you are being rate limited by GitHub's API
 Add a `.env` in the `www` folder with the following content:
 ```

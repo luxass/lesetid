@@ -13,7 +13,7 @@ if (!data || error.value) {
   await navigateTo("/examples");
 }
 
-const example = (data as Ref<Example>);
+const example = data as Ref<Example>;
 
 const providers = computed(() => {
   return Object.entries(example.value.providers);
@@ -36,14 +36,17 @@ const PROVIDER_ICONS: Record<string, string> = {
             <img
               v-if="(example.iconUrl && typeof example.iconUrl === 'object') && mode.value === 'dark'" width="32"
               height="32" :src="example.iconUrl.dark"
+              alt="Icon for {{ example.title }}"
             >
             <img
               v-if="(example.iconUrl && typeof example.iconUrl === 'object') && mode.value !== 'dark'" width="32"
               height="32" :src="example.iconUrl.light"
+              alt="Icon for {{ example.title }}"
             >
             <img
               v-if="example.iconUrl && typeof example.iconUrl === 'string'" :src="example.iconUrl" width="32"
               height="32"
+              alt="Icon for {{ example.title }}"
             >
           </ColorScheme>
 

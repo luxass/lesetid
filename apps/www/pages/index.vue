@@ -15,6 +15,7 @@ const mode = useColorMode();
     <Toolbar :model-value="text" @update:model-value="(str) => (text = str)" />
     <textarea
       v-model="text"
+      aria-label="Write your article here!"
       class="h-2xl w-full resize-none of-auto border border-base rounded p-4 text-sm shadow-sm outline-none focus-within:border-blue-600 bg-base focus-within:ring-2 focus-within:ring-blue-600"
     />
 

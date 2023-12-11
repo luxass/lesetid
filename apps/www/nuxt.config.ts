@@ -42,7 +42,7 @@ export default defineNuxtConfig({
     serverAssets: [
       {
         baseName: "texts",
-        dir: "../../example-articles",
+        dir: "./articles",
       },
     ],
     routeRules: {

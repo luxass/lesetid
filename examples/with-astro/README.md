@@ -5,7 +5,6 @@
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)][codespaces]
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)][gitpod]
 
-
 <samp>This is an example of how to use the `remark-lesetid` with [`astro`](https://astro.build).</samp>
 
 <!-- providers:start -->
