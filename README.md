@@ -18,10 +18,10 @@ This repository contains the packages, docs and examples for lesetid
   A simple example using [Nuxt](https://nuxt.com)
 - [Next.JS](https://github.com/luxass/lesetid/tree/main/examples/with-next) -
   A simple example using [Next.js](https://nextjs.org)
+- [Next.JS](https://github.com/luxass/lesetid/tree/main/examples/with-next-contentlayer) -
+  A simple example using [Next.js](https://nextjs.org) and [Contentlayer](https://contentlayer.dev)
 - [Astri](https://github.com/luxass/lesetid/tree/main/examples/with-astro) -
   A simple example using [Astro](https://astro.build)
-
-
 
 [Report an Issue](https://github.com/luxass/lesetid/issues/new)
 
