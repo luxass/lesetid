@@ -15,14 +15,15 @@
   "bugs": {
     "url": "https://github.com/luxass/lesetid/issues"
   },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=8.12.0"
+  },
   "workspaces": [
     "apps/*",
     "packages/*",
     "examples/*"
   ],
-  "engines": {
-    "node": ">=18"
-  },
   "scripts": {
     "build:all": "turbo run build",
     "build": "turbo run build --filter=\"./packages/*\"",
@@ -45,5 +46,8 @@
     "turbo": "^1.11.1",
     "typescript": "^5.3.3",
     "vitest": "^1.0.4"
+  },
+  "manypkg": {
+    "defaultBranch": "main"
   }
 }

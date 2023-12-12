@@ -11,7 +11,9 @@
         ".vercel/**",
         ".contentlayer/**"
       ],
-      "dependsOn": ["^build"],
+      "dependsOn": [
+        "^build"
+      ],
       "outputMode": "new-only"
     },
     "dev": {
@@ -35,7 +37,12 @@
       "outputMode": "new-only"
     },
     "typecheck": {
-      "dependsOn": ["remark-lesetid#build", "lesetid#build"],
+      "dependsOn": [
+        "remark-lesetid#build",
+        "lesetid#build",
+        "@lesetid-example/with-next#contentlayer:build",
+        "@lesetid-example/with-next#contentlayer:build"
+      ],
       "outputMode": "new-only"
     }
   }
