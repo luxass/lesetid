@@ -41,7 +41,7 @@
     "@changesets/cli": "^2.27.1",
     "@luxass/eslint-config": "^4.0.0-beta.16",
     "@manypkg/cli": "^0.21.1",
-    "@types/node": "^18.16.19",
+    "@types/node": "^20.0.0",
     "eslint": "^8.55.0",
     "tsup": "^8.0.1",
     "turbo": "^1.11.1",
