@@ -41,8 +41,8 @@
     },
     "typecheck": {
       "dependsOn": [
-        "topo"
-
+        "topo",
+        "^build"
       ],
       "outputMode": "new-only"
     }
