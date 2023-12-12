@@ -1,6 +1,9 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
+    "topo": {
+      "dependsOn": ["^topo"]
+    },
     "build": {
       "outputs": [
         "dist/**",
@@ -38,10 +41,8 @@
     },
     "typecheck": {
       "dependsOn": [
-        "remark-lesetid#build",
-        "lesetid#build",
-        "@lesetid-example/next#contentlayer:build",
-        "@lesetid-example/next-contentlayer#contentlayer:build"
+        "topo"
+
       ],
       "outputMode": "new-only"
     }
