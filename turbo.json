@@ -2,7 +2,9 @@
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "topo": {
-      "dependsOn": ["^topo"]
+      "dependsOn": [
+        "^topo"
+      ]
     },
     "build": {
       "outputs": [
@@ -27,21 +29,26 @@
     "lint": {
       "cache": true,
       "persistent": true,
-      "outputMode": "new-only"
+      "outputMode": "new-only",
+      "dependsOn": [
+        "^topo",
+        "^build"
+      ]
     },
     "test": {
       "outputs": [],
-      "dependsOn": [],
+      "dependsOn": [
+        "build"
+      ],
       "outputMode": "new-only"
     },
     "test:watch": {
-      "outputs": [],
-      "dependsOn": [],
+      "cache": false,
       "outputMode": "new-only"
     },
     "typecheck": {
       "dependsOn": [
-        "topo",
+        "^topo",
         "^build"
       ],
       "outputMode": "new-only"
