@@ -8,12 +8,18 @@ env:
   TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
   TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   release:
     name: Changelog PR or Release
-    if: ${{ github.repository_owner == 'luxass' }}
+    if: ${{ github.repository == 'luxass/lesetid' }}
     runs-on: ubuntu-latest
- 
+    permissions: 
+      contents: read
+      id-token: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -56,6 +62,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
 
       # Changeset has some issues with pnpm so we sync it up manually
       - name: Sync lockfile if necessary
