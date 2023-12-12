@@ -25,7 +25,7 @@
     "clean": "git clean -xdf .nuxt .output node_modules"
   },
   "dependencies": {
-    "remark-lesetid": "1.0.0"
+    "remark-lesetid": "1.0.1"
   },
   "devDependencies": {
     "@luxass/eslint-config": "^4.0.0-beta.16",

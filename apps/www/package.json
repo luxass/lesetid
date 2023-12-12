@@ -25,7 +25,7 @@
     "clean": "git clean -xdf .nuxt .output node_modules"
   },
   "dependencies": {
-    "lesetid": "1.0.0",
+    "lesetid": "1.0.1",
     "nuxt-icon": "^0.6.7",
     "valibot": "^0.24.1"
   },

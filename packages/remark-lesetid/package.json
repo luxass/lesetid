@@ -1,6 +1,6 @@
 {
   "name": "remark-lesetid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A remark plugin to add reading time to your markdown files",
   "type": "module",
   "author": {
@@ -62,7 +62,7 @@
     "clean": "git clean -xdf dist node_modules"
   },
   "dependencies": {
-    "lesetid": "1.0.0",
+    "lesetid": "1.0.1",
     "mdast-util-to-string": "^4.0.0",
     "unist-util-visit": "^5.0.0"
   },

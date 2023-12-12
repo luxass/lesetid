@@ -1,7 +1,7 @@
 {
   "name": "vscode-reading-time",
   "displayName": "Reading Time",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An extension that estimates the reading time of a markdown file.",
   "private": true,
   "author": {
@@ -82,7 +82,7 @@
     "clean": "git clean -xdf dist node_modules"
   },
   "dependencies": {
-    "lesetid": "1.0.0"
+    "lesetid": "1.0.1"
   },
   "devDependencies": {
     "@types/vscode": "^1.70.0",
