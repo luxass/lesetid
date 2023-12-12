@@ -40,8 +40,8 @@
       "dependsOn": [
         "remark-lesetid#build",
         "lesetid#build",
-        "@lesetid-example/with-next#contentlayer:build",
-        "@lesetid-example/with-next#contentlayer:build"
+        "@lesetid-example/next#contentlayer:build",
+        "@lesetid-example/next-contentlayer#contentlayer:build"
       ],
       "outputMode": "new-only"
     }
