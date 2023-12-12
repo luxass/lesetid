@@ -3,7 +3,7 @@
   "build": {
     "dockerfile": "../examples.Dockerfile"
   },
-  "workspaceFolder": "/workspaces/lesetid/examples/next",
+  "workspaceFolder": "/workspaces/lesetid/examples/with-next",
   "portsAttributes": {
     "3000": {
       "label": "Application",

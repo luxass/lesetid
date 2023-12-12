@@ -1,5 +1,5 @@
 {
-  "name": "@lesetid-example/next",
+  "name": "@lesetid-example/next-contentlayer",
   "version": "0.1.0",
   "private": true,
   "author": {
@@ -30,7 +30,6 @@
     "react-dom": "^18.2.0",
     "rehype-pretty-code": "^0.12.1",
     "shiki": "^0.14.6",
-    "shikiji": "^0.8.3",
     "tailwind-merge": "^2.1.0"
   },
   "devDependencies": {

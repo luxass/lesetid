@@ -1,9 +1,9 @@
 {
-  "name": "Astro Example",
+  "name": "NextJS Example",
   "build": {
     "dockerfile": "../examples.Dockerfile"
   },
-  "workspaceFolder": "/workspaces/lesetid/examples/astro",
+  "workspaceFolder": "/workspaces/lesetid/examples/with-next-contentlayer",
   "portsAttributes": {
     "3000": {
       "label": "Application",
@@ -16,18 +16,17 @@
   "postCreateCommand": "pnpm install && cd /workspaces/lesetid && pnpm run build",
   "waitFor": "postCreateCommand",
   "postAttachCommand": {
-    "Server": "pnpm start --host"
+    "Server": "pnpm start"
   },
   "customizations": {
     "codespaces": {
       "openFiles": [
-        "src/pages/index.astro"
+        "src/app/layout.tsx"
       ]
     },
     "vscode": {
       "extensions": [
-        "dbaeumer.vscode-eslint",
-        "astro-build.astro-vscode"
+        "dbaeumer.vscode-eslint"
       ]
     }
   }
