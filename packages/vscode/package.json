@@ -78,7 +78,8 @@
     "package": "pnpm vsce package --no-dependencies",
     "release": "pnpm vsce publish --no-dependencies",
     "lint": "eslint . --report-unused-disable-directives",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "clean": "git clean -xdf dist node_modules"
   },
   "dependencies": {
     "lesetid": "1.0.0"

@@ -21,7 +21,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint . --report-unused-disable-directives",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "clean": "git clean -xdf .nuxt .output node_modules"
   },
   "dependencies": {
     "remark-lesetid": "1.0.0"

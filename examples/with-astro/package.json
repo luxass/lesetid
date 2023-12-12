@@ -22,7 +22,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint . --report-unused-disable-directives",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "astro sync && tsc --noEmit",
+    "clean": "git clean -xdf .astro dist node_modules"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.2",

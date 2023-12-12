@@ -20,7 +20,8 @@
     "start": "next start",
     "lint": "eslint . --report-unused-disable-directives",
     "typecheck": "tsc --noEmit",
-    "contentlayer:build": "contentlayer build"
+    "contentlayer:build": "contentlayer build",
+    "clean": "git clean -xdf .next .contentlayer node_modules"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.0",

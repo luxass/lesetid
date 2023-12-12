@@ -21,6 +21,9 @@
       ],
       "outputMode": "new-only"
     },
+    "clean": {
+      "cache": false
+    },
     "dev": {
       "cache": false,
       "persistent": true,
@@ -49,8 +52,14 @@
     "typecheck": {
       "dependsOn": [
         "^topo",
-        "^build"
+        "^build",
+        "@lesetid-example/next#contentlayer:build",
+        "@lesetid-example/next-contentlayer#contentlayer:build"
       ],
+      "outputMode": "new-only"
+    },
+    "contentlayer:build": {
+      "cache": false,
       "outputMode": "new-only"
     }
   }
