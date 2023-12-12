@@ -18,7 +18,7 @@ jobs:
     if: ${{ github.repository == 'luxass/lesetid' }}
     runs-on: ubuntu-latest
     permissions: 
-      contents: read
+      contents: write
       id-token: write
     steps:
       - uses: actions/checkout@v4
