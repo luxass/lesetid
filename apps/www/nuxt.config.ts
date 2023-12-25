@@ -38,7 +38,7 @@ export default defineNuxtConfig({
   },
   css: ["@unocss/reset/tailwind.css"],
   nitro: {
-    preset: "vercel-edge",
+    preset: "vercel",
     serverAssets: [
       {
         baseName: "texts",
