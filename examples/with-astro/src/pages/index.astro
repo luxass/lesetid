@@ -12,8 +12,7 @@ export const prerender = true;
   <h1 class="my-8 mb-6 text-2xl font-semibold text-neutral-800 dark:text-neutral-100">Posts</h1>
   <article>
     {
-      posts.length > 0
-        ? (
+      posts.length > 0 ? (
         <ul class="grid auto-cols-max grid-cols-1 mt-4 gap-4 sm:grid-cols-2 sm:gap-3">
           {posts.map((post) => (
             <li>
@@ -21,10 +20,9 @@ export const prerender = true;
             </li>
           ))}
         </ul>
-          )
-        : (
+      ) : (
         <p>I didn't write any public available posts yet.</p>
-          )
+      )
     }
   </article>
 </PageLayout>

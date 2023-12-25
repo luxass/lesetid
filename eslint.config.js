@@ -3,7 +3,7 @@ import {
   luxass,
 } from "@luxass/eslint-config";
 
-export default await luxass({
+export default luxass({
   astro: {
     a11y: true,
   },

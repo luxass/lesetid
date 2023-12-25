@@ -1,4 +1,7 @@
-const { withContentlayer } = require("next-contentlayer");
+import UnpluginIcons from "unplugin-icons/webpack";
+import {
+  withContentlayer,
+} from "next-contentlayer";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -16,7 +19,7 @@ const nextConfig = {
   },
   webpack(config) {
     config.plugins.push(
-      require("unplugin-icons/webpack").default({
+      UnpluginIcons({
         compiler: "jsx",
         jsx: "react",
       }),
@@ -26,4 +29,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withContentlayer(nextConfig);
+export default withContentlayer(nextConfig);

@@ -8,13 +8,11 @@ const { href, class: clazz } = Astro.props;
 const isInternalLink = href && (href.startsWith("/") || href.startsWith("#"));
 const Component = href ? "a" : "div";
 
-const props = href
-  ? {
-      href,
-      target: isInternalLink ? undefined : "_blank",
-      rel: isInternalLink ? undefined : "noopener noreferrer",
-    }
-  : {};
+const props = href ? {
+  href,
+  target: isInternalLink ? undefined : "_blank",
+  rel: isInternalLink ? undefined : "noopener noreferrer",
+} : {};
 ---
 
 <Component
