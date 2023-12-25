@@ -7,7 +7,7 @@
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@8.12.0",
+  "packageManager": "pnpm@8.12.1",
   "license": "MIT",
   "homepage": "https://github.com/luxass/lesetid",
   "repository": "https://github.com/luxass/lesetid/tree/main/apps/www",
@@ -35,7 +35,7 @@
     "@nuxtjs/fontaine": "^0.4.1",
     "@unocss/nuxt": "^0.58.0",
     "nuxt": "^3.8.2",
-    "vue": "^3.3.11",
+    "vue": "^3.3.13",
     "vue-router": "^4.2.5"
   }
 }

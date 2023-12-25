@@ -8,7 +8,7 @@
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@8.12.0",
+  "packageManager": "pnpm@8.12.1",
   "license": "MIT",
   "homepage": "https://github.com/luxass/lesetid",
   "repository": "https://github.com/luxass/lesetid/tree/main/packages/lesetid",
@@ -76,6 +76,6 @@
     "clean": "git clean -xdf dist node_modules"
   },
   "devDependencies": {
-    "volapyk": "^1.3.9"
+    "volapyk": "^1.4.0"
   }
 }
