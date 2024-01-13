@@ -1,8 +1,7 @@
 {
-  "$schema": "https://projectrc.luxass.dev/schema",
-  "extras": {
-    "npm": true
-  },
+  "$schema": "https://projectrc.luxass.dev/schema.json",
+  "npm": true,
+  "version": true,
   "readme": true,
   "website": "https://lesetid.dev",
   "workspace": {
