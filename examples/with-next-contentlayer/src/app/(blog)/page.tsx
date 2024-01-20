@@ -1,8 +1,8 @@
-import { PostCard } from "~/components/PostCard";
-import { allPosts } from "~/contentlayer";
+import { PostCard } from "~/components/PostCard"
+import { allPosts } from "~/contentlayer"
 
 export default function IndexPage() {
-  const posts = allPosts.filter((post) => post.published).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 3);
+  const posts = allPosts.filter((post) => post.published).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 3)
 
   return (
     <>
@@ -25,5 +25,5 @@ export default function IndexPage() {
         }
       </article>
     </>
-  );
+  )
 }

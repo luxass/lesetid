@@ -1,9 +1,9 @@
 // @ts-check
 import {
   luxass,
-} from "@luxass/eslint-config";
+} from "@luxass/eslint-config"
 
-import pluginTailwindCSS from "eslint-plugin-tailwindcss";
+import pluginTailwindCSS from "eslint-plugin-tailwindcss"
 
 export default luxass({
   nextjs: true,
@@ -32,4 +32,4 @@ export default luxass({
       classRegex: "^(class(Name)?|tw)$",
     },
   },
-});
+})

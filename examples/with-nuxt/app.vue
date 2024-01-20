@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import "./styles/global.css";
+import "./styles/global.css"
 
 const ogUrl = process.env.NODE_ENV === "production"
   ? process.env.VERCEL_ENV === "production"
     ? "https://lesetid.dev"
     : `https://${process.env.VERCEL_URL}`
-  : "http://localhost:3000";
+  : "http://localhost:3000"
 
 useSeoMeta({
   description: "A example nuxt app using lesetid",
@@ -21,7 +21,7 @@ useSeoMeta({
   twitterDescription: "A example nuxt app using lesetid",
   twitterImage: `${ogUrl}/og-image.png`,
   twitterCard: "summary",
-});
+})
 </script>
 
 <template>

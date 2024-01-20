@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { CustomParsedContent } from "~/types";
+import type { CustomParsedContent } from "~/types"
 
-const posts = await queryContent<CustomParsedContent>().sort({ createdAt: -1 }).find();
+const posts = await queryContent<CustomParsedContent>().sort({ createdAt: -1 }).find()
 </script>
 
 <template>

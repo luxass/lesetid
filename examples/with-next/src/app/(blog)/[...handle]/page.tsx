@@ -1,11 +1,11 @@
-import { notFound } from "next/navigation";
-import React from "react";
-import type { Metadata } from "next/types";
-import { allPosts } from "~/contentlayer";
-import { MDXContent } from "~/components/mdx/MDXComponents";
+import { notFound } from "next/navigation"
+import React from "react"
+import type { Metadata } from "next/types"
+import { allPosts } from "~/contentlayer"
+import { MDXContent } from "~/components/mdx/MDXComponents"
 import {
   Notification,
-} from "~/components/Notification";
+} from "~/components/Notification"
 
 interface PostPageProps {
   params: {
@@ -14,23 +14,23 @@ interface PostPageProps {
 }
 
 async function getPostFromParams(params: PostPageProps["params"]) {
-  const slug = params?.handle?.join("/");
-  const post = allPosts.find((post) => post.url === slug);
+  const slug = params?.handle?.join("/")
+  const post = allPosts.find((post) => post.url === slug)
 
   if (!post) {
-    return null;
+    return null
   }
 
-  return post;
+  return post
 }
 
 export async function generateMetadata({
   params,
 }: PostPageProps): Promise<Metadata> {
-  const post = await getPostFromParams(params);
+  const post = await getPostFromParams(params)
 
   if (!post) {
-    return {};
+    return {}
   }
 
   const ogUrl = `https://image.luxass.dev/api/image/post?input=${encodeURIComponent(
@@ -39,7 +39,7 @@ export async function generateMetadata({
       description: post.description,
       date: post.date,
     }),
-  )}`;
+  )}`
 
   return {
     title: post.title,
@@ -64,7 +64,7 @@ export async function generateMetadata({
       description: post.description,
       images: [ogUrl.toString()],
     },
-  };
+  }
 }
 
 export async function generateStaticParams(): Promise<
@@ -72,14 +72,14 @@ export async function generateStaticParams(): Promise<
 > {
   return allPosts.map((post) => ({
     handle: post.url.split("/"),
-  }));
+  }))
 }
 
 export default async function PostPage({ params }: PostPageProps) {
-  const post = await getPostFromParams(params);
+  const post = await getPostFromParams(params)
 
   if (!post) {
-    notFound();
+    notFound()
   }
 
   return (
@@ -106,5 +106,5 @@ export default async function PostPage({ params }: PostPageProps) {
       <h1 className="mt-8">{post.title}</h1>
       <MDXContent code={post.body.code} />
     </article>
-  );
+  )
 }

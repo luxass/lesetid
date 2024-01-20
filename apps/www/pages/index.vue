@@ -1,12 +1,12 @@
 <script setup lang="ts">
-const text = ref("Write your article here!");
-const debounced = useDebounce(text, 500);
+const text = ref("Write your article here!")
+const debounced = useDebounce(text, 500)
 const {
   data: examples,
   error,
-} = await useExamples();
+} = await useExamples()
 
-const mode = useColorMode();
+const mode = useColorMode()
 </script>
 
 <template>

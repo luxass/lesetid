@@ -4,7 +4,7 @@ const { state, next } = useCycleList([
   "📖",
   "📚",
   "🇩🇰",
-]);
+])
 </script>
 
 <template>

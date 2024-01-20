@@ -1,6 +1,6 @@
 ---
-import { getCollection } from "astro:content";
-import Link from "./Link.astro";
+import { getCollection } from "astro:content"
+import Link from "./Link.astro"
 
 const posts = await getCollection("posts", ({ data }) => data.published).then((posts) => posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 3));
 ---

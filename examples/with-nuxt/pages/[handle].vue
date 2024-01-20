@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { CustomParsedContent } from "~/types";
+import type { CustomParsedContent } from "~/types"
 </script>
 
 <template>

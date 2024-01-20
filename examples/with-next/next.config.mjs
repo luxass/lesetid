@@ -1,7 +1,7 @@
-import UnpluginIcons from "unplugin-icons/webpack";
+import UnpluginIcons from "unplugin-icons/webpack"
 import {
   withContentlayer,
-} from "next-contentlayer";
+} from "next-contentlayer"
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -23,10 +23,10 @@ const nextConfig = {
         compiler: "jsx",
         jsx: "react",
       }),
-    );
+    )
 
-    return config;
+    return config
   },
-};
+}
 
-export default withContentlayer(nextConfig);
+export default withContentlayer(nextConfig)

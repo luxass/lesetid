@@ -1,6 +1,6 @@
-import type { PropsWithChildren } from "react";
-import { Footer } from "~/components/Footer";
-import { Header } from "~/components/Header";
+import type { PropsWithChildren } from "react"
+import { Footer } from "~/components/Footer"
+import { Header } from "~/components/Header"
 
 export default function BlogLayout({ children }: PropsWithChildren) {
   return (
@@ -9,5 +9,5 @@ export default function BlogLayout({ children }: PropsWithChildren) {
       <main className="flex-1 p-4">{children}</main>
       <Footer />
     </>
-  );
+  )
 }

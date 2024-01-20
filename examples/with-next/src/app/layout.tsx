@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
-import { Lexend } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from "next"
+import { Lexend } from "next/font/google"
+import "./globals.css"
 
 const lexend = Lexend({
   subsets: ["latin"],
   variable: "--font-lexend",
-});
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://next-example.lesetid.dev"),
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     )}`,
   },
 
-};
+}
 
 export default function RootLayout({
   children,
@@ -50,5 +50,5 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${lexend.variable} font-sans`}>{children}</body>
     </html>
-  );
+  )
 }

@@ -1,5 +1,5 @@
-import { defineCollection } from "astro:content";
-import { z } from "zod";
+import { defineCollection } from "astro:content"
+import { z } from "zod"
 
 const posts = defineCollection({
   type: "content",
@@ -10,6 +10,6 @@ const posts = defineCollection({
     date: z.string().transform((str) => new Date(str)),
     published: z.boolean().optional().default(true),
   }),
-});
+})
 
-export const collections = { posts };
+export const collections = { posts }

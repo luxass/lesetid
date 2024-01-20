@@ -3,7 +3,7 @@ useSeoMeta({
   description: "A playground for lesetid",
   ogTitle: "lesetid | playground",
   ogDescription: "A playground for lesetid",
-});
+})
 </script>
 
 <template>

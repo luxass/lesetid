@@ -1,8 +1,8 @@
-import Link from "next/link";
-import { allPosts } from "~/contentlayer";
+import Link from "next/link"
+import { allPosts } from "~/contentlayer"
 
 export function Header() {
-  const posts = allPosts.filter((post) => post.published).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 3);
+  const posts = allPosts.filter((post) => post.published).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 3)
   return (
     <header>
       <nav className="flex flex-wrap items-center justify-between">
@@ -19,5 +19,5 @@ export function Header() {
         </div>
       </nav>
     </header>
-  );
+  )
 }

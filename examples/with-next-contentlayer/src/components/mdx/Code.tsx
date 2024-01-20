@@ -1,9 +1,9 @@
-type HTMLCodeElement = HTMLElement;
+type HTMLCodeElement = HTMLElement
 
 export type CodeBlockProps = React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLCodeElement>,
   HTMLCodeElement
->;
+>
 
 export function CodeBlock({ children, ...props }: CodeBlockProps) {
   return (
@@ -13,5 +13,5 @@ export function CodeBlock({ children, ...props }: CodeBlockProps) {
     >
       {children}
     </code>
-  );
+  )
 }

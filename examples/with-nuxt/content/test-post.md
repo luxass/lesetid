@@ -13,5 +13,5 @@ It is really cool.
 And with code blocks!!
 
 ```js
-const cool = true;
+const cool = true
 ```

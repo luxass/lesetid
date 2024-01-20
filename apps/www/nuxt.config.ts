@@ -60,4 +60,4 @@ export default defineNuxtConfig({
     "lesetid/stream": "../packages/lesetid/src/stream.ts",
     "lesetid/utils": "../packages/lesetid/src/utils.ts",
   },
-});
+})

@@ -12,11 +12,11 @@ const props = withDefaults(
     disabled: false,
     icon: "",
   },
-);
+)
 const emit = defineEmits<{
   (e: "update:modelValue", value: any): void
-}>();
-const input = useVModel(props, "modelValue", emit, { passive: true });
+}>()
+const input = useVModel(props, "modelValue", emit, { passive: true })
 </script>
 
 <template>

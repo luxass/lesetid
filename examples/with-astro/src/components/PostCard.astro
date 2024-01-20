@@ -1,9 +1,9 @@
 ---
-import type { CollectionEntry } from "astro:content";
+import type { CollectionEntry } from "astro:content"
 
-import Card from "./Card.astro";
-import CalendarIcon from "~icons/carbon/Calendar";
-import AlarmIcon from "~icons/carbon/Alarm";
+import Card from "./Card.astro"
+import CalendarIcon from "~icons/carbon/Calendar"
+import AlarmIcon from "~icons/carbon/Alarm"
 
 export interface Props {
   post: CollectionEntry<"posts">
@@ -15,15 +15,15 @@ const {
     slug,
     render,
   },
-} = Astro.props;
+} = Astro.props
 
-const { remarkPluginFrontmatter } = await render();
+const { remarkPluginFrontmatter } = await render()
 
 const formattedDate = new Date(date).toLocaleDateString("en-US", {
   year: "numeric",
   month: "long",
   day: "numeric",
-});
+})
 
 const formattedTitle = title.length > 30 ? `${title.slice(0, 30)}...` : title;
 ---

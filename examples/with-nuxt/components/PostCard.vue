@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import type { CustomParsedContent } from "~/types";
+import type { CustomParsedContent } from "~/types"
 
 const props
 = defineProps<{
   post: CustomParsedContent
-}>();
+}>()
 
 const formattedDate = new Date(props.post.date).toLocaleDateString("en-US", {
   year: "numeric",
   month: "long",
   day: "numeric",
-});
+})
 
-const formattedTitle = props.post.title.length > 30 ? `${props.post.title.slice(0, 30)}...` : props.post.title;
+const formattedTitle = props.post.title.length > 30 ? `${props.post.title.slice(0, 30)}...` : props.post.title
 </script>
 
 <template>

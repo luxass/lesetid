@@ -2,8 +2,8 @@
 // We cannot use this import atm, because it typescript will error.
 // So we are just copying the types from the package.
 
-import type { Estimation } from "remark-lesetid";
-import type { LayoutKey } from "#build/types/layouts";
+import type { Estimation } from "remark-lesetid"
+import type { LayoutKey } from "#build/types/layouts"
 
 export interface ParsedContentInternalMeta {
   /**

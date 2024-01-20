@@ -4,9 +4,9 @@ export interface Props {
   href?: string
   class?: string
 }
-const { href, class: clazz } = Astro.props;
-const isInternalLink = href && (href.startsWith("/") || href.startsWith("#"));
-const Component = href ? "a" : "div";
+const { href, class: clazz } = Astro.props
+const isInternalLink = href && (href.startsWith("/") || href.startsWith("#"))
+const Component = href ? "a" : "div"
 
 const props = href ? {
   href,

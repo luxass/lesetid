@@ -4,7 +4,7 @@ defineProps<{
   icon?: string
   multiline?: boolean
   printable?: boolean
-}>();
+}>()
 </script>
 
 <template>

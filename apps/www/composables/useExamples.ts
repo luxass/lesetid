@@ -1,5 +1,5 @@
-import type { Example } from "~/types/example";
+import type { Example } from "~/types/example"
 
 export async function useExamples() {
-  return await useAsyncData<Example[]>(() => $fetch("/api/examples"));
+  return await useAsyncData<Example[]>(() => $fetch("/api/examples"))
 };

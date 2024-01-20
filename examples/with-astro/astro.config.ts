@@ -1,16 +1,16 @@
-import { defineConfig } from "astro/config";
-import unocss from "unocss/astro";
-import sitemap from "@astrojs/sitemap";
-import mdx from "@astrojs/mdx";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import rehypeSlug from "rehype-slug";
-import Icons from "unplugin-icons/vite";
-import vue from "@astrojs/vue";
-import rehypeExternalLinks from "rehype-external-links";
+import { defineConfig } from "astro/config"
+import unocss from "unocss/astro"
+import sitemap from "@astrojs/sitemap"
+import mdx from "@astrojs/mdx"
+import rehypeAutolinkHeadings from "rehype-autolink-headings"
+import rehypeSlug from "rehype-slug"
+import Icons from "unplugin-icons/vite"
+import vue from "@astrojs/vue"
+import rehypeExternalLinks from "rehype-external-links"
 
 import {
   remarkLesetid,
-} from "remark-lesetid/astro";
+} from "remark-lesetid/astro"
 
 // https://astro.build/config
 export default defineConfig({
@@ -52,4 +52,4 @@ export default defineConfig({
       }),
     ],
   },
-});
+})

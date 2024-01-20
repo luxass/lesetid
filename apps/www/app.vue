@@ -1,13 +1,13 @@
 <script setup lang="ts">
 useHead({
   title: "lesetid | playground",
-});
+})
 
 const ogUrl = process.env.NODE_ENV === "production"
   ? process.env.VERCEL_ENV === "production"
     ? "https://lesetid.dev"
     : `https://${process.env.VERCEL_URL}`
-  : "http://localhost:3000";
+  : "http://localhost:3000"
 
 useSeoMeta({
   description: "A playground for lesetid",
@@ -23,7 +23,7 @@ useSeoMeta({
   twitterDescription: "A playground for lesetid",
   twitterImage: `${ogUrl}/og-image.png`,
   twitterCard: "summary",
-});
+})
 </script>
 
 <template>
