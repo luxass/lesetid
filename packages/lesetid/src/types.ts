@@ -50,4 +50,4 @@ export interface Estimation {
   text: string
 }
 
-export type WordFN = (char?: string) => boolean;
+export type WordFN = (char?: string) => boolean
