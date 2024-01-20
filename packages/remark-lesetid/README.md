@@ -10,7 +10,7 @@ pnpm install remark-lesetid
 import { remarkLesetid } from "remark-lesetid";
 ```
 
-we are also providing an `export` to directly hook into [`astro`](https://astro.build).
+we are also providing an export to directly hook into [`astro`](https://astro.build).
 
 ```ts
 import { remarkLesetid } from "remark-lesetid/astro";
