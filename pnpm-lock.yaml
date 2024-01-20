@@ -397,12 +397,6 @@ importers:
 
   packages/lesetid:
     devDependencies:
-      '@luxass/eslint-config':
-        specifier: ^4.2.4
-        version: 4.2.4(@vue/compiler-sfc@3.4.15)(eslint-plugin-react-refresh@0.4.5)(eslint-plugin-tailwindcss@3.14.0)(eslint@8.56.0)(typescript@5.3.3)(vitest@1.2.1)
-      eslint:
-        specifier: ^8.56.0
-        version: 8.56.0
       volapyk:
         specifier: ^1.5.0
         version: 1.5.0
@@ -419,15 +413,9 @@ importers:
         specifier: ^5.0.0
         version: 5.0.0
     devDependencies:
-      '@luxass/eslint-config':
-        specifier: ^4.2.4
-        version: 4.2.4(@vue/compiler-sfc@3.4.15)(eslint-plugin-react-refresh@0.4.5)(eslint-plugin-tailwindcss@3.14.0)(eslint@8.56.0)(typescript@5.3.3)(vitest@1.2.1)
       '@types/mdast':
         specifier: ^4.0.3
         version: 4.0.3
-      eslint:
-        specifier: ^8.56.0
-        version: 8.56.0
       unified:
         specifier: ^11.0.4
         version: 11.0.4
@@ -441,9 +429,6 @@ importers:
         specifier: 1.0.1
         version: link:../lesetid
     devDependencies:
-      '@luxass/eslint-config':
-        specifier: ^4.2.4
-        version: 4.2.4(@vue/compiler-sfc@3.4.15)(eslint-plugin-react-refresh@0.4.5)(eslint-plugin-tailwindcss@3.14.0)(eslint@8.56.0)(typescript@5.3.3)(vitest@1.2.1)
       '@types/vscode':
         specifier: ^1.70.0
         version: 1.85.0
@@ -453,9 +438,6 @@ importers:
       '@vscode/vsce':
         specifier: ^2.22.0
         version: 2.22.0
-      eslint:
-        specifier: ^8.56.0
-        version: 8.56.0
 
 packages:
 
