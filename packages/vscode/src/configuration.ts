@@ -1,4 +1,4 @@
-import { type ConfigurationScope, workspace } from "vscode";
+import { type ConfigurationScope, workspace } from "vscode"
 
 interface Config {
   enabled: boolean
@@ -8,29 +8,29 @@ interface Config {
 }
 
 class Configuration<TConfig> {
-  get(): TConfig;
-  get<TKey extends Path<TConfig>>(key: TKey, scope?: ConfigurationScope | null): PathValue<TConfig, TKey>;
-  get<TKey extends Path<TConfig>>(key: TKey, scope: ConfigurationScope | null | undefined, defaultValue: NonNullable<PathValue<TConfig, TKey>>): NonNullable<PathValue<TConfig, TKey>>;
+  get(): TConfig
+  get<TKey extends Path<TConfig>>(key: TKey, scope?: ConfigurationScope | null): PathValue<TConfig, TKey>
+  get<TKey extends Path<TConfig>>(key: TKey, scope: ConfigurationScope | null | undefined, defaultValue: NonNullable<PathValue<TConfig, TKey>>): NonNullable<PathValue<TConfig, TKey>>
   get<TKey extends Path<TConfig>>(key?: TKey, scope?: ConfigurationScope | null, defaultValue?: NonNullable<PathValue<TConfig, TKey>>): TConfig | PathValue<TConfig, TKey> {
     if (!key) {
-      return workspace.getConfiguration().get<TConfig>("reading-time")! as TConfig;
+      return workspace.getConfiguration().get<TConfig>("reading-time")! as TConfig
     }
 
     const value = !defaultValue
       ? workspace.getConfiguration("reading-time", scope)
         .get<PathValue<TConfig, TKey>>(key as string)!
       : workspace.getConfiguration("reading-time", scope)
-        .get<PathValue<TConfig, TKey>>(key as string, defaultValue)!;
+        .get<PathValue<TConfig, TKey>>(key as string, defaultValue)!
 
-    return value as PathValue<TConfig, TKey>;
+    return value as PathValue<TConfig, TKey>
   }
 
   async set<TKey extends Path<TConfig>>(key: TKey, value: PathValue<TConfig, TKey>, scope?: ConfigurationScope | null): Promise<void> {
-    await workspace.getConfiguration("reading-time", scope).update(key as string, value);
+    await workspace.getConfiguration("reading-time", scope).update(key as string, value)
   }
 }
 
-export const config = new Configuration<Config>();
+export const config = new Configuration<Config>()
 
 type ChildPath<T, Key extends keyof T> = Key extends string
   ? T[Key] extends Record<string, any>
@@ -39,9 +39,9 @@ type ChildPath<T, Key extends keyof T> = Key extends string
     string}`
     | `${Key}.${Exclude<keyof T[Key], keyof any[]> & string}`
     : never
-  : never;
+  : never
 
-type Path<T> = ChildPath<T, keyof T> | keyof T;
+type Path<T> = ChildPath<T, keyof T> | keyof T
 
 type PathValue<T, P extends Path<T>> = P extends `${infer Key}.${infer Rest}`
   ? Key extends keyof T
@@ -51,4 +51,4 @@ type PathValue<T, P extends Path<T>> = P extends `${infer Key}.${infer Rest}`
     : never
   : P extends keyof T
     ? T[P]
-    : never;
+    : never

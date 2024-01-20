@@ -1,6 +1,6 @@
 import {
   defineConfig,
-} from "tsup";
+} from "tsup"
 
 export default defineConfig((opts) => [
   {
@@ -26,4 +26,4 @@ export default defineConfig((opts) => [
     minify: !opts.watch,
     external: ["vscode"],
   },
-]);
+])
