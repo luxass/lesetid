@@ -1,30 +1,30 @@
 <script lang="ts" setup>
-import type { Example } from "~/types/example";
+import type { Example } from "~/types/example"
 
-const route = useRoute();
-const mode = useColorMode();
+const route = useRoute()
+const mode = useColorMode()
 
 const {
   data,
   error,
-} = await useAsyncData<Example>(() => $fetch(`/api/examples/${route.params.example}`));
+} = await useAsyncData<Example>(() => $fetch(`/api/examples/${route.params.example}`))
 
 if (!data || error.value) {
-  await navigateTo("/examples");
+  await navigateTo("/examples")
 }
 
-const example = data as Ref<Example>;
+const example = data as Ref<Example>
 
 const providers = computed(() => {
-  return Object.entries(example.value.providers);
-});
+  return Object.entries(example.value.providers)
+})
 
 const PROVIDER_ICONS: Record<string, string> = {
   stackblitz: "logos:stackblitz-icon",
   codesandbox: "logos:codesandbox-icon",
   codespaces: "octicon:mark-github-16",
   gitpod: "devicon:gitpod",
-};
+}
 </script>
 
 <template>

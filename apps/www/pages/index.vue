@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const text = ref("Write your article here!");
-
+const debounced = useDebounce(text, 500);
 const {
   data: examples,
   error,
@@ -12,11 +12,10 @@ const mode = useColorMode();
 <template>
   <Header />
   <main class="mt-8 flex flex-col gap-8">
-    <Toolbar :model-value="text" @update:model-value="(str) => (text = str)" />
+    <Toolbar v-model="debounced" />
     <textarea
-      v-model="text"
-      aria-label="Write your article here!"
-      class="h-2xl w-full resize-none of-auto border border-base rounded p-4 text-sm shadow-sm outline-none focus-within:border-blue-600 bg-base focus-within:ring-2 focus-within:ring-blue-600"
+      v-model="text" aria-label="Write your article here!"
+      class="h-[42rem] w-full resize-none overflow-auto border border-base rounded p-4 text-sm shadow-sm outline-none focus-within:border-blue-600 bg-base focus-within:ring-2 focus-within:ring-blue-600"
     />
 
     <section v-if="!error || examples" id="examples" class="mt-8">
@@ -36,26 +35,21 @@ const mode = useColorMode();
       <div class="grid grid-cols-2 mt-4 gap-4 lg:grid-cols-3 sm:gap-3">
         <NuxtLink
           v-for="example in examples" :key="example.handle" :href="example.providers.stackblitz || example.url"
-          class="h-20 flex flex-row items-center gap-2 border border-base rounded p4 text-center"
+          class="h-20 flex flex-row items-center gap-2 border border-base rounded p-4 text-center"
         >
           <ClientOnly>
-            <ColorScheme tag="span">
-              <img
-                v-if="(example.iconUrl && typeof example.iconUrl === 'object') && mode.value === 'dark'" width="32"
-                height="32" :src="example.iconUrl.dark"
-                :alt="`Icon for ${example.title}`"
-              >
-              <img
-                v-if="(example.iconUrl && typeof example.iconUrl === 'object') && mode.value !== 'dark'" width="32"
-                height="32" :src="example.iconUrl.light"
-                :alt="`Icon for ${example.title}`"
-              >
-              <img
-                v-if="example.iconUrl && typeof example.iconUrl === 'string'" :src="example.iconUrl" width="32"
-                height="32"
-                :alt="`Icon for ${example.title}`"
-              >
-            </ColorScheme>
+            <img
+              v-if="(example.iconUrl && typeof example.iconUrl === 'object') && mode.value === 'dark'" width="32"
+              height="32" :src="example.iconUrl.dark" :alt="`Icon for ${example.title}`"
+            >
+            <img
+              v-if="(example.iconUrl && typeof example.iconUrl === 'object') && mode.value !== 'dark'" width="32"
+              height="32" :src="example.iconUrl.light" :alt="`Icon for ${example.title}`"
+            >
+            <img
+              v-if="example.iconUrl && typeof example.iconUrl === 'string'" :src="example.iconUrl" width="32"
+              height="32" :alt="`Icon for ${example.title}`"
+            >
 
             <template #fallback>
               <Icon name="ph:question" size="32" />

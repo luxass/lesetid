@@ -1,22 +1,10 @@
 <script setup lang="ts">
 import { estimate } from "lesetid";
 
-const props = withDefaults(
-  defineProps<{
-    modelValue?: string
-  }>(),
-  {
-    modelValue: undefined,
-  },
-);
-const emit = defineEmits<{
-  (e: "update:modelValue", value: string): void
-}>();
-
-const text = useVModel(props, "modelValue", emit, { passive: true });
+const modelValue = defineModel<string>();
 
 const time = computed(() => {
-  return estimate(text.value);
+  return estimate(modelValue.value);
 });
 
 const { data, error } = await useAsyncData(() => $fetch("/api/texts"));
@@ -24,7 +12,7 @@ const { data, error } = await useAsyncData(() => $fetch("/api/texts"));
 const selectedText = ref("");
 
 watch(selectedText, () => {
-  text.value
+  modelValue.value
     = data?.value?.texts.find((text) => text.key === selectedText.value)?.file
     || "";
 });

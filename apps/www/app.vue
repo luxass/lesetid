@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import "./styles/global.css";
-
 useHead({
   title: "lesetid | playground",
 });
@@ -29,7 +27,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="py3 md:px14 md:py10">
+  <div class="py-3 md:px-14 md:py-10">
     <NuxtPage />
   </div>
 </template>

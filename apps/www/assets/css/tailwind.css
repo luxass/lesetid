@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body , #__nuxt {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  @apply font-sans;
+}
+
+html.dark {
+  background: #111;
+  color: white;
+  color-scheme: dark;
+}
+
+#__nuxt {
+  @apply max-w-4xl lg:!mx-auto !mx-4;
+}
+
+@layer utilities {
+
+  .bg-base {
+    @apply bg-white dark:bg-[#151515];
+  }
+
+  .bg-secondary {
+    @apply bg-gray-400/5;
+  }
+
+  .bg-active {
+    @apply bg-gray-400/10;
+  }
+
+  .border-base {
+    @apply border-gray-400/20;
+  }
+}

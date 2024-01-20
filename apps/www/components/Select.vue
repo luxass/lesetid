@@ -28,11 +28,8 @@ const input = useVModel(props, "modelValue", emit, { passive: true });
       <Icon v-if="icon" :name="icon" class="mr-0.4em text-1.1em op50" />
     </slot>
     <select
-      v-model="input"
-      aria-label="Select a article to look at."
-      :disabled="disabled"
-      class="w-full flex-auto appearance-none bg-base !outline-none"
-      :class="disabled ? 'appearance-none' : ''"
+      v-model="input" aria-label="Select a article to look at." :disabled="disabled"
+      class="w-full flex-auto appearance-none bg-base !outline-none" :class="disabled ? 'appearance-none' : ''"
     >
       <option v-if="placeholder" value="" disabled hidden>
         {{ placeholder }}

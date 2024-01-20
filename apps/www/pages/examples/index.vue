@@ -1,10 +1,10 @@
 <script setup lang="ts">
 const {
   data: examples,
-} = await useExamples();
+} = await useExamples()
 
-const issueUrl = "https://github.com/luxass/lesetid/issues/new?assignees=&labels=example&projects=&template=missing-example.yml&title=missing+example+for+%5BEXAMPLE%5D";
-const mode = useColorMode();
+const issueUrl = "https://github.com/luxass/lesetid/issues/new?assignees=&labels=example&projects=&template=missing-example.yml&title=missing+example+for+%5BEXAMPLE%5D"
+const mode = useColorMode()
 </script>
 
 <template>

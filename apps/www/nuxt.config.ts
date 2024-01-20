@@ -2,17 +2,14 @@ export default defineNuxtConfig({
   modules: [
     "@nuxt/devtools",
     "@vueuse/nuxt",
-    "@unocss/nuxt",
-    "nuxt-icon",
     "@nuxtjs/color-mode",
-    "@nuxtjs/fontaine",
+    "nuxt-icon",
+    "@nuxtjs/tailwindcss",
   ],
+  sourcemap: false,
   colorMode: {
-    fallback: "dark",
-    preference: "dark",
     classSuffix: "",
   },
-  sourcemap: false,
   app: {
     head: {
       viewport: "width=device-width,initial-scale=1",
@@ -30,19 +27,20 @@ export default defineNuxtConfig({
     pageTransition: false,
     layoutTransition: false,
   },
-  experimental: {
+  future: {
     typescriptBundlerResolution: true,
+  },
+  experimental: {
     viewTransition: true,
     componentIslands: true,
     typedPages: true,
   },
-  css: ["@unocss/reset/tailwind.css"],
   nitro: {
     preset: "vercel",
     serverAssets: [
       {
         baseName: "texts",
-        dir: "./articles",
+        dir: "../articles",
       },
     ],
     routeRules: {
@@ -53,6 +51,9 @@ export default defineNuxtConfig({
         isr: 600,
       },
     },
+  },
+  tailwindcss: {
+    // exposeConfig: true,
   },
   alias: {
     "lesetid": "../packages/lesetid/src/index.ts",

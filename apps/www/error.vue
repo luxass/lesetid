@@ -1,5 +1,4 @@
 <script setup lang="ts">
-useDark();
 useHead({
   title: "lesetid | playground",
 });
@@ -12,7 +11,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="h-100dvh flex flex-col items-center justify-center gap-4">
+  <div class="h-dvh flex flex-col items-center justify-center gap-4">
     <h1 class="text-8xl text-blue-600">
       404
     </h1>

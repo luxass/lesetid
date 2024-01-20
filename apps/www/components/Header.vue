@@ -1,18 +1,4 @@
 <script setup lang="ts">
-const mode = useColorMode();
-const isDark = computed<boolean>({
-  get() {
-    return mode.value === "dark";
-  },
-  set() {
-    mode.preference = isDark.value ? "light" : "dark";
-  },
-});
-
-function toggle() {
-  isDark.value = !isDark.value;
-}
-
 const { state, next } = useCycleList([
   "📋",
   "📖",
@@ -39,22 +25,7 @@ const { state, next } = useCycleList([
           <Icon name="carbon:logo-npm" size="24" title="NPM" />
         </NuxtLink>
 
-        <ClientOnly>
-          <ColorScheme tag="span">
-            <button
-              title="Toggle Dark Mode" class="ml1 flex items-center justify-center text-lg op-50 hover:op-75"
-              @click="toggle"
-            >
-              <Icon :name="isDark ? 'carbon:moon' : 'carbon:sun'" size="24" />
-            </button>
-          </ColorScheme>
-
-          <template #fallback>
-            <button title="Toggle Dark Mode" class="ml1 flex items-center justify-center text-lg op-50 hover:op-75">
-              <Icon name="carbon:moon" size="24" />
-            </button>
-          </template>
-        </ClientOnly>
+        <ColorMode />
       </div>
     </nav>
   </header>
