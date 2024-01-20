@@ -35,6 +35,10 @@ export default defineNuxtConfig({
     componentIslands: true,
     typedPages: true,
   },
+  routeRules: {
+    "/**": { prerender: true },
+    "/api/**": { static: false, cache: false },
+  },
   nitro: {
     preset: "vercel",
     serverAssets: [
