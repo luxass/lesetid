@@ -29,26 +29,33 @@ export default defineNuxtConfig({
           name: "description",
           content: "A example nuxt app using lesetid",
         },
-        {
-          // disable darkreader
-          name: "darkreader-lock",
-          content: "",
-        },
       ],
     },
-    pageTransition: false,
-    layoutTransition: false,
   },
-  experimental: {
+  future: {
     typescriptBundlerResolution: true,
-    viewTransition: true,
-    componentIslands: true,
-    payloadExtraction: true,
-    typedPages: true,
+  },
+  routeRules: {
+    "/": {
+      isr: 3600,
+    },
+    "/**": {
+      isr: 3600,
+    },
+    "/api/examples": {
+      isr: 3600,
+    },
+    "/api/examples/:example": {
+      isr: 3600,
+    },
   },
   content: {
     highlight: {
-      theme: "vitesse-dark",
+      theme: {
+        default: "vitesse-dark",
+        dark: "vitesse-dark",
+        light: "vitesse-light",
+      },
     },
     markdown: {
       remarkPlugins: {
@@ -58,7 +65,6 @@ export default defineNuxtConfig({
       },
     },
   },
-  css: ["@unocss/reset/tailwind.css"],
   devServer: {
     port: 3001,
   },
