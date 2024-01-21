@@ -65,6 +65,9 @@ export default defineNuxtConfig({
       },
     },
   },
+  nitro: {
+    preset: "netlify",
+  },
   devServer: {
     port: 3001,
   },
