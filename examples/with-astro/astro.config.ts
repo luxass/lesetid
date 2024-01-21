@@ -6,11 +6,11 @@ import rehypeSlug from "rehype-slug"
 import rehypeExternalLinks from "rehype-external-links"
 import { remarkLesetid } from "remark-lesetid/astro"
 import tailwind from "@astrojs/tailwind"
-
 import remarkDirective from "remark-directive"
 import icon from "astro-icon"
 import solid from "@astrojs/solid-js"
 import { FontaineTransform } from "fontaine"
+import netlify from "@astrojs/netlify"
 import { asides } from "./remark-plugins/asides"
 
 // https://astro.build/config
@@ -47,11 +47,11 @@ export default defineConfig({
   },
   compressHTML: false,
   vite: {
-    plugins: [
-      FontaineTransform.vite({
-        fallbacks: ["Arial"],
-        resolvePath: (id) => new URL(`./public${id}`, import.meta.url), // id is the font src value in the CSS
-      }),
-    ],
+    plugins: [FontaineTransform.vite({
+      fallbacks: ["Arial"],
+      resolvePath: (id) => new URL(`./public${id}`, import.meta.url), // id is the font src value in the CSS
+    })],
   },
+  output: "hybrid",
+  adapter: netlify(),
 })
