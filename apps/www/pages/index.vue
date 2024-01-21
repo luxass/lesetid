@@ -1,11 +1,10 @@
 <script setup lang="ts">
 const text = ref("Write your article here!")
 const debounced = useDebounce(text, 500)
-
 const {
   data: examples,
   error,
-} = await useAsyncData("examples", () => $fetch("/api/examples"))
+} = await useAsyncData(() => $fetch("/api/examples"))
 
 const mode = useColorMode()
 </script>
@@ -15,7 +14,7 @@ const mode = useColorMode()
   <main class="mt-8 flex flex-col gap-8">
     <Toolbar v-model="debounced" />
     <textarea
-      v-model="text" aria-label="Write your article here!"
+      v-model="debounced" aria-label="Write your article here!"
       class="h-[42rem] w-full resize-none overflow-auto border border-base rounded p-4 text-sm shadow-sm outline-none focus-within:border-blue-600 bg-base focus-within:ring-2 focus-within:ring-blue-600"
     />
 

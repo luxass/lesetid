@@ -11,10 +11,12 @@ const { data, error } = await useAsyncData(() => $fetch("/api/texts"))
 
 const selectedText = ref("")
 
-watch(selectedText, () => {
-  modelValue.value
-    = data?.value?.texts.find((text) => text.key === selectedText.value)?.file
-    || ""
+watch(selectedText, (newVal) => {
+  if (newVal) {
+    modelValue.value
+      = data?.value?.texts.find((text) => text.key === newVal)?.file
+      || ""
+  }
 })
 </script>
 
