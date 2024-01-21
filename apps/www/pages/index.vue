@@ -32,7 +32,7 @@ const mode = useColorMode()
           examples page
         </NuxtLink>
       </p>
-      <div class="grid grid-cols-2 mt-4 gap-4 lg:grid-cols-3 sm:gap-3">
+      <div class="grid grid-cols-1 md:grid-cols-2 mt-4 gap-4 lg:grid-cols-3 sm:gap-3">
         <NuxtLink
           v-for="example in examples" :key="example.handle" :href="example.providers.stackblitz || example.url"
           class="h-20 flex flex-row items-center gap-2 border border-base rounded p-4 text-center"
