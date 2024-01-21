@@ -4,8 +4,7 @@ import {
 } from "@luxass/eslint-config"
 
 export default await luxass({
-  astro: {
-    a11y: true,
-  },
-  unocss: true,
+  astro: true,
+  tailwindcss: true,
+  solid: true,
 })

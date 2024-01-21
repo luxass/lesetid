@@ -2,8 +2,14 @@
 import type { CollectionEntry } from "astro:content"
 import { getCollection } from "astro:content"
 import PageLayout from "../layouts/PageLayout.astro"
-import Notification from "../components/Notification.astro"
-import Code from "../components/Code.vue"
+import Code from "../components/content/mdx/Code.astro"
+import Link from "../components/ui/Link.astro"
+import Pre from "../components/content/mdx/Pre.astro"
+import { getOgImageUrl } from "../utils"
+
+const ogImageUrl = getOgImageUrl(Astro.url.pathname)
+const imageSrc = ogImageUrl ?? "/default-og-image.png"
+const canonicalImageSrc = new URL(imageSrc, Astro.site)
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts")
@@ -19,7 +25,7 @@ interface Props {
 
 const {
   post: {
-    data: { title, description, date, published },
+    data: { title, description },
     render,
   },
 } = Astro.props
@@ -32,31 +38,18 @@ export const prerender = true;
 <PageLayout
   title={title}
   description={description}
-  image={`https://image.luxass.dev/api/image/post?input=${encodeURIComponent(
-    JSON.stringify({
-      title,
-      description,
-      date,
-    }),
-  )}`}
+  image={canonicalImageSrc}
 >
-  <article class="tracking-wide prose">
-    {
-      !published && (
-        <Notification type="important">
-          This post is a <strong>draft</strong>. It may be incomplete or contain inaccuracies.
-        </Notification>
-      )
-    }
-
-    <Notification type="note">
+  <article class="tracking-wide prose markdown">
+    <div class="border border-neutral-300 bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-800 rounded p-3 gap-3">
       This post will approximately take <strong>{remarkPluginFrontmatter.estimation.text}</strong> to read.
-    </Notification>
-
+    </div>
     <h1 class="mt-8">{title}</h1>
     <Content
       components={{
         code: Code,
+        a: Link,
+        pre: Pre,
       }}
     />
   </article>

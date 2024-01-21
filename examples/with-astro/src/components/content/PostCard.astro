@@ -1,0 +1,32 @@
+---
+import type { CollectionEntry } from "astro:content"
+
+import Link from "../ui/Link.astro"
+
+export function formatDate(date: Date): string {
+  return date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  })
+}
+
+export interface Props {
+  post: CollectionEntry<"posts">
+}
+
+const {
+  post: {
+    data: { title, description, date },
+    slug,
+  },
+} = Astro.props;
+---
+
+<Link href={`/${slug}`} class="flex flex-col justify-between h-36 border border-neutral-300 bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-800 rounded p-3 gap-3">
+  <span class="text-lg font-semibold">{title}</span>
+  <div class="flex-grow">
+    <span class="line-clamp-2">{description}</span>
+  </div>
+  <span>{formatDate(date)}</span>
+</Link>
