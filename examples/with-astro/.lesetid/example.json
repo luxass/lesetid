@@ -6,7 +6,7 @@
   },
   "title": "Astro",
   "handle": "astro",
-  "url": "/examples/astro",
+  "url": "/examples/with-astro",
   "providers": {
     "stackblitz": "https://stackblitz.com/github/luxass/lesetid/tree/main/examples/with-astro?title=astro%20example%20|%20lesetid",
     "codesandbox": "https://codesandbox.io/p/sandbox/github/luxass/lesetid/tree/main/examples/with-astro",

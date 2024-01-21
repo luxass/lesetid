@@ -3,7 +3,7 @@
   "iconUrl": "/nextjs.svg",
   "title": "NextJS with ContentLayer",
   "handle": "next-contentlayer",
-  "url": "/examples/next-contentlayer",
+  "url": "/examples/with-next-contentlayer",
   "providers": {
     "stackblitz": "https://stackblitz.com/github/luxass/lesetid/tree/main/examples/with-next-contentlayer?title=next%20example%20|%20lesetid",
     "codesandbox": "https://codesandbox.io/p/sandbox/github/luxass/lesetid/tree/main/examples/with-next-contentlayer",

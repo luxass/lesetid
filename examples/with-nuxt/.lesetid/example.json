@@ -3,7 +3,7 @@
   "iconUrl": "/nuxt.svg",
   "title": "Nuxt",
   "handle": "nuxt",
-  "url": "/examples/nuxt",
+  "url": "/examples/with-nuxt",
   "providers": {
     "stackblitz": "https://stackblitz.com/github/luxass/lesetid/tree/main/examples/with-nuxt?title=nuxt%20example%20|%20lesetid",
     "codesandbox": "https://codesandbox.io/p/sandbox/github/luxass/lesetid/tree/main/examples/with-nuxt",
