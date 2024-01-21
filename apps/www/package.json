@@ -29,10 +29,10 @@
     "valibot": "^0.26.0"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "^4.2.4",
+    "@luxass/eslint-config": "^4.2.5",
     "@nuxt/devtools": "latest",
     "@nuxtjs/color-mode": "^3.3.2",
-    "@nuxtjs/tailwindcss": "^6.10.4",
+    "@nuxtjs/tailwindcss": "^6.11.0",
     "eslint": "^8.56.0",
     "eslint-plugin-tailwindcss": "^3.14.0",
     "nuxt": "^3.9.3",

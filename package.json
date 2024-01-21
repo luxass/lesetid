@@ -31,7 +31,7 @@
     "dev:all": "turbo run dev",
     "dev": "turbo run dev --filter=\"./packages/*\"",
     "dev:examples": "turbo run dev --filter=\"@lesetid-example/*\"",
-    "lint": "turbo run lint && manypkg check",
+    "lint": "turbo run lint",
     "test": "turbo run test",
     "test:watch": "turbo run test:watch",
     "typecheck": "turbo run typecheck",
@@ -40,8 +40,7 @@
   "dependencies": {
     "@changesets/changelog-github": "^0.5.0",
     "@changesets/cli": "^2.27.1",
-    "@luxass/eslint-config": "^4.2.4",
-    "@manypkg/cli": "^0.21.2",
+    "@luxass/eslint-config": "^4.2.5",
     "@types/node": "^18.16.19",
     "eslint": "^8.56.0",
     "tsup": "^8.0.1",
