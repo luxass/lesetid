@@ -1,20 +1,27 @@
 <script setup lang="ts">
-const { data: posts } = await useAsyncData(
-  () => queryContent().limit(3).sort({ createdAt: -1 }).find(),
-)
+import {
+  url,
+} from "../.lesetid/example.json"
 </script>
 
 <template>
-  <header>
+  <header class="px-4">
     <nav class="flex flex-wrap items-center justify-between">
-      <NuxtLink href="/" class="transition-transform active:scale-95">
-        Nuxt Example
-      </NuxtLink>
+      <div class="flex items-center gap-2">
+        <NuxtLink href="/" class="transition-transform active:scale-95">
+          Nuxt Example
+        </NuxtLink>
+      </div>
 
       <div class="flex items-center gap-4 sm:gap-6">
-        <NuxtLink v-for="post in posts" :key="post._id" class="transition-transform active:scale-95" :href="post._path">
-          {{ post.shortTitle }}
+        <NuxtLink class="transition-transform active:scale-95" href="/">
+          Posts
         </NuxtLink>
+        <NuxtLink class="transition-transform active:scale-95" :href="`https://github.com/luxass/lesetid/blob/main${url}`">
+          <Icon name="mdi:github" class="size-5" />
+        </NuxtLink>
+
+        <ColorMode />
       </div>
     </nav>
   </header>

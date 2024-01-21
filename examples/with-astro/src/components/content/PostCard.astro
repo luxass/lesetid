@@ -23,7 +23,7 @@ const {
 } = Astro.props;
 ---
 
-<Link href={`/${slug}`} class="flex flex-col justify-between h-36 border border-neutral-300 bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-800 rounded p-3 gap-3">
+<Link href={`/posts${slug}`} class="flex flex-col justify-between h-36 border border-neutral-300 bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-800 rounded p-3 gap-3">
   <span class="text-lg font-semibold">{title}</span>
   <div class="flex-grow">
     <span class="line-clamp-2">{description}</span>

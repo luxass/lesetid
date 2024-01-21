@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import "./styles/global.css"
-
 const ogUrl = process.env.NODE_ENV === "production"
   ? process.env.VERCEL_ENV === "production"
     ? "https://lesetid.dev"
@@ -25,9 +23,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <Header />
-  <main class="flex-1 p-4">
+  <NuxtLayout>
     <NuxtPage />
-  </main>
-  <Footer />
+  </NuxtLayout>
 </template>

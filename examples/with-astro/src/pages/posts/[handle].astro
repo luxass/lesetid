@@ -1,11 +1,11 @@
 ---
 import type { CollectionEntry } from "astro:content"
 import { getCollection } from "astro:content"
-import PageLayout from "../layouts/PageLayout.astro"
-import Code from "../components/content/mdx/Code.astro"
-import Link from "../components/ui/Link.astro"
-import Pre from "../components/content/mdx/Pre.astro"
-import { getOgImageUrl } from "../utils"
+import PageLayout from "../../layouts/PageLayout.astro"
+import Code from "../../components/content/mdx/Code.astro"
+import Link from "../../components/ui/Link.astro"
+import Pre from "../../components/content/mdx/Pre.astro"
+import { getOgImageUrl } from "../../utils"
 
 const ogImageUrl = getOgImageUrl(Astro.url.pathname)
 const imageSrc = ogImageUrl ?? "/default-og-image.png"

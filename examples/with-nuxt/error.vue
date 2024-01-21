@@ -1,13 +1,17 @@
 <script setup lang="ts">
+useHead({
+  title: "nuxt example | lesetid.dev",
+})
+
 useSeoMeta({
-  description: "A playground for lesetid",
-  ogTitle: "lesetid | playground",
-  ogDescription: "A playground for lesetid",
+  description: "A nuxt example for lesetid",
+  ogTitle: "nuxt example | lesetid.dev",
+  ogDescription: "A nuxt example for lesetid",
 })
 </script>
 
 <template>
-  <div class="h-100dvh flex flex-col items-center justify-center gap-4">
+  <div class="h-dvh flex flex-col items-center justify-center gap-4">
     <h1 class="text-8xl text-blue-600">
       404
     </h1>

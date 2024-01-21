@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply antialiased touch-manipulation scroll-smooth text-base;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  @apply dark:outline-white selection:dark:bg-neutral-700 selection:dark:text-white outline-black selection:bg-neutral-200 selection:text-black;
+}
+
+html, body , #__nuxt {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", "DM Sans Fallback";
+}
+
+body {
+  @apply text-neutral-900 bg-neutral-100 dark:text-neutral-300 dark:bg-neutral-900
+}
+
+#__nuxt {
+  @apply px-0 md:px-4 py-4 md:py-8 max-w-3xl md:mx-auto relative min-h-screen text-sm md:text-base flex flex-col;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/dm-sans.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.prose {
+  @apply [&>:not(:last-child)]:mb-6;
+
+  & p:not([class*="callout"] p) {
+    @apply my-6 leading-7;
+  }
+
+  & h1,
+  & h2,
+  & h3 {
+    @apply text-neutral-900 dark:text-neutral-300 font-semibold my-8;
+  }
+
+  & h1 {
+    @apply text-2xl;
+  }
+
+  & h2 {
+    @apply text-xl;
+  }
+
+  & h3 {
+    @apply text-lg;
+  }
+
+  & strong {
+    @apply font-medium text-neutral-900 dark:text-neutral-300;
+  }
+
+  & ul {
+    @apply list-disc list-outside pl-4;
+  }
+
+  & ul>li {
+    @apply mb-2;
+  }
+
+  & img {
+    @apply mx-auto rounded my-6;
+  }
+}
