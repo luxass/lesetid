@@ -4,7 +4,7 @@
     "dark": "/astro-dark.svg",
     "light": "/astro-light.svg"
   },
-  "title": "Astro Example",
+  "title": "Astro",
   "handle": "astro",
   "url": "/examples/astro",
   "providers": {

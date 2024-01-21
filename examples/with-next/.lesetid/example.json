@@ -1,7 +1,7 @@
 {
   "$schema": "https://lesetid.dev/schema",
   "iconUrl": "/nextjs.svg",
-  "title": "NextJS Example",
+  "title": "NextJS",
   "handle": "next",
   "url": "/examples/next",
   "providers": {

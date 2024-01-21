@@ -1,7 +1,7 @@
 {
   "$schema": "https://lesetid.dev/schema",
   "iconUrl": "/nextjs.svg",
-  "title": "NextJS with ContentLayer Example",
+  "title": "NextJS with ContentLayer",
   "handle": "next-contentlayer",
   "url": "/examples/next-contentlayer",
   "providers": {

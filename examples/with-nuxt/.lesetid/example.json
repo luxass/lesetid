@@ -1,7 +1,7 @@
 {
   "$schema": "https://lesetid.dev/schema",
   "iconUrl": "/nuxt.svg",
-  "title": "Nuxt Example",
+  "title": "Nuxt",
   "handle": "nuxt",
   "url": "/examples/nuxt",
   "providers": {
