@@ -36,10 +36,15 @@ export default defineNuxtConfig({
     typedPages: true,
   },
   routeRules: {
-    "/**": { prerender: true },
-    "/api/**": { static: false, cache: false },
+    "/": {
+      isr: 60 * 60 * 24,
+    },
+    "/**": {
+      isr: 60 * 60 * 24,
+    },
   },
   nitro: {
+    compressPublicAssets: true,
     preset: "vercel",
     serverAssets: [
       {
