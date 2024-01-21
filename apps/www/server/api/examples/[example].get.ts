@@ -17,13 +17,6 @@ export default defineEventHandler(async (event) => {
     })
   }
 
-  if (example === "with-astro") {
-    throw createError({
-      statusCode: 404,
-      statusMessage: "Not found",
-    })
-  }
-
   const exampleContent = await $fetch(`https://api.github.com/repos/luxass/lesetid/contents/examples/${example}/.lesetid/example.json`, {
     headers: {
       "User-Agent": "lesetid.dev",
