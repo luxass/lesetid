@@ -1,22 +1,24 @@
 <script lang="ts" setup>
-import type { Example } from "~/types/example"
-
 const route = useRoute()
 const mode = useColorMode()
 
-const {
-  data,
-  error,
-} = await useAsyncData<Example>(() => $fetch(`/api/examples/${route.params.example}`))
-
-if (!data || error.value) {
+const { example: exampleParam } = route.params
+if (!exampleParam) {
   await navigateTo("/examples")
 }
 
-const example = data as Ref<Example>
+const {
+  data: example,
+  pending,
+  error,
+} = await useAsyncData(`example-${exampleParam}`, () => $fetch(`/api/examples/${route.params.example}`))
+
+if (!example || !example?.value) {
+  await navigateTo("/examples")
+}
 
 const providers = computed(() => {
-  return Object.entries(example.value.providers)
+  return Object.entries(example?.value?.providers || {})
 })
 
 const PROVIDER_ICONS: Record<string, string> = {
@@ -28,50 +30,46 @@ const PROVIDER_ICONS: Record<string, string> = {
 </script>
 
 <template>
-  <header>
-    <nav class="flex flex-wrap items-center justify-between">
-      <div class="flex items-center gap-2">
-        <ClientOnly>
-          <ColorScheme tag="span">
-            <img
-              v-if="(example.iconUrl && typeof example.iconUrl === 'object') && mode.value === 'dark'" width="32"
-              height="32" :src="example.iconUrl.dark"
-              alt="Icon for {{ example.title }}"
-            >
-            <img
-              v-if="(example.iconUrl && typeof example.iconUrl === 'object') && mode.value !== 'dark'" width="32"
-              height="32" :src="example.iconUrl.light"
-              alt="Icon for {{ example.title }}"
-            >
-            <img
-              v-if="example.iconUrl && typeof example.iconUrl === 'string'" :src="example.iconUrl" width="32"
-              height="32"
-              alt="Icon for {{ example.title }}"
-            >
-          </ColorScheme>
+  <span v-if="pending || error">HAHAHA</span>
+  <Header v-else :title="example?.title">
+    <template #icon>
+      <ClientOnly>
+        <img
+          v-if="(example?.iconUrl && typeof example?.iconUrl === 'object') && mode.value === 'dark'" width="32"
+          height="32" :src="example?.iconUrl.dark"
+          alt="Icon for {{ example?.title }}"
+        >
+        <img
+          v-if="(example?.iconUrl && typeof example?.iconUrl === 'object') && mode.value !== 'dark'" width="32"
+          height="32" :src="example?.iconUrl.light"
+          alt="Icon for {{ example?.title }}"
+        >
+        <img
+          v-if="example?.iconUrl && typeof example?.iconUrl === 'string'" :src="example?.iconUrl" width="32"
+          height="32"
+          alt="Icon for {{ example?.title }}"
+        >
 
-          <template #fallback>
-            <Icon name="octicon:question" size="32" />
-          </template>
-        </ClientOnly>
-        <h1>{{ example.title }}</h1>
-      </div>
-      <div class="flex items-center gap-2">
-        <NuxtLink href="/examples" class="underline underline-offset-3">
-          Back to examples
-        </NuxtLink>
-      </div>
-    </nav>
-  </header>
-  <main class="mt-8 flex flex-col gap-8">
-    <div class="grid grid-cols-2 mt-4 gap-4 lg:grid-cols-3 sm:gap-3">
+        <template #fallback>
+          <Icon name="octicon:question" size="32" />
+        </template>
+      </ClientOnly>
+    </template>
+  </Header>
+
+  <NuxtLink href="/examples" class="text-right underline underline-offset-3 mt-4 block">
+    Back to examples
+  </NuxtLink>
+
+  <main class="mt-4 flex flex-col gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 mt-4 gap-4 lg:grid-cols-3 sm:gap-3">
       <NuxtLink
         v-for="[provider, providerUrl] in providers" :key="provider" :href="providerUrl"
-        class="h-20 flex flex-row items-center gap-2 border border-base rounded p4 text-center"
+        class="h-20 flex flex-row items-center gap-2 border border-base rounded p-4 text-center"
       >
         <Icon
           :name="PROVIDER_ICONS[provider] || 'octicon:question'" size="32" :class="{
-            'fill-white': provider === 'codesandbox',
+            'dark:fill-white': provider === 'codesandbox',
           }"
         />
         <span class="flex-1 text-left capitalize">{{ provider }}</span>

@@ -5,7 +5,6 @@ import {
 import type { Example } from "~/types/example"
 
 export default defineEventHandler(async () => {
-  const examples: Example[] = []
   const data = await $fetch("https://api.github.com/repos/luxass/lesetid/contents/examples", {
     headers: {
       "User-Agent": "lesetid.dev",
@@ -16,15 +15,15 @@ export default defineEventHandler(async () => {
 
   const examplesOutput = await parseAsync(ExamplesSchema, data)
 
-  await Promise.all(examplesOutput.filter((example) => example.type === "dir").map(async (example) => {
-    const response = await $fetch(`/api/examples/${example.name}`)
-
-    if (typeof response === "string") {
-      console.error(`Example ${example.name} failed to load`)
-      return
+  const _examples: (Example | undefined)[] = await Promise.all(examplesOutput.filter((example) => example.type === "dir").map(async (example) => {
+    try {
+      const response = await $fetch(`/api/examples/${example.name}`)
+      return response
+    } catch (error) {
+      console.error(`Error loading example ${example.name}: ${error}`)
     }
-    examples.push(response)
   }))
+  const examples: Example[] = _examples.filter((example): example is Example => example !== undefined)
 
   return examples
 })

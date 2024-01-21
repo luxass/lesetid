@@ -3,14 +3,25 @@ import { parseAsync } from "valibot"
 
 export default defineEventHandler(async (event) => {
   if (!event.context.params) {
-    setResponseStatus(event, 404)
-    return "Not found"
+    throw createError({
+      statusCode: 404,
+      statusMessage: "Not found",
+    })
   }
 
   const { example } = event.context.params
   if (!example) {
-    setResponseStatus(event, 404)
-    return "Not found"
+    throw createError({
+      statusCode: 404,
+      statusMessage: "Not found",
+    })
+  }
+
+  if (example === "with-astro") {
+    throw createError({
+      statusCode: 404,
+      statusMessage: "Not found",
+    })
   }
 
   const exampleContent = await $fetch(`https://api.github.com/repos/luxass/lesetid/contents/examples/${example}/.lesetid/example.json`, {
@@ -22,12 +33,16 @@ export default defineEventHandler(async (event) => {
   })
 
   if (!exampleContent || typeof exampleContent !== "object") {
-    setResponseStatus(event, 404)
-    return "Not found"
+    throw createError({
+      statusCode: 404,
+      statusMessage: "Not found",
+    })
   }
   if (!("content" in exampleContent) || typeof exampleContent.content !== "string") {
-    setResponseStatus(event, 404)
-    return "Not found"
+    throw createError({
+      statusCode: 404,
+      statusMessage: "Not found",
+    })
   }
 
   const exampleObj = await parseAsync(ExampleSchema, JSON.parse(atob(exampleContent.content)))

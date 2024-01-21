@@ -24,23 +24,22 @@ export default defineNuxtConfig({
         },
       ],
     },
-    pageTransition: false,
-    layoutTransition: false,
   },
   future: {
     typescriptBundlerResolution: true,
   },
-  experimental: {
-    viewTransition: true,
-    componentIslands: true,
-    typedPages: true,
-  },
   routeRules: {
     "/": {
-      isr: 60 * 60 * 24,
+      isr: 3600,
     },
     "/**": {
-      isr: 60 * 60 * 24,
+      isr: 3600,
+    },
+    "/api/examples": {
+      isr: 3600,
+    },
+    "/api/examples/:example": {
+      isr: 3600,
     },
   },
   nitro: {
@@ -52,17 +51,6 @@ export default defineNuxtConfig({
         dir: "../articles",
       },
     ],
-    routeRules: {
-      "/api/examples": {
-        isr: 600,
-      },
-      "/api/examples/:example": {
-        isr: 600,
-      },
-    },
-  },
-  tailwindcss: {
-    // exposeConfig: true,
   },
   alias: {
     "lesetid": "../packages/lesetid/src/index.ts",

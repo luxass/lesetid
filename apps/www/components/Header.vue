@@ -1,21 +1,21 @@
 <script setup lang="ts">
-const { state, next } = useCycleList([
-  "📋",
-  "📖",
-  "📚",
-  "🇩🇰",
-])
+const { title } = withDefaults(defineProps<{
+  title?: string
+}>(), {
+  title: "lesetid",
+})
 </script>
 
 <template>
   <header>
     <nav class="flex flex-wrap items-center justify-between">
-      <div class="flex items-center gap-2">
-        <Icon :name="state" size="32" class="cursor-pointer select-none" @click="next()" />
-        <NuxtLink href="/">
-          <h1>lesetid</h1>
-        </NuxtLink>
-      </div>
+      <NuxtLink href="/" class="flex items-center gap-2">
+        <slot name="icon">
+          <Icon name="📖" size="32" class="cursor-pointer select-none" />
+        </slot>
+
+        <h1>{{ title }}</h1>
+      </NuxtLink>
 
       <div class="flex items-center justify-between gap-2">
         <NuxtLink href="https://github.com/luxass/lesetid">

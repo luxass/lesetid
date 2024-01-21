@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const {
   data: examples,
-} = await useExamples()
+} = await useFetch("/api/examples")
 
 const issueUrl = "https://github.com/luxass/lesetid/issues/new?assignees=&labels=example&projects=&template=missing-example.yml&title=missing+example+for+%5BEXAMPLE%5D"
 const mode = useColorMode()
@@ -25,26 +25,24 @@ const mode = useColorMode()
         issue.
       </NuxtLink>
     </p>
-    <div class="grid grid-cols-2 mt-4 gap-4 lg:grid-cols-3 sm:gap-3">
+    <div class="grid grid-cols-1 md:grid-cols-2 mt-4 gap-4 lg:grid-cols-3 sm:gap-3">
       <NuxtLink
         v-for="example in examples" :key="example.handle" :href="example.url"
-        class="h-20 flex flex-row items-center gap-2 border border-base rounded p4 text-center"
+        class="h-20 flex flex-row items-center gap-2 border border-base rounded p-4 text-center"
       >
         <ClientOnly>
-          <ColorScheme tag="span">
-            <img
-              v-if="(example.iconUrl && typeof example.iconUrl === 'object') && mode.value === 'dark'" width="32"
-              height="32" :src="example.iconUrl.dark" :alt="`Icon for ${example.title}`"
-            >
-            <img
-              v-if="(example.iconUrl && typeof example.iconUrl === 'object') && mode.value !== 'dark'" width="32"
-              height="32" :src="example.iconUrl.light" :alt="`Icon for ${example.title}`"
-            >
-            <img
-              v-if="example.iconUrl && typeof example.iconUrl === 'string'" :src="example.iconUrl" width="32"
-              height="32" :alt="`Icon for ${example.title}`"
-            >
-          </ColorScheme>
+          <img
+            v-if="(example.iconUrl && typeof example.iconUrl === 'object') && mode.value === 'dark'" width="32"
+            height="32" :src="example.iconUrl.dark" :alt="`Icon for ${example.title}`"
+          >
+          <img
+            v-if="(example.iconUrl && typeof example.iconUrl === 'object') && mode.value !== 'dark'" width="32"
+            height="32" :src="example.iconUrl.light" :alt="`Icon for ${example.title}`"
+          >
+          <img
+            v-if="example.iconUrl && typeof example.iconUrl === 'string'" :src="example.iconUrl" width="32"
+            height="32" :alt="`Icon for ${example.title}`"
+          >
 
           <template #fallback>
             <Icon name="ph:question" size="32" />

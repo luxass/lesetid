@@ -1,10 +1,11 @@
 <script setup lang="ts">
 const text = ref("Write your article here!")
 const debounced = useDebounce(text, 500)
+
 const {
   data: examples,
   error,
-} = await useExamples()
+} = await useAsyncData("examples", () => $fetch("/api/examples"))
 
 const mode = useColorMode()
 </script>
