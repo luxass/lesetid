@@ -30,16 +30,16 @@ export default defineNuxtConfig({
   },
   routeRules: {
     "/": {
-      isr: 3600,
+      isr: 86400,
     },
     "/**": {
-      isr: 3600,
+      isr: 86400,
     },
     "/api/examples": {
-      isr: 3600,
+      isr: 86400,
     },
     "/api/examples/:example": {
-      isr: 3600,
+      isr: 86400,
     },
   },
   nitro: {
