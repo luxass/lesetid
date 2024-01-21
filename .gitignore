@@ -18,6 +18,7 @@ build
 .contentlayer
 out
 .wrangler
+.netlify
 
 # env
 .env
