@@ -53,8 +53,7 @@
       "dependsOn": [
         "^topo",
         "^build",
-        "@lesetid-example/next#contentlayer:build",
-        "@lesetid-example/next-contentlayer#contentlayer:build"
+        "@lesetid-example/next#contentlayer:build"
       ],
       "outputMode": "new-only"
     },
