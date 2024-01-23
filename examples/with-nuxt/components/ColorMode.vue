@@ -18,7 +18,7 @@ const isDark = computed({
       class="ml1 flex items-center justify-center text-lg op-50 hover:op-75"
       @click="isDark = !isDark"
     >
-      <Icon :name="isDark ? 'carbon:moon' : 'carbon:sun'" size="24" />
+      <Icon :name="isDark ? 'carbon:moon' : 'carbon:sun'" size="20" />
     </button>
 
     <template #fallback>
