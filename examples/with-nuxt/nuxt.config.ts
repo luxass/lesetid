@@ -38,10 +38,10 @@ export default defineNuxtConfig({
   },
   routeRules: {
     "/": {
-      isr: 3600,
+      isr: 86400,
     },
     "/**": {
-      isr: 3600,
+      isr: 86400,
     },
   },
   content: {
@@ -61,7 +61,7 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
-    preset: "netlify",
+    preset: "netlify-builder",
     prerender: {
       routes: ["/sitemap.xml"],
     },
