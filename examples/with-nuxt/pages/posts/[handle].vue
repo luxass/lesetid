@@ -12,7 +12,7 @@ const handle = Array.isArray(route.params.handle)
   <ContentDoc v-slot="{ doc }" :path="handle">
     <article class="tracking-wide prose markdown">
       <div class="border border-neutral-300 bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-800 rounded p-3 gap-3">
-        This post will approximately take <strong>{{ (doc as ContentWithEstimation).estimation.text }}</strong> to read.
+        This post will approximately take <strong>{{ (doc as ContentWithEstimation).estimation?.text || "NaN" }}</strong> to read.
       </div>
 
       <h1 class="mt-8">
