@@ -1,12 +1,8 @@
 import UnpluginIcons from "unplugin-icons/webpack"
-import {
-  withContentlayer,
-} from "next-contentlayer"
 
-/** @type {import('next').NextConfig} */
+/** @type {import("next").NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -15,7 +11,6 @@ const nextConfig = {
   },
   experimental: {
     mdxRs: true,
-    webpackBuildWorker: true,
   },
   webpack(config) {
     config.plugins.push(
@@ -29,4 +24,4 @@ const nextConfig = {
   },
 }
 
-export default withContentlayer(nextConfig)
+export default nextConfig

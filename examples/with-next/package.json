@@ -26,12 +26,14 @@
   },
   "dependencies": {
     "class-variance-authority": "^0.7.0",
-    "lesetid": "1.0.1",
+    "gray-matter": "^4.0.3",
     "next": "latest",
     "next-contentlayer": "^0.3.4",
+    "next-mdx-remote": "^4.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rehype-pretty-code": "^0.12.5",
+    "remark-lesetid": "1.0.1",
     "shikiji": "^0.9.19",
     "tailwind-merge": "^2.2.0"
   },

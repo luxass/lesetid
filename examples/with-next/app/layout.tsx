@@ -1,10 +1,10 @@
 import type { Metadata } from "next"
-import { Lexend } from "next/font/google"
+import { DM_Sans } from "next/font/google"
 import "./globals.css"
 
-const lexend = Lexend({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-lexend",
+  variable: "--font-dm-sans",
 })
 
 export const metadata: Metadata = {
@@ -48,7 +48,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${lexend.variable} font-sans`}>{children}</body>
+      <head />
+      <body className={`${dmSans.variable} font-sans`}>{children}</body>
     </html>
   )
 }

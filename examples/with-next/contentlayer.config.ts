@@ -2,9 +2,10 @@ import { defineDocumentType, makeSource } from "contentlayer/source-files"
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import rehypeSlug from "rehype-slug"
 import remarkGfm from "remark-gfm"
-import {
-  estimate,
-} from "lesetid"
+
+// import {
+//   estimate,
+// } from "lesetid"
 import rehypePrettyCode from "rehype-pretty-code"
 
 export const Post = defineDocumentType(() => ({
@@ -41,8 +42,8 @@ export const Post = defineDocumentType(() => ({
       type: "string",
       resolve: (doc) => {
         const content = doc.body.raw
-        const estimation = estimate(content)
-        return estimation.text
+        // const estimation = estimate(content)
+        return "estimation.text"
       },
     },
   },

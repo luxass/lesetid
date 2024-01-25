@@ -1,5 +1,5 @@
 import { useMDXComponent } from "next-contentlayer/hooks"
-import { CodeBlock } from "~/components/mdx/Code"
+import { CodeBlock } from "./Code"
 
 interface MdxProps {
   code: string
