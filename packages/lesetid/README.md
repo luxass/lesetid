@@ -13,7 +13,7 @@
 ## 📦 Installation
 
 ```sh
-pnpm install lesetid
+npm install lesetid
 ```
 
 ## 📚 Usage
