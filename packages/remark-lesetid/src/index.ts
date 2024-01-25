@@ -1,7 +1,7 @@
 import { visit } from "unist-util-visit"
-import { estimate } from "lesetid"
+import { type Estimation, estimate } from "lesetid"
 import type { Root } from "mdast"
-import type { Transformer } from "unified"
+import type { Plugin } from "unified"
 
 export type { Estimation } from "lesetid"
 
@@ -9,7 +9,7 @@ export interface Options {
   dataKey?: string
 }
 
-export function remarkLesetid(options?: Readonly<Options> | null | undefined): Transformer<Root> {
+const remarkLesetid: Plugin<Options[], Root> = (options) => {
   if (!options) {
     options = {
       dataKey: "estimation",
@@ -20,14 +20,33 @@ export function remarkLesetid(options?: Readonly<Options> | null | undefined): T
   }
 
   const { dataKey } = options
-  const transformer: Transformer<Root> = (tree, file) => {
+
+  return (tree, file) => {
     visit(tree, "text", (node) => {
       const textOnPage = node.value
       const estimation = estimate(textOnPage)
+
+      // if matter is defined in data, the frontmatter
+      // parser is vfile-matter.
+      if ("matter" in file.data && file.data.matter) {
+        file.data.matter[dataKey] ||= estimation
+        return
+      }
+
       file.data[dataKey] ||= estimation
     })
   }
-  return transformer
 }
 
 export default remarkLesetid
+
+declare module "vfile" {
+  interface DataMap {
+    matter?: {
+      [key: string]: unknown
+      estimation?: Estimation
+    }
+
+    estimation?: Estimation
+  }
+}
