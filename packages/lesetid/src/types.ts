@@ -3,51 +3,51 @@ export interface Options {
    * The average number of words per minute.
    * @default 200
    */
-  wordsPerMinute?: number
+  wordsPerMinute?: number;
 
   /**
    * The average number of characters per minute.
    * @default 500
    */
-  charsPerMinute?: number
+  charsPerMinute?: number;
 
   /**
    * A function that determines if a character is a word.
    */
-  isWord?: WordFN
+  isWord?: WordFN;
 }
 
 export interface CountResult {
-  words: number
-  chars: number
+  words: number;
+  chars: number;
 }
 
 export interface Estimation {
   /**
    * The estimated time to read the text.
    */
-  minutes: number
+  minutes: number;
 
   /**
    * The estimated time to read the text in milliseconds.
    */
-  time: number
+  time: number;
 
   /**
    * The amount of words in the text.
    */
-  words: number
+  words: number;
 
   /**
    * The amount of characters in the text.
    */
-  chars: number
+  chars: number;
 
   /**
    * The formatted estimated time to read the text.
    * @example "1 min read"
    */
-  text: string
+  text: string;
 }
 
-export type WordFN = (char?: string) => boolean
+export type WordFN = (char?: string) => boolean;

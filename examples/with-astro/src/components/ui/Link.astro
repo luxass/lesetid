@@ -1,18 +1,18 @@
 ---
-import type { HTMLTag, Polymorphic } from "astro/types"
+import type { HTMLTag, Polymorphic } from "astro/types";
 
 type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
-  disabled?: boolean
-  href?: string
-  target?: string
-  rel?: string
-  external?: boolean
-}
+  disabled?: boolean;
+  href?: string;
+  target?: string;
+  rel?: string;
+  external?: boolean;
+};
 
-const { as: Element = "button", href, disabled, rel: _rel, target: _target, ...props } = Astro.props
+const { as: Element = "button", href, disabled, rel: _rel, target: _target, ...props } = Astro.props;
 
-const isExternal = (href || "").startsWith("http")
-const target = _target ?? isExternal ? "_blank" : undefined
+const isExternal = (href || "").startsWith("http");
+const target = _target ?? isExternal ? "_blank" : undefined;
 const rel = _rel ?? isExternal ? "noopener noreferrer" : undefined;
 ---
 

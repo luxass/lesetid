@@ -101,11 +101,11 @@ html.dark {
   }
 }
 
-.callout> :first-child {
+.callout > :first-child {
   margin-top: 0;
 }
 
-.callout> :last-child {
+.callout > :last-child {
   margin-bottom: 0;
 }
 
@@ -142,7 +142,7 @@ html.dark {
     @apply list-disc list-outside pl-4;
   }
 
-  & ul>li {
+  & ul > li {
     @apply mb-2;
   }
 

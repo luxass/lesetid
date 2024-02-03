@@ -1,5 +1,5 @@
-import type { Config } from "tailwindcss"
-import defaultTheme from "tailwindcss/defaultTheme"
+import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 const config: Config = {
   content: [
@@ -17,5 +17,5 @@ const config: Config = {
       },
     },
   },
-}
-export default config
+};
+export default config;

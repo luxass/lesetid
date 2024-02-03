@@ -1,49 +1,49 @@
-import { type JSX, createSignal, onCleanup } from "solid-js"
+import { type JSX, createSignal, onCleanup } from "solid-js";
 
-type CopyFn = (text: string) => Promise<boolean>
+type CopyFn = (text: string) => Promise<boolean>;
 
 interface CopyToClipboardProps {
-  id: string
+  id: string;
 }
 
 export function CopyToClipboard(props: CopyToClipboardProps) {
   const copy: CopyFn = async (text) => {
     if (!navigator?.clipboard) {
-      console.warn("Clipboard not supported")
-      return false
+      console.warn("Clipboard not supported");
+      return false;
     }
 
     try {
-      await navigator.clipboard.writeText(text)
-      return true
+      await navigator.clipboard.writeText(text);
+      return true;
     } catch (error) {
-      console.warn("Copy failed", error)
-      return false
+      console.warn("Copy failed", error);
+      return false;
     }
-  }
+  };
 
-  const [isCopied, setIsCopied] = createSignal(false)
+  const [isCopied, setIsCopied] = createSignal(false);
 
-  let timeout: NodeJS.Timeout
+  let timeout: NodeJS.Timeout;
   onCleanup(() => {
-    if (timeout) clearTimeout(timeout)
-  })
+    if (timeout) clearTimeout(timeout);
+  });
 
   const handleClick = async () => {
     // get the text from the dom element with the id
-    const text = document.getElementById(props.id)?.textContent
+    const text = document.getElementById(props.id)?.textContent;
     if (!text) {
-      console.warn("No text to copy")
-      throw new Error("No text to copy")
+      console.warn("No text to copy");
+      throw new Error("No text to copy");
     }
-    const isCopiedValue = await copy(text)
-    setIsCopied(isCopiedValue)
+    const isCopiedValue = await copy(text);
+    setIsCopied(isCopiedValue);
     if (isCopiedValue) {
       timeout = setTimeout(() => {
-        setIsCopied(false)
-      }, 2000)
+        setIsCopied(false);
+      }, 2000);
     }
-  }
+  };
 
   return (
     <button
@@ -52,7 +52,7 @@ export function CopyToClipboard(props: CopyToClipboardProps) {
     >
       {isCopied() ? <LucideClipboardCheck /> : <LucideClipboard />}
     </button>
-  )
+  );
 }
 
 function LucideClipboard(props: JSX.IntrinsicElements["svg"]) {
@@ -63,7 +63,7 @@ function LucideClipboard(props: JSX.IntrinsicElements["svg"]) {
         <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
       </g>
     </svg>
-  )
+  );
 }
 
 function LucideClipboardCheck(props: JSX.IntrinsicElements["svg"]) {
@@ -75,5 +75,5 @@ function LucideClipboardCheck(props: JSX.IntrinsicElements["svg"]) {
         <path d="m9 14l2 2l4-4" />
       </g>
     </svg>
-  )
+  );
 }

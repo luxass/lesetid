@@ -1,11 +1,11 @@
-import { cx } from "class-variance-authority"
-import type { PropsWithChildren } from "react"
+import { cx } from "class-variance-authority";
+import type { PropsWithChildren } from "react";
 
 export interface NotificationProps {
-  type: "warning" | "note" | "tip" | "important" | "caution" | "custom"
-  icon?: string
-  multiline?: boolean
-  printable?: boolean
+  type: "warning" | "note" | "tip" | "important" | "caution" | "custom";
+  icon?: string;
+  multiline?: boolean;
+  printable?: boolean;
 }
 
 export function Notification({ printable, type, icon, multiline, children }: PropsWithChildren<NotificationProps>) {
@@ -39,5 +39,5 @@ export function Notification({ printable, type, icon, multiline, children }: Pro
         {children}
       </p>
     </div>
-  )
+  );
 }

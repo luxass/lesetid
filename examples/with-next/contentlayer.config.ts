@@ -1,12 +1,12 @@
-import { defineDocumentType, makeSource } from "contentlayer/source-files"
-import rehypeAutolinkHeadings from "rehype-autolink-headings"
-import rehypeSlug from "rehype-slug"
-import remarkGfm from "remark-gfm"
+import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeSlug from "rehype-slug";
+import remarkGfm from "remark-gfm";
 
 // import {
 //   estimate,
 // } from "lesetid"
-import rehypePrettyCode from "rehype-pretty-code"
+import rehypePrettyCode from "rehype-pretty-code";
 
 export const Post = defineDocumentType(() => ({
   name: "Post",
@@ -41,13 +41,13 @@ export const Post = defineDocumentType(() => ({
     estimation: {
       type: "string",
       resolve: (doc) => {
-        const content = doc.body.raw
+        const content = doc.body.raw;
         // const estimation = estimate(content)
-        return "estimation.text"
+        return "estimation.text";
       },
     },
   },
-}))
+}));
 
 export default makeSource({
   contentDirPath: "./src/content",
@@ -73,4 +73,4 @@ export default makeSource({
       ],
     ],
   },
-})
+});

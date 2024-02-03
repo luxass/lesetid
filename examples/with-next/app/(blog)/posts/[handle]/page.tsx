@@ -1,16 +1,16 @@
-import { notFound } from "next/navigation"
-import { compileMDX } from "next-mdx-remote/rsc"
-import rehypeAutolinkHeadings from "rehype-autolink-headings"
-import rehypeSlug from "rehype-slug"
-import remarkGfm from "remark-gfm"
-import rehypePrettyCode from "rehype-pretty-code"
-import remarkLesetid from "remark-lesetid"
-import { getBlogPosts } from "../../../../lib/content"
+import { notFound } from "next/navigation";
+import { compileMDX } from "next-mdx-remote/rsc";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeSlug from "rehype-slug";
+import remarkGfm from "remark-gfm";
+import rehypePrettyCode from "rehype-pretty-code";
+import remarkLesetid from "remark-lesetid";
+import { getBlogPosts } from "../../../../lib/content";
 
 interface PostPageProps {
   params: {
-    handle: string
-  }
+    handle: string;
+  };
 }
 
 // export async function generateMetadata({
@@ -65,10 +65,10 @@ interface PostPageProps {
 // }
 
 export default async function PostPage({ params }: PostPageProps) {
-  const post = getBlogPosts().find((post) => post.slug === params.handle)
+  const post = getBlogPosts().find((post) => post.slug === params.handle);
 
   if (!post) {
-    notFound()
+    notFound();
   }
 
   const { content, frontmatter } = await compileMDX<{ title: string }>({
@@ -98,11 +98,11 @@ export default async function PostPage({ params }: PostPageProps) {
         ],
       },
     },
-  })
+  });
 
   return (
-    <article className="tracking-wide prose markdown">
-      <div className="border border-neutral-300 bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-800 rounded p-3 gap-3">
+    <article className="prose markdown tracking-wide">
+      <div className="gap-3 rounded border border-neutral-300 bg-neutral-100 p-3 dark:border-neutral-700 dark:bg-neutral-800">
         This post will approximately take
         {" "}
         <strong>{frontmatter.title}</strong>
@@ -124,5 +124,5 @@ export default async function PostPage({ params }: PostPageProps) {
       /> */}
       {content}
     </article>
-  )
+  );
 }

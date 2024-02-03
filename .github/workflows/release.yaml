@@ -17,7 +17,7 @@ jobs:
     name: Changelog PR or Release
     if: ${{ github.repository == 'luxass/lesetid' }}
     runs-on: ubuntu-latest
-    permissions: 
+    permissions:
       contents: write
       pull-requests: write
       id-token: write

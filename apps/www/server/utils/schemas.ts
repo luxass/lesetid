@@ -7,11 +7,11 @@ import {
   startsWith,
   string,
   union,
-} from "valibot"
+} from "valibot";
 
 export const ICON_URL_SCHEMA = string([
   startsWith("/"),
-])
+]);
 
 export const ExampleSchema = object({
   iconUrl: optional(union([
@@ -25,7 +25,7 @@ export const ExampleSchema = object({
   url: string(),
   handle: string(),
   providers: record(string()),
-})
+});
 
 export const ExamplesSchema = array(object({
   name: string(),
@@ -36,4 +36,4 @@ export const ExamplesSchema = array(object({
     literal("dir"),
     literal("file"),
   ]),
-}))
+}));

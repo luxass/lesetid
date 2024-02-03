@@ -8,8 +8,10 @@
 <samp>This is an example of how to use the `remark-lesetid` with [`astro`](https://astro.build).</samp>
 
 <!-- providers:start -->
+
 [stackblitz]: https://stackblitz.com/github/luxass/lesetid/tree/main/examples/with-astro?title=astro%20example%20|%20lesetid
 [codesandbox]: https://codesandbox.io/p/sandbox/github/luxass/lesetid/tree/main/examples/with-astro
 [codespaces]: https://codespaces.new/luxass/lesetid?devcontainer_path=.devcontainer/examples/with-astro/devcontainer.json
 [gitpod]: https://gitpod.io/#https://github.com/luxass/lesetid/tree/main/examples/with-astro
+
 <!-- providers:end -->

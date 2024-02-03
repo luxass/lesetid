@@ -1,18 +1,18 @@
 ---
-import type { CollectionEntry } from "astro:content"
+import type { CollectionEntry } from "astro:content";
 
-import Link from "../ui/Link.astro"
+import Link from "../ui/Link.astro";
 
 export function formatDate(date: Date): string {
   return date.toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
-  })
+  });
 }
 
 export interface Props {
-  post: CollectionEntry<"posts">
+  post: CollectionEntry<"posts">;
 }
 
 const {

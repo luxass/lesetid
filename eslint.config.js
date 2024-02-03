@@ -4,7 +4,5 @@ import {
 } from "@luxass/eslint-config";
 
 export default luxass({
-  astro: {
-    a11y: true,
-  },
+  formatters: true,
 });

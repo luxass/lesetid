@@ -106,11 +106,11 @@ body {
   }
 }
 
-.callout> :first-child {
+.callout > :first-child {
   margin-top: 0;
 }
 
-.callout> :last-child {
+.callout > :last-child {
   margin-bottom: 0;
 }
 

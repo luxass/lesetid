@@ -1,8 +1,8 @@
-import Link from "next/link"
-import type { Post } from "../lib/content"
+import Link from "next/link";
+import type { Post } from "../lib/content";
 
 export interface PostCardProps {
-  post: Post
+  post: Post;
 }
 
 export function PostCard({ post }: PostCardProps) {
@@ -10,15 +10,15 @@ export function PostCard({ post }: PostCardProps) {
     year: "numeric",
     month: "long",
     day: "numeric",
-  })
+  });
 
   return (
-    <Link href={`/posts/${post.slug}`} className="flex flex-col justify-between h-36 border border-neutral-300 bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-800 rounded p-3 gap-3">
+    <Link href={`/posts/${post.slug}`} className="flex h-36 flex-col justify-between gap-3 rounded border border-neutral-300 bg-neutral-100 p-3 dark:border-neutral-700 dark:bg-neutral-800">
       <span className="text-lg font-semibold">{post.metadata.title}</span>
-      <div className="flex-grow">
+      <div className="grow">
         <span className="line-clamp-2">{post.metadata.description}</span>
       </div>
       <span>{formattedDate}</span>
     </Link>
-  )
+  );
 }

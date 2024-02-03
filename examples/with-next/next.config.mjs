@@ -1,4 +1,4 @@
-import UnpluginIcons from "unplugin-icons/webpack"
+import UnpluginIcons from "unplugin-icons/webpack";
 
 /** @type {import("next").NextConfig} */
 const nextConfig = {
@@ -18,10 +18,10 @@ const nextConfig = {
         compiler: "jsx",
         jsx: "react",
       }),
-    )
+    );
 
-    return config
+    return config;
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;

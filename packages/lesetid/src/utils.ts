@@ -1,7 +1,7 @@
-import type { WordFN } from "./types"
+import type { WordFN } from "./types";
 
 function isCharCodeIntersected(code: number, start: number, end: number) {
-  return code >= start && code <= end
+  return code >= start && code <= end;
 }
 
 export const CJK_CODE_RANGES = [
@@ -12,7 +12,7 @@ export const CJK_CODE_RANGES = [
   [0xAC00, 0xD7A3],
   // CJK extensions
   [0x20000, 0x2EBE0],
-]
+];
 
 /**
  * Checks if a character is a CJK character.
@@ -24,18 +24,18 @@ export const CJK_CODE_RANGES = [
  * @returns {boolean} - true if the character is a CJK character, false otherwise.
  */
 export const isCJK: WordFN = (char?: string): boolean => {
-  if (!char) return false
-  const charCode = char.charCodeAt(0)
+  if (!char) return false;
+  const charCode = char.charCodeAt(0);
 
   for (const [start, end] of CJK_CODE_RANGES) {
-    if (!start || !end) return false
+    if (!start || !end) return false;
     if (isCharCodeIntersected(charCode, start, end)) {
-      return true
+      return true;
     }
   }
 
-  return false
-}
+  return false;
+};
 
 export const PUNCTATION_CODE_RANGES = [
   [0x21, 0x2F],
@@ -46,7 +46,7 @@ export const PUNCTATION_CODE_RANGES = [
   [0x3000, 0x303F],
   // Full-width ASCII punctuation variants
   [0xFF00, 0xFFEF],
-]
+];
 
 /**
  * Checks if a character is a punctuation character.
@@ -58,18 +58,18 @@ export const PUNCTATION_CODE_RANGES = [
  * @returns {boolean} - true if the character is a punctuation character, false otherwise.
  */
 export const isPunctuation: WordFN = (char?: string): boolean => {
-  if (!char) return false
-  const charCode = char.charCodeAt(0)
+  if (!char) return false;
+  const charCode = char.charCodeAt(0);
 
   for (const [start, end] of PUNCTATION_CODE_RANGES) {
-    if (!start || !end) return false
+    if (!start || !end) return false;
     if (isCharCodeIntersected(charCode, start, end)) {
-      return true
+      return true;
     }
   }
 
-  return false
-}
+  return false;
+};
 
 /**
  * Checks if a character is a ansi character.
@@ -77,6 +77,6 @@ export const isPunctuation: WordFN = (char?: string): boolean => {
  * @returns {boolean} - true if the character is a word character, false otherwise.
  */
 export const isAnsi: WordFN = (char?: string): boolean => {
-  if (!char) return false
-  return " \n\r\t".includes(char)
-}
+  if (!char) return false;
+  return " \n\r\t".includes(char);
+};

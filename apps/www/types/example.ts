@@ -1,3 +1,3 @@
-import type { Input } from "valibot"
+import type { Input } from "valibot";
 
-export type Example = Input<typeof ExampleSchema>
+export type Example = Input<typeof ExampleSchema>;

@@ -1,33 +1,33 @@
 /// <reference types="mdast-util-directive" />
 
-import type { Paragraph, Root } from "mdast"
-import type { Plugin } from "unified"
-import { remove } from "unist-util-remove"
-import { visit } from "unist-util-visit"
-import { type Properties, h as _h, s as _s } from "hastscript"
+import type { Paragraph, Root } from "mdast";
+import type { Plugin } from "unified";
+import { remove } from "unist-util-remove";
+import { visit } from "unist-util-visit";
+import { type Properties, h as _h, s as _s } from "hastscript";
 
-type Variant = "note" | "important" | "warning" | "tip" | "caution"
+type Variant = "note" | "important" | "warning" | "tip" | "caution";
 
-const variants = new Set(["note", "tip", "important", "warning", "caution"])
+const variants = new Set(["note", "tip", "important", "warning", "caution"]);
 
 /** Hacky function that generates an mdast HTML tree ready for conversion to HTML by rehype. */
 function h(el: string, attrs: Properties = {}, children: any[] = []): Paragraph {
-  const { tagName, properties } = _h(el, attrs)
+  const { tagName, properties } = _h(el, attrs);
   return {
     type: "paragraph",
     data: { hName: tagName, hProperties: properties },
     children,
-  }
+  };
 }
 
 /** Hacky function that generates an mdast SVG tree ready for conversion to HTML by rehype. */
 function s(el: string, attrs: Properties = {}, children: any[] = []): Paragraph {
-  const { tagName, properties } = _s(el, attrs)
+  const { tagName, properties } = _s(el, attrs);
   return {
     type: "paragraph",
     data: { hName: tagName, hProperties: properties },
     children,
-  }
+  };
 }
 const ICONS: Record<Variant, Paragraph> = {
   note: s(
@@ -110,44 +110,44 @@ const ICONS: Record<Variant, Paragraph> = {
       }),
     ],
   ),
-}
+};
 
 export const asides: Plugin<void[], Root> = () => {
   return (tree) => {
     visit(tree, (node, index, parent) => {
       if (!parent || index === undefined || (node.type !== "containerDirective" && node.type !== "paragraph")) {
-        return
+        return;
       }
 
       if (node.type === "paragraph" && parent.type !== "blockquote") {
-        return
+        return;
       }
 
-      let variant = "note"
+      let variant = "note";
       if (node.type === "paragraph") {
-        const firstChild = node.children[0]
+        const firstChild = node.children[0];
         if (!firstChild || firstChild.type !== "text") {
-          return
+          return;
         }
 
-        const type = firstChild.value.match(/^\[\!(NOTE|TIP|WARNING|DANGER|IMPORTANT)\]/)
+        const type = firstChild.value.match(/^\[\!(NOTE|TIP|WARNING|DANGER|IMPORTANT)\]/);
         if (!type) {
-          return
+          return;
         }
 
-        variant = type[1].toLowerCase()
-        firstChild.value = firstChild.value.replace(/^\[\!(NOTE|TIP|WARNING|DANGER|IMPORTANT)\]/, "").trim()
+        variant = type[1].toLowerCase();
+        firstChild.value = firstChild.value.replace(/^\[\!(NOTE|TIP|WARNING|DANGER|IMPORTANT)\]/, "").trim();
       } else {
-        variant = node.name.toLowerCase()
+        variant = node.name.toLowerCase();
       }
 
-      if (!isAsideVariant(variant)) return
+      if (!isAsideVariant(variant)) return;
 
       // remark-directive converts a container’s “label” to a paragraph in
       // its children, but we want to pass it as the title prop to <Aside>, so
       // we iterate over the children, find a directive label, store it for the
       // title prop, and remove the paragraph from children.
-      let title = variant.toUpperCase()
+      let title = variant.toUpperCase();
 
       remove(node, (child): boolean | void => {
         if (child.data && "directiveLabel" in child.data && child.data.directiveLabel) {
@@ -156,11 +156,11 @@ export const asides: Plugin<void[], Root> = () => {
             && Array.isArray(child.children)
             && "value" in child.children[0]
           ) {
-            title = child.children[0].value
+            title = child.children[0].value;
           }
-          return true
+          return true;
         }
-      })
+      });
 
       const aside = h(
         "aside",
@@ -175,18 +175,18 @@ export const asides: Plugin<void[], Root> = () => {
           ]),
           h("section", { class: "callout-content" }, node.children),
         ],
-      )
+      );
 
       if (parent.type !== "blockquote") {
-        parent.children[index] = aside
-        return
+        parent.children[index] = aside;
+        return;
       }
 
-      const parentIndex = tree.children.findIndex((it) => it === parent)
-      tree.children[parentIndex] = aside
-    })
-  }
-}
+      const parentIndex = tree.children.findIndex((it) => it === parent);
+      tree.children[parentIndex] = aside;
+    });
+  };
+};
 function isAsideVariant(variant: string): variant is Variant {
-  return variants.has(variant)
+  return variants.has(variant);
 }

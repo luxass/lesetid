@@ -1,4 +1,4 @@
-import { defineConfig } from "tsup"
+import { defineConfig } from "tsup";
 
 export default defineConfig({
   entry: ["./src/index.ts", "./src/astro.ts"],
@@ -10,7 +10,7 @@ export default defineConfig({
   outExtension(ctx) {
     return {
       js: ctx.format === "cjs" ? ".cjs" : ".mjs",
-    }
+    };
   },
   esbuildOptions: (options) => {
     if (options.format === "cjs") {
@@ -20,8 +20,8 @@ export default defineConfig({
         // library with a default export, as that's how ESLint expects plugins to look.
         // @see https://github.com/evanw/esbuild/issues/1182#issuecomment-1011414271
         js: "module.exports = module.exports.default;",
-      }
+      };
     }
-    return options
+    return options;
   },
-})
+});

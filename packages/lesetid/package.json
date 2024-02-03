@@ -11,7 +11,11 @@
   "packageManager": "pnpm@8.15.1",
   "license": "MIT",
   "homepage": "https://github.com/luxass/lesetid",
-  "repository": "https://github.com/luxass/lesetid/tree/main/packages/lesetid",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luxass/lesetid.git",
+    "directory": "packages/lesetid"
+  },
   "bugs": {
     "url": "https://github.com/luxass/lesetid/issues"
   },

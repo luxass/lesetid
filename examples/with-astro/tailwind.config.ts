@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -9,4 +9,4 @@ export default {
     // eslint-disable-next-line ts/no-require-imports
     require("@tailwindcss/typography"),
   ],
-} satisfies Config
+} satisfies Config;

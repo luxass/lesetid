@@ -1,11 +1,11 @@
-import type { MetadataRoute } from "next"
-import { allPosts } from "~/contentlayer"
+import type { MetadataRoute } from "next";
+import { allPosts } from "~/contentlayer";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = allPosts.map((post) => ({
     url: `https://next-example.lesetid.dev/${post.url}`,
     lastModified: new Date().toISOString(),
-  }))
+  }));
 
   return [
     {
@@ -13,5 +13,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date().toISOString(),
     },
     ...posts,
-  ]
+  ];
 }

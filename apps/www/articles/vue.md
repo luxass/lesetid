@@ -12,9 +12,9 @@ Vue.js is a frontend framework, which means that it is only used to build the fr
 
 There are many reasons to use Vue.js, including:
 
-* **Simplicity:** Vue.js is a relatively simple framework to learn. It has a small learning curve, making it easy to get started.
-* **Power:** Vue.js is a powerful framework that can be used to build complex applications.
-* **Flexibility:** Vue.js is a flexible framework that can be adapted to a wide range of applications.
+- **Simplicity:** Vue.js is a relatively simple framework to learn. It has a small learning curve, making it easy to get started.
+- **Power:** Vue.js is a powerful framework that can be used to build complex applications.
+- **Flexibility:** Vue.js is a flexible framework that can be adapted to a wide range of applications.
 
 **How does Vue.js work?**
 
@@ -40,10 +40,10 @@ Vue.js uses a data binding engine to update the user interface when data changes
 
 There are two types of data binding in Vue.js:
 
-* **Property binding:** Property binding is used to update the user interface when the properties on a component change.
-[Image of Vue.js property binding]
-* **One-way binding:** One-way binding is used to update the data when the user interface changes.
-[Image of Vue.js one-way binding]
+- **Property binding:** Property binding is used to update the user interface when the properties on a component change.
+  [Image of Vue.js property binding]
+- **One-way binding:** One-way binding is used to update the data when the user interface changes.
+  [Image of Vue.js one-way binding]
 
 **Vue.js applications**
 
@@ -53,14 +53,14 @@ Vue.js applications are built by combining components. An application can be sta
 
 There are many libraries and tools available for Vue.js that can help you build complex applications. Some popular libraries and tools include:
 
-* **Pinia:** Pinia is a state management library for Vue.js.
-[Image of Pinia state management library for Vue.js]
-* **Vue-Router:** Vue-Router is a router for Vue.js.
-[Image of Vue-Router router for Vue.js]
-* **Vuetify:** Vuetify is a UI library for Vue.js.
-[Image of Vuetify UI library for Vue.js]
-* **Vue.js CLI:** Vue.js CLI is a tool for creating and maintaining Vue.js applications.
-[Image of Vue.js CLI tool for creating and maintaining Vue.js applications]
+- **Pinia:** Pinia is a state management library for Vue.js.
+  [Image of Pinia state management library for Vue.js]
+- **Vue-Router:** Vue-Router is a router for Vue.js.
+  [Image of Vue-Router router for Vue.js]
+- **Vuetify:** Vuetify is a UI library for Vue.js.
+  [Image of Vuetify UI library for Vue.js]
+- **Vue.js CLI:** Vue.js CLI is a tool for creating and maintaining Vue.js applications.
+  [Image of Vue.js CLI tool for creating and maintaining Vue.js applications]
 
 **Conclusion**
 

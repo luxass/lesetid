@@ -11,7 +11,9 @@ html {
   @apply dark:outline-white selection:dark:bg-neutral-700 selection:dark:text-white outline-black selection:bg-neutral-200 selection:text-black;
 }
 
-html, body , #__nuxt {
+html,
+body,
+#__nuxt {
   height: 100vh;
   margin: 0;
   padding: 0;
@@ -19,7 +21,7 @@ html, body , #__nuxt {
 }
 
 body {
-  @apply text-neutral-900 bg-neutral-100 dark:text-neutral-300 dark:bg-neutral-900
+  @apply text-neutral-900 bg-neutral-100 dark:text-neutral-300 dark:bg-neutral-900;
 }
 
 #__nuxt {

@@ -1,12 +1,12 @@
 ---
-import { CopyToClipboard } from "./CopyToClipboard"
+import { CopyToClipboard } from "./CopyToClipboard";
 
-const id = Math.random().toString(36).slice(2, 9)
+const id = Math.random().toString(36).slice(2, 9);
 
-const html = await Astro.slots.render("default")
+const html = await Astro.slots.render("default");
 
-const regex = /<([a-z][a-z0-9]*)\b[^>]*>(.*?)<\/\1>/g
-const match = html.match(regex)
+const regex = /<([a-z][a-z0-9]*)\b[^>]*>(.*?)<\/\1>/g;
+const match = html.match(regex);
 ---
 
 <code id={id} class:list={[!match && "rounded p-1 bg-gray-400/10"]}><Fragment set:html={html} /></code>

@@ -16,8 +16,8 @@ Here is an example of a server API route that returns a single object:
 export default defineEventHandler((event) => {
   return {
     message: "Hello, world!",
-  }
-})
+  };
+});
 ```
 
 This route will return the following JSON data:
@@ -32,7 +32,7 @@ This route will return the following JSON data:
 
 Here are some examples of server API routes that return different types of data:
 
-* **A route that returns a list of objects:**
+- **A route that returns a list of objects:**
 
 ```js
 // server/api/my-list-route.ts
@@ -48,21 +48,21 @@ export default defineEventHandler((event) => {
       name: "Jane Doe",
       age: 25,
     },
-  ]
-})
+  ];
+});
 ```
 
-* **A route that returns a set of data from a database:**
+- **A route that returns a set of data from a database:**
 
 ```js
 // server/api/users.ts
-import { db } from "~/utils/database"
+import { db } from "~/utils/database";
 
 export default defineEventHandler((event) => {
-  const results = await db.query("SELECT * FROM users")
+  const results = await db.query("SELECT * FROM users");
 
-  return results
-})
+  return results;
+});
 ```
 
 **Conclusion**
