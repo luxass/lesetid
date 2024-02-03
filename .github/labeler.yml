@@ -4,10 +4,6 @@
   - any:
       - packages/lesetid/**
 
-"pkg: vscode":
-  - any:
-      - packages/vscode/**
-
 "pkg: remark-lesetid":
   - any:
       - packages/remark-lesetid/**
