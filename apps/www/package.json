@@ -7,7 +7,7 @@
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@8.14.1",
+  "packageManager": "pnpm@8.15.1",
   "license": "MIT",
   "homepage": "https://github.com/luxass/lesetid",
   "repository": "https://github.com/luxass/lesetid/tree/main/apps/www",
@@ -26,16 +26,16 @@
   },
   "dependencies": {
     "lesetid": "1.0.1",
-    "valibot": "^0.26.0"
+    "valibot": "^0.27.1"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "^4.2.5",
+    "@luxass/eslint-config": "^4.2.6",
     "@nuxt/devtools": "latest",
     "@nuxtjs/color-mode": "^3.3.2",
-    "@nuxtjs/tailwindcss": "^6.11.0",
+    "@nuxtjs/tailwindcss": "^6.11.3",
     "eslint": "^8.56.0",
-    "eslint-plugin-tailwindcss": "^3.14.0",
-    "nuxt": "^3.9.3",
+    "eslint-plugin-tailwindcss": "^3.14.1",
+    "nuxt": "^3.10.0",
     "nuxt-icon": "^0.6.8",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
