@@ -4,7 +4,8 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 import rehypePrettyCode from "rehype-pretty-code";
-import remarkLesetid, { type Estimation } from "remark-lesetid";
+import type { Estimation } from "remark-lesetid";
+import remarkLesetid from "remark-lesetid";
 import { getBlogPosts } from "../../../../lib/content";
 
 interface PostPageProps {
@@ -78,6 +79,7 @@ export default async function PostPage({ params }: PostPageProps) {
       mdxOptions: {
         remarkPlugins: [
           remarkGfm,
+          // @ts-expect-error something broke in their types.
           remarkLesetid,
         ],
         rehypePlugins: [
