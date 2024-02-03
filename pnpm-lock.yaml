@@ -42,8 +42,8 @@ importers:
         specifier: 1.0.1
         version: link:../../packages/lesetid
       valibot:
-        specifier: ^0.26.0
-        version: 0.26.0
+        specifier: ^0.27.0
+        version: 0.27.1
     devDependencies:
       '@luxass/eslint-config':
         specifier: ^4.2.5
@@ -381,8 +381,8 @@ importers:
         specifier: ^1.70.0
         version: 1.85.0
       '@vscode/test-web':
-        specifier: ^0.0.50
-        version: 0.0.50
+        specifier: ^0.0.51
+        version: 0.0.51
       '@vscode/vsce':
         specifier: ^2.22.0
         version: 2.22.0
@@ -4962,8 +4962,8 @@ packages:
     resolution: {integrity: sha512-KYSIHVmslkaCDyw013pphY+d7x1qV8IZupYfeIfzNA+nsaWHbn5uPuQRvdRFsa9zFzGeudPuoGoZ1Op4jrJXIQ==}
     dev: false
 
-  /@vscode/test-web@0.0.50:
-    resolution: {integrity: sha512-aFcwTyA3qirjfr6f5oKEV/07MbsbNeJEqElIh/ceNPEnJIyKYQeffbU7Cia9XtTKk1Ue1qMqwhdIO8OnUa9QBg==}
+  /@vscode/test-web@0.0.51:
+    resolution: {integrity: sha512-BULmM/HkTuWYuDQLq17L0XYZkzOtsIIC38HN5eYaVBUXSOSwXpyihTalsQ6y9GNPuGWZUnc2XqXYvR6gdSHHOg==}
     engines: {node: '>=16'}
     hasBin: true
     dependencies:
@@ -6418,6 +6418,7 @@ packages:
 
   /color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
+    requiresBuild: true
 
   /color-string@1.9.1:
     resolution: {integrity: sha512-shrVawQFojnZv6xM40anx4CkoDP+fZsw/ZerEMsW/pyzsRbElpsL/DBVW7q3ExxwusdNXI3lXpuhEZkzs8p5Eg==}
@@ -16019,8 +16020,8 @@ packages:
       sade: 1.8.1
     dev: false
 
-  /valibot@0.26.0:
-    resolution: {integrity: sha512-cM8VM9jsJGx9P4qarZUBXd0I88OVI4ddtyZ1sAMiofC3Usj7Jxm2c8Xx5accdTrKc3CblO8yyytRaJ6lrsuA+Q==}
+  /valibot@0.27.1:
+    resolution: {integrity: sha512-k57/5/kMwMjiVP0LUMpa+n4ihSemuXshz1ND4fftKw1bkHZYN/TnHcbjaEie3K7FwAceiOgugLZPjSaNxdygeg==}
     dev: false
 
   /validate-html-nesting@1.2.2:
