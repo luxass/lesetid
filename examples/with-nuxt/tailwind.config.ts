@@ -1,10 +1,11 @@
 import type { Config } from "tailwindcss"
 
-export default <Partial<Config>>{
-  darkMode: "class",
+export default <Partial<Config>> {
   theme: {
-    extend: {
-      sans: ["DM Sans", "sans-serif"],
-    },
+    extend: {},
   },
+  plugins: [
+    // eslint-disable-next-line ts/no-require-imports
+    require("@tailwindcss/typography"),
+  ],
 }

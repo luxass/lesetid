@@ -20,8 +20,6 @@ import {
         <NuxtLink class="transition-transform active:scale-95" :href="`https://github.com/luxass/lesetid/blob/main${url}`">
           <Icon name="mdi:github" class="size-5" />
         </NuxtLink>
-
-        <ColorMode />
       </div>
     </nav>
   </header>

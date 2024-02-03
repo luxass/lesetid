@@ -4,7 +4,7 @@
 
 <template>
   <Header />
-  <main class="flex-1 p-4 prose">
+  <main class="flex-1 p-4">
     <slot />
   </main>
   <Footer />

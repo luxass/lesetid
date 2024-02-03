@@ -8,11 +8,13 @@ import Header from "../components/layout/Header.astro"
 export interface Props {
   title: string
   description: string
+  class?: string
 }
 
 const {
   title,
   description,
+  class: clazz,
 } = Astro.props;
 ---
 
@@ -52,7 +54,7 @@ const {
   </head>
   <body>
     <Header />
-    <main class="flex-1 p-4" transition:animate="slide">
+    <main class="flex-1 p-4" class:list={clazz} transition:animate="slide">
       <slot />
     </main>
     <Footer />
