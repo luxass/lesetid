@@ -4,7 +4,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 import rehypePrettyCode from "rehype-pretty-code";
-import remarkLesetid from "remark-lesetid";
+import remarkLesetid, { type Estimation } from "remark-lesetid";
 import { getBlogPosts } from "../../../../lib/content";
 
 interface PostPageProps {
@@ -71,7 +71,7 @@ export default async function PostPage({ params }: PostPageProps) {
     notFound();
   }
 
-  const { content, frontmatter } = await compileMDX<{ title: string }>({
+  const { content, frontmatter } = await compileMDX<{ title: string; estimation?: Estimation }>({
     source: post.content,
     options: {
       parseFrontmatter: true,
@@ -101,27 +101,15 @@ export default async function PostPage({ params }: PostPageProps) {
   });
 
   return (
-    <article className="prose markdown tracking-wide">
-      <div className="gap-3 rounded border border-neutral-300 bg-neutral-100 p-3 dark:border-neutral-700 dark:bg-neutral-800">
+    <article className="prose dark:prose-invert markdown tracking-wide">
+      <div className="border border-neutral-300 dark:border-neutral-700 rounded p-3 gap-3">
         This post will approximately take
         {" "}
-        <strong>{frontmatter.title}</strong>
+        <strong>{frontmatter.estimation?.text || "NaN"}</strong>
         {" "}
         to read.
       </div>
-      {JSON.stringify(frontmatter)}
       <h1 className="mt-8">{post.metadata.title}</h1>
-      {/* <Content
-        components={{
-          code: Code,
-          a: Link,
-          pre: Pre,
-        }}
-      /> */}
-      {/* <MDXRemote
-        {...props}
-        components={{ ...components, ...(props.components || {}) }}
-      /> */}
       {content}
     </article>
   );

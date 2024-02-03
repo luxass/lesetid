@@ -6,16 +6,13 @@ export function Header() {
   return (
     <header className="px-4">
       <nav className="flex flex-wrap items-center justify-between">
-        <div className="flex items-center gap-2">
-          <Link href="/" className="transition-transform active:scale-95">NextJS Example</Link>
-        </div>
+        <Link href="/" className="transition-transform active:scale-95">NextJS Example</Link>
 
         <div className="flex items-center gap-4 sm:gap-6">
           <Link className="transition-transform active:scale-95" href="/">Posts</Link>
           <Link className="transition-transform active:scale-95" href={`https://github.com/luxass/lesetid/blob/main${example.url}`}>
             <MdiGithub className="size-5" />
           </Link>
-          {/* <ThemeIcon /> */}
         </div>
       </nav>
     </header>

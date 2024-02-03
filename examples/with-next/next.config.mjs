@@ -12,16 +12,16 @@ const nextConfig = {
   experimental: {
     mdxRs: true,
   },
-  webpack(config) {
-    config.plugins.push(
-      UnpluginIcons({
-        compiler: "jsx",
-        jsx: "react",
-      }),
-    );
+  // webpack(config) {
+  //   config.plugins.push(
+  //     UnpluginIcons({
+  //       compiler: "jsx",
+  //       jsx: "react",
+  //     }),
+  //   );
 
-    return config;
-  },
+  //   return config;
+  // },
 };
 
 export default nextConfig;
