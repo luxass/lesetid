@@ -1,16 +1,16 @@
 import type { MetadataRoute } from "next";
-import { allPosts } from "~/contentlayer";
+import { getBlogPosts } from "~/lib/content";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const posts = allPosts.map((post) => ({
-    url: `https://next-example.lesetid.dev/${post.url}`,
-    lastModified: new Date().toISOString(),
+  const posts = getBlogPosts().map((post) => ({
+    url: `https://next-example.lesetid.dev/posts/${post.slug}`,
+    lastModified: post.metadata.date,
   }));
 
   return [
     {
       url: "https://next-example.lesetid.dev/",
-      lastModified: new Date().toISOString(),
+      lastModified: new Date().toISOString().split("T")[0],
     },
     ...posts,
   ];

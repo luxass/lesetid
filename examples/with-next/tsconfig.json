@@ -12,10 +12,7 @@
     "moduleResolution": "bundler",
     "paths": {
       "~/*": [
-        "./src/*"
-      ],
-      "~/contentlayer": [
-        "./.contentlayer/generated"
+        "./*"
       ]
     },
     "resolveJsonModule": true,
