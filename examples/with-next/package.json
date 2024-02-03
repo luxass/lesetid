@@ -35,7 +35,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rehype-pretty-code": "^0.12.6",
-    "remark-lesetid": "1.0.1",
+    "remark-lesetid": "1.1.0",
     "shiki": "^1.0.0-beta.5",
     "tailwind-merge": "^2.2.1"
   },
