@@ -105,7 +105,7 @@ export default async function PostPage({ params }: PostPageProps) {
       <div className="border border-neutral-300 bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-800 rounded p-3 gap-3">
         This post will approximately take
         {" "}
-        <strong>{frontmatter.}</strong>
+        <strong>{frontmatter.title}</strong>
         {" "}
         to read.
       </div>

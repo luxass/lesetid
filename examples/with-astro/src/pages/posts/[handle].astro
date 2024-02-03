@@ -5,11 +5,6 @@ import PageLayout from "../../layouts/PageLayout.astro"
 import Code from "../../components/content/mdx/Code.astro"
 import Link from "../../components/ui/Link.astro"
 import Pre from "../../components/content/mdx/Pre.astro"
-import { getOgImageUrl } from "../../utils"
-
-const ogImageUrl = getOgImageUrl(Astro.url.pathname)
-const imageSrc = ogImageUrl ?? "/default-og-image.png"
-const canonicalImageSrc = new URL(imageSrc, Astro.site)
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts")
@@ -38,7 +33,6 @@ export const prerender = true;
 <PageLayout
   title={title}
   description={description}
-  image={canonicalImageSrc}
 >
   <article class="tracking-wide prose dark:prose-invert markdown">
     <div class="border border-neutral-300 dark:border-neutral-700 rounded p-3 gap-3">
