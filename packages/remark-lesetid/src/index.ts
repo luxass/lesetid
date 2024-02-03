@@ -20,21 +20,21 @@ const remarkLesetid: Plugin<Options[], Root> = (options) => {
   }
 
   const { dataKey } = options;
-
   return (tree, file) => {
+    let textOnPage = "";
     visit(tree, "text", (node) => {
-      const textOnPage = node.value;
-      const estimation = estimate(textOnPage);
-
-      // if matter is defined in data, the frontmatter
-      // parser is vfile-matter.
-      if ("matter" in file.data && file.data.matter) {
-        file.data.matter[dataKey] ||= estimation;
-        return;
-      }
-
-      file.data[dataKey] ||= estimation;
+      textOnPage += node.value;
     });
+
+    const estimation = estimate(textOnPage);
+    // if matter is defined in data, the frontmatter
+    // parser is vfile-matter.
+    if ("matter" in file.data && file.data.matter) {
+      file.data.matter[dataKey] ||= estimation;
+      return;
+    }
+
+    file.data[dataKey] ||= estimation;
   };
 };
 
