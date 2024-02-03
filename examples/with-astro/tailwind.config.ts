@@ -1,10 +1,12 @@
 import type { Config } from "tailwindcss"
 
 export default {
-  darkMode: "class",
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    // eslint-disable-next-line ts/no-require-imports
+    require("@tailwindcss/typography"),
+  ],
 } satisfies Config

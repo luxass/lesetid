@@ -20,8 +20,7 @@ body {
   font-display: swap;
 }
 
-html.dark {
-
+@media (prefers-color-scheme: dark) {
   .astro-code,
   .astro-code span:not(button span) {
     color: var(--shiki-dark) !important;
@@ -113,48 +112,6 @@ html.dark {
 
 .callout> :last-child {
   margin-bottom: 0;
-}
-
-.prose {
-  @apply [&>:not(:last-child)]:mb-6;
-
-  & p:not([class*="callout"] p) {
-    @apply my-6 leading-7;
-  }
-
-  & h1,
-  & h2,
-  & h3 {
-    @apply text-neutral-900 dark:text-neutral-300 font-semibold my-8;
-  }
-
-  & h1 {
-    @apply text-2xl;
-  }
-
-  & h2 {
-    @apply text-xl;
-  }
-
-  & h3 {
-    @apply text-lg;
-  }
-
-  & strong {
-    @apply font-medium text-neutral-900 dark:text-neutral-300;
-  }
-
-  & ul {
-    @apply list-disc list-outside pl-4;
-  }
-
-  & ul>li {
-    @apply mb-2;
-  }
-
-  & img {
-    @apply mx-auto rounded my-6;
-  }
 }
 
 .markdown {
