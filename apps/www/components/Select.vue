@@ -1,10 +1,10 @@
 <script setup lang="ts">
 const props = withDefaults(
   defineProps<{
-    modelValue?: any
-    placeholder?: string
-    icon?: string
-    disabled?: boolean
+    modelValue?: any;
+    placeholder?: string;
+    icon?: string;
+    disabled?: boolean;
   }>(),
   {
     modelValue: undefined,
@@ -12,11 +12,11 @@ const props = withDefaults(
     disabled: false,
     icon: "",
   },
-)
+);
 const emit = defineEmits<{
-  (e: "update:modelValue", value: any): void
-}>()
-const input = useVModel(props, "modelValue", emit, { passive: true })
+  (e: "update:modelValue", value: any): void;
+}>();
+const input = useVModel(props, "modelValue", emit, { passive: true });
 </script>
 
 <template>

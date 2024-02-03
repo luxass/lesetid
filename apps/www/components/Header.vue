@@ -1,9 +1,9 @@
 <script setup lang="ts">
 const { title } = withDefaults(defineProps<{
-  title?: string
+  title?: string;
 }>(), {
   title: "lesetid",
-})
+});
 </script>
 
 <template>

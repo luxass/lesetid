@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import type { ContentWithEstimation } from "~/types"
+import type { ContentWithEstimation } from "~/types";
 
 const { post } = defineProps<{
-  post: ContentWithEstimation
-}>()
+  post: ContentWithEstimation;
+}>();
 
 const {
   title,
   description,
   date,
-} = post
+} = post;
 
 const formattedDate = new Date(date).toLocaleDateString("en-US", {
   year: "numeric",
   month: "long",
   day: "numeric",
-})
+});
 </script>
 
 <template>

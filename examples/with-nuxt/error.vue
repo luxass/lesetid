@@ -1,13 +1,13 @@
 <script setup lang="ts">
 useHead({
   title: "nuxt example | lesetid.dev",
-})
+});
 
 useSeoMeta({
   description: "A nuxt example for lesetid",
   ogTitle: "nuxt example | lesetid.dev",
   ogDescription: "A nuxt example for lesetid",
-})
+});
 </script>
 
 <template>

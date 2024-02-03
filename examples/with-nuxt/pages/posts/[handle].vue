@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import type { ContentWithEstimation } from "~/types"
+import type { ContentWithEstimation } from "~/types";
 
-const route = useRoute()
+const route = useRoute();
 
 const handle = Array.isArray(route.params.handle)
   ? route.params.handle[0]
-  : route.params.handle
+  : route.params.handle;
 </script>
 
 <template>

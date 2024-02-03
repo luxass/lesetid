@@ -1,23 +1,23 @@
 <script setup lang="ts">
-import { estimate } from "lesetid"
+import { estimate } from "lesetid";
 
-const modelValue = defineModel<string>()
+const modelValue = defineModel<string>();
 
 const time = computed(() => {
-  return estimate(modelValue.value)
-})
+  return estimate(modelValue.value);
+});
 
-const { data, error } = await useAsyncData(() => $fetch("/api/texts"))
+const { data, error } = await useAsyncData(() => $fetch("/api/texts"));
 
-const selectedText = ref("")
+const selectedText = ref("");
 
 watch(selectedText, (newVal) => {
   if (newVal) {
     modelValue.value
       = data?.value?.texts.find((text) => text.key === newVal)?.file
-      || ""
+      || "";
   }
-})
+});
 </script>
 
 <template>

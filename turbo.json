@@ -13,8 +13,7 @@
         ".output/**",
         ".next/**",
         "!.next/cache/**",
-        ".vercel/**",
-        ".contentlayer/**"
+        ".vercel/**"
       ],
       "dependsOn": [
         "^build"
@@ -52,13 +51,8 @@
     "typecheck": {
       "dependsOn": [
         "^topo",
-        "^build",
-        "@lesetid-example/next#contentlayer:build"
+        "^build"
       ],
-      "outputMode": "new-only"
-    },
-    "contentlayer:build": {
-      "cache": false,
       "outputMode": "new-only"
     }
   }

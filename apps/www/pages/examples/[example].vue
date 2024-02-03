@@ -1,32 +1,32 @@
 <script lang="ts" setup>
-const route = useRoute()
-const mode = useColorMode()
+const route = useRoute();
+const mode = useColorMode();
 
-const { example: exampleParam } = route.params
+const { example: exampleParam } = route.params;
 if (!exampleParam) {
-  await navigateTo("/examples")
+  await navigateTo("/examples");
 }
 
 const {
   data: example,
   pending,
   error,
-} = await useAsyncData(`example-${exampleParam}`, () => $fetch(`/api/examples/${route.params.example}`))
+} = await useAsyncData(`example-${exampleParam}`, () => $fetch(`/api/examples/${route.params.example}`));
 
 if (!example || !example?.value) {
-  await navigateTo("/examples")
+  await navigateTo("/examples");
 }
 
 const providers = computed(() => {
-  return Object.entries(example?.value?.providers || {})
-})
+  return Object.entries(example?.value?.providers || {});
+});
 
 const PROVIDER_ICONS: Record<string, string> = {
   stackblitz: "logos:stackblitz-icon",
   codesandbox: "logos:codesandbox-icon",
   codespaces: "octicon:mark-github-16",
   gitpod: "devicon:gitpod",
-}
+};
 </script>
 
 <template>
