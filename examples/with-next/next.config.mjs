@@ -1,5 +1,3 @@
-import UnpluginIcons from "unplugin-icons/webpack";
-
 /** @type {import("next").NextConfig} */
 const nextConfig = {
   reactStrictMode: true,

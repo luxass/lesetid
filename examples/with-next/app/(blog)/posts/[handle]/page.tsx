@@ -101,8 +101,8 @@ export default async function PostPage({ params }: PostPageProps) {
   });
 
   return (
-    <article className="prose dark:prose-invert markdown tracking-wide">
-      <div className="border border-neutral-300 dark:border-neutral-700 rounded p-3 gap-3">
+    <article className="markdown prose tracking-wide dark:prose-invert">
+      <div className="gap-3 rounded border border-neutral-300 p-3 dark:border-neutral-700">
         This post will approximately take
         {" "}
         <strong>{frontmatter.estimation?.text || "NaN"}</strong>
