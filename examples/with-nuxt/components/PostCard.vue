@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { CustomParsedContent } from "~/types"
+import type { ContentWithEstimation } from "~/types"
 
 const { post } = defineProps<{
-  post: CustomParsedContent
+  post: ContentWithEstimation
 }>()
 
 const {

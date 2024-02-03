@@ -4,7 +4,7 @@ import PageLayout from "../layouts/PageLayout.astro"
 import PostCard from "../components/content/PostCard.astro"
 
 const posts = await getCollection("posts", ({ data }) => data.published)
-  .then((posts) => posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()))
+  .then((posts) => posts.sort((a, b) => a.data.date.getTime() - b.data.date.getTime()))
 
 export const prerender = true;
 ---

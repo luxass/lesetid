@@ -17,7 +17,6 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "en",
       },
-      title: "nuxt example | lesetid.dev",
       link: [
         {
           rel: "icon",

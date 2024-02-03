@@ -1,7 +1,14 @@
 <script setup lang="ts">
-import type { CustomParsedContent } from "~/types"
+import type { ContentWithEstimation } from "~/types"
 
-const posts = await queryContent<CustomParsedContent>().sort({ createdAt: -1 }).find()
+const posts = await queryContent<ContentWithEstimation>()
+  .sort({
+    date: 1,
+  }).find()
+
+useHead({
+  title: "posts | nuxt-example.lesetid.dev",
+})
 </script>
 
 <template>
