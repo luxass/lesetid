@@ -42,8 +42,8 @@ importers:
         specifier: 1.0.1
         version: link:../../packages/lesetid
       valibot:
-        specifier: ^0.27.1
-        version: 0.27.1
+        specifier: ^0.30.0
+        version: 0.30.0
     devDependencies:
       '@luxass/eslint-config':
         specifier: ^4.2.6
@@ -14939,8 +14939,8 @@ packages:
       sade: 1.8.1
     dev: false
 
-  /valibot@0.27.1:
-    resolution: {integrity: sha512-k57/5/kMwMjiVP0LUMpa+n4ihSemuXshz1ND4fftKw1bkHZYN/TnHcbjaEie3K7FwAceiOgugLZPjSaNxdygeg==}
+  /valibot@0.30.0:
+    resolution: {integrity: sha512-5POBdbSkM+3nvJ6ZlyQHsggisfRtyT4tVTo1EIIShs6qCdXJnyWU5TJ68vr8iTg5zpOLjXLRiBqNx+9zwZz/rA==}
     dev: false
 
   /validate-html-nesting@1.2.2:
