@@ -42,8 +42,8 @@ importers:
         specifier: 1.0.1
         version: link:../../packages/lesetid
       valibot:
-        specifier: ^0.27.1
-        version: 0.27.1
+        specifier: ^0.34.0
+        version: 0.34.0
     devDependencies:
       '@luxass/eslint-config':
         specifier: ^4.2.6
@@ -12404,6 +12404,7 @@ packages:
 
   /queue-tick@1.0.1:
     resolution: {integrity: sha512-kJt5qhMxoszgU/62PLP1CJytzd2NKetjSRnyuj31fDd3Rlcz3fzlFdFLD1SItunPwyqEOkca6GbV612BWfaBag==}
+    requiresBuild: true
 
   /quick-lru@4.0.1:
     resolution: {integrity: sha512-ARhCpm70fzdcvNQfPoy49IaanKkTlRWF2JMzqhcJbhSFRZv7nPTvZJdcY7301IPmvW+/p0RgIWnQDLJxifsQ7g==}
@@ -14939,8 +14940,8 @@ packages:
       sade: 1.8.1
     dev: false
 
-  /valibot@0.27.1:
-    resolution: {integrity: sha512-k57/5/kMwMjiVP0LUMpa+n4ihSemuXshz1ND4fftKw1bkHZYN/TnHcbjaEie3K7FwAceiOgugLZPjSaNxdygeg==}
+  /valibot@0.34.0:
+    resolution: {integrity: sha512-TELvxO0hEB1/6XjTS5Jfi4dS0oyawA5flxs4/sK/tSUXnlLMiKTMYE6Atuu0a7kvtP3eqPv3yZ80msfM+qMDHA==}
     dev: false
 
   /validate-html-nesting@1.2.2:

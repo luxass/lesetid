@@ -7,7 +7,7 @@
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@8.15.1",
+  "packageManager": "pnpm@8.15.8",
   "license": "MIT",
   "homepage": "https://github.com/luxass/lesetid",
   "repository": {
@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "lesetid": "1.0.1",
-    "valibot": "^0.27.1"
+    "valibot": "^0.34.0"
   },
   "devDependencies": {
     "@luxass/eslint-config": "^4.2.6",
