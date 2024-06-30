@@ -40,7 +40,7 @@
     "eslint": "^8.56.0",
     "eslint-plugin-tailwindcss": "^3.14.1",
     "nuxt": "^3.10.0",
-    "nuxt-icon": "^0.6.8",
+    "nuxt-icon": "^0.6.10",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
   }
