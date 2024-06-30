@@ -72,7 +72,7 @@
   },
   "devDependencies": {
     "@types/mdast": "^4.0.3",
-    "unified": "^11.0.4",
+    "unified": "^11.0.5",
     "vfile": "^6.0.1"
   }
 }
