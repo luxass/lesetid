@@ -4,9 +4,6 @@ import {
 } from "@luxass/eslint-config";
 
 export default luxass({
-  nextjs: true,
-  react: {
-    a11y: true,
-  },
+  react: true,
   tailwindcss: true,
 });

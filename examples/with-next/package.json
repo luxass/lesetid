@@ -40,6 +40,7 @@
     "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
+    "@eslint-react/eslint-plugin": "^1.5.19",
     "@iconify-json/carbon": "^1.1.36",
     "@iconify-json/logos": "1.1.43",
     "@iconify-json/octicon": "1.1.55",
@@ -52,7 +53,6 @@
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.19",
     "eslint": "^9.6.0",
-    "eslint-config-next": "14.2.4",
     "eslint-plugin-react-refresh": "^0.4.7",
     "eslint-plugin-tailwindcss": "^3.17.4",
     "postcss": "^8.4.39",

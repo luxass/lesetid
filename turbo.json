@@ -17,21 +17,18 @@
       ],
       "dependsOn": [
         "^build"
-      ],
-      "outputLogs": "new-only"
+      ]
     },
     "clean": {
       "cache": false
     },
     "dev": {
       "cache": false,
-      "persistent": true,
-      "outputLogs": "new-only"
+      "persistent": true
     },
     "lint": {
       "cache": true,
       "persistent": true,
-      "outputLogs": "new-only",
       "dependsOn": [
         "^topo",
         "^build"
@@ -41,19 +38,16 @@
       "outputs": [],
       "dependsOn": [
         "build"
-      ],
-      "outputLogs": "new-only"
+      ]
     },
     "test:watch": {
-      "cache": false,
-      "outputLogs": "new-only"
+      "cache": false
     },
     "typecheck": {
       "dependsOn": [
         "^topo",
         "^build"
-      ],
-      "outputLogs": "new-only"
+      ]
     }
   }
 }

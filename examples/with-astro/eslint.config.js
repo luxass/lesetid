@@ -6,5 +6,4 @@ import {
 export default await luxass({
   astro: true,
   tailwindcss: true,
-  solid: true,
 });

@@ -13,14 +13,14 @@ export default function IndexPage() {
       {
         posts.length > 0
           ? (
-            <div className="mt-4 grid auto-cols-max grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-3">
-              {posts.map((post, idx) => (
-                <PostCard post={post} key={`post-${idx}`} />
-              ))}
-            </div>
+              <div className="mt-4 grid auto-cols-max grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-3">
+                {posts.map((post, idx) => (
+                  <PostCard post={post} key={`post-${idx}`} />
+                ))}
+              </div>
             )
           : (
-            <p>No public posts available yet.</p>
+              <p>No public posts available yet.</p>
             )
       }
     </article>
