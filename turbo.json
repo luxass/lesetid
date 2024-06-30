@@ -1,6 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "pipeline": {
+  "tasks": {
     "topo": {
       "dependsOn": [
         "^topo"
@@ -18,7 +18,7 @@
       "dependsOn": [
         "^build"
       ],
-      "outputMode": "new-only"
+      "outputLogs": "new-only"
     },
     "clean": {
       "cache": false
@@ -26,12 +26,12 @@
     "dev": {
       "cache": false,
       "persistent": true,
-      "outputMode": "new-only"
+      "outputLogs": "new-only"
     },
     "lint": {
       "cache": true,
       "persistent": true,
-      "outputMode": "new-only",
+      "outputLogs": "new-only",
       "dependsOn": [
         "^topo",
         "^build"
@@ -42,18 +42,18 @@
       "dependsOn": [
         "build"
       ],
-      "outputMode": "new-only"
+      "outputLogs": "new-only"
     },
     "test:watch": {
       "cache": false,
-      "outputMode": "new-only"
+      "outputLogs": "new-only"
     },
     "typecheck": {
       "dependsOn": [
         "^topo",
         "^build"
       ],
-      "outputMode": "new-only"
+      "outputLogs": "new-only"
     }
   }
 }
