@@ -130,13 +130,13 @@ export const asides: Plugin<void[], Root> = () => {
           return;
         }
 
-        const type = firstChild.value.match(/^\[\!(NOTE|TIP|WARNING|DANGER|IMPORTANT)\]/);
+        const type = firstChild.value.match(/^\[!(NOTE|TIP|WARNING|DANGER|IMPORTANT)\]/);
         if (!type) {
           return;
         }
 
         variant = type[1].toLowerCase();
-        firstChild.value = firstChild.value.replace(/^\[\!(NOTE|TIP|WARNING|DANGER|IMPORTANT)\]/, "").trim();
+        firstChild.value = firstChild.value.replace(/^\[!(NOTE|TIP|WARNING|DANGER|IMPORTANT)\]/, "").trim();
       } else {
         variant = node.name.toLowerCase();
       }
