@@ -79,12 +79,10 @@ export default async function PostPage({ params }: PostPageProps) {
       mdxOptions: {
         remarkPlugins: [
           remarkGfm,
-          // @ts-expect-error something broke in their types.
           remarkLesetid,
         ],
         rehypePlugins: [
           rehypeSlug,
-          // @ts-expect-error something broke in their types.
           [rehypePrettyCode, {
             theme: "vitesse-dark",
           }],
