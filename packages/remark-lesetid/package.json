@@ -8,7 +8,7 @@
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@8.15.1",
+  "packageManager": "pnpm@9.4.0",
   "license": "MIT",
   "homepage": "https://github.com/luxass/remark-lesetid",
   "repository": {
@@ -71,8 +71,8 @@
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
-    "@types/mdast": "^4.0.3",
-    "unified": "^11.0.4",
+    "@types/mdast": "^4.0.4",
+    "unified": "^11.0.5",
     "vfile": "^6.0.1"
   }
 }
