@@ -71,6 +71,12 @@ jobs:
         run: |
           git checkout changeset-release/main
           pnpm install --no-frozen-lockfile
-          git add .
-          git commit -m "chore(release): 📦 sync lockfile"
-          git push origin changeset-release/main
+
+          # Check for changes and only commit if there are any
+          if git diff --exit-code; then
+            echo "No changes to commit."
+          else
+            git add .
+            git commit -m "chore(release): 📦 sync lockfile"
+            git push origin changeset-release/main
+          fi
