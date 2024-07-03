@@ -26,7 +26,7 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint . --report-unused-disable-directives",
     "typecheck": "tsc --noEmit",
-    "clean": "git clean -xdf .nuxt .output node_modules"
+    "clean": "git clean -xdf .nuxt dist .output node_modules .turbo .netlify"
   },
   "dependencies": {
     "remark-lesetid": "1.1.0",

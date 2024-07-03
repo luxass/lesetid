@@ -77,9 +77,13 @@
     "test": "vitest run",
     "lint": "eslint . --report-unused-disable-directives",
     "typecheck": "tsc --noEmit",
-    "clean": "git clean -xdf dist node_modules"
+    "clean": "git clean -xdf dist node_modules .turbo"
   },
   "devDependencies": {
+    "@luxass/eslint-config": "^4.8.0",
+    "@types/node": "^18.16.19",
+    "eslint": "^9.6.0",
+    "typescript": "^5.5.3",
     "volapyk": "^1.6.0"
   }
 }

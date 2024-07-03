@@ -71,7 +71,11 @@
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
+    "@luxass/eslint-config": "^4.8.0",
     "@types/mdast": "^4.0.4",
+    "@types/node": "^18.16.19",
+    "eslint": "^9.6.0",
+    "typescript": "^5.5.3",
     "unified": "^11.0.5",
     "vfile": "^6.0.1"
   }

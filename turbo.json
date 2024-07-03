@@ -1,5 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
+  "ui": "tui",
   "tasks": {
     "topo": {
       "dependsOn": [
@@ -22,16 +23,20 @@
     "clean": {
       "cache": false
     },
+    "//#clean": {
+      "cache": false
+    },
     "dev": {
       "cache": false,
       "persistent": true
     },
     "lint": {
-      "cache": true,
-      "persistent": true,
       "dependsOn": [
         "^topo",
         "^build"
+      ],
+      "outputs": [
+        "node_modules/.cache/.eslintcache"
       ]
     },
     "test": {
@@ -47,7 +52,15 @@
       "dependsOn": [
         "^topo",
         "^build"
+      ],
+      "outputs": [
+        "node_modules/.cache/tsbuildinfo.json"
       ]
     }
-  }
+  },
+  "globalPassThroughEnv": [
+    "NODE_ENV",
+    "CI",
+    "npm_lifecycle_event"
+  ]
 }
