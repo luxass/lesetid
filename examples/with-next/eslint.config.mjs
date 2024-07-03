@@ -3,7 +3,8 @@ import {
   luxass,
 } from "@luxass/eslint-config";
 
-export default await luxass({
-  astro: true,
+export default luxass({
+  react: true,
   tailwindcss: true,
+  formatters: true,
 });

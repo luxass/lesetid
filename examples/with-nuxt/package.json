@@ -49,5 +49,9 @@
     "nuxt-icon": "^0.6.10",
     "vue": "^3.4.31",
     "vue-router": "^4.4.0"
+  },
+  "stackblitz": {
+    "installDependencies": false,
+    "startCommand": "node .stackblitz.mjs && npm install && npm run dev"
   }
 }

@@ -63,11 +63,16 @@
     "eslint-plugin-solid": "^0.14.1",
     "hastscript": "^9.0.0",
     "mdast-util-directive": "^3.0.0",
+    "prettier-plugin-astro": "^0.14.0",
     "remark": "^15.0.1",
     "remark-directive": "^3.0.0",
     "typescript": "^5.5.3",
     "unified": "^11.0.5",
     "unist-util-remove": "^4.0.0",
     "unist-util-visit": "^5.0.0"
+  },
+  "stackblitz": {
+    "installDependencies": false,
+    "startCommand": "node .stackblitz.mjs && npm install && npm run dev"
   }
 }
