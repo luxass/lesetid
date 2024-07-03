@@ -5,14 +5,19 @@ import Link from "../ui/Link.astro";
 import { url } from "../../../.lesetid/example.json";
 ---
 
-<footer class="mt-8 border-t border-t-neutral-700 pt-8 text-center flex items-center justify-between gap-2 px-4">
+<footer
+  class="mt-8 border-t border-t-neutral-700 pt-8 text-center flex items-center justify-between gap-2 px-4"
+>
   <p>Astro Example</p>
   <ul>
     <li class="flex items-center gap-2">
       <Link href="/sitemap-index.xml" aria-label="sitemap">
         <Icon name="mdi:sitemap" class="size-5" />
       </Link>
-      <Link href={`https://github.com/luxass/lesetid/blob/main${url}`} aria-label="github">
+      <Link
+        href={`https://github.com/luxass/lesetid/blob/main${url}`}
+        aria-label="github"
+      >
         <Icon name="mdi:github" class="size-5" />
       </Link>
     </li>

@@ -11,11 +11,7 @@ export interface Props {
   class?: string;
 }
 
-const {
-  title,
-  description,
-  class: clazz,
-} = Astro.props;
+const { title, description, class: clazz } = Astro.props;
 ---
 
 <!doctype html>
@@ -50,7 +46,13 @@ const {
     <!-- links -->
     <link rel="sitemap" href="/sitemap-index.xml" />
 
-    <link rel="preload" href="/fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link
+      rel="preload"
+      href="/fonts/dm-sans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <Header />
