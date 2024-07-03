@@ -1,5 +1,6 @@
 {
   "name": "@lesetid-example/nuxt",
+  "version": "1.0.0",
   "type": "module",
   "private": true,
   "author": {
@@ -48,6 +49,5 @@
     "nuxt-icon": "^0.6.10",
     "vue": "^3.4.31",
     "vue-router": "^4.4.0"
-  },
-  "version": ""
+  }
 }

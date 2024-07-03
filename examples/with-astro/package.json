@@ -1,5 +1,6 @@
 {
   "name": "@lesetid-example/astro",
+  "version": "1.0.0",
   "type": "module",
   "private": true,
   "author": {
@@ -68,6 +69,5 @@
     "unified": "^11.0.5",
     "unist-util-remove": "^4.0.0",
     "unist-util-visit": "^5.0.0"
-  },
-  "version": ""
+  }
 }
