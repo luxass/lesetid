@@ -6,7 +6,7 @@
       "repo": "luxass/lesetid"
     }
   ],
-  "commit": false,
+  "commit": ["@changesets/cli/commit", { "skipCI": false }],
   "linked": [],
   "access": "public",
   "baseBranch": "main",

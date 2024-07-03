@@ -7,7 +7,7 @@ settings:
 importers:
 
   .:
-    dependencies:
+    devDependencies:
       '@changesets/changelog-github':
         specifier: ^0.5.0
         version: 0.5.0
@@ -39,8 +39,8 @@ importers:
   apps/www:
     dependencies:
       lesetid:
-        specifier: 1.0.1
-        version: 1.0.1
+        specifier: workspace:*
+        version: link:../../packages/lesetid
       valibot:
         specifier: ^0.35.0
         version: 0.35.0
@@ -115,8 +115,8 @@ importers:
         specifier: ^15.0.1
         version: 15.0.1
       remark-lesetid:
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: workspace:*
+        version: link:../../packages/remark-lesetid
       solid-js:
         specifier: ^1.8.18
         version: 1.8.18
@@ -209,8 +209,8 @@ importers:
         specifier: ^0.13.2
         version: 0.13.2(shiki@1.10.1)
       remark-lesetid:
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: workspace:*
+        version: link:../../packages/remark-lesetid
       shiki:
         specifier: ^1.10.1
         version: 1.10.1
@@ -225,7 +225,7 @@ importers:
         specifier: ^1.1.36
         version: 1.1.36
       '@iconify-json/logos':
-        specifier: 1.1.43
+        specifier: ^1.1.43
         version: 1.1.43
       '@iconify-json/octicon':
         specifier: 1.1.55
@@ -291,8 +291,8 @@ importers:
   examples/with-nuxt:
     dependencies:
       remark-lesetid:
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: workspace:*
+        version: link:../../packages/remark-lesetid
       sitemap:
         specifier: ^8.0.0
         version: 8.0.0
@@ -364,8 +364,8 @@ importers:
   packages/remark-lesetid:
     dependencies:
       lesetid:
-        specifier: 1.0.1
-        version: 1.0.1
+        specifier: workspace:*
+        version: link:../lesetid
       mdast-util-to-string:
         specifier: ^4.0.0
         version: 4.0.0
@@ -4997,10 +4997,6 @@ packages:
     resolution: {integrity: sha512-b94GiNHQNy6JNTrt5w6zNyffMrNkXZb3KTkCZJb2V1xaEGCk093vkZ2jk3tpaeP33/OiXC+WvK9AxUebnf5nbw==}
     engines: {node: '>= 0.6.3'}
 
-  lesetid@1.0.1:
-    resolution: {integrity: sha512-fs6t/ToWbuZ2moe7kJDUykSbns1SEkVyAomlzDoReNIO9d73/BA3Eb4/rnoSpmndVHQe3qWLn41/fYMXNywWlg==}
-    engines: {node: '>=18'}
-
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
@@ -6303,10 +6299,6 @@ packages:
 
   remark-gfm@4.0.0:
     resolution: {integrity: sha512-U92vJgBPkbw4Zfu/IiW2oTZLSL3Zpv+uI7My2eq8JxKgqraFdU8YUGicEJCEgSbeaG+QDFqIcwwfMTOEelPxuA==}
-
-  remark-lesetid@1.1.0:
-    resolution: {integrity: sha512-RYIJQ72tzFcTn6xY+my7u4ERYi0qxcyrtymQ18O8EdtpsqTVh+1ux4+ziohH62RPOuRCi9bWKJLGJIbqX6ln3g==}
-    engines: {node: '>=18'}
 
   remark-mdc@3.2.1:
     resolution: {integrity: sha512-MLNqQE7ryygOA3TtH4hKmIvmjFAqTMzCs2zrMzXs4MWJXYM2vbtdwR2NfgcN3vxIp5Pllgq3oLGuKgQSs8J19w==}
@@ -13574,8 +13566,6 @@ snapshots:
     dependencies:
       readable-stream: 2.3.8
 
-  lesetid@1.0.1: {}
-
   levn@0.4.1:
     dependencies:
       prelude-ls: 1.2.1
@@ -15431,12 +15421,6 @@ snapshots:
       unified: 11.0.5
     transitivePeerDependencies:
       - supports-color
-
-  remark-lesetid@1.1.0:
-    dependencies:
-      lesetid: 1.0.1
-      mdast-util-to-string: 4.0.0
-      unist-util-visit: 5.0.0
 
   remark-mdc@3.2.1:
     dependencies:

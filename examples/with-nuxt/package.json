@@ -29,7 +29,7 @@
     "clean": "git clean -xdf .nuxt dist .output node_modules .turbo .netlify"
   },
   "dependencies": {
-    "remark-lesetid": "1.1.0",
+    "remark-lesetid": "workspace:*",
     "sitemap": "^8.0.0"
   },
   "devDependencies": {

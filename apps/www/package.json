@@ -29,7 +29,7 @@
     "clean": "git clean -xdf .nuxt .output node_modules"
   },
   "dependencies": {
-    "lesetid": "1.0.1",
+    "lesetid": "workspace:*",
     "valibot": "^0.35.0"
   },
   "devDependencies": {
