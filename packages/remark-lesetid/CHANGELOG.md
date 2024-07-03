@@ -1,5 +1,18 @@
 # remark-lesetid
 
+## 1.2.0
+
+### Minor Changes
+
+- [`3c603b6`](https://github.com/luxass/lesetid/commit/3c603b68c6593801f160bcb25a12cd077132c173) Thanks [@luxass](https://github.com/luxass)! - chore: update dependencies
+
+### Patch Changes
+
+- [`d3e5b76`](https://github.com/luxass/lesetid/commit/d3e5b762e1059ae1b66663467722d0285c2eb10e) Thanks [@luxass](https://github.com/luxass)! - cleanup dependencies
+
+- Updated dependencies [[`d3e5b76`](https://github.com/luxass/lesetid/commit/d3e5b762e1059ae1b66663467722d0285c2eb10e), [`3c603b6`](https://github.com/luxass/lesetid/commit/3c603b68c6593801f160bcb25a12cd077132c173)]:
+  - lesetid@1.1.0
+
 ## 1.1.0
 
 ### Minor Changes
