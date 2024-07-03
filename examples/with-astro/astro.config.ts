@@ -33,7 +33,7 @@ export default defineConfig({
   },
   markdown: {
     shikiConfig: {
-      experimentalThemes: {
+      themes: {
         dark: "vitesse-dark",
         light: "vitesse-light",
       },
