@@ -73,7 +73,7 @@
   "devDependencies": {
     "@luxass/eslint-config": "^4.8.0",
     "@types/mdast": "^4.0.4",
-    "@types/node": "^18.16.19",
+    "@types/node": "^18.19.39",
     "eslint": "^9.6.0",
     "typescript": "^5.5.3",
     "unified": "^11.0.5",
