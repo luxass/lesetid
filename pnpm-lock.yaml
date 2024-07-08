@@ -42,8 +42,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/lesetid
       valibot:
-        specifier: ^0.35.0
-        version: 0.35.0
+        specifier: ^0.36.0
+        version: 0.36.0
     devDependencies:
       '@luxass/eslint-config':
         specifier: ^4.8.0
@@ -7338,6 +7338,9 @@ packages:
 
   valibot@0.35.0:
     resolution: {integrity: sha512-+i2aCRkReTrd5KBN/dW2BrPOvFnU5LXTV2xjZnjnqUIO8YUx6P2+MgRrkwF2FhkexgyKq/NIZdPdknhHf5A/Ww==}
+
+  valibot@0.36.0:
+    resolution: {integrity: sha512-CjF1XN4sUce8sBK9TixrDqFM7RwNkuXdJu174/AwmQUB62QbCQADg5lLe8ldBalFgtj1uKj+pKwDJiNo4Mn+eQ==}
 
   validate-html-nesting@1.2.2:
     resolution: {integrity: sha512-hGdgQozCsQJMyfK5urgFcWEqsSSrK63Awe0t/IMR0bZ0QMtnuaiHzThW81guu3qx9abLi99NEuiaN6P9gVYsNg==}
@@ -16669,6 +16672,8 @@ snapshots:
   util-deprecate@1.0.2: {}
 
   valibot@0.35.0: {}
+
+  valibot@0.36.0: {}
 
   validate-html-nesting@1.2.2: {}
 

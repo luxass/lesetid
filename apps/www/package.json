@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "lesetid": "workspace:*",
-    "valibot": "^0.35.0"
+    "valibot": "^0.36.0"
   },
   "devDependencies": {
     "@luxass/eslint-config": "^4.8.0",
