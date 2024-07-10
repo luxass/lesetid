@@ -23,9 +23,3 @@ ignores = [
 
 [workspace.overrides.vscode-reading-time]
 project = { ignore = true }
-
-[workspace.overrides.vscode-reading-time2]
-project = { ignore = true }
-
-[workspace.overrides.vscode-reading-time3]
-project = {}
