@@ -22,4 +22,5 @@ ignores = [
 ]
 
 [workspace.overrides.vscode-reading-time]
+[project]
 ignore = true
