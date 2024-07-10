@@ -12,6 +12,9 @@ version = true
 enabled = true
 downloads = true
 
+[readme]
+enabled = true
+
 [website]
 enabled = true
 
