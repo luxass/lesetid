@@ -20,3 +20,6 @@ ignores = [
   "examples/*",
   "www"
 ]
+
+[workspace.overrides.vscode-reading-time]
+ignore = true
