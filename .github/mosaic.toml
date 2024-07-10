@@ -28,3 +28,4 @@ project = { ignore = true }
 project = { ignore = true }
 
 [workspace.overrides.vscode-reading-time3]
+project = {}
