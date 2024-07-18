@@ -1,5 +1,8 @@
 import Link from "next/link";
 import type { SVGProps } from "react";
+import {
+  url,
+} from "../.lesetid/example.json";
 
 export function Footer() {
   return (
@@ -10,7 +13,7 @@ export function Footer() {
           <Link href="/sitemap-index.xml" aria-label="sitemap">
             <MdiSitemap className="size-5" />
           </Link>
-          <Link href={`https://github.com/luxass/lesetid/blob/main${URL}`} aria-label="github">
+          <Link href={`https://github.com/luxass/lesetid/blob/main${url}`} aria-label="github">
             <MdiGithub className="size-5" />
           </Link>
         </li>

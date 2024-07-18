@@ -11,9 +11,6 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://next-example.lesetid.dev"),
   title: "lesetid | next example",
   description: "A example next app using lesetid.dev",
-  other: {
-    "darkreader-lock": "",
-  },
   openGraph: {
     type: "website",
     siteName: "lesetid.dev",

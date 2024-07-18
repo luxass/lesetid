@@ -8,27 +8,11 @@ html {
 }
 
 * {
-  @apply dark:outline-white selection:dark:bg-neutral-700 selection:dark:text-white outline-black selection:bg-neutral-200 selection:text-black;
+  @apply outline-black selection:bg-neutral-200 selection:text-black;
 }
 
 body {
-  @apply text-neutral-900 bg-neutral-100 dark:text-neutral-300 dark:bg-neutral-900 px-0 md:px-4 py-4 md:py-8 max-w-3xl md:mx-auto relative min-h-screen text-sm md:text-base flex flex-col;
-}
-
-html.dark {
-  .astro-code,
-  .astro-code span:not(button span) {
-    color: var(--shiki-dark) !important;
-    background-color: var(--shiki-dark-bg) !important;
-  }
-
-  .callout {
-    --callout-note-color: #2f81f7;
-    --callout-tip-color: #3fb950;
-    --callout-warning-color: #d29922;
-    --callout-caution-color: #f85149;
-    --callout-important-color: #a371f7;
-  }
+  @apply text-neutral-900 bg-neutral-100 px-0 md:px-4 py-4 md:py-8 max-w-3xl md:mx-auto relative min-h-screen text-sm md:text-base flex flex-col;
 }
 
 .callout {
@@ -119,7 +103,7 @@ html.dark {
   & h1,
   & h2,
   & h3 {
-    @apply text-neutral-900 dark:text-neutral-300 font-semibold my-8;
+    @apply text-neutral-900 font-semibold my-8;
   }
 
   & h1 {
@@ -135,7 +119,7 @@ html.dark {
   }
 
   & strong {
-    @apply font-medium text-neutral-900 dark:text-neutral-300;
+    @apply font-medium text-neutral-900;
   }
 
   & ul {
@@ -153,6 +137,6 @@ html.dark {
 
 .markdown {
   & a:not([class*="not-markdown"] a) {
-    @apply text-blue-600 dark:text-blue-400 underline underline-offset-2;
+    @apply text-blue-600 underline underline-offset-2;
   }
 }
