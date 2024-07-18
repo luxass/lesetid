@@ -1,2 +1,2 @@
 [build]
-ignore = "git diff $CACHED_COMMIT_REF $COMMIT_REF | grep -qE '^(packages/|examples/with-astro/)'"
+ignore = "git diff --name-only $CACHED_COMMIT_REF $COMMIT_REF | grep -qE '^(packages/|examples/with-astro/)'"
