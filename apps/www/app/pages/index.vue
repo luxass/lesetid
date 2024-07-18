@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const text = ref("Write your article here!");
-const debounced = useDebounce(text, 500);
+const debounced = refDebounced(text, 1000);
 </script>
 
 <template>
