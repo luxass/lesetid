@@ -2,6 +2,7 @@
   "name": "lesetid-monorepo",
   "description": "Monorepo for the lesetid packages",
   "type": "module",
+  "version": "0.0.0",
   "private": true,
   "author": {
     "name": "Lucas Nørgård",
@@ -54,6 +55,5 @@
     "turbo": "^2.0.7",
     "typescript": "^5.5.3",
     "vitest": "^2.0.3"
-  },
-  "version": ""
+  }
 }
