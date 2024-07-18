@@ -21,7 +21,7 @@ const input = useVModel(props, "modelValue", emit, { passive: true });
 
 <template>
   <div
-    class="flex items-center border rounded px-2 py-1 focus-within:border-blue-600 bg-base focus-within:ring-2 focus-within:ring-blue-600"
+    class="bg-base flex items-center rounded border px-2 py-1 focus-within:border-blue-600 focus-within:ring-2 focus-within:ring-blue-600"
     :class="disabled ? 'border-gray:10' : 'border-base'"
   >
     <slot name="icon">
@@ -29,7 +29,7 @@ const input = useVModel(props, "modelValue", emit, { passive: true });
     </slot>
     <select
       v-model="input" aria-label="Select a article to look at." :disabled="disabled"
-      class="w-full flex-auto appearance-none bg-base !outline-none" :class="disabled ? 'appearance-none' : ''"
+      class="bg-base w-full flex-auto appearance-none !outline-none" :class="disabled ? 'appearance-none' : ''"
     >
       <option v-if="placeholder" value="" disabled hidden>
         {{ placeholder }}

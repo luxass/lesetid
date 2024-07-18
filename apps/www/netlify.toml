@@ -1,0 +1,15 @@
+[build]
+ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- 'packages/**/*' 'apps/www/**/*'"
+
+[[redirects]]
+from = "/view-source"
+to = "https://github.com/luxass/lesetid"
+status = 301
+force = true
+
+[[redirects]]
+from = "/"
+to = "/examples"
+status = 301
+force = true
+conditions = { Host = [ "examples.lesetid.dev" ] }

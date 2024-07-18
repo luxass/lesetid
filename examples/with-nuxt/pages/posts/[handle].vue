@@ -4,8 +4,8 @@ import type { ContentWithEstimation } from "~/types";
 
 <template>
   <ContentDoc v-slot="{ doc }">
-    <article class="tracking-wide prose dark:prose-invert markdown">
-      <div class="border border-neutral-300 dark:border-neutral-700 rounded p-3 gap-3">
+    <article class="markdown prose tracking-wide dark:prose-invert">
+      <div class="gap-3 rounded border border-neutral-300 p-3 dark:border-neutral-700">
         This post will approximately take <strong>{{ (doc as ContentWithEstimation).estimation?.text || "NaN" }}</strong>
         to read.
       </div>

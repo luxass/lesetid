@@ -5,7 +5,7 @@ import {
 </script>
 
 <template>
-  <footer class="mt-8 border-t border-t-neutral-700 pt-8 text-center flex items-center justify-between gap-2 px-4">
+  <footer class="mt-8 flex items-center justify-between gap-2 border-t border-t-neutral-700 px-4 pt-8 text-center">
     <p>Nuxt Example</p>
     <ul>
       <li class="flex items-center gap-2">

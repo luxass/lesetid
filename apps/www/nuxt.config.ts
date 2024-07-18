@@ -2,14 +2,10 @@ export default defineNuxtConfig({
   modules: [
     "@nuxt/devtools",
     "@vueuse/nuxt",
-    "@nuxtjs/color-mode",
     "nuxt-icon",
     "@nuxtjs/tailwindcss",
   ],
   sourcemap: false,
-  colorMode: {
-    classSuffix: "",
-  },
   app: {
     head: {
       viewport: "width=device-width,initial-scale=1",
@@ -26,7 +22,7 @@ export default defineNuxtConfig({
     },
   },
   future: {
-    typescriptBundlerResolution: true,
+    compatibilityVersion: 4,
   },
   routeRules: {
     "/": {
@@ -57,4 +53,5 @@ export default defineNuxtConfig({
     "lesetid/stream": "../packages/lesetid/src/stream.ts",
     "lesetid/utils": "../packages/lesetid/src/utils.ts",
   },
+  compatibilityDate: "2024-07-18",
 });

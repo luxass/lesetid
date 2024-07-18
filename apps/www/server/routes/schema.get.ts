@@ -5,32 +5,9 @@ export default defineEventHandler(() => {
     type: "object",
     properties: {
       iconUrl: {
-        oneOf: [
-          {
-            description: "The url to the icon",
-            pattern: "^/",
-            type: "string",
-          },
-          {
-            type: "object",
-            properties: {
-              light: {
-                description: "The url to the icon",
-                pattern: "^/",
-                type: "string",
-              },
-              dark: {
-                description: "The url to the icon",
-                pattern: "^/",
-                type: "string",
-              },
-            },
-            required: [
-              "light",
-              "dark",
-            ],
-          },
-        ],
+        description: "The url to the icon",
+        pattern: "^/",
+        type: "string",
       },
       title: {
         description: "The title of the example",

@@ -13,13 +13,7 @@ import {
 export const ICON_URL_SCHEMA = pipe(string(), startsWith("/"));
 
 export const ExampleSchema = object({
-  iconUrl: optional(union([
-    ICON_URL_SCHEMA,
-    object({
-      dark: ICON_URL_SCHEMA,
-      light: ICON_URL_SCHEMA,
-    }),
-  ])),
+  iconUrl: optional(pipe(string(), startsWith("/"))),
   title: string(),
   url: string(),
   handle: string(),

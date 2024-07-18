@@ -11,7 +11,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="h-dvh flex flex-col items-center justify-center gap-4">
+  <div class="flex h-dvh flex-col items-center justify-center gap-4">
     <h1 class="text-8xl text-blue-600">
       404
     </h1>

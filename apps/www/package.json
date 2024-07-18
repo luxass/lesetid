@@ -26,23 +26,28 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint . --report-unused-disable-directives",
-    "typecheck": "tsc --noEmit",
-    "clean": "git clean -xdf .nuxt .output node_modules"
+    "typecheck": "vue-tsc --noEmit",
+    "clean": "git clean -xdf .nuxt .output node_modules .netlify"
   },
   "dependencies": {
+    "@nuxtjs/color-mode": "^3.4.2",
+    "@nuxtjs/tailwindcss": "^6.12.1",
+    "@vueuse/core": "^10.11.0",
+    "@vueuse/nuxt": "^10.11.0",
     "lesetid": "workspace:*",
-    "valibot": "^0.36.0"
+    "nuxt": "^3.12.3",
+    "nuxt-icon": "^0.6.10",
+    "tailwindcss": "^3.4.6",
+    "valibot": "^0.36.0",
+    "vue": "^3.4.32",
+    "vue-router": "^4.4.0"
   },
   "devDependencies": {
     "@luxass/eslint-config": "^4.9.0",
     "@nuxt/devtools": "latest",
-    "@nuxtjs/color-mode": "^3.4.2",
-    "@nuxtjs/tailwindcss": "^6.12.1",
     "eslint": "^9.7.0",
     "eslint-plugin-tailwindcss": "^3.17.4",
-    "nuxt": "^3.12.3",
-    "nuxt-icon": "^0.6.10",
-    "vue": "^3.4.32",
-    "vue-router": "^4.4.0"
+    "typescript": "^5.5.3",
+    "vue-tsc": "^2.0.26"
   }
 }

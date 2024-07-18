@@ -39,12 +39,7 @@ export default defineEventHandler(async (event) => {
   }
 
   const exampleObj = await parseAsync(ExampleSchema, JSON.parse(atob(exampleContent.content)));
-  if (typeof exampleObj.iconUrl === "object") {
-    exampleObj.iconUrl.dark = `https://raw.githubusercontent.com/luxass/lesetid/main/examples/${example}/.lesetid${exampleObj.iconUrl.dark}`;
-    exampleObj.iconUrl.light = `https://raw.githubusercontent.com/luxass/lesetid/main/examples/${example}/.lesetid${exampleObj.iconUrl.light}`;
-  } else {
-    exampleObj.iconUrl = `https://raw.githubusercontent.com/luxass/lesetid/main/examples/${example}/.lesetid${exampleObj.iconUrl}`;
-  }
+  exampleObj.iconUrl = `https://raw.githubusercontent.com/luxass/lesetid/main/examples/${example}/.lesetid${exampleObj.iconUrl}`;
 
   return exampleObj;
 });

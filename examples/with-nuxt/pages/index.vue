@@ -13,11 +13,11 @@ useHead({
 
 <template>
   <article>
-    <h1 class="text-2xl mt-8 mb-6">
+    <h1 class="mb-6 mt-8 text-2xl">
       Posts
     </h1>
     <p>Welcome to my blog, this is where i'm writing about things i find interesting.</p>
-    <div v-if="posts.length > 0" class="grid auto-cols-max grid-cols-1 mt-4 gap-4 sm:grid-cols-2 sm:gap-3">
+    <div v-if="posts.length > 0" class="mt-4 grid auto-cols-max grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-3">
       <PostCard v-for="post in posts" :key="post._id" :post="post" />
     </div>
     <p v-else>

@@ -24,8 +24,6 @@ const { title } = withDefaults(defineProps<{
         <NuxtLink href="https://npmjs.com/package/lesetid">
           <Icon name="carbon:logo-npm" size="24" title="NPM" />
         </NuxtLink>
-
-        <ColorMode />
       </div>
     </nav>
   </header>
