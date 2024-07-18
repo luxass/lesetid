@@ -33,10 +33,7 @@ export default defineConfig({
   },
   markdown: {
     shikiConfig: {
-      themes: {
-        dark: "vitesse-dark",
-        light: "vitesse-light",
-      },
+      theme: "vitesse-light",
     },
     rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings, [rehypeExternalLinks, {
       target: "_blank",

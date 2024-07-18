@@ -47,7 +47,7 @@ export function CopyToClipboard(props: CopyToClipboardProps) {
 
   return (
     <button
-      class="absolute right-2 top-2 flex items-center justify-center rounded border border-gray-400/20 bg-[#ffffff] p-2 opacity-0 group-hover:opacity-100 dark:bg-[#121212]"
+      class="absolute right-2 top-2 flex items-center justify-center rounded border border-gray-400/20 bg-[#ffffff] p-2 opacity-0 group-hover:opacity-100"
       onClick={handleClick}
     >
       {isCopied() ? <LucideClipboardCheck /> : <LucideClipboard />}

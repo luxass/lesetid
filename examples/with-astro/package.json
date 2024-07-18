@@ -23,12 +23,11 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "check": "astro check",
+    "typecheck": "astro check",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint . --report-unused-disable-directives",
-    "typecheck": "astro sync && tsc --noEmit",
-    "clean": "git clean -xdf .astro dist node_modules .turbo"
+    "clean": "git clean -xdf .astro dist node_modules .netlify .turbo"
   },
   "dependencies": {
     "@astrojs/check": "^0.8.2",

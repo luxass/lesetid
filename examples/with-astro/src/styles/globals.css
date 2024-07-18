@@ -4,11 +4,11 @@ html {
 }
 
 * {
-  @apply dark:outline-white selection:dark:bg-neutral-700 selection:dark:text-white outline-black selection:bg-neutral-200 selection:text-black;
+  @apply outline-black selection:bg-neutral-200 selection:text-black;
 }
 
 body {
-  @apply text-neutral-900 bg-neutral-100 dark:text-neutral-300 dark:bg-neutral-900 px-0 md:px-4 py-4 md:py-8 max-w-3xl md:mx-auto relative min-h-screen text-sm md:text-base flex flex-col;
+  @apply text-neutral-900 bg-neutral-100 px-0 md:px-4 py-4 md:py-8 max-w-3xl md:mx-auto relative min-h-screen text-sm md:text-base flex flex-col;
   font-family: "DM Sans", "DM Sans Fallback";
 }
 
@@ -18,22 +18,6 @@ body {
   font-weight: 300 900;
   font-style: normal;
   font-display: swap;
-}
-
-@media (prefers-color-scheme: dark) {
-  .astro-code,
-  .astro-code span:not(button span) {
-    color: var(--shiki-dark) !important;
-    background-color: var(--shiki-dark-bg) !important;
-  }
-
-  .callout {
-    --callout-note-color: #2f81f7;
-    --callout-tip-color: #3fb950;
-    --callout-warning-color: #d29922;
-    --callout-caution-color: #f85149;
-    --callout-important-color: #a371f7;
-  }
 }
 
 .callout {
@@ -116,6 +100,6 @@ body {
 
 .markdown {
   & a:not([class*="not-markdown"] a) {
-    @apply text-blue-600 dark:text-blue-400 underline underline-offset-2;
+    @apply text-blue-600 underline underline-offset-2;
   }
 }
