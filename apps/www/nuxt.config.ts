@@ -44,7 +44,7 @@ export default defineNuxtConfig({
   },
   nitro: {
     compressPublicAssets: true,
-    preset: "vercel",
+    preset: "netlify",
     serverAssets: [
       {
         baseName: "texts",
