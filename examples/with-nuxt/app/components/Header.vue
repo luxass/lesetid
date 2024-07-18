@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {
   url,
-} from "../.lesetid/example.json";
+} from "../../.lesetid/example.json";
 </script>
 
 <template>

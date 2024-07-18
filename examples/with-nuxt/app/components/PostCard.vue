@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ContentWithEstimation } from "~/types";
+import type { ContentWithEstimation } from "../../types";
 
 const { post } = defineProps<{
   post: ContentWithEstimation;
@@ -20,8 +20,8 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
 
 <template>
   <NuxtLink
-    :href="`/posts${post._path}`"
-    class="group flex max-w-sm cursor-pointer flex-col gap-2 rounded-md border border-neutral-300 p-4 transition-all duration-300 hover:-translate-y-2 hover:border-neutral-400 dark:border-neutral-700"
+    :href="post._path"
+    class="group flex max-w-sm cursor-pointer flex-col gap-2 rounded-md border border-neutral-300 p-4 transition-all duration-300 hover:-translate-y-2 hover:border-neutral-400"
   >
     <div class="flex w-full flex-col justify-between gap-2 md:flex-row md:items-center">
       <p>{{ title }}</p>

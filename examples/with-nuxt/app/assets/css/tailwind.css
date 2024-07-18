@@ -8,7 +8,7 @@ html {
 }
 
 * {
-  @apply dark:outline-white selection:dark:bg-neutral-700 selection:dark:text-white outline-black selection:bg-neutral-200 selection:text-black;
+  @apply outline-black selection:bg-neutral-200 selection:text-black;
 }
 
 html,
@@ -21,7 +21,7 @@ body,
 }
 
 body {
-  @apply text-neutral-900 bg-neutral-100 dark:text-neutral-300 dark:bg-neutral-900;
+  @apply text-neutral-900 bg-neutral-100;
 }
 
 #__nuxt {

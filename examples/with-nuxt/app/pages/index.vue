@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ContentWithEstimation } from "~/types";
+import type { ContentWithEstimation } from "../../types";
 
 const posts = await queryContent<ContentWithEstimation>()
   .sort({

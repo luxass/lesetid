@@ -5,12 +5,8 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@nuxt/content",
     "@nuxtjs/tailwindcss",
-    "@nuxtjs/color-mode",
   ],
   sourcemap: false,
-  colorMode: {
-    classSuffix: "",
-  },
   app: {
     head: {
       viewport: "width=device-width,initial-scale=1",
@@ -33,7 +29,7 @@ export default defineNuxtConfig({
     },
   },
   future: {
-    typescriptBundlerResolution: true,
+    compatibilityVersion: 4,
   },
   routeRules: {
     "/": {
@@ -46,9 +42,7 @@ export default defineNuxtConfig({
   content: {
     highlight: {
       theme: {
-        default: "vitesse-dark",
-        dark: "vitesse-dark",
-        light: "vitesse-light",
+        default: "vitesse-light",
       },
     },
     markdown: {
@@ -60,7 +54,7 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
-    preset: "netlify-builder",
+    preset: "netlify",
     prerender: {
       routes: ["/sitemap.xml"],
     },
