@@ -1,6 +1,6 @@
 {
   "$schema": "https://lesetid.dev/schema",
-  "iconUrl": "/astro-dark.svg",
+  "iconUrl": "/astro.svg",
   "title": "Astro",
   "handle": "astro",
   "url": "/examples/with-astro",
