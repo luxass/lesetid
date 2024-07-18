@@ -3,13 +3,13 @@ import { parseAsync } from "valibot";
 import type { Example } from "../../../types/example";
 
 export default defineEventHandler(async () => {
-  const headers = {
-    "User-Agent": "lesetid.dev",
-    "X-GitHub-Api-Version": "2022-11-28",
-    "Authorization": `Bearer ${process.env.GITHUB_TOKEN}`,
-  };
-
-  const data = await $fetch("https://api.github.com/repos/luxass/lesetid/contents/examples", { headers });
+  const data = await $fetch("https://api.github.com/repos/luxass/lesetid/contents/examples", {
+    headers: {
+      "User-Agent": "lesetid.dev",
+      "X-GitHub-Api-Version": "2022-11-28",
+      "Authorization": `Bearer ${process.env.GITHUB_TOKEN}`,
+    },
+  });
 
   const examplesOutput = await parseAsync(ExamplesSchema, data);
 
