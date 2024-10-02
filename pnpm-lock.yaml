@@ -61,7 +61,7 @@ importers:
         version: 0.6.10(magicast@0.3.5)(rollup@4.20.0)(vite@5.3.5(@types/node@22.1.0)(terser@5.31.3))(vue@3.4.38(typescript@5.5.3))(webpack-sources@3.2.3)
       tailwindcss:
         specifier: ^3.4.6
-        version: 3.4.12
+        version: 3.4.13
       valibot:
         specifier: ^0.36.0
         version: 0.36.0
@@ -74,7 +74,7 @@ importers:
     devDependencies:
       '@luxass/eslint-config':
         specifier: ^4.9.0
-        version: 4.11.0(@eslint-react/eslint-plugin@1.5.27(eslint@9.7.0)(typescript@5.5.3))(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.5.3))(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.5.3))(@vue/compiler-sfc@3.5.6)(astro-eslint-parser@1.0.2(typescript@5.5.3))(eslint-plugin-astro@1.2.3(eslint@9.7.0)(typescript@5.5.3))(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint-plugin-react-hooks@4.6.2(eslint@9.7.0))(eslint-plugin-react-refresh@0.4.8(eslint@9.7.0))(eslint-plugin-tailwindcss@3.17.4(tailwindcss@3.4.12))(eslint@9.7.0)(prettier-plugin-astro@0.14.1)(typescript@5.5.3)(vitest@2.0.3(@types/node@22.1.0)(terser@5.31.3))
+        version: 4.11.0(@eslint-react/eslint-plugin@1.5.27(eslint@9.7.0)(typescript@5.5.3))(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.5.3))(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.5.3))(@vue/compiler-sfc@3.5.6)(astro-eslint-parser@1.0.2(typescript@5.5.3))(eslint-plugin-astro@1.2.3(eslint@9.7.0)(typescript@5.5.3))(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint-plugin-react-hooks@4.6.2(eslint@9.7.0))(eslint-plugin-react-refresh@0.4.8(eslint@9.7.0))(eslint-plugin-tailwindcss@3.17.4(tailwindcss@3.4.13))(eslint@9.7.0)(prettier-plugin-astro@0.14.1)(typescript@5.5.3)(vitest@2.0.3(@types/node@22.1.0)(terser@5.31.3))
       '@nuxt/devtools':
         specifier: ^1.3.9
         version: 1.3.14(rollup@4.20.0)(vite@5.3.5(@types/node@22.1.0)(terser@5.31.3))(webpack-sources@3.2.3)
@@ -83,7 +83,7 @@ importers:
         version: 9.7.0
       eslint-plugin-tailwindcss:
         specifier: ^3.17.4
-        version: 3.17.4(tailwindcss@3.4.12)
+        version: 3.17.4(tailwindcss@3.4.13)
       typescript:
         specifier: ^5.5.3
         version: 5.5.3
@@ -110,7 +110,7 @@ importers:
         version: 4.4.0(solid-js@1.8.18)(vite@5.3.5(@types/node@22.1.0)(terser@5.31.3))
       '@astrojs/tailwind':
         specifier: ^5.1.0
-        version: 5.1.0(astro@4.11.6(@types/node@22.1.0)(terser@5.31.3)(typescript@5.5.3))(tailwindcss@3.4.12)
+        version: 5.1.0(astro@4.11.6(@types/node@22.1.0)(terser@5.31.3)(typescript@5.5.3))(tailwindcss@3.4.13)
       astro:
         specifier: ^4.11.6
         version: 4.11.6(@types/node@22.1.0)(terser@5.31.3)(typescript@5.5.3)
@@ -137,7 +137,7 @@ importers:
         version: 1.8.18
       tailwindcss:
         specifier: ^3.4.6
-        version: 3.4.12
+        version: 3.4.13
       zod:
         specifier: ^3.23.8
         version: 3.23.8
@@ -156,10 +156,10 @@ importers:
         version: 1.1.117
       '@luxass/eslint-config':
         specifier: ^4.9.0
-        version: 4.11.0(@eslint-react/eslint-plugin@1.5.27(eslint@9.7.0)(typescript@5.5.3))(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.5.3))(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.5.3))(@vue/compiler-sfc@3.5.6)(astro-eslint-parser@1.0.2(typescript@5.5.3))(eslint-plugin-astro@1.2.3(eslint@9.7.0)(typescript@5.5.3))(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint-plugin-react-hooks@4.6.2(eslint@9.7.0))(eslint-plugin-react-refresh@0.4.8(eslint@9.7.0))(eslint-plugin-tailwindcss@3.17.4(tailwindcss@3.4.12))(eslint@9.7.0)(prettier-plugin-astro@0.14.1)(typescript@5.5.3)(vitest@2.0.3(@types/node@22.1.0)(terser@5.31.3))
+        version: 4.11.0(@eslint-react/eslint-plugin@1.5.27(eslint@9.7.0)(typescript@5.5.3))(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.5.3))(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.5.3))(@vue/compiler-sfc@3.5.6)(astro-eslint-parser@1.0.2(typescript@5.5.3))(eslint-plugin-astro@1.2.3(eslint@9.7.0)(typescript@5.5.3))(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint-plugin-react-hooks@4.6.2(eslint@9.7.0))(eslint-plugin-react-refresh@0.4.8(eslint@9.7.0))(eslint-plugin-tailwindcss@3.17.4(tailwindcss@3.4.13))(eslint@9.7.0)(prettier-plugin-astro@0.14.1)(typescript@5.5.3)(vitest@2.0.3(@types/node@22.1.0)(terser@5.31.3))
       '@tailwindcss/typography':
         specifier: ^0.5.13
-        version: 0.5.13(tailwindcss@3.4.12)
+        version: 0.5.13(tailwindcss@3.4.13)
       '@types/hast':
         specifier: ^3.0.4
         version: 3.0.4
@@ -213,7 +213,7 @@ importers:
         version: 4.0.3
       next:
         specifier: latest
-        version: 14.2.13(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 14.2.14(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-mdx-remote:
         specifier: ^5.0.0
         version: 5.0.0(@types/react@18.3.3)(react@18.3.1)
@@ -283,7 +283,7 @@ importers:
         version: 0.4.8(eslint@9.7.0)
       eslint-plugin-tailwindcss:
         specifier: ^3.17.4
-        version: 3.17.4(tailwindcss@3.4.12)
+        version: 3.17.4(tailwindcss@3.4.13)
       postcss:
         specifier: ^8.4.39
         version: 8.4.47
@@ -298,7 +298,7 @@ importers:
         version: 4.0.0
       tailwindcss:
         specifier: ^3.4.6
-        version: 3.4.12
+        version: 3.4.13
       typescript:
         specifier: ^5.5.3
         version: 5.5.3
@@ -329,7 +329,7 @@ importers:
     devDependencies:
       '@luxass/eslint-config':
         specifier: ^4.9.0
-        version: 4.11.0(@eslint-react/eslint-plugin@1.5.27(eslint@9.7.0)(typescript@5.5.3))(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.5.3))(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.5.3))(@vue/compiler-sfc@3.5.6)(astro-eslint-parser@1.0.2(typescript@5.5.3))(eslint-plugin-astro@1.2.3(eslint@9.7.0)(typescript@5.5.3))(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint-plugin-react-hooks@4.6.2(eslint@9.7.0))(eslint-plugin-react-refresh@0.4.8(eslint@9.7.0))(eslint-plugin-tailwindcss@3.17.4(tailwindcss@3.4.12))(eslint@9.7.0)(prettier-plugin-astro@0.14.1)(typescript@5.5.3)(vitest@2.0.3(@types/node@22.1.0)(terser@5.31.3))
+        version: 4.11.0(@eslint-react/eslint-plugin@1.5.27(eslint@9.7.0)(typescript@5.5.3))(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.5.3))(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.5.3))(@vue/compiler-sfc@3.5.6)(astro-eslint-parser@1.0.2(typescript@5.5.3))(eslint-plugin-astro@1.2.3(eslint@9.7.0)(typescript@5.5.3))(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint-plugin-react-hooks@4.6.2(eslint@9.7.0))(eslint-plugin-react-refresh@0.4.8(eslint@9.7.0))(eslint-plugin-tailwindcss@3.17.4(tailwindcss@3.4.13))(eslint@9.7.0)(prettier-plugin-astro@0.14.1)(typescript@5.5.3)(vitest@2.0.3(@types/node@22.1.0)(terser@5.31.3))
       '@nuxt/content':
         specifier: ^2.13.1
         version: 2.13.1(ioredis@5.4.1)(magicast@0.3.5)(nuxt@3.12.4(@parcel/watcher@2.4.1)(@types/node@22.1.0)(eslint@9.7.0)(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.20.0)(terser@5.31.3)(typescript@5.5.3)(vue-tsc@2.0.26(typescript@5.5.3))(webpack-sources@3.2.3))(rollup@4.20.0)(vue@3.4.38(typescript@5.5.3))(webpack-sources@3.2.3)
@@ -347,13 +347,13 @@ importers:
         version: 6.12.1(magicast@0.3.5)(rollup@4.20.0)(webpack-sources@3.2.3)
       '@tailwindcss/typography':
         specifier: ^0.5.13
-        version: 0.5.13(tailwindcss@3.4.12)
+        version: 0.5.13(tailwindcss@3.4.13)
       eslint:
         specifier: ^9.7.0
         version: 9.7.0
       tailwindcss:
         specifier: ^3.4.6
-        version: 3.4.12
+        version: 3.4.13
       typescript:
         specifier: ^5.5.3
         version: 5.5.3
@@ -1692,8 +1692,8 @@ packages:
     resolution: {integrity: sha512-2KYkyluThg1AKfd0JWI7FzpS4A/fzVVGYIf6AM4ydWyNj8eI/86GQVLeRgDoH7CNOxt243R5tutWlmHpVq0/Ew==}
     engines: {node: '>=18.0.0'}
 
-  '@next/env@14.2.13':
-    resolution: {integrity: sha512-s3lh6K8cbW1h5Nga7NNeXrbe0+2jIIYK9YaA9T7IufDWnZpozdFUp6Hf0d5rNWUKu4fEuSX2rCKlGjCrtylfDw==}
+  '@next/env@14.2.14':
+    resolution: {integrity: sha512-/0hWQfiaD5//LvGNgc8PjvyqV50vGK0cADYzaoOOGN8fxzBn3iAiaq3S0tCRnFBldq0LVveLcxCTi41ZoYgAgg==}
 
   '@next/mdx@14.2.5':
     resolution: {integrity: sha512-AROhSdXQg0/jt55iqxVSJqp9oaCyXwRe44/I17c77gDshZ6ex7VKBZDH0GljaxZ0Y4mScYUbFJJEh42Xw4X4Dg==}
@@ -1706,56 +1706,56 @@ packages:
       '@mdx-js/react':
         optional: true
 
-  '@next/swc-darwin-arm64@14.2.13':
-    resolution: {integrity: sha512-IkAmQEa2Htq+wHACBxOsslt+jMoV3msvxCn0WFSfJSkv/scy+i/EukBKNad36grRxywaXUYJc9mxEGkeIs8Bzg==}
+  '@next/swc-darwin-arm64@14.2.14':
+    resolution: {integrity: sha512-bsxbSAUodM1cjYeA4o6y7sp9wslvwjSkWw57t8DtC8Zig8aG8V6r+Yc05/9mDzLKcybb6EN85k1rJDnMKBd9Gw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [darwin]
 
-  '@next/swc-darwin-x64@14.2.13':
-    resolution: {integrity: sha512-Dv1RBGs2TTjkwEnFMVL5XIfJEavnLqqwYSD6LXgTPdEy/u6FlSrLBSSfe1pcfqhFEXRAgVL3Wpjibe5wXJzWog==}
+  '@next/swc-darwin-x64@14.2.14':
+    resolution: {integrity: sha512-cC9/I+0+SK5L1k9J8CInahduTVWGMXhQoXFeNvF0uNs3Bt1Ub0Azb8JzTU9vNCr0hnaMqiWu/Z0S1hfKc3+dww==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [darwin]
 
-  '@next/swc-linux-arm64-gnu@14.2.13':
-    resolution: {integrity: sha512-yB1tYEFFqo4ZNWkwrJultbsw7NPAAxlPXURXioRl9SdW6aIefOLS+0TEsKrWBtbJ9moTDgU3HRILL6QBQnMevg==}
+  '@next/swc-linux-arm64-gnu@14.2.14':
+    resolution: {integrity: sha512-RMLOdA2NU4O7w1PQ3Z9ft3PxD6Htl4uB2TJpocm+4jcllHySPkFaUIFacQ3Jekcg6w+LBaFvjSPthZHiPmiAUg==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
 
-  '@next/swc-linux-arm64-musl@14.2.13':
-    resolution: {integrity: sha512-v5jZ/FV/eHGoWhMKYrsAweQ7CWb8xsWGM/8m1mwwZQ/sutJjoFaXchwK4pX8NqwImILEvQmZWyb8pPTcP7htWg==}
+  '@next/swc-linux-arm64-musl@14.2.14':
+    resolution: {integrity: sha512-WgLOA4hT9EIP7jhlkPnvz49iSOMdZgDJVvbpb8WWzJv5wBD07M2wdJXLkDYIpZmCFfo/wPqFsFR4JS4V9KkQ2A==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
 
-  '@next/swc-linux-x64-gnu@14.2.13':
-    resolution: {integrity: sha512-aVc7m4YL7ViiRv7SOXK3RplXzOEe/qQzRA5R2vpXboHABs3w8vtFslGTz+5tKiQzWUmTmBNVW0UQdhkKRORmGA==}
+  '@next/swc-linux-x64-gnu@14.2.14':
+    resolution: {integrity: sha512-lbn7svjUps1kmCettV/R9oAvEW+eUI0lo0LJNFOXoQM5NGNxloAyFRNByYeZKL3+1bF5YE0h0irIJfzXBq9Y6w==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
 
-  '@next/swc-linux-x64-musl@14.2.13':
-    resolution: {integrity: sha512-4wWY7/OsSaJOOKvMsu1Teylku7vKyTuocvDLTZQq0TYv9OjiYYWt63PiE1nTuZnqQ4RPvME7Xai+9enoiN0Wrg==}
+  '@next/swc-linux-x64-musl@14.2.14':
+    resolution: {integrity: sha512-7TcQCvLQ/hKfQRgjxMN4TZ2BRB0P7HwrGAYL+p+m3u3XcKTraUFerVbV3jkNZNwDeQDa8zdxkKkw2els/S5onQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
 
-  '@next/swc-win32-arm64-msvc@14.2.13':
-    resolution: {integrity: sha512-uP1XkqCqV2NVH9+g2sC7qIw+w2tRbcMiXFEbMihkQ8B1+V6m28sshBwAB0SDmOe0u44ne1vFU66+gx/28RsBVQ==}
+  '@next/swc-win32-arm64-msvc@14.2.14':
+    resolution: {integrity: sha512-8i0Ou5XjTLEje0oj0JiI0Xo9L/93ghFtAUYZ24jARSeTMXLUx8yFIdhS55mTExq5Tj4/dC2fJuaT4e3ySvXU1A==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [win32]
 
-  '@next/swc-win32-ia32-msvc@14.2.13':
-    resolution: {integrity: sha512-V26ezyjPqQpDBV4lcWIh8B/QICQ4v+M5Bo9ykLN+sqeKKBxJVDpEc6biDVyluTXTC40f5IqCU0ttth7Es2ZuMw==}
+  '@next/swc-win32-ia32-msvc@14.2.14':
+    resolution: {integrity: sha512-2u2XcSaDEOj+96eXpyjHjtVPLhkAFw2nlaz83EPeuK4obF+HmtDJHqgR1dZB7Gb6V/d55FL26/lYVd0TwMgcOQ==}
     engines: {node: '>= 10'}
     cpu: [ia32]
     os: [win32]
 
-  '@next/swc-win32-x64-msvc@14.2.13':
-    resolution: {integrity: sha512-WwzOEAFBGhlDHE5Z73mNU8CO8mqMNLqaG+AO9ETmzdCQlJhVtWZnOl2+rqgVQS+YHunjOWptdFmNfbpwcUuEsw==}
+  '@next/swc-win32-x64-msvc@14.2.14':
+    resolution: {integrity: sha512-MZom+OvZ1NZxuRovKt1ApevjiUJTcU2PmdJKL66xUPaJeRywnbGGRWUlaAOwunD6dX+pm83vj979NTC8QXjGWg==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
@@ -5206,8 +5206,8 @@ packages:
     peerDependencies:
       react: '>=16'
 
-  next@14.2.13:
-    resolution: {integrity: sha512-BseY9YNw8QJSwLYD7hlZzl6QVDoSFHL/URN5K64kVEVpCsSOWeyjbIGK+dZUaRViHTaMQX8aqmnn0PHBbGZezg==}
+  next@14.2.14:
+    resolution: {integrity: sha512-Q1coZG17MW0Ly5x76shJ4dkC23woLAhhnDnw+DfTc7EpZSGuWrlsZ3bZaO8t6u1Yu8FVfhkqJE+U8GC7E0GLPQ==}
     engines: {node: '>=18.17.0'}
     hasBin: true
     peerDependencies:
@@ -5438,8 +5438,8 @@ packages:
     resolution: {integrity: sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==}
     engines: {node: '>=6'}
 
-  package-json-from-dist@1.0.0:
-    resolution: {integrity: sha512-dATvCeZN/8wQsGywez1mzHtTlP22H8OEfPrVMLNr4/eGa+ijtLn/6M5f0dY8UKNrC2O9UCU6SSoG3qRKnt7STw==}
+  package-json-from-dist@1.0.1:
+    resolution: {integrity: sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==}
 
   package-manager-detector@0.2.0:
     resolution: {integrity: sha512-E385OSk9qDcXhcM9LNSe4sdhx8a9mAPrZ4sMLW+tmxl5ZuGtPUcdFu+MPP2jbgiWAZ6Pfe5soGFMd+0Db5Vrog==}
@@ -6562,8 +6562,8 @@ packages:
   tailwind-merge@2.4.0:
     resolution: {integrity: sha512-49AwoOQNKdqKPd9CViyH5wJoSKsCDjUlzL8DxuGp3P1FsGY36NJDAa18jLZcaHAUUuTj+JB8IAo8zWgBNvBF7A==}
 
-  tailwindcss@3.4.12:
-    resolution: {integrity: sha512-Htf/gHj2+soPb9UayUNci/Ja3d8pTmu9ONTfh4QY8r3MATTZOzmv6UYWF7ZwikEIC8okpfqmGqrmDehua8mF8w==}
+  tailwindcss@3.4.13:
+    resolution: {integrity: sha512-KqjHOJKogOUt5Bs752ykCeiwvi0fKVkr5oqsFNt/8px/tA8scFPIlkygsf6jXrfCqGHz7VflA6+yytWuM+XhFw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -7649,13 +7649,13 @@ snapshots:
       - supports-color
       - vite
 
-  '@astrojs/tailwind@5.1.0(astro@4.11.6(@types/node@22.1.0)(terser@5.31.3)(typescript@5.5.3))(tailwindcss@3.4.12)':
+  '@astrojs/tailwind@5.1.0(astro@4.11.6(@types/node@22.1.0)(terser@5.31.3)(typescript@5.5.3))(tailwindcss@3.4.13)':
     dependencies:
       astro: 4.11.6(@types/node@22.1.0)(terser@5.31.3)(typescript@5.5.3)
       autoprefixer: 10.4.20(postcss@8.4.47)
       postcss: 8.4.47
       postcss-load-config: 4.0.2(postcss@8.4.47)
-      tailwindcss: 3.4.12
+      tailwindcss: 3.4.13
     transitivePeerDependencies:
       - ts-node
 
@@ -8755,7 +8755,7 @@ snapshots:
 
   '@kwsites/promise-deferred@1.1.1': {}
 
-  '@luxass/eslint-config@4.11.0(@eslint-react/eslint-plugin@1.5.27(eslint@9.7.0)(typescript@5.5.3))(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.5.3))(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.5.3))(@vue/compiler-sfc@3.5.6)(astro-eslint-parser@1.0.2(typescript@5.5.3))(eslint-plugin-astro@1.2.3(eslint@9.7.0)(typescript@5.5.3))(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint-plugin-react-hooks@4.6.2(eslint@9.7.0))(eslint-plugin-react-refresh@0.4.8(eslint@9.7.0))(eslint-plugin-tailwindcss@3.17.4(tailwindcss@3.4.12))(eslint@9.7.0)(prettier-plugin-astro@0.14.1)(typescript@5.5.3)(vitest@2.0.3(@types/node@22.1.0)(terser@5.31.3))':
+  '@luxass/eslint-config@4.11.0(@eslint-react/eslint-plugin@1.5.27(eslint@9.7.0)(typescript@5.5.3))(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.5.3))(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.5.3))(@vue/compiler-sfc@3.5.6)(astro-eslint-parser@1.0.2(typescript@5.5.3))(eslint-plugin-astro@1.2.3(eslint@9.7.0)(typescript@5.5.3))(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint-plugin-react-hooks@4.6.2(eslint@9.7.0))(eslint-plugin-react-refresh@0.4.8(eslint@9.7.0))(eslint-plugin-tailwindcss@3.17.4(tailwindcss@3.4.13))(eslint@9.7.0)(prettier-plugin-astro@0.14.1)(typescript@5.5.3)(vitest@2.0.3(@types/node@22.1.0)(terser@5.31.3))':
     dependencies:
       '@antfu/install-pkg': 0.3.5
       '@clack/prompts': 0.7.0
@@ -8796,7 +8796,7 @@ snapshots:
       eslint-plugin-format: 0.1.2(eslint@9.7.0)
       eslint-plugin-react-hooks: 4.6.2(eslint@9.7.0)
       eslint-plugin-react-refresh: 0.4.8(eslint@9.7.0)
-      eslint-plugin-tailwindcss: 3.17.4(tailwindcss@3.4.12)
+      eslint-plugin-tailwindcss: 3.17.4(tailwindcss@3.4.13)
       prettier-plugin-astro: 0.14.1
     transitivePeerDependencies:
       - '@typescript-eslint/utils'
@@ -8846,7 +8846,7 @@ snapshots:
       eslint-plugin-format: 0.1.2(eslint@9.7.0)
       eslint-plugin-react-hooks: 4.6.2(eslint@9.7.0)
       eslint-plugin-react-refresh: 0.4.8(eslint@9.7.0)
-      eslint-plugin-tailwindcss: 3.17.4(tailwindcss@3.4.12)
+      eslint-plugin-tailwindcss: 3.17.4(tailwindcss@3.4.13)
       prettier-plugin-astro: 0.14.1
     transitivePeerDependencies:
       - '@typescript-eslint/utils'
@@ -8931,7 +8931,7 @@ snapshots:
       '@netlify/node-cookies': 0.1.0
       urlpattern-polyfill: 8.0.2
 
-  '@next/env@14.2.13': {}
+  '@next/env@14.2.14': {}
 
   '@next/mdx@14.2.5(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1))':
     dependencies:
@@ -8939,31 +8939,31 @@ snapshots:
     optionalDependencies:
       '@mdx-js/react': 3.0.1(@types/react@18.3.3)(react@18.3.1)
 
-  '@next/swc-darwin-arm64@14.2.13':
+  '@next/swc-darwin-arm64@14.2.14':
     optional: true
 
-  '@next/swc-darwin-x64@14.2.13':
+  '@next/swc-darwin-x64@14.2.14':
     optional: true
 
-  '@next/swc-linux-arm64-gnu@14.2.13':
+  '@next/swc-linux-arm64-gnu@14.2.14':
     optional: true
 
-  '@next/swc-linux-arm64-musl@14.2.13':
+  '@next/swc-linux-arm64-musl@14.2.14':
     optional: true
 
-  '@next/swc-linux-x64-gnu@14.2.13':
+  '@next/swc-linux-x64-gnu@14.2.14':
     optional: true
 
-  '@next/swc-linux-x64-musl@14.2.13':
+  '@next/swc-linux-x64-musl@14.2.14':
     optional: true
 
-  '@next/swc-win32-arm64-msvc@14.2.13':
+  '@next/swc-win32-arm64-msvc@14.2.14':
     optional: true
 
-  '@next/swc-win32-ia32-msvc@14.2.13':
+  '@next/swc-win32-ia32-msvc@14.2.14':
     optional: true
 
-  '@next/swc-win32-x64-msvc@14.2.13':
+  '@next/swc-win32-x64-msvc@14.2.14':
     optional: true
 
   '@nodelib/fs.scandir@2.1.5':
@@ -9397,8 +9397,8 @@ snapshots:
       pathe: 1.1.2
       postcss: 8.4.47
       postcss-nesting: 12.1.5(postcss@8.4.47)
-      tailwind-config-viewer: 2.0.4(tailwindcss@3.4.12)
-      tailwindcss: 3.4.12
+      tailwind-config-viewer: 2.0.4(tailwindcss@3.4.13)
+      tailwindcss: 3.4.13
       ufo: 1.5.4
       unctx: 2.3.1(webpack-sources@3.2.3)
     transitivePeerDependencies:
@@ -9745,13 +9745,13 @@ snapshots:
       '@swc/counter': 0.1.3
       tslib: 2.6.3
 
-  '@tailwindcss/typography@0.5.13(tailwindcss@3.4.12)':
+  '@tailwindcss/typography@0.5.13(tailwindcss@3.4.13)':
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.4.12
+      tailwindcss: 3.4.13
 
   '@trysound/sax@0.2.0': {}
 
@@ -11825,11 +11825,11 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-tailwindcss@3.17.4(tailwindcss@3.4.12):
+  eslint-plugin-tailwindcss@3.17.4(tailwindcss@3.4.13):
     dependencies:
       fast-glob: 3.3.2
       postcss: 8.4.47
-      tailwindcss: 3.4.12
+      tailwindcss: 3.4.13
 
   eslint-plugin-toml@0.11.1(eslint@9.7.0):
     dependencies:
@@ -12298,7 +12298,7 @@ snapshots:
       jackspeak: 3.4.3
       minimatch: 9.0.5
       minipass: 7.1.2
-      package-json-from-dist: 1.0.0
+      package-json-from-dist: 1.0.1
       path-scurry: 1.11.1
 
   glob@7.2.3:
@@ -13733,9 +13733,9 @@ snapshots:
       - '@types/react'
       - supports-color
 
-  next@14.2.13(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  next@14.2.14(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
-      '@next/env': 14.2.13
+      '@next/env': 14.2.14
       '@swc/helpers': 0.5.5
       busboy: 1.6.0
       caniuse-lite: 1.0.30001649
@@ -13745,15 +13745,15 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       styled-jsx: 5.1.1(@babel/core@7.25.2)(react@18.3.1)
     optionalDependencies:
-      '@next/swc-darwin-arm64': 14.2.13
-      '@next/swc-darwin-x64': 14.2.13
-      '@next/swc-linux-arm64-gnu': 14.2.13
-      '@next/swc-linux-arm64-musl': 14.2.13
-      '@next/swc-linux-x64-gnu': 14.2.13
-      '@next/swc-linux-x64-musl': 14.2.13
-      '@next/swc-win32-arm64-msvc': 14.2.13
-      '@next/swc-win32-ia32-msvc': 14.2.13
-      '@next/swc-win32-x64-msvc': 14.2.13
+      '@next/swc-darwin-arm64': 14.2.14
+      '@next/swc-darwin-x64': 14.2.14
+      '@next/swc-linux-arm64-gnu': 14.2.14
+      '@next/swc-linux-arm64-musl': 14.2.14
+      '@next/swc-linux-x64-gnu': 14.2.14
+      '@next/swc-linux-x64-musl': 14.2.14
+      '@next/swc-win32-arm64-msvc': 14.2.14
+      '@next/swc-win32-ia32-msvc': 14.2.14
+      '@next/swc-win32-x64-msvc': 14.2.14
       '@opentelemetry/api': 1.9.0
     transitivePeerDependencies:
       - '@babel/core'
@@ -14172,7 +14172,7 @@ snapshots:
 
   p-try@2.2.0: {}
 
-  package-json-from-dist@1.0.0: {}
+  package-json-from-dist@1.0.1: {}
 
   package-manager-detector@0.2.0: {}
 
@@ -15454,7 +15454,7 @@ snapshots:
 
   system-architecture@0.1.0: {}
 
-  tailwind-config-viewer@2.0.4(tailwindcss@3.4.12):
+  tailwind-config-viewer@2.0.4(tailwindcss@3.4.13):
     dependencies:
       '@koa/router': 12.0.1
       commander: 6.2.1
@@ -15464,13 +15464,13 @@ snapshots:
       open: 7.4.2
       portfinder: 1.0.32
       replace-in-file: 6.3.5
-      tailwindcss: 3.4.12
+      tailwindcss: 3.4.13
     transitivePeerDependencies:
       - supports-color
 
   tailwind-merge@2.4.0: {}
 
-  tailwindcss@3.4.12:
+  tailwindcss@3.4.13:
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
