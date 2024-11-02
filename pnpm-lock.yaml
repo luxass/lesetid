@@ -40,7 +40,7 @@ importers:
     dependencies:
       '@nuxtjs/color-mode':
         specifier: ^3.4.2
-        version: 3.4.4(magicast@0.3.5)(rollup@4.24.3)(webpack-sources@3.2.3)
+        version: 3.5.2(magicast@0.3.5)(rollup@4.24.3)(webpack-sources@3.2.3)
       '@nuxtjs/tailwindcss':
         specifier: ^6.12.1
         version: 6.12.2(magicast@0.3.5)(rollup@4.24.3)(webpack-sources@3.2.3)
@@ -1794,8 +1794,8 @@ packages:
     peerDependencies:
       vue: ^3.3.4
 
-  '@nuxtjs/color-mode@3.4.4':
-    resolution: {integrity: sha512-VSNJVGnRIjiGmfbMa0cN+rwNRowDRTL/wku/z5MpKSanVo3khIRitBNqNviso1l3T+LW0pLHeXBNp6L8g/l1EA==}
+  '@nuxtjs/color-mode@3.5.2':
+    resolution: {integrity: sha512-cC6RfgZh3guHBMLLjrBB2Uti5eUoGM9KyauOaYS9ETmxNWBMTvpgjvSiSJp1OFljIXPIqVTJ3xtJpSNZiO3ZaA==}
 
   '@nuxtjs/fontaine@0.4.3':
     resolution: {integrity: sha512-2bERBEzJgyKSjUGnQoj4kEFiAQErrG9rpBqzVLVMNTB59Fmep/j77CqT7j7yIKKfsr2W+n5nC7WPjp2bHi994Q==}
@@ -9295,7 +9295,7 @@ snapshots:
       - vue-tsc
       - webpack-sources
 
-  '@nuxtjs/color-mode@3.4.4(magicast@0.3.5)(rollup@4.24.3)(webpack-sources@3.2.3)':
+  '@nuxtjs/color-mode@3.5.2(magicast@0.3.5)(rollup@4.24.3)(webpack-sources@3.2.3)':
     dependencies:
       '@nuxt/kit': 3.13.2(magicast@0.3.5)(rollup@4.24.3)(webpack-sources@3.2.3)
       pathe: 1.1.2
