@@ -81,7 +81,7 @@
   },
   "devDependencies": {
     "@luxass/eslint-config": "^4.9.0",
-    "@types/node": "^18.19.39",
+    "@types/node": "^22.0.0",
     "eslint": "^9.7.0",
     "typescript": "^5.5.3",
     "volapyk": "^1.6.0"

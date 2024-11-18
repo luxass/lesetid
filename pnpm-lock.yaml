@@ -16,10 +16,10 @@ importers:
         version: 2.27.9
       '@luxass/eslint-config':
         specifier: ^4.9.0
-        version: 4.11.0(@eslint-react/eslint-plugin@1.5.27(eslint@9.7.0)(typescript@5.6.3))(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.6.3))(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.6.3))(@vue/compiler-sfc@3.5.12)(astro-eslint-parser@1.0.2(typescript@5.6.3))(eslint-plugin-astro@1.2.3(eslint@9.7.0)(typescript@5.6.3))(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint-plugin-react-hooks@4.6.2(eslint@9.7.0))(eslint-plugin-react-refresh@0.4.8(eslint@9.7.0))(eslint-plugin-tailwindcss@3.17.5)(eslint@9.7.0)(prettier-plugin-astro@0.14.1)(typescript@5.6.3)(vitest@2.0.5(@types/node@18.19.63)(terser@5.36.0))
+        version: 4.11.0(@eslint-react/eslint-plugin@1.5.27(eslint@9.7.0)(typescript@5.6.3))(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.6.3))(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.6.3))(@vue/compiler-sfc@3.5.12)(astro-eslint-parser@1.0.2(typescript@5.6.3))(eslint-plugin-astro@1.2.3(eslint@9.7.0)(typescript@5.6.3))(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint-plugin-react-hooks@4.6.2(eslint@9.7.0))(eslint-plugin-react-refresh@0.4.8(eslint@9.7.0))(eslint-plugin-tailwindcss@3.17.5)(eslint@9.7.0)(prettier-plugin-astro@0.14.1)(typescript@5.6.3)(vitest@2.0.5(@types/node@22.8.7)(terser@5.36.0))
       '@types/node':
-        specifier: ^18.19.39
-        version: 18.19.63
+        specifier: ^22.0.0
+        version: 22.8.7
       eslint:
         specifier: ^9.7.0
         version: 9.7.0
@@ -34,7 +34,7 @@ importers:
         version: 5.6.3
       vitest:
         specifier: ^2.0.3
-        version: 2.0.5(@types/node@18.19.63)(terser@5.36.0)
+        version: 2.0.5(@types/node@22.8.7)(terser@5.36.0)
 
   apps/www:
     dependencies:
@@ -74,7 +74,7 @@ importers:
     devDependencies:
       '@luxass/eslint-config':
         specifier: ^4.9.0
-        version: 4.11.0(@eslint-react/eslint-plugin@1.5.27(eslint@9.7.0)(typescript@5.6.3))(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.6.3))(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.6.3))(@vue/compiler-sfc@3.5.12)(astro-eslint-parser@1.0.2(typescript@5.6.3))(eslint-plugin-astro@1.2.3(eslint@9.7.0)(typescript@5.6.3))(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint-plugin-react-hooks@4.6.2(eslint@9.7.0))(eslint-plugin-react-refresh@0.4.8(eslint@9.7.0))(eslint-plugin-tailwindcss@3.17.5(tailwindcss@3.4.14))(eslint@9.7.0)(prettier-plugin-astro@0.14.1)(typescript@5.6.3)(vitest@2.0.5(@types/node@22.8.7)(terser@5.36.0))
+        version: 4.11.0(@eslint-react/eslint-plugin@1.5.27(eslint@9.7.0)(typescript@5.6.3))(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.6.3))(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.6.3))(@vue/compiler-sfc@3.5.12)(astro-eslint-parser@1.0.2(typescript@5.6.3))(eslint-plugin-astro@1.2.3(eslint@9.7.0)(typescript@5.6.3))(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint-plugin-react-hooks@4.6.2(eslint@9.7.0))(eslint-plugin-react-refresh@0.4.8(eslint@9.7.0))(eslint-plugin-tailwindcss@3.17.5)(eslint@9.7.0)(prettier-plugin-astro@0.14.1)(typescript@5.6.3)(vitest@2.0.5(@types/node@22.8.7)(terser@5.36.0))
       '@nuxt/devtools':
         specifier: ^1.3.9
         version: 1.6.0(rollup@4.24.3)(vite@5.4.10(@types/node@22.8.7)(terser@5.36.0))(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
@@ -156,7 +156,7 @@ importers:
         version: 1.1.117
       '@luxass/eslint-config':
         specifier: ^4.9.0
-        version: 4.11.0(@eslint-react/eslint-plugin@1.5.27(eslint@9.7.0)(typescript@5.6.3))(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.6.3))(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.6.3))(@vue/compiler-sfc@3.5.12)(astro-eslint-parser@1.0.2(typescript@5.6.3))(eslint-plugin-astro@1.2.3(eslint@9.7.0)(typescript@5.6.3))(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint-plugin-react-hooks@4.6.2(eslint@9.7.0))(eslint-plugin-react-refresh@0.4.8(eslint@9.7.0))(eslint-plugin-tailwindcss@3.17.5(tailwindcss@3.4.14))(eslint@9.7.0)(prettier-plugin-astro@0.14.1)(typescript@5.6.3)(vitest@2.0.5(@types/node@22.8.7)(terser@5.36.0))
+        version: 4.11.0(@eslint-react/eslint-plugin@1.5.27(eslint@9.7.0)(typescript@5.6.3))(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.6.3))(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.6.3))(@vue/compiler-sfc@3.5.12)(astro-eslint-parser@1.0.2(typescript@5.6.3))(eslint-plugin-astro@1.2.3(eslint@9.7.0)(typescript@5.6.3))(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint-plugin-react-hooks@4.6.2(eslint@9.7.0))(eslint-plugin-react-refresh@0.4.8(eslint@9.7.0))(eslint-plugin-tailwindcss@3.17.5)(eslint@9.7.0)(prettier-plugin-astro@0.14.1)(typescript@5.6.3)(vitest@2.0.5(@types/node@22.8.7)(terser@5.36.0))
       '@tailwindcss/typography':
         specifier: ^0.5.13
         version: 0.5.13(tailwindcss@3.4.14)
@@ -213,7 +213,7 @@ importers:
         version: 4.0.3
       next:
         specifier: latest
-        version: 15.0.2(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 15.0.3(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-mdx-remote:
         specifier: ^5.0.0
         version: 5.0.0(@types/react@18.3.3)(react@18.3.1)
@@ -253,7 +253,7 @@ importers:
         version: 1.1.1
       '@luxass/eslint-config':
         specifier: ^4.9.0
-        version: 4.11.0(@eslint-react/eslint-plugin@1.5.27(eslint@9.7.0)(typescript@5.6.3))(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.6.3))(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.6.3))(@vue/compiler-sfc@3.5.12)(astro-eslint-parser@1.0.2(typescript@5.6.3))(eslint-plugin-astro@1.2.3(eslint@9.7.0)(typescript@5.6.3))(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint-plugin-react-hooks@4.6.2(eslint@9.7.0))(eslint-plugin-react-refresh@0.4.8(eslint@9.7.0))(eslint-plugin-tailwindcss@3.17.5)(eslint@9.7.0)(prettier-plugin-astro@0.14.1)(typescript@5.6.3)(vitest@2.0.5(@types/node@18.19.63)(terser@5.36.0))
+        version: 4.11.0(@eslint-react/eslint-plugin@1.5.27(eslint@9.7.0)(typescript@5.6.3))(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.6.3))(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.6.3))(@vue/compiler-sfc@3.5.12)(astro-eslint-parser@1.0.2(typescript@5.6.3))(eslint-plugin-astro@1.2.3(eslint@9.7.0)(typescript@5.6.3))(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint-plugin-react-hooks@4.6.2(eslint@9.7.0))(eslint-plugin-react-refresh@0.4.8(eslint@9.7.0))(eslint-plugin-tailwindcss@3.17.5)(eslint@9.7.0)(prettier-plugin-astro@0.14.1)(typescript@5.6.3)(vitest@2.0.5(@types/node@22.8.7)(terser@5.36.0))
       '@next/mdx':
         specifier: ^14.2.5
         version: 14.2.5(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1))
@@ -329,7 +329,7 @@ importers:
     devDependencies:
       '@luxass/eslint-config':
         specifier: ^4.9.0
-        version: 4.11.0(@eslint-react/eslint-plugin@1.5.27(eslint@9.7.0)(typescript@5.6.3))(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.6.3))(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.6.3))(@vue/compiler-sfc@3.5.12)(astro-eslint-parser@1.0.2(typescript@5.6.3))(eslint-plugin-astro@1.2.3(eslint@9.7.0)(typescript@5.6.3))(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint-plugin-react-hooks@4.6.2(eslint@9.7.0))(eslint-plugin-react-refresh@0.4.8(eslint@9.7.0))(eslint-plugin-tailwindcss@3.17.5(tailwindcss@3.4.14))(eslint@9.7.0)(prettier-plugin-astro@0.14.1)(typescript@5.6.3)(vitest@2.0.5(@types/node@22.8.7)(terser@5.36.0))
+        version: 4.11.0(@eslint-react/eslint-plugin@1.5.27(eslint@9.7.0)(typescript@5.6.3))(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.6.3))(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.6.3))(@vue/compiler-sfc@3.5.12)(astro-eslint-parser@1.0.2(typescript@5.6.3))(eslint-plugin-astro@1.2.3(eslint@9.7.0)(typescript@5.6.3))(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint-plugin-react-hooks@4.6.2(eslint@9.7.0))(eslint-plugin-react-refresh@0.4.8(eslint@9.7.0))(eslint-plugin-tailwindcss@3.17.5)(eslint@9.7.0)(prettier-plugin-astro@0.14.1)(typescript@5.6.3)(vitest@2.0.5(@types/node@22.8.7)(terser@5.36.0))
       '@nuxt/content':
         specifier: ^2.13.1
         version: 2.13.1(ioredis@5.4.1)(magicast@0.3.5)(nuxt@3.13.2(@parcel/watcher@2.4.1)(@types/node@22.8.7)(eslint@9.7.0)(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.24.3)(terser@5.36.0)(typescript@5.6.3)(vue-tsc@2.0.26(typescript@5.6.3))(webpack-sources@3.2.3))(rollup@4.24.3)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3)
@@ -365,10 +365,10 @@ importers:
     devDependencies:
       '@luxass/eslint-config':
         specifier: ^4.9.0
-        version: 4.11.0(@eslint-react/eslint-plugin@1.5.27(eslint@9.7.0)(typescript@5.6.3))(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.6.3))(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.6.3))(@vue/compiler-sfc@3.5.12)(astro-eslint-parser@1.0.2(typescript@5.6.3))(eslint-plugin-astro@1.2.3(eslint@9.7.0)(typescript@5.6.3))(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint-plugin-react-hooks@4.6.2(eslint@9.7.0))(eslint-plugin-react-refresh@0.4.8(eslint@9.7.0))(eslint-plugin-tailwindcss@3.17.5)(eslint@9.7.0)(prettier-plugin-astro@0.14.1)(typescript@5.6.3)(vitest@2.0.5(@types/node@18.19.63)(terser@5.36.0))
+        version: 4.11.0(@eslint-react/eslint-plugin@1.5.27(eslint@9.7.0)(typescript@5.6.3))(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.6.3))(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.6.3))(@vue/compiler-sfc@3.5.12)(astro-eslint-parser@1.0.2(typescript@5.6.3))(eslint-plugin-astro@1.2.3(eslint@9.7.0)(typescript@5.6.3))(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint-plugin-react-hooks@4.6.2(eslint@9.7.0))(eslint-plugin-react-refresh@0.4.8(eslint@9.7.0))(eslint-plugin-tailwindcss@3.17.5)(eslint@9.7.0)(prettier-plugin-astro@0.14.1)(typescript@5.6.3)(vitest@2.0.5(@types/node@22.8.7)(terser@5.36.0))
       '@types/node':
-        specifier: ^18.19.39
-        version: 18.19.63
+        specifier: ^22.0.0
+        version: 22.8.7
       eslint:
         specifier: ^9.7.0
         version: 9.7.0
@@ -393,13 +393,13 @@ importers:
     devDependencies:
       '@luxass/eslint-config':
         specifier: ^4.9.0
-        version: 4.11.0(@eslint-react/eslint-plugin@1.5.27(eslint@9.7.0)(typescript@5.6.3))(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.6.3))(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.6.3))(@vue/compiler-sfc@3.5.12)(astro-eslint-parser@1.0.2(typescript@5.6.3))(eslint-plugin-astro@1.2.3(eslint@9.7.0)(typescript@5.6.3))(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint-plugin-react-hooks@4.6.2(eslint@9.7.0))(eslint-plugin-react-refresh@0.4.8(eslint@9.7.0))(eslint-plugin-tailwindcss@3.17.5)(eslint@9.7.0)(prettier-plugin-astro@0.14.1)(typescript@5.6.3)(vitest@2.0.5(@types/node@18.19.63)(terser@5.36.0))
+        version: 4.11.0(@eslint-react/eslint-plugin@1.5.27(eslint@9.7.0)(typescript@5.6.3))(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.6.3))(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.6.3))(@vue/compiler-sfc@3.5.12)(astro-eslint-parser@1.0.2(typescript@5.6.3))(eslint-plugin-astro@1.2.3(eslint@9.7.0)(typescript@5.6.3))(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint-plugin-react-hooks@4.6.2(eslint@9.7.0))(eslint-plugin-react-refresh@0.4.8(eslint@9.7.0))(eslint-plugin-tailwindcss@3.17.5)(eslint@9.7.0)(prettier-plugin-astro@0.14.1)(typescript@5.6.3)(vitest@2.0.5(@types/node@22.8.7)(terser@5.36.0))
       '@types/mdast':
         specifier: ^4.0.4
         version: 4.0.4
       '@types/node':
-        specifier: ^18.19.39
-        version: 18.19.63
+        specifier: ^22.0.0
+        version: 22.8.7
       eslint:
         specifier: ^9.7.0
         version: 9.7.0
@@ -1677,8 +1677,8 @@ packages:
     resolution: {integrity: sha512-q3L9i3HoNfz0SGpTIS4zTcKBbRkxzCRpd169eyiTuk3IwcPC3/85mzLHranlKo2b+HYT0gu37YxGB45aD8A3Tw==}
     engines: {node: '>=18.0.0'}
 
-  '@next/env@15.0.2':
-    resolution: {integrity: sha512-c0Zr0ModK5OX7D4ZV8Jt/wqoXtitLNPwUfG9zElCZztdaZyNVnN40rDXVZ/+FGuR4CcNV5AEfM6N8f+Ener7Dg==}
+  '@next/env@15.0.3':
+    resolution: {integrity: sha512-t9Xy32pjNOvVn2AS+Utt6VmyrshbpfUMhIjFO60gI58deSo/KgLOp31XZ4O+kY/Is8WAGYwA5gR7kOb1eORDBA==}
 
   '@next/mdx@14.2.5':
     resolution: {integrity: sha512-AROhSdXQg0/jt55iqxVSJqp9oaCyXwRe44/I17c77gDshZ6ex7VKBZDH0GljaxZ0Y4mScYUbFJJEh42Xw4X4Dg==}
@@ -1691,50 +1691,50 @@ packages:
       '@mdx-js/react':
         optional: true
 
-  '@next/swc-darwin-arm64@15.0.2':
-    resolution: {integrity: sha512-GK+8w88z+AFlmt+ondytZo2xpwlfAR8U6CRwXancHImh6EdGfHMIrTSCcx5sOSBei00GyLVL0ioo1JLKTfprgg==}
+  '@next/swc-darwin-arm64@15.0.3':
+    resolution: {integrity: sha512-s3Q/NOorCsLYdCKvQlWU+a+GeAd3C8Rb3L1YnetsgwXzhc3UTWrtQpB/3eCjFOdGUj5QmXfRak12uocd1ZiiQw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [darwin]
 
-  '@next/swc-darwin-x64@15.0.2':
-    resolution: {integrity: sha512-KUpBVxIbjzFiUZhiLIpJiBoelqzQtVZbdNNsehhUn36e2YzKHphnK8eTUW1s/4aPy5kH/UTid8IuVbaOpedhpw==}
+  '@next/swc-darwin-x64@15.0.3':
+    resolution: {integrity: sha512-Zxl/TwyXVZPCFSf0u2BNj5sE0F2uR6iSKxWpq4Wlk/Sv9Ob6YCKByQTkV2y6BCic+fkabp9190hyrDdPA/dNrw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [darwin]
 
-  '@next/swc-linux-arm64-gnu@15.0.2':
-    resolution: {integrity: sha512-9J7TPEcHNAZvwxXRzOtiUvwtTD+fmuY0l7RErf8Yyc7kMpE47MIQakl+3jecmkhOoIyi/Rp+ddq7j4wG6JDskQ==}
+  '@next/swc-linux-arm64-gnu@15.0.3':
+    resolution: {integrity: sha512-T5+gg2EwpsY3OoaLxUIofmMb7ohAUlcNZW0fPQ6YAutaWJaxt1Z1h+8zdl4FRIOr5ABAAhXtBcpkZNwUcKI2fw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
 
-  '@next/swc-linux-arm64-musl@15.0.2':
-    resolution: {integrity: sha512-BjH4ZSzJIoTTZRh6rG+a/Ry4SW0HlizcPorqNBixBWc3wtQtj4Sn9FnRZe22QqrPnzoaW0ctvSz4FaH4eGKMww==}
+  '@next/swc-linux-arm64-musl@15.0.3':
+    resolution: {integrity: sha512-WkAk6R60mwDjH4lG/JBpb2xHl2/0Vj0ZRu1TIzWuOYfQ9tt9NFsIinI1Epma77JVgy81F32X/AeD+B2cBu/YQA==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
 
-  '@next/swc-linux-x64-gnu@15.0.2':
-    resolution: {integrity: sha512-i3U2TcHgo26sIhcwX/Rshz6avM6nizrZPvrDVDY1bXcLH1ndjbO8zuC7RoHp0NSK7wjJMPYzm7NYL1ksSKFreA==}
+  '@next/swc-linux-x64-gnu@15.0.3':
+    resolution: {integrity: sha512-gWL/Cta1aPVqIGgDb6nxkqy06DkwJ9gAnKORdHWX1QBbSZZB+biFYPFti8aKIQL7otCE1pjyPaXpFzGeG2OS2w==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
 
-  '@next/swc-linux-x64-musl@15.0.2':
-    resolution: {integrity: sha512-AMfZfSVOIR8fa+TXlAooByEF4OB00wqnms1sJ1v+iu8ivwvtPvnkwdzzFMpsK5jA2S9oNeeQ04egIWVb4QWmtQ==}
+  '@next/swc-linux-x64-musl@15.0.3':
+    resolution: {integrity: sha512-QQEMwFd8r7C0GxQS62Zcdy6GKx999I/rTO2ubdXEe+MlZk9ZiinsrjwoiBL5/57tfyjikgh6GOU2WRQVUej3UA==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
 
-  '@next/swc-win32-arm64-msvc@15.0.2':
-    resolution: {integrity: sha512-JkXysDT0/hEY47O+Hvs8PbZAeiCQVxKfGtr4GUpNAhlG2E0Mkjibuo8ryGD29Qb5a3IOnKYNoZlh/MyKd2Nbww==}
+  '@next/swc-win32-arm64-msvc@15.0.3':
+    resolution: {integrity: sha512-9TEp47AAd/ms9fPNgtgnT7F3M1Hf7koIYYWCMQ9neOwjbVWJsHZxrFbI3iEDJ8rf1TDGpmHbKxXf2IFpAvheIQ==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [win32]
 
-  '@next/swc-win32-x64-msvc@15.0.2':
-    resolution: {integrity: sha512-foaUL0NqJY/dX0Pi/UcZm5zsmSk5MtP/gxx3xOPyREkMFN+CTjctPfu3QaqrQHinaKdPnMWPJDKt4VjDfTBe/Q==}
+  '@next/swc-win32-x64-msvc@15.0.3':
+    resolution: {integrity: sha512-VNAz+HN4OGgvZs6MOoVfnn41kBzT+M+tB+OK4cww6DNyWS6wKaDpaAm/qLeOUbnMh0oVx1+mg0uoYARF69dJyA==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
@@ -2288,9 +2288,6 @@ packages:
 
   '@types/node@17.0.45':
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
-
-  '@types/node@18.19.63':
-    resolution: {integrity: sha512-hcUB7THvrGmaEcPcvUZCZtQ2Z3C+UR/aOcraBLCvTsFMh916Gc1kCCYcfcMuB76HM2pSerxl1PoP3KnmHzd9Lw==}
 
   '@types/node@22.8.7':
     resolution: {integrity: sha512-LidcG+2UeYIWcMuMUpBKOnryBWG/rnmOHQR5apjn8myTQcx3rinFRn7DcIFhMnS0PPFSC6OafdIKEad0lj6U0Q==}
@@ -5234,16 +5231,16 @@ packages:
     peerDependencies:
       react: '>=16'
 
-  next@15.0.2:
-    resolution: {integrity: sha512-rxIWHcAu4gGSDmwsELXacqAPUk+j8dV/A9cDF5fsiCMpkBDYkO2AEaL1dfD+nNmDiU6QMCFN8Q30VEKapT9UHQ==}
-    engines: {node: '>=18.18.0'}
+  next@15.0.3:
+    resolution: {integrity: sha512-ontCbCRKJUIoivAdGB34yCaOcPgYXr9AAkV/IwqFfWWTXEPUgLYkSkqBhIk9KK7gGmgjc64B+RdoeIDM13Irnw==}
+    engines: {node: ^18.18.0 || ^19.8.0 || >= 20.0.0}
     hasBin: true
     peerDependencies:
       '@opentelemetry/api': ^1.1.0
       '@playwright/test': ^1.41.2
       babel-plugin-react-compiler: '*'
-      react: ^18.2.0 || 19.0.0-rc-02c0e824-20241028
-      react-dom: ^18.2.0 || 19.0.0-rc-02c0e824-20241028
+      react: ^18.2.0 || 19.0.0-rc-66855b96-20241106
+      react-dom: ^18.2.0 || 19.0.0-rc-66855b96-20241106
       sass: ^1.3.0
     peerDependenciesMeta:
       '@opentelemetry/api':
@@ -6859,9 +6856,6 @@ packages:
 
   unctx@2.3.1:
     resolution: {integrity: sha512-PhKke8ZYauiqh3FEMVNm7ljvzQiph0Mt3GBRve03IJm7ukfaON2OBK795tLwhbyfzknuRRkW0+Ze+CQUmzOZ+A==}
-
-  undici-types@5.26.5:
-    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
 
   undici-types@6.19.8:
     resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
@@ -8779,7 +8773,7 @@ snapshots:
 
   '@kwsites/promise-deferred@1.1.1': {}
 
-  '@luxass/eslint-config@4.11.0(@eslint-react/eslint-plugin@1.5.27(eslint@9.7.0)(typescript@5.6.3))(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.6.3))(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.6.3))(@vue/compiler-sfc@3.5.12)(astro-eslint-parser@1.0.2(typescript@5.6.3))(eslint-plugin-astro@1.2.3(eslint@9.7.0)(typescript@5.6.3))(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint-plugin-react-hooks@4.6.2(eslint@9.7.0))(eslint-plugin-react-refresh@0.4.8(eslint@9.7.0))(eslint-plugin-tailwindcss@3.17.5(tailwindcss@3.4.14))(eslint@9.7.0)(prettier-plugin-astro@0.14.1)(typescript@5.6.3)(vitest@2.0.5(@types/node@22.8.7)(terser@5.36.0))':
+  '@luxass/eslint-config@4.11.0(@eslint-react/eslint-plugin@1.5.27(eslint@9.7.0)(typescript@5.6.3))(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.6.3))(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.6.3))(@vue/compiler-sfc@3.5.12)(astro-eslint-parser@1.0.2(typescript@5.6.3))(eslint-plugin-astro@1.2.3(eslint@9.7.0)(typescript@5.6.3))(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint-plugin-react-hooks@4.6.2(eslint@9.7.0))(eslint-plugin-react-refresh@0.4.8(eslint@9.7.0))(eslint-plugin-tailwindcss@3.17.5)(eslint@9.7.0)(prettier-plugin-astro@0.14.1)(typescript@5.6.3)(vitest@2.0.5(@types/node@22.8.7)(terser@5.36.0))':
     dependencies:
       '@antfu/install-pkg': 0.3.5
       '@clack/prompts': 0.7.0
@@ -8788,56 +8782,6 @@ snapshots:
       '@typescript-eslint/eslint-plugin': 8.1.0(@typescript-eslint/parser@8.1.0(eslint@9.7.0)(typescript@5.6.3))(eslint@9.7.0)(typescript@5.6.3)
       '@typescript-eslint/parser': 8.1.0(eslint@9.7.0)(typescript@5.6.3)
       '@vitest/eslint-plugin': 1.0.3(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.6.3))(eslint@9.7.0)(typescript@5.6.3)(vitest@2.0.5(@types/node@22.8.7)(terser@5.36.0))
-      eslint: 9.7.0
-      eslint-config-flat-gitignore: 0.1.8
-      eslint-flat-config-utils: 0.3.0
-      eslint-merge-processors: 0.1.0(eslint@9.7.0)
-      eslint-plugin-antfu: 2.3.5(eslint@9.7.0)
-      eslint-plugin-import-x: 3.1.0(eslint@9.7.0)(typescript@5.6.3)
-      eslint-plugin-jsdoc: 50.2.2(eslint@9.7.0)
-      eslint-plugin-jsonc: 2.16.0(eslint@9.7.0)
-      eslint-plugin-markdown: 5.1.0(eslint@9.7.0)
-      eslint-plugin-n: 17.10.2(eslint@9.7.0)
-      eslint-plugin-regexp: 2.6.0(eslint@9.7.0)
-      eslint-plugin-toml: 0.11.1(eslint@9.7.0)
-      eslint-plugin-unicorn: 55.0.0(eslint@9.7.0)
-      eslint-plugin-unused-imports: 4.1.3(@typescript-eslint/eslint-plugin@8.1.0(@typescript-eslint/parser@8.1.0(eslint@9.7.0)(typescript@5.6.3))(eslint@9.7.0)(typescript@5.6.3))(eslint@9.7.0)
-      eslint-plugin-vue: 9.27.0(eslint@9.7.0)
-      eslint-plugin-yml: 1.14.0(eslint@9.7.0)
-      eslint-processor-vue-blocks: 0.1.2(@vue/compiler-sfc@3.5.12)(eslint@9.7.0)
-      globals: 15.9.0
-      jsonc-eslint-parser: 2.4.0
-      local-pkg: 0.5.0
-      parse-gitignore: 2.0.0
-      toml-eslint-parser: 0.10.0
-      vue-eslint-parser: 9.4.3(eslint@9.7.0)
-      yaml-eslint-parser: 1.2.3
-    optionalDependencies:
-      '@eslint-react/eslint-plugin': 1.5.27(eslint@9.7.0)(typescript@5.6.3)
-      '@unocss/eslint-plugin': 0.61.5(eslint@9.7.0)(typescript@5.6.3)
-      astro-eslint-parser: 1.0.2(typescript@5.6.3)
-      eslint-plugin-astro: 1.2.3(eslint@9.7.0)(typescript@5.6.3)
-      eslint-plugin-format: 0.1.2(eslint@9.7.0)
-      eslint-plugin-react-hooks: 4.6.2(eslint@9.7.0)
-      eslint-plugin-react-refresh: 0.4.8(eslint@9.7.0)
-      eslint-plugin-tailwindcss: 3.17.5(tailwindcss@3.4.14)
-      prettier-plugin-astro: 0.14.1
-    transitivePeerDependencies:
-      - '@typescript-eslint/utils'
-      - '@vue/compiler-sfc'
-      - supports-color
-      - typescript
-      - vitest
-
-  '@luxass/eslint-config@4.11.0(@eslint-react/eslint-plugin@1.5.27(eslint@9.7.0)(typescript@5.6.3))(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.6.3))(@unocss/eslint-plugin@0.61.5(eslint@9.7.0)(typescript@5.6.3))(@vue/compiler-sfc@3.5.12)(astro-eslint-parser@1.0.2(typescript@5.6.3))(eslint-plugin-astro@1.2.3(eslint@9.7.0)(typescript@5.6.3))(eslint-plugin-format@0.1.2(eslint@9.7.0))(eslint-plugin-react-hooks@4.6.2(eslint@9.7.0))(eslint-plugin-react-refresh@0.4.8(eslint@9.7.0))(eslint-plugin-tailwindcss@3.17.5)(eslint@9.7.0)(prettier-plugin-astro@0.14.1)(typescript@5.6.3)(vitest@2.0.5(@types/node@18.19.63)(terser@5.36.0))':
-    dependencies:
-      '@antfu/install-pkg': 0.3.5
-      '@clack/prompts': 0.7.0
-      '@eslint-community/eslint-plugin-eslint-comments': 4.4.0(eslint@9.7.0)
-      '@stylistic/eslint-plugin': 2.6.3(eslint@9.7.0)(typescript@5.6.3)
-      '@typescript-eslint/eslint-plugin': 8.1.0(@typescript-eslint/parser@8.1.0(eslint@9.7.0)(typescript@5.6.3))(eslint@9.7.0)(typescript@5.6.3)
-      '@typescript-eslint/parser': 8.1.0(eslint@9.7.0)(typescript@5.6.3)
-      '@vitest/eslint-plugin': 1.0.3(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.6.3))(eslint@9.7.0)(typescript@5.6.3)(vitest@2.0.5(@types/node@18.19.63)(terser@5.36.0))
       eslint: 9.7.0
       eslint-config-flat-gitignore: 0.1.8
       eslint-flat-config-utils: 0.3.0
@@ -8955,7 +8899,7 @@ snapshots:
       '@netlify/node-cookies': 0.1.0
       urlpattern-polyfill: 8.0.2
 
-  '@next/env@15.0.2': {}
+  '@next/env@15.0.3': {}
 
   '@next/mdx@14.2.5(@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1))':
     dependencies:
@@ -8963,28 +8907,28 @@ snapshots:
     optionalDependencies:
       '@mdx-js/react': 3.0.1(@types/react@18.3.3)(react@18.3.1)
 
-  '@next/swc-darwin-arm64@15.0.2':
+  '@next/swc-darwin-arm64@15.0.3':
     optional: true
 
-  '@next/swc-darwin-x64@15.0.2':
+  '@next/swc-darwin-x64@15.0.3':
     optional: true
 
-  '@next/swc-linux-arm64-gnu@15.0.2':
+  '@next/swc-linux-arm64-gnu@15.0.3':
     optional: true
 
-  '@next/swc-linux-arm64-musl@15.0.2':
+  '@next/swc-linux-arm64-musl@15.0.3':
     optional: true
 
-  '@next/swc-linux-x64-gnu@15.0.2':
+  '@next/swc-linux-x64-gnu@15.0.3':
     optional: true
 
-  '@next/swc-linux-x64-musl@15.0.2':
+  '@next/swc-linux-x64-musl@15.0.3':
     optional: true
 
-  '@next/swc-win32-arm64-msvc@15.0.2':
+  '@next/swc-win32-arm64-msvc@15.0.3':
     optional: true
 
-  '@next/swc-win32-x64-msvc@15.0.2':
+  '@next/swc-win32-x64-msvc@15.0.3':
     optional: true
 
   '@nodelib/fs.scandir@2.1.5':
@@ -9792,7 +9736,7 @@ snapshots:
 
   '@types/cheerio@0.22.35':
     dependencies:
-      '@types/node': 18.19.63
+      '@types/node': 22.8.7
 
   '@types/cookie@0.6.0': {}
 
@@ -9817,7 +9761,7 @@ snapshots:
 
   '@types/http-proxy@1.17.15':
     dependencies:
-      '@types/node': 18.19.63
+      '@types/node': 22.8.7
 
   '@types/json-schema@7.0.15': {}
 
@@ -9841,14 +9785,9 @@ snapshots:
 
   '@types/node@17.0.45': {}
 
-  '@types/node@18.19.63':
-    dependencies:
-      undici-types: 5.26.5
-
   '@types/node@22.8.7':
     dependencies:
       undici-types: 6.19.8
-    optional: true
 
   '@types/normalize-package-data@2.4.4': {}
 
@@ -9867,11 +9806,11 @@ snapshots:
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 18.19.63
+      '@types/node': 22.8.7
 
   '@types/tar@6.1.13':
     dependencies:
-      '@types/node': 18.19.63
+      '@types/node': 22.8.7
       minipass: 4.2.8
 
   '@types/unist@2.0.11': {}
@@ -9882,7 +9821,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 18.19.63
+      '@types/node': 22.8.7
     optional: true
 
   '@typescript-eslint/eslint-plugin@8.1.0(@typescript-eslint/parser@8.1.0(eslint@9.7.0)(typescript@5.6.3))(eslint@9.7.0)(typescript@5.6.3)':
@@ -10152,14 +10091,6 @@ snapshots:
     dependencies:
       vite: 5.4.10(@types/node@22.8.7)(terser@5.36.0)
       vue: 3.5.12(typescript@5.6.3)
-
-  '@vitest/eslint-plugin@1.0.3(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.6.3))(eslint@9.7.0)(typescript@5.6.3)(vitest@2.0.5(@types/node@18.19.63)(terser@5.36.0))':
-    dependencies:
-      eslint: 9.7.0
-    optionalDependencies:
-      '@typescript-eslint/utils': 8.1.0(eslint@9.7.0)(typescript@5.6.3)
-      typescript: 5.6.3
-      vitest: 2.0.5(@types/node@18.19.63)(terser@5.36.0)
 
   '@vitest/eslint-plugin@1.0.3(@typescript-eslint/utils@8.1.0(eslint@9.7.0)(typescript@5.6.3))(eslint@9.7.0)(typescript@5.6.3)(vitest@2.0.5(@types/node@22.8.7)(terser@5.36.0))':
     dependencies:
@@ -13746,9 +13677,9 @@ snapshots:
       - '@types/react'
       - supports-color
 
-  next@15.0.2(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  next@15.0.3(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
-      '@next/env': 15.0.2
+      '@next/env': 15.0.3
       '@swc/counter': 0.1.3
       '@swc/helpers': 0.5.13
       busboy: 1.6.0
@@ -13758,14 +13689,14 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       styled-jsx: 5.1.6(@babel/core@7.26.0)(react@18.3.1)
     optionalDependencies:
-      '@next/swc-darwin-arm64': 15.0.2
-      '@next/swc-darwin-x64': 15.0.2
-      '@next/swc-linux-arm64-gnu': 15.0.2
-      '@next/swc-linux-arm64-musl': 15.0.2
-      '@next/swc-linux-x64-gnu': 15.0.2
-      '@next/swc-linux-x64-musl': 15.0.2
-      '@next/swc-win32-arm64-msvc': 15.0.2
-      '@next/swc-win32-x64-msvc': 15.0.2
+      '@next/swc-darwin-arm64': 15.0.3
+      '@next/swc-darwin-x64': 15.0.3
+      '@next/swc-linux-arm64-gnu': 15.0.3
+      '@next/swc-linux-arm64-musl': 15.0.3
+      '@next/swc-linux-x64-gnu': 15.0.3
+      '@next/swc-linux-x64-musl': 15.0.3
+      '@next/swc-win32-arm64-msvc': 15.0.3
+      '@next/swc-win32-x64-msvc': 15.0.3
       '@opentelemetry/api': 1.9.0
       sharp: 0.33.5
     transitivePeerDependencies:
@@ -15771,10 +15702,7 @@ snapshots:
     transitivePeerDependencies:
       - webpack-sources
 
-  undici-types@5.26.5: {}
-
-  undici-types@6.19.8:
-    optional: true
+  undici-types@6.19.8: {}
 
   unenv@1.10.0:
     dependencies:
@@ -16057,24 +15985,6 @@ snapshots:
     dependencies:
       vite: 5.4.10(@types/node@22.8.7)(terser@5.36.0)
 
-  vite-node@2.0.5(@types/node@18.19.63)(terser@5.36.0):
-    dependencies:
-      cac: 6.7.14
-      debug: 4.3.7(supports-color@9.4.0)
-      pathe: 1.1.2
-      tinyrainbow: 1.2.0
-      vite: 5.4.10(@types/node@18.19.63)(terser@5.36.0)
-    transitivePeerDependencies:
-      - '@types/node'
-      - less
-      - lightningcss
-      - sass
-      - sass-embedded
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
-
   vite-node@2.0.5(@types/node@22.8.7)(terser@5.36.0):
     dependencies:
       cac: 6.7.14
@@ -16092,7 +16002,6 @@ snapshots:
       - sugarss
       - supports-color
       - terser
-    optional: true
 
   vite-node@2.1.4(@types/node@22.8.7)(terser@5.36.0):
     dependencies:
@@ -16180,16 +16089,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vite@5.4.10(@types/node@18.19.63)(terser@5.36.0):
-    dependencies:
-      esbuild: 0.21.5
-      postcss: 8.4.47
-      rollup: 4.24.3
-    optionalDependencies:
-      '@types/node': 18.19.63
-      fsevents: 2.3.3
-      terser: 5.36.0
-
   vite@5.4.10(@types/node@22.8.7)(terser@5.36.0):
     dependencies:
       esbuild: 0.21.5
@@ -16203,39 +16102,6 @@ snapshots:
   vitefu@0.2.5(vite@5.4.10(@types/node@22.8.7)(terser@5.36.0)):
     optionalDependencies:
       vite: 5.4.10(@types/node@22.8.7)(terser@5.36.0)
-
-  vitest@2.0.5(@types/node@18.19.63)(terser@5.36.0):
-    dependencies:
-      '@ampproject/remapping': 2.3.0
-      '@vitest/expect': 2.0.5
-      '@vitest/pretty-format': 2.1.4
-      '@vitest/runner': 2.0.5
-      '@vitest/snapshot': 2.0.5
-      '@vitest/spy': 2.0.5
-      '@vitest/utils': 2.0.5
-      chai: 5.1.2
-      debug: 4.3.7(supports-color@9.4.0)
-      execa: 8.0.1
-      magic-string: 0.30.12
-      pathe: 1.1.2
-      std-env: 3.7.0
-      tinybench: 2.9.0
-      tinypool: 1.0.1
-      tinyrainbow: 1.2.0
-      vite: 5.4.10(@types/node@18.19.63)(terser@5.36.0)
-      vite-node: 2.0.5(@types/node@18.19.63)(terser@5.36.0)
-      why-is-node-running: 2.3.0
-    optionalDependencies:
-      '@types/node': 18.19.63
-    transitivePeerDependencies:
-      - less
-      - lightningcss
-      - sass
-      - sass-embedded
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
 
   vitest@2.0.5(@types/node@22.8.7)(terser@5.36.0):
     dependencies:
@@ -16269,7 +16135,6 @@ snapshots:
       - sugarss
       - supports-color
       - terser
-    optional: true
 
   volapyk@1.6.0: {}
 
