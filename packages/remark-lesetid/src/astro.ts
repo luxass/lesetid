@@ -1,10 +1,10 @@
+import type { Root } from "mdast";
+import type { Plugin } from "unified";
 import {
-  type Estimation,
   estimate,
+  type Estimation,
 } from "lesetid";
 import { toString } from "mdast-util-to-string";
-import type { Plugin } from "unified";
-import type { Root } from "mdast";
 
 const remarkLesetid: Plugin<void[], Root> = () => {
   return (tree, file) => {

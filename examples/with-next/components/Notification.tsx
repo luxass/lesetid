@@ -1,5 +1,5 @@
-import { cx } from "class-variance-authority";
 import type { PropsWithChildren } from "react";
+import { cx } from "class-variance-authority";
 
 export interface NotificationProps {
   type: "warning" | "note" | "tip" | "important" | "caution" | "custom";

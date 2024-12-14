@@ -1,15 +1,15 @@
-import { defineConfig } from "astro/config";
-import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import rehypeSlug from "rehype-slug";
-import rehypeExternalLinks from "rehype-external-links";
-import remarkLesetid from "remark-lesetid/astro";
-import tailwind from "@astrojs/tailwind";
-import remarkDirective from "remark-directive";
-import icon from "astro-icon";
-import solid from "@astrojs/solid-js";
 import netlify from "@astrojs/netlify";
+import sitemap from "@astrojs/sitemap";
+import solid from "@astrojs/solid-js";
+import tailwind from "@astrojs/tailwind";
+import icon from "astro-icon";
+import { defineConfig } from "astro/config";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeExternalLinks from "rehype-external-links";
+import rehypeSlug from "rehype-slug";
+import remarkDirective from "remark-directive";
+import remarkLesetid from "remark-lesetid/astro";
 import { asides } from "./remark-plugins/asides";
 
 // https://astro.build/config

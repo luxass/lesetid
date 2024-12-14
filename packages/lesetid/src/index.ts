@@ -2,21 +2,21 @@ import type { CountResult, Estimation, Options, WordFN } from "./types";
 
 import {
   CJK_CODE_RANGES,
-  PUNCTATION_CODE_RANGES,
   isAnsi,
   isCJK,
   isPunctuation,
+  PUNCTATION_CODE_RANGES,
 } from "./utils";
 
 export {
+  CJK_CODE_RANGES,
   isAnsi,
   isCJK,
   isPunctuation,
-  CJK_CODE_RANGES,
   PUNCTATION_CODE_RANGES,
 };
 
-export type { Options, WordFN, CountResult, Estimation };
+export type { CountResult, Estimation, Options, WordFN };
 
 export const DEFAULT_OPTIONS = {
   wordsPerMinute: 200,
@@ -71,7 +71,7 @@ export function count(
     } else if (
       isPunctuationOrWord(char, options.isWord || isAnsi)
       && (!isPunctuationOrWord(nextChar, options.isWord || isAnsi)
-      || isCJK(nextChar))
+        || isCJK(nextChar))
     ) {
       words++;
     }

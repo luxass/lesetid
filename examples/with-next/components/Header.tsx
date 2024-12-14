@@ -1,5 +1,5 @@
-import Link from "next/link";
 import type { SVGProps } from "react";
+import Link from "next/link";
 import example from "../.lesetid/example.json";
 
 export function Header() {

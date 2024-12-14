@@ -1,4 +1,4 @@
-import { type JSX, createSignal, onCleanup } from "solid-js";
+import { createSignal, type JSX, onCleanup } from "solid-js";
 
 type CopyFn = (text: string) => Promise<boolean>;
 

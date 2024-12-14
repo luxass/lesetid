@@ -2,9 +2,9 @@
 
 import type { Paragraph, Root } from "mdast";
 import type { Plugin } from "unified";
+import { h as _h, s as _s, type Properties } from "hastscript";
 import { remove } from "unist-util-remove";
 import { visit } from "unist-util-visit";
-import { type Properties, h as _h, s as _s } from "hastscript";
 
 type Variant = "note" | "important" | "warning" | "tip" | "caution";
 

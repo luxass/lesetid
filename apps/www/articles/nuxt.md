@@ -58,7 +58,7 @@ export default defineEventHandler((event) => {
 // server/api/users.ts
 import { db } from "~/utils/database";
 
-export default defineEventHandler((event) => {
+export default defineEventHandler(async (event) => {
   const results = await db.query("SELECT * FROM users");
 
   return results;

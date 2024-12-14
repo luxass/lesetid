@@ -1,7 +1,7 @@
-import { visit } from "unist-util-visit";
-import { type Estimation, estimate } from "lesetid";
 import type { Root } from "mdast";
 import type { Plugin } from "unified";
+import { estimate, type Estimation } from "lesetid";
+import { visit } from "unist-util-visit";
 
 export type { Estimation } from "lesetid";
 

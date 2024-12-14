@@ -1,12 +1,12 @@
-import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import type { Estimation } from "remark-lesetid";
 import { compileMDX } from "next-mdx-remote/rsc";
+import { notFound } from "next/navigation";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
-import rehypePrettyCode from "rehype-pretty-code";
-import type { Estimation } from "remark-lesetid";
 import remarkLesetid from "remark-lesetid";
-import type { Metadata } from "next";
 import { getBlogPosts } from "../../../../lib/content";
 
 interface PostPageProps {

@@ -1,7 +1,7 @@
 import type { Buffer } from "node:buffer";
-import { Transform } from "node:stream";
 import type { TransformCallback } from "node:stream";
-import { DEFAULT_OPTIONS, type Options, count } from "./";
+import { Transform } from "node:stream";
+import { count, DEFAULT_OPTIONS, type Options } from "./";
 
 export function createReadingTimeStream(options: Options = DEFAULT_OPTIONS) {
   return new ReadingTimeStream(options);

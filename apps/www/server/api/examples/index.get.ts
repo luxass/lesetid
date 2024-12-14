@@ -1,6 +1,6 @@
+import type { Example } from "../../../types/example";
 import process from "node:process";
 import { parseAsync } from "valibot";
-import type { Example } from "../../../types/example";
 
 export default defineEventHandler(async () => {
   const data = await $fetch("https://api.github.com/repos/luxass/lesetid/contents/examples", {
