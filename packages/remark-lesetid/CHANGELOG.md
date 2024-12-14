@@ -1,5 +1,16 @@
 # remark-lesetid
 
+## 1.3.0
+
+### Minor Changes
+
+- [`aa05abd`](https://github.com/luxass/lesetid/commit/aa05abd0f6784222e81f97e3855b1b81ceb8403b) Thanks [@luxass](https://github.com/luxass)! - updated dependencies
+
+### Patch Changes
+
+- Updated dependencies [[`aa05abd`](https://github.com/luxass/lesetid/commit/aa05abd0f6784222e81f97e3855b1b81ceb8403b)]:
+  - lesetid@1.2.0
+
 ## 1.2.0
 
 ### Minor Changes
