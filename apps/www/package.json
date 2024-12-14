@@ -8,7 +8,7 @@
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@9.5.0",
+  "packageManager": "pnpm@9.15.0",
   "license": "MIT",
   "homepage": "https://github.com/luxass/lesetid",
   "repository": {
@@ -30,24 +30,24 @@
     "clean": "git clean -xdf .nuxt .output node_modules .netlify"
   },
   "dependencies": {
-    "@nuxtjs/color-mode": "^3.4.2",
-    "@nuxtjs/tailwindcss": "^6.12.1",
-    "@vueuse/core": "^10.11.0",
-    "@vueuse/nuxt": "^10.11.0",
+    "@nuxtjs/color-mode": "^3.5.2",
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "@vueuse/core": "^12.0.0",
+    "@vueuse/nuxt": "^12.0.0",
     "lesetid": "workspace:*",
-    "nuxt": "^3.12.3",
+    "nuxt": "^3.14.1592",
     "nuxt-icon": "^0.6.10",
-    "tailwindcss": "^3.4.6",
-    "valibot": "^0.36.0",
-    "vue": "^3.4.32",
-    "vue-router": "^4.4.0"
+    "tailwindcss": "^3.4.16",
+    "valibot": "^0.42.1",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "^4.9.0",
-    "@nuxt/devtools": "^1.3.9",
-    "eslint": "^9.7.0",
-    "eslint-plugin-tailwindcss": "^3.17.4",
-    "typescript": "^5.5.3",
-    "vue-tsc": "^2.0.26"
+    "@luxass/eslint-config": "^4.14.0",
+    "@nuxt/devtools": "^1.6.4",
+    "eslint": "^9.17.0",
+    "eslint-plugin-tailwindcss": "^3.17.5",
+    "typescript": "^5.7.2",
+    "vue-tsc": "^2.1.10"
   }
 }
