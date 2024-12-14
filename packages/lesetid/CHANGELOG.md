@@ -1,5 +1,11 @@
 # lesetid
 
+## 1.2.0
+
+### Minor Changes
+
+- [`aa05abd`](https://github.com/luxass/lesetid/commit/aa05abd0f6784222e81f97e3855b1b81ceb8403b) Thanks [@luxass](https://github.com/luxass)! - updated dependencies
+
 ## 1.1.0
 
 ### Minor Changes
