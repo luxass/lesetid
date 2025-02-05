@@ -30,24 +30,24 @@
     "clean": "git clean -xdf .nuxt .output node_modules .netlify"
   },
   "dependencies": {
-    "@nuxtjs/color-mode": "^3.5.2",
-    "@nuxtjs/tailwindcss": "^6.12.2",
-    "@vueuse/core": "^12.0.0",
-    "@vueuse/nuxt": "^12.0.0",
+    "@nuxtjs/color-mode": "catalog:",
+    "@nuxtjs/tailwindcss": "catalog:",
+    "@vueuse/core": "catalog:",
+    "@vueuse/nuxt": "catalog:",
     "lesetid": "workspace:*",
-    "nuxt": "^3.14.1592",
-    "nuxt-icon": "^0.6.10",
-    "tailwindcss": "^3.4.16",
-    "valibot": "^0.42.1",
-    "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
+    "nuxt": "catalog:",
+    "nuxt-icon": "catalog:",
+    "tailwindcss": "catalog:",
+    "valibot": "catalog:",
+    "vue": "catalog:",
+    "vue-router": "catalog:"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "^4.14.0",
-    "@nuxt/devtools": "^1.6.4",
-    "eslint": "^9.17.0",
-    "eslint-plugin-tailwindcss": "^3.17.5",
-    "typescript": "^5.7.2",
-    "vue-tsc": "^2.1.10"
+    "@luxass/eslint-config": "catalog:",
+    "@nuxt/devtools": "catalog:",
+    "eslint": "catalog:",
+    "eslint-plugin-tailwindcss": "catalog:",
+    "typescript": "catalog:",
+    "vue-tsc": "catalog:"
   }
 }

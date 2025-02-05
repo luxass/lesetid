@@ -30,25 +30,25 @@
     "clean": "git clean -xdf .nuxt dist .output node_modules .turbo .netlify"
   },
   "dependencies": {
-    "nuxt": "^3.14.1592",
-    "nuxt-icon": "^0.6.10",
+    "nuxt": "catalog:",
+    "nuxt-icon": "catalog:",
     "remark-lesetid": "workspace:*",
-    "sitemap": "^8.0.0",
-    "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
+    "sitemap": "catalog:",
+    "vue": "catalog:",
+    "vue-router": "catalog:"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "^4.14.0",
-    "@nuxt/content": "^2.13.4",
-    "@nuxt/devtools": "^1.6.4",
-    "@nuxt/image": "^1.8.1",
-    "@nuxtjs/fontaine": "^0.4.4",
-    "@nuxtjs/tailwindcss": "^6.12.2",
-    "@tailwindcss/typography": "^0.5.15",
-    "eslint": "^9.17.0",
-    "tailwindcss": "^3.4.16",
-    "typescript": "^5.7.2",
-    "vue-tsc": "^2.1.10"
+    "@luxass/eslint-config": "catalog:",
+    "@nuxt/content": "catalog:",
+    "@nuxt/devtools": "catalog:",
+    "@nuxt/image": "catalog:",
+    "@nuxtjs/fontaine": "catalog:",
+    "@nuxtjs/tailwindcss": "catalog:",
+    "@tailwindcss/typography": "catalog:",
+    "eslint": "catalog:",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:",
+    "vue-tsc": "catalog:"
   },
   "stackblitz": {
     "installDependencies": false,
