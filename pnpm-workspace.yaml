@@ -37,11 +37,11 @@ catalog:
   "@types/react-dom": ^18.3.5
   "@vueuse/core": ^12.0.0
   "@vueuse/nuxt": ^12.0.0
-  astro: ^5.0.5
+  astro: ^5.2.5
   astro-icon: ^1.1.4
   autoprefixer: ^10.4.20
   class-variance-authority: ^0.7.1
-  eslint: ^9.17.0
+  eslint: ^9.19.0
   eslint-plugin-astro: ^1.3.1
   eslint-plugin-format: ^0.1.3
   eslint-plugin-react-hooks: ^5.1.0
@@ -71,18 +71,18 @@ catalog:
   solid-js: ^1.9.3
   tailwind-merge: ^2.5.5
   tailwindcss: ^3.4.16
-  tsup: ^8.3.5
-  turbo: ^2.3.3
-  typescript: ^5.7.2
+  tsup: ^8.3.6
+  turbo: ^2.4.0
+  typescript: ^5.7.3
   unified: ^11.0.5
   unist-util-remove: ^4.0.0
   unist-util-visit: ^5.0.0
   unplugin-icons: ^0.21.0
   valibot: ^0.42.1
   vfile: 6.0.3
-  vitest: ^2.1.8
+  vitest: ^3.0.5
   volapyk: ^1.6.2
   vue: ^3.5.13
   vue-router: ^4.5.0
-  vue-tsc: ^2.1.10
+  vue-tsc: ^2.2.0
   zod: ^3.24.1
