@@ -8,7 +8,7 @@
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@9.15.4",
+  "packageManager": "pnpm@10.2.0",
   "license": "MIT",
   "homepage": "https://github.com/luxass/remark-lesetid",
   "repository": {
@@ -67,16 +67,16 @@
   },
   "dependencies": {
     "lesetid": "workspace:*",
-    "mdast-util-to-string": "^4.0.0",
-    "unist-util-visit": "^5.0.0"
+    "mdast-util-to-string": "catalog:",
+    "unist-util-visit": "catalog:"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "^4.14.0",
-    "@types/mdast": "^4.0.4",
-    "@types/node": "^18.19.68",
-    "eslint": "^9.17.0",
-    "typescript": "^5.7.2",
-    "unified": "^11.0.5",
-    "vfile": "6.0.3"
+    "@luxass/eslint-config": "catalog:",
+    "@types/mdast": "catalog:",
+    "@types/node": "catalog:",
+    "eslint": "catalog:",
+    "typescript": "catalog:",
+    "unified": "catalog:",
+    "vfile": "catalog:"
   }
 }

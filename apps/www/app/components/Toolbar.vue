@@ -15,7 +15,7 @@ watch(selectedText, (newVal) => {
   if (newVal) {
     modelValue.value
       = data?.value?.texts.find((text) => text.key === newVal)?.file
-      || "";
+        || "";
   }
 });
 </script>
