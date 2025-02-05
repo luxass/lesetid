@@ -10,11 +10,11 @@ catalogs:
       specifier: ^0.9.4
       version: 0.9.4
     '@astrojs/mdx':
-      specifier: ^4.0.2
-      version: 4.0.2
+      specifier: ^4.0.8
+      version: 4.0.8
     '@astrojs/netlify':
-      specifier: ^6.0.0
-      version: 6.0.0
+      specifier: ^6.1.0
+      version: 6.1.0
     '@astrojs/sitemap':
       specifier: ^3.2.1
       version: 3.2.1
@@ -28,29 +28,29 @@ catalogs:
       specifier: ^0.5.0
       version: 0.5.0
     '@changesets/cli':
-      specifier: ^2.27.10
+      specifier: ^2.27.12
       version: 2.27.12
     '@eslint-react/eslint-plugin':
       specifier: ^1.19.0
       version: 1.19.0
     '@iconify-json/carbon':
+      specifier: ^1.2.6
+      version: 1.2.6
+    '@iconify-json/logos':
       specifier: ^1.2.4
       version: 1.2.4
-    '@iconify-json/logos':
+    '@iconify-json/lucide':
+      specifier: ^1.2.25
+      version: 1.2.25
+    '@iconify-json/mdi':
       specifier: ^1.2.3
       version: 1.2.3
-    '@iconify-json/lucide':
-      specifier: ^1.2.18
-      version: 1.2.18
-    '@iconify-json/mdi':
-      specifier: ^1.2.1
-      version: 1.2.1
     '@iconify-json/octicon':
       specifier: 1.2.2
       version: 1.2.2
     '@iconify-json/tabler':
-      specifier: ^1.2.11
-      version: 1.2.11
+      specifier: ^1.2.15
+      version: 1.2.15
     '@iconify/tailwind':
       specifier: 1.2.0
       version: 1.2.0
@@ -350,10 +350,10 @@ importers:
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.4.2)(typescript@5.7.3)
       '@astrojs/mdx':
         specifier: 'catalog:'
-        version: 4.0.2(astro@5.2.5(@types/node@22.13.0)(db0@0.2.3)(ioredis@5.4.2)(jiti@2.4.2)(rollup@4.34.0)(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0))
+        version: 4.0.8(astro@5.2.5(@types/node@22.13.0)(db0@0.2.3)(ioredis@5.4.2)(jiti@2.4.2)(rollup@4.34.0)(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0))
       '@astrojs/netlify':
         specifier: 'catalog:'
-        version: 6.0.0(@types/node@22.13.0)(astro@5.2.5(@types/node@22.13.0)(db0@0.2.3)(ioredis@5.4.2)(jiti@2.4.2)(rollup@4.34.0)(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0))(jiti@2.4.2)(rollup@4.34.0)(terser@5.37.0)(yaml@2.7.0)
+        version: 6.1.0(@types/node@22.13.0)(astro@5.2.5(@types/node@22.13.0)(db0@0.2.3)(ioredis@5.4.2)(jiti@2.4.2)(rollup@4.34.0)(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0))(jiti@2.4.2)(rollup@4.34.0)(terser@5.37.0)(yaml@2.7.0)
       '@astrojs/sitemap':
         specifier: 'catalog:'
         version: 3.2.1
@@ -396,16 +396,16 @@ importers:
     devDependencies:
       '@iconify-json/logos':
         specifier: 'catalog:'
-        version: 1.2.3
+        version: 1.2.4
       '@iconify-json/lucide':
         specifier: 'catalog:'
-        version: 1.2.18
+        version: 1.2.25
       '@iconify-json/mdi':
         specifier: 'catalog:'
-        version: 1.2.1
+        version: 1.2.3
       '@iconify-json/tabler':
         specifier: 'catalog:'
-        version: 1.2.11
+        version: 1.2.15
       '@luxass/eslint-config':
         specifier: 'catalog:'
         version: 4.15.0(@eslint-react/eslint-plugin@1.19.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(@typescript-eslint/utils@8.21.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(@unocss/eslint-plugin@0.61.5(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(@vue/compiler-sfc@3.5.13)(astro-eslint-parser@1.0.2(typescript@5.7.3))(eslint-plugin-astro@1.3.1(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint-plugin-format@0.1.3(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-react-hooks@5.1.0(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-react-refresh@0.4.18(eslint@9.19.0(jiti@2.4.2)))(eslint-plugin-tailwindcss@3.18.0(tailwindcss@3.4.17))(eslint@9.19.0(jiti@2.4.2))(prettier-plugin-astro@0.14.1)(typescript@5.7.3)(vitest@3.0.5(@types/debug@4.1.12)(@types/node@22.13.0)(jiti@2.4.2)(terser@5.37.0)(yaml@2.7.0))
@@ -493,10 +493,10 @@ importers:
         version: 1.19.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3)
       '@iconify-json/carbon':
         specifier: 'catalog:'
-        version: 1.2.4
+        version: 1.2.6
       '@iconify-json/logos':
         specifier: 'catalog:'
-        version: 1.2.3
+        version: 1.2.4
       '@iconify-json/octicon':
         specifier: 'catalog:'
         version: 1.2.2
@@ -696,8 +696,8 @@ packages:
   '@astrojs/compiler@2.10.3':
     resolution: {integrity: sha512-bL/O7YBxsFt55YHU021oL+xz+B/9HvGNId3F9xURN16aeqDK9juHGktdkCSXz+U4nqFACq6ZFvWomOzhV+zfPw==}
 
-  '@astrojs/internal-helpers@0.4.1':
-    resolution: {integrity: sha512-bMf9jFihO8YP940uD70SI/RDzIhUHJAolWVcO1v5PUivxGKvfLZTLTVVxEYzGYyPsA3ivdLNqMnL5VgmQySa+g==}
+  '@astrojs/internal-helpers@0.4.2':
+    resolution: {integrity: sha512-EdDWkC3JJVcpGpqJAU/5hSk2LKXyG3mNGkzGoAuyK+xoPHbaVdSuIWoN1QTnmK3N/gGfaaAfM8gO2KDCAW7S3w==}
 
   '@astrojs/internal-helpers@0.5.1':
     resolution: {integrity: sha512-M7rAge1n2+aOSxNvKUFa0u/KFn0W+sZy7EW91KOSERotm2Ti8qs+1K0xx3zbOxtAVrmJb5/J98eohVvvEqtNkw==}
@@ -714,20 +714,17 @@ packages:
       prettier-plugin-astro:
         optional: true
 
-  '@astrojs/markdown-remark@6.0.1':
-    resolution: {integrity: sha512-CTSYijj25NfxgZi15TU3CwPwgyD1/7yA3FcdcNmB9p94nydupiUbrIiq3IqeTp2m5kCVzxbPZeC7fTwEOaNyGw==}
-
   '@astrojs/markdown-remark@6.1.0':
     resolution: {integrity: sha512-emZNNSTPGgPc3V399Cazpp5+snogjaF04ocOSQn9vy3Kw/eIC4vTQjXOrWDEoSEy+AwPDZX9bQ4wd3bxhpmGgQ==}
 
-  '@astrojs/mdx@4.0.2':
-    resolution: {integrity: sha512-uBoXNSSAUqhf2dVtJWFbSapwNkcnCzbISW98EcybFXvNgYt9g8yPJ7+lYnf+sH5pv0c/JEW8HlBvPSi81AVRlw==}
+  '@astrojs/mdx@4.0.8':
+    resolution: {integrity: sha512-/aiLr2yQ55W9AbpyOgfMtFXk7g2t7XoWdC2Avps/NqxAx4aYONDLneX43D79QwgqdjFhin7o3cIPp/vVppMbaA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0}
     peerDependencies:
       astro: ^5.0.0
 
-  '@astrojs/netlify@6.0.0':
-    resolution: {integrity: sha512-r0Z8A0Sg8g2QsM6veoJ7/UkibXuLJviLZ9TblaEKrvfcyx2O+D5ejHthaAK7kkRb6/Guw7bPxoxfbt6gvM4g/A==}
+  '@astrojs/netlify@6.1.0':
+    resolution: {integrity: sha512-k8pRjWU6vK3MiHvXfbSL2+u0ML2ATTUdqGsAxFz9HEUJdMb3d/AmAyvIgOI6x/u2ugqBQJWePq14iPnQ8qFKDA==}
     peerDependencies:
       astro: ^5.0.0
 
@@ -758,8 +755,8 @@ packages:
     resolution: {integrity: sha512-wxhSKRfKugLwLlr4OFfcqovk+LIFtKwLyGPqMsv+9/ibqqnW3Gv7tBhtKEb0gAyUAC4G9BTVQeQahqnQAhd6IQ==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0}
 
-  '@astrojs/underscore-redirects@0.4.0':
-    resolution: {integrity: sha512-Urt32++4ql0IFTTNejnRIN7LPJ6YzU9QXLcc4RXm5or1RLPnQBKVrLvmDxKx3eT72l7ZAi6W4L5E7pcbWbYDRA==}
+  '@astrojs/underscore-redirects@0.6.0':
+    resolution: {integrity: sha512-dnJgFpaM955IFNIkEEmMaaIdWXRdeZs1ID6mlGBqdjh6NiCXfKmOdq7L4fd9Dd/tr18fkLrOJ25IUJSxRAEhjQ==}
 
   '@astrojs/yaml2ts@0.2.2':
     resolution: {integrity: sha512-GOfvSr5Nqy2z5XiwqTouBBpy5FyI6DEe+/g/Mk5am9SjILN1S5fOEvYK0GuWHg98yS/dobP4m8qyqw/URW35fQ==}
@@ -1296,23 +1293,23 @@ packages:
     resolution: {integrity: sha512-c7hNEllBlenFTHBky65mhq8WD2kbN9Q6gk0bTk8lSBvc554jpXSkST1iePudpt7+A/AQvuHs9EMqjHDXMY1lrA==}
     engines: {node: '>=18.18'}
 
-  '@iconify-json/carbon@1.2.4':
-    resolution: {integrity: sha512-DhW2jjMVGwV0DLHc0cmDYohdtGxMra8UuwgjHrryPy+rQX4gXhJwCBBVP2h2UG/92AoRCTn7zUJve4WvY5MLYg==}
+  '@iconify-json/carbon@1.2.6':
+    resolution: {integrity: sha512-Oat/TUfu1Cpg/inoi6ZIVvNjWoKQJFugpDB6LqpahENf4f2pZKMOUR2B9MCQlje77iRRI5nWQzvUO2kJlXFStw==}
 
-  '@iconify-json/logos@1.2.3':
-    resolution: {integrity: sha512-JLHS5hgZP1b55EONAWNeqBUuriRfRNKWXK4cqYx0PpVaJfIIMiiMxFfvoQiX/bkE9XgkLhcKmDUqL3LXPdXPwQ==}
+  '@iconify-json/logos@1.2.4':
+    resolution: {integrity: sha512-XC4If5D/hbaZvUkTV8iaZuGlQCyG6CNOlaAaJaGa13V5QMYwYjgtKk3vPP8wz3wtTVNVEVk3LRx1fOJz+YnSMw==}
 
-  '@iconify-json/lucide@1.2.18':
-    resolution: {integrity: sha512-SFBoHBSULntem84iWxGM9NzlP6QY/dwjxC5t4c1lC7+xq31Fous8JkppoJih0/ICJ3CsbppRZeb11y3iLcwwug==}
+  '@iconify-json/lucide@1.2.25':
+    resolution: {integrity: sha512-OsHihLfqdjxwoLWDEnGesrYbCG6VCCoLvmb1U6UJhggsppW+D3DUY/LhhcppZM4Yw3AM4USDIn/gkzqjdRYgEw==}
 
-  '@iconify-json/mdi@1.2.1':
-    resolution: {integrity: sha512-dSkQU78gsZV6Yxnq78+LuX7jzeFC/5NAmz7O3rh558GimGFcwMVY/OtqRowIzjqJBmMmWZft7wkFV4TrwRXjlg==}
+  '@iconify-json/mdi@1.2.3':
+    resolution: {integrity: sha512-O3cLwbDOK7NNDf2ihaQOH5F9JglnulNDFV7WprU2dSoZu3h3cWH//h74uQAB87brHmvFVxIOkuBX2sZSzYhScg==}
 
   '@iconify-json/octicon@1.2.2':
     resolution: {integrity: sha512-qEPkP9DMMay5uILzyaSmVksSMxRw9i2wSDREfB8OK20mPdSadusjLqD/u69GzpFpw6894c+WNmoq7WzN5KAPeg==}
 
-  '@iconify-json/tabler@1.2.11':
-    resolution: {integrity: sha512-sOZRVC+QaGmagdogWlz/cTmgXyo5OfRMaac28fAv0+CgESO/eQRBbnjgP4boKG+eKWxjQvRACDOI1HZ1J6Jh7Q==}
+  '@iconify-json/tabler@1.2.15':
+    resolution: {integrity: sha512-EMEOt1PubLxcbwHMO9XmHT601A/2fCNd7fK50p5Qh42xvVxCvO3YhhGuGMAk6t6VkdSZYLQ14Y2bYPcom1aFeQ==}
 
   '@iconify/collections@1.0.436':
     resolution: {integrity: sha512-M1PinD36UOFlwbhAJtnVNxqb9mpvow4SNHieSY4vCn4eVq/oWgk1nmPoUjxU0lAMlbNcy0xT2smDr90xt3ZnWw==}
@@ -1520,6 +1517,11 @@ packages:
 
   '@manypkg/get-packages@1.1.3':
     resolution: {integrity: sha512-fo+QhuU3qE/2TQMQmbVMqaQ6EWbMhi4ABWP+O4AM1NqPBuy0OrApV5LO6BrrgnhtAHS2NH6RrVk9OL181tTi8A==}
+
+  '@mapbox/node-pre-gyp@2.0.0':
+    resolution: {integrity: sha512-llMXd39jtP0HpQLVI37Bf1m2ADlEb35GYSh1SDSLsBhR+5iCxiNGlT31yqbNtVHygHAtMy6dWFERpU2JgufhPg==}
+    engines: {node: '>=18'}
+    hasBin: true
 
   '@mapbox/node-pre-gyp@2.0.0-rc.0':
     resolution: {integrity: sha512-nhSMNprz3WmeRvd8iUs5JqkKr0Ncx46JtPxM3AhXes84XpSJfmIwKeWXRpsr53S7kqPkQfPhzrMFUxSNb23qSA==}
@@ -2313,6 +2315,11 @@ packages:
   '@vercel/nft@0.27.10':
     resolution: {integrity: sha512-zbaF9Wp/NsZtKLE4uVmL3FyfFwlpDyuymQM1kPbeT0mVOHKDQQNjnnfslB3REg3oZprmNFJuh3pkHBk2qAaizg==}
     engines: {node: '>=16'}
+    hasBin: true
+
+  '@vercel/nft@0.29.1':
+    resolution: {integrity: sha512-6239JJM1V9b3OjvZIjbe+47/hGxMr44FEzlbTErrqzebCaoKAHK+yvahn3gdNacybDUbTxVF8Zuh0vqaeM8aKQ==}
+    engines: {node: '>=18'}
     hasBin: true
 
   '@vitejs/plugin-vue-jsx@4.1.1':
@@ -7074,46 +7081,6 @@ packages:
     peerDependencies:
       vite: ^3.0.0-0 || ^4.0.0-0 || ^5.0.0-0 || ^6.0.0-0
 
-  vite@6.0.1:
-    resolution: {integrity: sha512-Ldn6gorLGr4mCdFnmeAOLweJxZ34HjKnDm4HGo6P66IEqTxQb36VEdFJQENKxWjupNfoIjvRUnswjn1hpYEpjQ==}
-    engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': ^18.0.0 || ^20.0.0 || >=22.0.0
-      jiti: '>=1.21.0'
-      less: '*'
-      lightningcss: ^1.21.0
-      sass: '*'
-      sass-embedded: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.16.0
-      tsx: ^4.8.1
-      yaml: ^2.4.2
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      jiti:
-        optional: true
-      less:
-        optional: true
-      lightningcss:
-        optional: true
-      sass:
-        optional: true
-      sass-embedded:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-      tsx:
-        optional: true
-      yaml:
-        optional: true
-
   vite@6.0.11:
     resolution: {integrity: sha512-4VL9mQPKoHy4+FE0NnRE/kbY51TOfaknxAjt3fJbGJxhIpBZiqVzlZDEesWWsuREXHwNdAoOFZ9MkPEVXczHwg==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
@@ -7600,7 +7567,7 @@ snapshots:
 
   '@astrojs/compiler@2.10.3': {}
 
-  '@astrojs/internal-helpers@0.4.1': {}
+  '@astrojs/internal-helpers@0.4.2': {}
 
   '@astrojs/internal-helpers@0.5.1': {}
 
@@ -7630,30 +7597,6 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@astrojs/markdown-remark@6.0.1':
-    dependencies:
-      '@astrojs/prism': 3.2.0
-      github-slugger: 2.0.0
-      hast-util-from-html: 2.0.3
-      hast-util-to-text: 4.0.2
-      import-meta-resolve: 4.1.0
-      js-yaml: 4.1.0
-      mdast-util-definitions: 6.0.0
-      rehype-raw: 7.0.0
-      rehype-stringify: 10.0.1
-      remark-gfm: 4.0.0
-      remark-parse: 11.0.0
-      remark-rehype: 11.1.1
-      remark-smartypants: 3.0.2
-      shiki: 1.24.2
-      unified: 11.0.5
-      unist-util-remove-position: 5.0.0
-      unist-util-visit: 5.0.0
-      unist-util-visit-parents: 6.0.1
-      vfile: 6.0.3
-    transitivePeerDependencies:
-      - supports-color
-
   '@astrojs/markdown-remark@6.1.0':
     dependencies:
       '@astrojs/prism': 3.2.0
@@ -7679,9 +7622,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.0.2(astro@5.2.5(@types/node@22.13.0)(db0@0.2.3)(ioredis@5.4.2)(jiti@2.4.2)(rollup@4.34.0)(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0))':
+  '@astrojs/mdx@4.0.8(astro@5.2.5(@types/node@22.13.0)(db0@0.2.3)(ioredis@5.4.2)(jiti@2.4.2)(rollup@4.34.0)(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0))':
     dependencies:
-      '@astrojs/markdown-remark': 6.0.1
+      '@astrojs/markdown-remark': 6.1.0
       '@mdx-js/mdx': 3.1.0(acorn@8.14.0)
       acorn: 8.14.0
       astro: 5.2.5(@types/node@22.13.0)(db0@0.2.3)(ioredis@5.4.2)(jiti@2.4.2)(rollup@4.34.0)(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0)
@@ -7698,15 +7641,15 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/netlify@6.0.0(@types/node@22.13.0)(astro@5.2.5(@types/node@22.13.0)(db0@0.2.3)(ioredis@5.4.2)(jiti@2.4.2)(rollup@4.34.0)(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0))(jiti@2.4.2)(rollup@4.34.0)(terser@5.37.0)(yaml@2.7.0)':
+  '@astrojs/netlify@6.1.0(@types/node@22.13.0)(astro@5.2.5(@types/node@22.13.0)(db0@0.2.3)(ioredis@5.4.2)(jiti@2.4.2)(rollup@4.34.0)(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0))(jiti@2.4.2)(rollup@4.34.0)(terser@5.37.0)(yaml@2.7.0)':
     dependencies:
-      '@astrojs/internal-helpers': 0.4.1
-      '@astrojs/underscore-redirects': 0.4.0
+      '@astrojs/internal-helpers': 0.4.2
+      '@astrojs/underscore-redirects': 0.6.0
       '@netlify/functions': 2.8.2
-      '@vercel/nft': 0.27.10(rollup@4.34.0)
+      '@vercel/nft': 0.29.1(rollup@4.34.0)
       astro: 5.2.5(@types/node@22.13.0)(db0@0.2.3)(ioredis@5.4.2)(jiti@2.4.2)(rollup@4.34.0)(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0)
       esbuild: 0.24.2
-      vite: 6.0.1(@types/node@22.13.0)(jiti@2.4.2)(terser@5.37.0)(yaml@2.7.0)
+      vite: 6.0.11(@types/node@22.13.0)(jiti@2.4.2)(terser@5.37.0)(yaml@2.7.0)
     transitivePeerDependencies:
       - '@types/node'
       - encoding
@@ -7775,7 +7718,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/underscore-redirects@0.4.0': {}
+  '@astrojs/underscore-redirects@0.6.0': {}
 
   '@astrojs/yaml2ts@0.2.2':
     dependencies:
@@ -8004,7 +7947,7 @@ snapshots:
       outdent: 0.5.0
       prettier: 2.8.8
       resolve-from: 5.0.0
-      semver: 7.7.0
+      semver: 7.7.1
 
   '@changesets/assemble-release-plan@6.0.5':
     dependencies:
@@ -8013,7 +7956,7 @@ snapshots:
       '@changesets/should-skip-package': 0.1.1
       '@changesets/types': 6.0.0
       '@manypkg/get-packages': 1.1.3
-      semver: 7.7.0
+      semver: 7.7.1
 
   '@changesets/changelog-git@0.2.0':
     dependencies:
@@ -8054,7 +7997,7 @@ snapshots:
       package-manager-detector: 0.2.9
       picocolors: 1.1.1
       resolve-from: 5.0.0
-      semver: 7.7.0
+      semver: 7.7.1
       spawndamnit: 3.0.1
       term-size: 2.2.1
 
@@ -8077,7 +8020,7 @@ snapshots:
       '@changesets/types': 6.0.0
       '@manypkg/get-packages': 1.1.3
       picocolors: 1.1.1
-      semver: 7.7.0
+      semver: 7.7.1
 
   '@changesets/get-github-info@0.6.0':
     dependencies:
@@ -8472,19 +8415,19 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.1': {}
 
-  '@iconify-json/carbon@1.2.4':
+  '@iconify-json/carbon@1.2.6':
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/logos@1.2.3':
+  '@iconify-json/logos@1.2.4':
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/lucide@1.2.18':
+  '@iconify-json/lucide@1.2.25':
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/mdi@1.2.1':
+  '@iconify-json/mdi@1.2.3':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -8492,7 +8435,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/tabler@1.2.11':
+  '@iconify-json/tabler@1.2.15':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -8791,6 +8734,19 @@ snapshots:
       globby: 11.1.0
       read-yaml-file: 1.1.0
 
+  '@mapbox/node-pre-gyp@2.0.0':
+    dependencies:
+      consola: 3.4.0
+      detect-libc: 2.0.3
+      https-proxy-agent: 7.0.6(supports-color@9.4.0)
+      node-fetch: 2.7.0
+      nopt: 8.0.0
+      semver: 7.7.1
+      tar: 7.4.3
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+
   '@mapbox/node-pre-gyp@2.0.0-rc.0':
     dependencies:
       consola: 3.4.0
@@ -8798,7 +8754,7 @@ snapshots:
       https-proxy-agent: 7.0.6(supports-color@9.4.0)
       node-fetch: 2.7.0
       nopt: 8.0.0
-      semver: 7.7.0
+      semver: 7.7.1
       tar: 7.4.3
     transitivePeerDependencies:
       - encoding
@@ -9917,7 +9873,7 @@ snapshots:
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.5
-      semver: 7.7.0
+      semver: 7.7.1
       ts-api-utils: 1.4.3(typescript@5.7.3)
     optionalDependencies:
       typescript: 5.7.3
@@ -10026,6 +9982,25 @@ snapshots:
   '@vercel/nft@0.27.10(rollup@4.34.0)':
     dependencies:
       '@mapbox/node-pre-gyp': 2.0.0-rc.0
+      '@rollup/pluginutils': 5.1.4(rollup@4.34.0)
+      acorn: 8.14.0
+      acorn-import-attributes: 1.9.5(acorn@8.14.0)
+      async-sema: 3.1.1
+      bindings: 1.5.0
+      estree-walker: 2.0.2
+      glob: 7.2.3
+      graceful-fs: 4.2.11
+      node-gyp-build: 4.8.4
+      picomatch: 4.0.2
+      resolve-from: 5.0.0
+    transitivePeerDependencies:
+      - encoding
+      - rollup
+      - supports-color
+
+  '@vercel/nft@0.29.1(rollup@4.34.0)':
+    dependencies:
+      '@mapbox/node-pre-gyp': 2.0.0
       '@rollup/pluginutils': 5.1.4(rollup@4.34.0)
       acorn: 8.14.0
       acorn-import-attributes: 1.9.5(acorn@8.14.0)
@@ -11476,7 +11451,7 @@ snapshots:
   eslint-compat-utils@0.5.1(eslint@9.19.0(jiti@2.4.2)):
     dependencies:
       eslint: 9.19.0(jiti@2.4.2)
-      semver: 7.7.0
+      semver: 7.7.1
 
   eslint-compat-utils@0.6.4(eslint@9.19.0(jiti@2.4.2)):
     dependencies:
@@ -13818,7 +13793,7 @@ snapshots:
 
   node-abi@3.65.0:
     dependencies:
-      semver: 7.7.0
+      semver: 7.7.1
     optional: true
 
   node-addon-api@6.1.0:
@@ -15244,7 +15219,7 @@ snapshots:
       detect-libc: 2.0.3
       node-addon-api: 6.1.0
       prebuild-install: 7.1.2
-      semver: 7.7.0
+      semver: 7.7.1
       simple-get: 4.0.1
       tar-fs: 3.0.6
       tunnel-agent: 0.6.0
@@ -15881,7 +15856,7 @@ snapshots:
 
   typescript-auto-import-cache@0.3.3:
     dependencies:
-      semver: 7.7.0
+      semver: 7.7.1
 
   typescript@5.7.3: {}
 
@@ -16356,18 +16331,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vite@6.0.1(@types/node@22.13.0)(jiti@2.4.2)(terser@5.37.0)(yaml@2.7.0):
-    dependencies:
-      esbuild: 0.24.2
-      postcss: 8.5.1
-      rollup: 4.34.0
-    optionalDependencies:
-      '@types/node': 22.13.0
-      fsevents: 2.3.3
-      jiti: 2.4.2
-      terser: 5.37.0
-      yaml: 2.7.0
-
   vite@6.0.11(@types/node@18.19.74)(jiti@2.4.2)(terser@5.37.0)(yaml@2.7.0):
     dependencies:
       esbuild: 0.24.2
@@ -16522,7 +16485,7 @@ snapshots:
   volar-service-typescript@0.0.62(@volar/language-service@2.4.11):
     dependencies:
       path-browserify: 1.0.1
-      semver: 7.7.0
+      semver: 7.7.1
       typescript-auto-import-cache: 0.3.3
       vscode-languageserver-textdocument: 1.0.12
       vscode-nls: 5.2.0
