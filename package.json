@@ -19,10 +19,6 @@
   "bugs": {
     "url": "https://github.com/luxass/lesetid/issues"
   },
-  "engines": {
-    "node": ">=18",
-    "pnpm": ">=8.11.0"
-  },
   "workspaces": [
     "apps/*",
     "packages/*",
@@ -35,15 +31,11 @@
     "dev:all": "turbo run dev",
     "dev": "turbo run dev --filter=\"./packages/*\"",
     "dev:examples": "turbo run dev --filter=\"@lesetid-example/*\"",
-    "lint": "turbo run lint --continue -- --cache --cache-location node_modules/.cache/.eslintcache",
-    "lint:fix": "turbo run lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
-    "lint:ws": "pnpm dlx sherif@latest",
+    "lint": "turbo run lint && manypkg check",
     "test": "turbo run test",
     "test:watch": "turbo run test:watch",
     "typecheck": "turbo run typecheck",
-    "clean": "git clean -xdf node_modules",
-    "clean:workspaces": "turbo run clean",
-    "postinstall": "pnpm lint:ws"
+    "clean": "turbo run clean && git clean -xdf node_modules"
   },
   "devDependencies": {
     "@changesets/changelog-github": "catalog:",

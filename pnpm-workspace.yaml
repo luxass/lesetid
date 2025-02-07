@@ -86,3 +86,4 @@ catalog:
   vue-router: ^4.5.0
   vue-tsc: ^2.2.0
   zod: ^3.24.1
+  "@manypkg/cli": ^0.23.0
