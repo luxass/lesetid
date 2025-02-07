@@ -1,5 +1,0 @@
-👋 Welcome to "lesetid" in GitHub Codespaces!
-
-🛠️  Your environment is fully setup with all the required software.
-
-📖 The "example" should automatically start soon in a new terminal tab.
