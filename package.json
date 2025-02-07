@@ -20,7 +20,7 @@
     "url": "https://github.com/luxass/lesetid/issues"
   },
   "workspaces": [
-    "apps/*",
+    "www",
     "packages/*",
     "examples/*"
   ],
