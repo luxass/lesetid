@@ -40,7 +40,7 @@ export default defineNuxtConfig({
   },
   nitro: {
     compressPublicAssets: true,
-    preset: "cloudflare",
+    preset: "cloudflare-pages",
     serverAssets: [
       {
         baseName: "texts",
