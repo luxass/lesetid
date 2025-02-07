@@ -1,2 +1,0 @@
-[build]
-ignore = "git diff --name-only $CACHED_COMMIT_REF $COMMIT_REF | grep -qE '^(packages/|examples/with-nuxt/)'"
