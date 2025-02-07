@@ -1,0 +1,52 @@
+---
+import { Icon } from "astro-icon/components";
+import type { Example } from "../lib/schemas";
+
+const res = await fetch(new URL("/api/v1/examples", Astro.url));
+
+if (!res.ok) {
+  throw new Error("failed to fetch examples");
+}
+
+const examples = (await res.json()) as Example[];
+---
+
+<section id="examples" class="mt-8">
+  <h2 class="text-xl">Examples</h2>
+  <p>
+    If you want to open a provider different from <a
+      href="https://stackblitz.com"
+      target="_blank"
+      class="underline-offset-3 underline"
+      rel="noopener noreferrer"
+    >
+      Stackblitz
+    </a> you can use the <a href="/examples" class="underline-offset-3 underline"> examples page </a>
+  </p>
+  <div class="mt-4 grid grid-cols-1 gap-4 sm:gap-3 md:grid-cols-2 lg:grid-cols-3">
+    {
+      examples.map((example) => (
+        <a
+          href={example.providers.stackblitz || example.url}
+          class="border-base flex h-20 flex-row items-center gap-2 rounded border p-4 text-center"
+        >
+          {example.iconUrl ? (
+            <img src={example.iconUrl} width="32" height="32" alt={`Icon for ${example.title}`} />
+          ) : (
+            <Icon name="ph:question" size="32" />
+          )}
+          <span class="flex-1 text-left">{example.title}</span>
+        </a>
+      ))
+    }
+    <a
+      href="https://github.com/luxass/lesetid/issues/new?assignees=&labels=example&projects=&template=missing-example.yml&title=missing+example+for+%5BEXAMPLE%5D"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="border-base flex h-20 items-center gap-2 rounded border border-dashed p-4 text-center hover:border-solid"
+    >
+      <Icon name="ph:package" size="32" />
+      <span class="flex-1 text-left">Missing an example?</span>
+    </a>
+  </div>
+</section>

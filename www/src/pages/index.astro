@@ -1,0 +1,27 @@
+---
+import ExamplesSection from "../components/ExamplesSection.astro";
+import PageLayout from "../layouts/page-layout.astro";
+---
+
+<PageLayout title="lesetid" description="">
+  <p>reading time: <span data-reading-time></span></p>
+  <textarea
+    id="text-input"
+    aria-label="Write your article here!"
+    class="bg-background h-[42rem] w-full resize-none overflow-auto rounded border p-4 text-sm shadow-sm outline-none focus-within:border-accent focus-within:ring-2 focus-within:ring-accent"
+  ></textarea>
+
+  <ExamplesSection />
+</PageLayout>
+
+<script>
+  import { estimate } from "lesetid";
+
+  const textarea = document.getElementById("text-input");
+
+  textarea?.addEventListener("input", (e) => {
+    const text = e.target.value;
+
+    document.querySelectorAll("[data-reading-time]")[0].textContent = estimate(text).text;
+  });
+</script>

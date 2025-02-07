@@ -1,0 +1,11 @@
+:root {
+  --background: #111;
+  --foreground: #d1d5db;
+  --card-bg: hsla(200, 7%, 9%, 1);
+  --card-border: hsla(203, 6%, 24%, 1);
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
