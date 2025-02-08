@@ -22,9 +22,6 @@
     "clean": {
       "cache": false
     },
-    "//#clean": {
-      "cache": false
-    },
     "dev": {
       "cache": false,
       "persistent": true
