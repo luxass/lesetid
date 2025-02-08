@@ -75,8 +75,10 @@
     "@types/mdast": "catalog:",
     "@types/node": "catalog:",
     "eslint": "catalog:",
+    "remark": "catalog:",
     "typescript": "catalog:",
     "unified": "catalog:",
-    "vfile": "catalog:"
+    "vfile": "catalog:",
+    "volapyk": "catalog:"
   }
 }
