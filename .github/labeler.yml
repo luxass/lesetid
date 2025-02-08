@@ -10,7 +10,7 @@
 
 "apps: www":
   - any:
-      - apps/www
+      - www
 
 example:
   - any:
