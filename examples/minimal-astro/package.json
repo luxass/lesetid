@@ -1,0 +1,24 @@
+{
+  "name": "@lesetid-example/minimal-astro",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "clean": "git clean -xdf dist node_modules .astro",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "typecheck": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.0.8",
+    "@astrojs/rss": "^4.0.11",
+    "@astrojs/sitemap": "^3.2.1",
+    "astro": "^5.2.5",
+    "remark-lesetid": "workspace:*"
+  },
+  "stackblitz": {
+    "installDependencies": false,
+    "startCommand": "node .stackblitz/cleanup.mjs && npm install && npm run dev"
+  }
+}

@@ -37,6 +37,7 @@ export async function GET() {
               type: "string",
             },
           },
+          additionalProperties: false,
           required: [],
         },
       },

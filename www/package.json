@@ -9,27 +9,28 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint .",
-    "clean": "git clean -xdf dist node_modules",
+    "clean": "git clean -xdf dist node_modules .astro",
     "typecheck": "astro-check"
   },
   "dependencies": {
     "lesetid": "workspace:*",
-    "zod": "^3.24.1"
+    "zod": "catalog:"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@iconify-json/ph": "^1.2.2",
-    "@luxass/eslint-config": "^4.15.0",
-    "@types/node": "^22.0.0",
-    "@unocss/eslint-plugin": "^65.4.3",
-    "@unocss/reset": "^65.4.3",
-    "astro": "^5.2.5",
-    "astro-eslint-parser": "^1.1.0",
-    "astro-icon": "^1.1.5",
-    "eslint": "^9.18.0",
-    "eslint-plugin-astro": "^1.3.1",
-    "eslint-plugin-format": "^1.0.1",
-    "typescript": "^5.7.3",
-    "unocss": "^65.4.3"
+    "@astrojs/check": "catalog:",
+    "@iconify-json/ph": "catalog:",
+    "@luxass/eslint-config": "catalog:",
+    "@types/node": "catalog:",
+    "@unocss/eslint-plugin": "catalog:",
+    "@unocss/reset": "catalog:",
+    "astro": "catalog:",
+    "astro-eslint-parser": "catalog:",
+    "astro-icon": "catalog:",
+    "eslint": "catalog:",
+    "eslint-plugin-astro": "catalog:",
+    "eslint-plugin-format": "catalog:",
+    "prettier-plugin-astro": "catalog:",
+    "typescript": "catalog:",
+    "unocss": "catalog:"
   }
 }
