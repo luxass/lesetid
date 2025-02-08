@@ -1,6 +1,7 @@
 {
   "name": "@lesetid/www",
   "type": "module",
+  "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
