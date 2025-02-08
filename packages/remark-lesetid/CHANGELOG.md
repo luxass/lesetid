@@ -1,5 +1,13 @@
 # remark-lesetid
 
+## 1.4.0
+
+### Minor Changes
+
+- [#119](https://github.com/luxass/lesetid/pull/119) [`c34f44f`](https://github.com/luxass/lesetid/commit/c34f44fd1e710a91aa183a625660ddf293db5122) Thanks [@luxass](https://github.com/luxass)! - feat: pass options from remark plugin down to lesetid
+
+- [#121](https://github.com/luxass/lesetid/pull/121) [`0030eb6`](https://github.com/luxass/lesetid/commit/0030eb642e75da90a6c04943ee5ed2394141e7bf) Thanks [@luxass](https://github.com/luxass)! - fix(remark-lesetid): extend options with lesetid options
+
 ## 1.3.0
 
 ### Minor Changes
