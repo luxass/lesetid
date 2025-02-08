@@ -25,4 +25,13 @@ export default defineConfig({
     },
     validateSecrets: true,
   },
+  vite: {
+    resolve: {
+      alias: {
+        "lesetid": "../packages/lesetid/src/index.ts",
+        "lesetid/stream": "../packages/lesetid/src/stream.ts",
+        "lesetid/utils": "../packages/lesetid/src/utils.ts",
+      },
+    },
+  },
 });
