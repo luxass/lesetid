@@ -1,0 +1,16 @@
+---
+const links = [
+  { title: "github", href: "https://github.com/luxass/lesetid" },
+  { title: "examples", href: "https://examples.lesetid.dev" },
+];
+---
+
+<footer class="flex flex-wrap gap-4 text-sm pt-8 justify-right">
+  {
+    links.map((link) => (
+      <a href={link.href} class="text-gray-400 hover:text-accent transition-colors duration-200">
+        {link.title}
+      </a>
+    ))
+  }
+</footer>
