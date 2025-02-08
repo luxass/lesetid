@@ -41,7 +41,7 @@
     "@changesets/changelog-github": "catalog:",
     "@changesets/cli": "catalog:",
     "@luxass/eslint-config": "catalog:",
-    "@manypkg/cli": "^0.23.0",
+    "@manypkg/cli": "catalog:",
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "tsup": "catalog:",
