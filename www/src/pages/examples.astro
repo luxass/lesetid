@@ -1,15 +1,10 @@
 ---
 import { Icon } from "astro-icon/components";
-import type { Example } from "../lib/schemas";
 import PageLayout from "../layouts/page-layout.astro";
 
-const res = await fetch(new URL("/api/v1/examples", Astro.url));
+import { getExamples } from "../lib/examples";
 
-if (!res.ok) {
-  throw new Error("failed to fetch examples");
-}
-
-const examples = (await res.json()) as Example[];
+const examples = await getExamples();
 ---
 
 <PageLayout title="lesetid | examples" description="Lesetid Examples">

@@ -1,7 +1,7 @@
 import { join } from "node:path";
 
-export async function GET() {
-  const fileObjects = Object.values(import.meta.glob("../../../texts/*.md", { eager: true }));
+export async function getTexts() {
+  const fileObjects = Object.values(import.meta.glob("../texts/*.md", { eager: true }));
 
   const files = await Promise.all(fileObjects.map(async (fileModule) => {
     if (
@@ -18,15 +18,10 @@ export async function GET() {
     }
 
     return {
-      file: fileModule.file.replace(join(import.meta.dirname, "../../../texts/"), ""),
+      file: fileModule.file.replace(join(import.meta.dirname, "../texts/"), ""),
       content: fileModule.rawContent(),
     };
   }));
 
-  return new Response(JSON.stringify(files.filter(Boolean)), {
-    status: 200,
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  return files.filter((file): file is { file: string; content: string } => file !== null);
 }

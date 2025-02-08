@@ -1,13 +1,8 @@
 ---
 import { Icon } from "astro-icon/components";
+import { getTexts } from "../lib/texts";
 
-const res = await fetch(new URL("/api/v1/texts", Astro.url));
-
-let texts: { file: string; content: string }[] = [];
-
-if (res.ok) {
-  texts = await res.json();
-}
+const texts = await getTexts();
 ---
 
 <div class="border-card-border flex flex-wrap justify-between gap-2 rounded border-2 p-2">
