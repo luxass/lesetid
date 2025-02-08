@@ -8,6 +8,7 @@ import Container from "@/app/_components/container";
 import Header from "@/app/_components/header";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
+import { estimate } from "lesetid";
 
 export default async function Post(props: Params) {
   const params = await props.params;
@@ -16,6 +17,8 @@ export default async function Post(props: Params) {
   if (!post) {
     return notFound();
   }
+
+  const estimation = estimate(post.content || "");
 
   const content = await markdownToHtml(post.content || "");
 
@@ -30,6 +33,7 @@ export default async function Post(props: Params) {
             coverImage={post.coverImage}
             date={post.date}
             author={post.author}
+            estimation={estimation}
           />
           <PostBody content={content} />
         </article>

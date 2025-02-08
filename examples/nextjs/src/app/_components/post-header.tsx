@@ -1,3 +1,4 @@
+import type { Estimation } from "lesetid";
 import Avatar from "./avatar";
 import CoverImage from "./cover-image";
 import DateFormatter from "./date-formatter";
@@ -9,9 +10,10 @@ type Props = {
   coverImage: string;
   date: string;
   author: Author;
+  estimation: Estimation
 };
 
-export function PostHeader({ title, coverImage, date, author }: Props) {
+export function PostHeader({ title, coverImage, date, author, estimation }: Props) {
   return (
     <>
       <PostTitle>{title}</PostTitle>
@@ -26,7 +28,7 @@ export function PostHeader({ title, coverImage, date, author }: Props) {
           <Avatar name={author.name} picture={author.picture} />
         </div>
         <div className="mb-6 text-lg">
-          <DateFormatter dateString={date} />
+          <DateFormatter dateString={date} />, {estimation.text}
         </div>
       </div>
     </>
