@@ -10,32 +10,35 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
+permissions: {}
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
 
-      - name: Setup pnpm
+      - name: setup pnpm
         uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # v4.0.0
 
-      - name: Setup node
-        uses: actions/setup-node@1d0ff469b7ec7b3cb9d8673fde0c81c44821de2a # v4.2.0
+      - name: setup node
+        uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
         with:
           node-version: lts/*
 
-      - name: Install dependencies
+      - name: install
         run: pnpm install --frozen-lockfile
 
-      - name: Build
-        run: pnpm turbo build --filter "./packages/*"
+      - name: build
+        run: pnpm build --filter "./packages/*"
 
-      - name: Lint
-        run: pnpm turbo lint --filter "./packages/*"
+      - name: lint
+        run: pnpm lint --filter "./packages/*"
 
-      - name: Typecheck
-        run: pnpm turbo typecheck --filter "./packages/*"
+      - name: typecheck
+        run: pnpm typecheck --filter "./packages/*"
 
   test:
     runs-on: ${{ matrix.os }}
@@ -51,20 +54,22 @@ jobs:
 
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
+      - name: setup pnpm
+        uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # v4.0.0
 
-      - name: Set node ${{ matrix.node }}
-        uses: actions/setup-node@1d0ff469b7ec7b3cb9d8673fde0c81c44821de2a # v4.2.0
+      - name: setup node ${{ matrix.node }}
+        uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
         with:
           node-version: ${{ matrix.node }}
 
-      - name: Install
+      - name: install
         run: pnpm install --frozen-lockfile
 
-      - name: Build
+      - name: build
         run: pnpm build --filter "./packages/*"
 
-      - name: Test
+      - name: test
         run: pnpm test --filter "./packages/*"
