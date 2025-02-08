@@ -6,7 +6,7 @@
 
 "pkg: remark-lesetid":
   - changed-files:
-      - any-glob-to-any-file: "packages/remark-lesetid/**"
+      - any-glob-to-any-file: "packages/remark-lesetid/**/*"
 
 "apps: www":
   - changed-files:
@@ -14,4 +14,6 @@
 
 example:
   - changed-files:
-      - any-glob-to-any-file: ["examples/**/*", "!examples/**/package.json"]
+      - any-glob-to-any-file:
+          - "!examples/**/package.json"
+          - "examples/**/*"
