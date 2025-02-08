@@ -27,6 +27,8 @@ export default defineConfig({
     validateSecrets: true,
   },
   vite: {
-    plugins: [tsconfigPaths()],
+    plugins: [tsconfigPaths({
+      root: import.meta.dirname,
+    })],
   },
 });
