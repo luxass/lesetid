@@ -2,7 +2,6 @@
 import icon from "astro-icon";
 import { defineConfig } from "astro/config";
 import unocss from "unocss/astro";
-import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://astro.build/config
 export default defineConfig({
@@ -25,10 +24,5 @@ export default defineConfig({
       },
     },
     validateSecrets: true,
-  },
-  vite: {
-    plugins: [tsconfigPaths({
-      root: import.meta.dirname,
-    })],
   },
 });
