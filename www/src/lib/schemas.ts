@@ -11,14 +11,3 @@ export const EXAMPLE_SCHEMA = z.object({
 });
 
 export type Example = z.infer<typeof EXAMPLE_SCHEMA>;
-
-export const EXAMPLES_GITHUB_RESPONSE_SCHEMA = z.array(z.object({
-  name: z.string(),
-  path: z.string(),
-  url: z.string(),
-  html_url: z.string(),
-  type: z.union([
-    z.literal("dir"),
-    z.literal("file"),
-  ]),
-}));

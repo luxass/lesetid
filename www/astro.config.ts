@@ -15,13 +15,4 @@ export default defineConfig({
       },
     }),
   ],
-  env: {
-    schema: {
-      GITHUB_TOKEN: {
-        access: "secret",
-        context: "server",
-        type: "string",
-      },
-    },
-  },
 });
