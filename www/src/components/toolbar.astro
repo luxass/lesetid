@@ -3,7 +3,7 @@ import { Icon } from "astro-icon/components";
 
 const res = await fetch(new URL("/api/v1/texts", Astro.url));
 
-let texts: string[] = [];
+let texts: { file: string; content: string }[] = [];
 
 if (res.ok) {
   texts = await res.json();
@@ -16,10 +16,46 @@ if (res.ok) {
     <span id="reading-time">0 min</span>
   </div>
   <select
+    id="text-select"
     aria-label="Select a article to look at."
     class="bg-background rounded border-2 border-card-border px-2 pr-8 py-1 text-sm outline-none transition-colors duration-200 focus:border-accent focus:ring-2 focus:ring-accent"
   >
     <option value="" disabled selected>Select a text</option>
-    {texts.map((text) => <option value={text}>{text}</option>)}
+    {texts.map((text) => <option value={text.file}>{text.file}</option>)}
   </select>
 </div>
+
+<script id="texts" data-texts={JSON.stringify(texts)}></script>
+
+<script>
+  const textSelect = document.getElementById("text-select") as HTMLSelectElement;
+
+  const textarea = document.querySelector("textarea") as HTMLTextAreaElement;
+
+  const textsElement = document.getElementById("texts");
+
+  if (textsElement == null) {
+    // eslint-disable-next-line no-alert
+    alert("no texts found");
+    throw new Error("no texts found");
+  }
+
+  const texts: { file: string; content: string }[] = JSON.parse(textsElement.getAttribute("data-texts") as string);
+
+  textSelect.addEventListener("change", async (e) => {
+    if (e.target == null || !("value" in e.target) || typeof e.target.value !== "string") {
+      return;
+    }
+
+    const file = e.target.value;
+
+    const found = texts.find((text) => text.file === file);
+
+    if (found == null) {
+      return;
+    }
+
+    textarea.value = found.content;
+    (window as any).__UPDATE_READING_TIME(found.content);
+  });
+</script>
