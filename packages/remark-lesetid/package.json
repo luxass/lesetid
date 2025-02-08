@@ -78,6 +78,7 @@
     "remark": "catalog:",
     "typescript": "catalog:",
     "unified": "catalog:",
-    "vfile": "catalog:"
+    "vfile": "catalog:",
+    "volapyk": "catalog:"
   }
 }

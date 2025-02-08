@@ -256,6 +256,9 @@ importers:
       vfile:
         specifier: 'catalog:'
         version: 6.0.3
+      volapyk:
+        specifier: 'catalog:'
+        version: 1.6.3
 
   www:
     dependencies:
