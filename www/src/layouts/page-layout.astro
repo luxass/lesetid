@@ -5,14 +5,14 @@ import Header from "../components/header.astro";
 
 export interface Props {
   title: string;
-  description: string;
+  description?: string;
   image?: string;
   keywords?: string[];
 }
 
 const {
   title,
-  description = "personal website and blog of lucas nørgård",
+  description = "A playground for Lesetid",
   keywords = [],
   image = new URL(`https://image.luxass.dev/api/image/text?width=300&height=300`),
 } = Astro.props;

@@ -1,14 +1,15 @@
 ---
-import ExamplesSection from "../components/ExamplesSection.astro";
+import ExamplesSection from "../components/examples-section.astro";
+import Toolbar from "../components/toolbar.astro";
 import PageLayout from "../layouts/page-layout.astro";
 ---
 
-<PageLayout title="lesetid" description="">
-  <p>reading time: <span data-reading-time></span></p>
+<PageLayout title="lesetid | playground">
+  <Toolbar />
   <textarea
     id="text-input"
     aria-label="Write your article here!"
-    class="bg-background h-[42rem] w-full resize-none overflow-auto rounded border p-4 text-sm shadow-sm outline-none focus-within:border-accent focus-within:ring-2 focus-within:ring-accent"
+    class="bg-background mt-8 h-[42rem] w-full resize-none overflow-auto rounded border-2 border-card-border p-4 text-sm shadow-sm outline-none focus-within:border-accent focus-within:ring-2 focus-within:ring-accent transition-colors duration-200"
   ></textarea>
 
   <ExamplesSection />
@@ -16,12 +17,32 @@ import PageLayout from "../layouts/page-layout.astro";
 
 <script>
   import { estimate } from "lesetid";
+  import { debounce } from "../lib/utils";
 
   const textarea = document.getElementById("text-input");
+  const readingTimeElement = document.getElementById("reading-time");
 
-  textarea?.addEventListener("input", (e) => {
-    const text = e.target.value;
+  if (!textarea) {
+    // eslint-disable-next-line no-alert
+    alert("textarea is not found, can't update reading time");
+    throw new Error("textarea is not found, can't update reading time");
+  }
 
-    document.querySelectorAll("[data-reading-time]")[0].textContent = estimate(text).text;
+  if (!readingTimeElement) {
+    // eslint-disable-next-line no-alert
+    alert("reading-time element is not found, can't update reading time");
+    throw new Error("reading-time element is not found, can't update reading time");
+  }
+
+  const updateReadingTime = debounce((text) => {
+    readingTimeElement.textContent = estimate(text).text;
+  }, 300);
+
+  textarea.addEventListener("input", (e) => {
+    if (e.target == null || !("value" in e.target) || typeof e.target.value !== "string") {
+      return;
+    }
+
+    updateReadingTime(e.target.value);
   });
 </script>
