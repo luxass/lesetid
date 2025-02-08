@@ -314,9 +314,6 @@ importers:
       rehype-slug:
         specifier: 'catalog:'
         version: 6.0.0
-      remark:
-        specifier: 'catalog:'
-        version: 15.0.1
       remark-lesetid:
         specifier: workspace:*
         version: link:../../packages/remark-lesetid
@@ -375,6 +372,9 @@ importers:
       prettier-plugin-astro:
         specifier: 'catalog:'
         version: 0.14.1
+      remark:
+        specifier: 'catalog:'
+        version: 15.0.1
       remark-directive:
         specifier: 'catalog:'
         version: 3.0.1

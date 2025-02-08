@@ -41,7 +41,6 @@
     "rehype-autolink-headings": "catalog:",
     "rehype-external-links": "catalog:",
     "rehype-slug": "catalog:",
-    "remark": "catalog:",
     "remark-lesetid": "workspace:*",
     "solid-js": "catalog:",
     "tailwindcss": "catalog:",
