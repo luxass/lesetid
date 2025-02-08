@@ -22,6 +22,8 @@ export async function getTexts() {
 
     // eslint-disable-next-line no-console
     console.log("FILE", fileModule);
+    // eslint-disable-next-line no-console
+    console.log(import.meta.dirname, "__dirname" in globalThis ? __dirname : "NO __dirname");
 
     return {
       file: fileModule.file.replace(join(import.meta.dirname, "../texts/"), ""),
