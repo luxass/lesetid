@@ -23,6 +23,5 @@ export default defineConfig({
         type: "string",
       },
     },
-    validateSecrets: true,
   },
 });
