@@ -1,18 +1,17 @@
 # See https://github.com/actions/labeler
 
 "pkg: lesetid":
-  - any:
-      - packages/lesetid/**
+  - changed-files:
+      - any-glob-to-any-file: "packages/lesetid/**/*"
 
 "pkg: remark-lesetid":
-  - any:
-      - packages/remark-lesetid/**
+  - changed-files:
+      - any-glob-to-any-file: "packages/remark-lesetid/**"
 
 "apps: www":
-  - any:
-      - www
+  - changed-files:
+      - any-glob-to-any-file: "www"
 
 example:
-  - any:
-      - "examples/**/*"
-      - "!examples/**/package.json"
+  - changed-files:
+      - any-glob-to-any-file: ["examples/**/*", "!examples/**/package.json"]
