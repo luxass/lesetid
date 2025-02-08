@@ -12,6 +12,7 @@ export default defineConfig({
     icon({
       include: {
         ph: ["github-logo-duotone", "question", "package", "alarm-duotone"],
+        logos: ["stackblitz-icon", "codesandbox-icon"],
       },
     }),
   ],

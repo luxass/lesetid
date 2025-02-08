@@ -2,7 +2,7 @@
   "$schema": "https://lesetid.dev/schema.json",
   "iconUrl": "/astro.svg",
   "title": "Astro",
-  "handle": "astro",
+  "handle": "minimal-astro",
   "url": "/examples/minimal-astro",
   "providers": {
     "stackblitz": "https://stackblitz.com/github/luxass/lesetid/tree/main/examples/minimal-astro?title=astro%20example%20|%20lesetid",

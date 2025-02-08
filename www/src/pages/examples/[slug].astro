@@ -1,0 +1,54 @@
+---
+import type { GetStaticPaths } from "astro";
+import { Icon } from "astro-icon/components";
+import PageLayout from "../../layouts/page-layout.astro";
+
+import { getExamples } from "../../lib/examples";
+
+export async function getStaticPaths() {
+  const examples = await getExamples();
+
+  return examples.map((example) => ({
+    params: { slug: example.handle },
+    props: {
+      example,
+    },
+  }));
+}
+
+const { slug } = Astro.params;
+const { example } = Astro.props;
+
+const PROVIDER_ICONS: Record<string, string> = {
+  stackblitz: "logos:stackblitz-icon",
+  codesandbox: "logos:codesandbox-icon",
+};
+
+const providers = Object.entries(example.providers);
+---
+
+<PageLayout title={`lesetid | ${example.handle} examples`} description="Lesetid Examples">
+  <h2 class="text-xl mb-4 flex flex-row gap-2">
+    {
+      example.iconUrl ? (
+        <img src={example.iconUrl} width="32" height="32" alt={`Icon for ${example.title}`} />
+      ) : (
+        <Icon name="ph:question" size="32" />
+      )
+    }
+    {example.title}
+  </h2>
+
+  <a href="/examples" class="underline-offset-3 mt-4 block text-right underline"> Back to examples </a>
+
+  <div class="mt-4 grid grid-cols-1 gap-4 sm:gap-3 md:grid-cols-2 lg:grid-cols-3">
+    {
+      providers.map(([provider, url]) => (
+        <a href={url} class="border-card-border flex h-20 flex-row items-center gap-2 rounded border p-4 text-center">
+          <Icon name={PROVIDER_ICONS[provider]} size="32" />
+          <span class="flex-1 text-left capitalize">{provider}</span>
+        </a>
+      ))
+    }
+  </div>
+</PageLayout>

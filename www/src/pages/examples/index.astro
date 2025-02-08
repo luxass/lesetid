@@ -1,8 +1,8 @@
 ---
 import { Icon } from "astro-icon/components";
-import PageLayout from "../layouts/page-layout.astro";
+import PageLayout from "../../layouts/page-layout.astro";
 
-import { getExamples } from "../lib/examples";
+import { getExamples } from "../../lib/examples";
 
 const examples = await getExamples();
 ---
@@ -23,7 +23,7 @@ const examples = await getExamples();
     {
       examples.map((example) => (
         <a
-          href={example.providers.stackblitz || example.url}
+          href={example.url}
           class="border-card-border flex h-20 flex-row items-center gap-2 rounded border p-4 text-center"
         >
           {example.iconUrl ? (

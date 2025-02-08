@@ -2,7 +2,7 @@
   "$schema": "https://lesetid.dev/schema.json",
   "iconUrl": "/nextjs.svg",
   "title": "NextJS",
-  "handle": "next",
+  "handle": "nextjs",
   "url": "/examples/nextjs",
   "providers": {
     "stackblitz": "https://stackblitz.com/github/luxass/lesetid/tree/main/examples/nextjs?title=next%20example%20|%20lesetid",
