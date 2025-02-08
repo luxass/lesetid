@@ -20,7 +20,7 @@
     "url": "https://github.com/luxass/lesetid/issues"
   },
   "workspaces": [
-    "apps/*",
+    "www",
     "packages/*",
     "examples/*"
   ],
@@ -41,11 +41,17 @@
     "@changesets/changelog-github": "catalog:",
     "@changesets/cli": "catalog:",
     "@luxass/eslint-config": "catalog:",
+    "@manypkg/cli": "^0.23.0",
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "tsup": "catalog:",
     "turbo": "catalog:",
     "typescript": "catalog:",
     "vitest": "catalog:"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }

@@ -1,0 +1,52 @@
+---
+import ExamplesSection from "../components/examples-section.astro";
+import Toolbar from "../components/toolbar.astro";
+import PageLayout from "../layouts/page-layout.astro";
+---
+
+<PageLayout title="lesetid | playground">
+  <Toolbar />
+  <textarea
+    id="text-input"
+    aria-label="Write your article here!"
+    class="bg-background mt-8 h-[42rem] w-full resize-none overflow-auto rounded border-2 border-card-border p-4 text-sm shadow-sm outline-none focus-within:border-accent focus-within:ring-2 focus-within:ring-accent transition-colors duration-200"
+  ></textarea>
+
+  <ExamplesSection />
+</PageLayout>
+
+<script>
+  import { estimate } from "lesetid";
+  import { debounce } from "../lib/utils";
+
+  const textarea = document.getElementById("text-input");
+  const readingTimeElement = document.getElementById("reading-time");
+
+  if (!textarea) {
+    // eslint-disable-next-line no-alert
+    alert("textarea is not found, can't update reading time");
+    throw new Error("textarea is not found, can't update reading time");
+  }
+
+  if (!readingTimeElement) {
+    // eslint-disable-next-line no-alert
+    alert("reading-time element is not found, can't update reading time");
+    throw new Error("reading-time element is not found, can't update reading time");
+  }
+
+  function calculateReadingTime(text: string): void {
+    readingTimeElement!.textContent = estimate(text).text;
+  }
+
+  const updateReadingTime = debounce(calculateReadingTime, 300);
+
+  (window as any).__UPDATE_READING_TIME = calculateReadingTime;
+
+  textarea.addEventListener("input", (e) => {
+    if (e.target == null || !("value" in e.target) || typeof e.target.value !== "string") {
+      return;
+    }
+
+    updateReadingTime(e.target.value);
+  });
+</script>
