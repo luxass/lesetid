@@ -35,7 +35,7 @@ jobs:
         run: pnpm build
 
       - name: test prettier
-        run: npx prettier "./www/src/pages/*.astro" --check
+        run: pnpm dlx prettier "./www/src/pages/*.astro" --check
 
       - name: lint
         run: pnpm lint
