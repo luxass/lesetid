@@ -23,5 +23,8 @@ export async function getTexts() {
     };
   }));
 
+  // eslint-disable-next-line no-console
+  console.log("FILES", files);
+
   return files.filter((file): file is { file: string; content: string } => file !== null);
 }
