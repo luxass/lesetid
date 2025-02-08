@@ -12,12 +12,12 @@
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3",
+    "lesetid": "workspace:*",
     "next": "^15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "remark": "^15.0.1",
-    "remark-html": "^16.0.1",
-    "lesetid": "workspace:*"
+    "remark-html": "^16.0.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.4",
