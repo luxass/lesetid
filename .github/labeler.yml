@@ -13,7 +13,7 @@
       - any-glob-to-any-file: "www"
 
 example:
-  - changed-files:
-      - any-glob-to-any-file:
-          - "!examples/**/package.json"
-          - "examples/**/*"
+  - all:
+    - changed-files:
+        - any-glob-to-any-file: "examples/**/*"
+        - all-globs-to-all-files: "!examples/**/package.json"
