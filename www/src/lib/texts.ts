@@ -1,11 +1,8 @@
 import path from "node:path";
 
 export async function getTexts() {
-  // eslint-disable-next-line no-console
-  console.log("BEFORE");
   const fileObjects = Object.values(import.meta.glob("../texts/*.md", { eager: true }));
-  // eslint-disable-next-line no-console
-  console.log("AFTER 1");
+
   const files = await Promise.all(fileObjects.map(async (fileModule) => {
     if (
       fileModule == null
@@ -20,13 +17,6 @@ export async function getTexts() {
       return null;
     }
 
-    // eslint-disable-next-line no-console
-    console.log("FILE", fileModule);
-    // eslint-disable-next-line no-console
-    console.log(import.meta.dirname, "__dirname" in globalThis ? __dirname : "NO __dirname");
-    // eslint-disable-next-line no-console
-    console.log(import.meta);
-
     const dirname = path.dirname(fileModule.file);
 
     return {
@@ -34,9 +24,6 @@ export async function getTexts() {
       content: fileModule.rawContent(),
     };
   }));
-
-  // eslint-disable-next-line no-console
-  console.log("FILES", files);
 
   return files.filter((file): file is { file: string; content: string } => file !== null);
 }
