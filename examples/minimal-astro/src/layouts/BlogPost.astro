@@ -6,7 +6,7 @@ import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 
 type Props = CollectionEntry<'blog'>['data'] & {
-	estimation: string
+	estimation?: string
 }
 
 const { title, description, pubDate, updatedDate, heroImage, estimation } = Astro.props;

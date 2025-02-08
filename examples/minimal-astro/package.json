@@ -1,11 +1,10 @@
 {
   "name": "@lesetid-example/minimal-astro",
   "type": "module",
-  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "clean": "git clean -xdf dist node_modules",
+    "clean": "git clean -xdf dist node_modules .astro",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",

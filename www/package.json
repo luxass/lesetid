@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint .",
-    "clean": "git clean -xdf dist node_modules",
+    "clean": "git clean -xdf dist node_modules .astro",
     "typecheck": "astro-check"
   },
   "dependencies": {
