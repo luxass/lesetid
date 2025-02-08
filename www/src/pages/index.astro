@@ -16,37 +16,37 @@ import PageLayout from "../layouts/page-layout.astro";
 </PageLayout>
 
 <script>
-import { estimate } from "lesetid";
-import { debounce } from "../lib/utils";
+  import { estimate } from "lesetid";
+  import { debounce } from "../lib/utils";
 
-const textarea = document.getElementById("text-input");
-const readingTimeElement = document.getElementById("reading-time");
+  const textarea = document.getElementById("text-input");
+  const readingTimeElement = document.getElementById("reading-time");
 
-if (!textarea) {
-  // eslint-disable-next-line no-alert
-  alert("textarea is not found, can't update reading time");
-  throw new Error("textarea is not found, can't update reading time");
-}
+  if (!textarea) {
+    // eslint-disable-next-line no-alert
+    alert("textarea is not found, can't update reading time");
+    throw new Error("textarea is not found, can't update reading time");
+  }
 
-if (!readingTimeElement) {
-  // eslint-disable-next-line no-alert
-  alert("reading-time element is not found, can't update reading time");
-  throw new Error("reading-time element is not found, can't update reading time");
-}
+  if (!readingTimeElement) {
+    // eslint-disable-next-line no-alert
+    alert("reading-time element is not found, can't update reading time");
+    throw new Error("reading-time element is not found, can't update reading time");
+  }
 
-function calculateReadingTime(text: string): void {
+  function calculateReadingTime(text: string): void {
     readingTimeElement!.textContent = estimate(text).text;
   }
 
-const updateReadingTime = debounce(calculateReadingTime, 300);
+  const updateReadingTime = debounce(calculateReadingTime, 300);
 
-(window as any).__UPDATE_READING_TIME = calculateReadingTime;
+  (window as any).__UPDATE_READING_TIME = calculateReadingTime;
 
-textarea.addEventListener("input", (e) => {
-  if (e.target == null || !("value" in e.target) || typeof e.target.value !== "string") {
-    return;
-  }
+  textarea.addEventListener("input", (e) => {
+    if (e.target == null || !("value" in e.target) || typeof e.target.value !== "string") {
+      return;
+    }
 
-  updateReadingTime(e.target.value);
-});
+    updateReadingTime(e.target.value);
+  });
 </script>
