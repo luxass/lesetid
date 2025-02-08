@@ -1,4 +1,4 @@
-import { join } from "node:path";
+import path from "node:path";
 
 export async function getTexts() {
   // eslint-disable-next-line no-console
@@ -27,8 +27,10 @@ export async function getTexts() {
     // eslint-disable-next-line no-console
     console.log(import.meta);
 
+    const dirname = path.dirname(fileModule.file);
+
     return {
-      file: fileModule.file.replace(join(import.meta.dirname, "../texts/"), ""),
+      file: fileModule.file.replace(`${dirname}/`, ""),
       content: fileModule.rawContent(),
     };
   }));
