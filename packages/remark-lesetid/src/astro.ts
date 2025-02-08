@@ -3,13 +3,16 @@ import type { Plugin } from "unified";
 import {
   estimate,
   type Estimation,
+  type Options,
 } from "lesetid";
 import { toString } from "mdast-util-to-string";
 
-const remarkLesetid: Plugin<void[], Root> = () => {
+export type { Estimation, Options };
+
+const remarkLesetid: Plugin<Options[], Root> = (options) => {
   return (tree, file) => {
     const textOnPage = toString(tree);
-    const estimation = estimate(textOnPage);
+    const estimation = estimate(textOnPage, options);
     if (!file.data.astro) throw new Error("Missing astro data");
     file.data.astro.frontmatter ||= {};
 
