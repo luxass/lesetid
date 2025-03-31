@@ -6,12 +6,12 @@ catalogs:
   prod:
     "@iconify-json/logos": ^1.2.4
     "@iconify-json/ph": ^1.2.2
-    "astro": ^5.2.5
+    "astro": ^5.5.5
     "astro-icon": ^1.1.5
     "hastscript": ^9.0.0
     "mdast-util-to-string": ^4.0.0
     "unist-util-visit": ^5.0.0
-    "zod": ^3.24.1
+    "zod": ^3.24.2
   dev:
     "unified": ^11.0.5
     "vfile": 6.0.3
@@ -39,19 +39,19 @@ catalogs:
     "classnames": ^2.5.1
     "date-fns": ^4.1.0
     "gray-matter": ^4.0.3
-    "next": ^15.1.6
-    "react": ^19.0.0
-    "react-dom": ^19.0.0
+    "next": ^15.2.4
+    "react": ^19.1.0
+    "react-dom": ^19.1.0
     "remark-html": ^16.0.1
     "remark": ^15.0.1
-    "@tailwindcss/postcss": ^4.0.4
-    "@types/react": ^19.0.8
-    "@types/react-dom": ^19.0.3
-    "postcss": ^8.5.1
+    "@tailwindcss/postcss": ^4.0.17
+    "@types/react": ^19.0.12
+    "@types/react-dom": ^19.0.4
+    "postcss": ^8.5.3
     "tailwindcss": ^4.0.4
-    "@astrojs/mdx": ^4.0.8
+    "@astrojs/mdx": ^4.2.2
     "@astrojs/rss": ^4.0.11
-    "@astrojs/sitemap": ^3.2.1
+    "@astrojs/sitemap": ^3.3.0
 
 onlyBuiltDependencies:
   - esbuild
