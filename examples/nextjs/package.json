@@ -9,24 +9,24 @@
     "start": "next start"
   },
   "dependencies": {
-    "classnames": "^2.5.1",
-    "date-fns": "^4.1.0",
-    "gray-matter": "^4.0.3",
+    "classnames": "catalog:example",
+    "date-fns": "catalog:example",
+    "gray-matter": "catalog:example",
     "lesetid": "workspace:*",
-    "next": "^15.1.6",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "remark": "^15.0.1",
-    "remark-html": "^16.0.1"
+    "next": "catalog:example",
+    "react": "catalog:example",
+    "react-dom": "catalog:example",
+    "remark": "catalog:example",
+    "remark-html": "catalog:example"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.0.4",
-    "@types/node": "^20.14.8",
-    "@types/react": "^19.0.8",
-    "@types/react-dom": "^19.0.3",
-    "postcss": "^8.5.1",
-    "tailwindcss": "^4.0.4",
-    "typescript": "^5.7.3"
+    "@tailwindcss/postcss": "catalog:example",
+    "@types/node": "catalog:dev",
+    "@types/react": "catalog:example",
+    "@types/react-dom": "catalog:example",
+    "postcss": "catalog:example",
+    "tailwindcss": "catalog:example",
+    "typescript": "catalog:dev"
   },
   "stackblitz": {
     "installDependencies": false,

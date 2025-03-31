@@ -13,25 +13,25 @@
     "typecheck": "astro-check"
   },
   "dependencies": {
+    "@iconify-json/logos": "catalog:prod",
+    "@iconify-json/ph": "catalog:prod",
+    "astro": "catalog:prod",
+    "astro-icon": "catalog:prod",
     "lesetid": "workspace:*",
-    "zod": "catalog:"
+    "zod": "catalog:prod"
   },
   "devDependencies": {
-    "@astrojs/check": "catalog:",
-    "@iconify-json/logos": "catalog:",
-    "@iconify-json/ph": "catalog:",
-    "@luxass/eslint-config": "catalog:",
-    "@types/node": "catalog:",
-    "@unocss/eslint-plugin": "catalog:",
-    "@unocss/reset": "catalog:",
-    "astro": "catalog:",
-    "astro-eslint-parser": "catalog:",
-    "astro-icon": "catalog:",
-    "eslint": "catalog:",
-    "eslint-plugin-astro": "catalog:",
-    "eslint-plugin-format": "catalog:",
-    "prettier-plugin-astro": "catalog:",
-    "typescript": "catalog:",
-    "unocss": "catalog:"
+    "@astrojs/check": "catalog:dev",
+    "@luxass/eslint-config": "catalog:dev",
+    "@types/node": "catalog:dev",
+    "@unocss/eslint-plugin": "catalog:dev",
+    "@unocss/reset": "catalog:dev",
+    "astro-eslint-parser": "catalog:dev",
+    "eslint": "catalog:dev",
+    "eslint-plugin-astro": "catalog:dev",
+    "eslint-plugin-format": "catalog:dev",
+    "prettier-plugin-astro": "catalog:dev",
+    "typescript": "catalog:dev",
+    "unocss": "catalog:dev"
   }
 }

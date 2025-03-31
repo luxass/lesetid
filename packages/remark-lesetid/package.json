@@ -67,18 +67,18 @@
   },
   "dependencies": {
     "lesetid": "workspace:*",
-    "mdast-util-to-string": "catalog:",
-    "unist-util-visit": "catalog:"
+    "mdast-util-to-string": "catalog:prod",
+    "unist-util-visit": "catalog:prod"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "catalog:",
-    "@types/mdast": "catalog:",
-    "@types/node": "catalog:",
-    "eslint": "catalog:",
-    "remark": "catalog:",
-    "typescript": "catalog:",
-    "unified": "catalog:",
-    "vfile": "catalog:",
-    "volapyk": "catalog:"
+    "@luxass/eslint-config": "catalog:dev",
+    "@types/mdast": "catalog:dev",
+    "@types/node": "catalog:dev",
+    "eslint": "catalog:dev",
+    "remark": "catalog:example",
+    "typescript": "catalog:dev",
+    "unified": "catalog:dev",
+    "vfile": "catalog:dev",
+    "volapyk": "catalog:dev"
   }
 }

@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 catalogs:
-  default:
+  dev:
     '@astrojs/check':
       specifier: ^0.9.4
       version: 0.9.4
@@ -15,12 +15,6 @@ catalogs:
     '@changesets/cli':
       specifier: ^2.27.12
       version: 2.28.1
-    '@iconify-json/logos':
-      specifier: ^1.2.4
-      version: 1.2.4
-    '@iconify-json/ph':
-      specifier: ^1.2.2
-      version: 1.2.2
     '@luxass/eslint-config':
       specifier: ^4.15.0
       version: 4.15.0
@@ -39,15 +33,9 @@ catalogs:
     '@unocss/reset':
       specifier: ^65.4.3
       version: 65.5.0
-    astro:
-      specifier: ^5.2.5
-      version: 5.2.5
     astro-eslint-parser:
       specifier: ^1.2.1
       version: 1.2.1
-    astro-icon:
-      specifier: ^1.1.5
-      version: 1.1.5
     eslint:
       specifier: ^9.20.0
       version: 9.20.1
@@ -57,15 +45,9 @@ catalogs:
     eslint-plugin-format:
       specifier: ^1.0.1
       version: 1.0.1
-    mdast-util-to-string:
-      specifier: ^4.0.0
-      version: 4.0.0
     prettier-plugin-astro:
       specifier: ^0.14.1
       version: 0.14.1
-    remark:
-      specifier: ^15.0.1
-      version: 15.0.1
     tsup:
       specifier: ^8.3.6
       version: 8.3.6
@@ -78,9 +60,6 @@ catalogs:
     unified:
       specifier: ^11.0.5
       version: 11.0.5
-    unist-util-visit:
-      specifier: ^5.0.0
-      version: 5.0.0
     unocss:
       specifier: ^65.4.3
       version: 65.5.0
@@ -93,6 +72,74 @@ catalogs:
     volapyk:
       specifier: ^1.6.3
       version: 1.6.3
+  example:
+    '@astrojs/mdx':
+      specifier: ^4.0.8
+      version: 4.0.8
+    '@astrojs/rss':
+      specifier: ^4.0.11
+      version: 4.0.11
+    '@astrojs/sitemap':
+      specifier: ^3.2.1
+      version: 3.2.1
+    '@tailwindcss/postcss':
+      specifier: ^4.0.4
+      version: 4.0.4
+    '@types/react':
+      specifier: ^19.0.8
+      version: 19.0.8
+    '@types/react-dom':
+      specifier: ^19.0.3
+      version: 19.0.3
+    classnames:
+      specifier: ^2.5.1
+      version: 2.5.1
+    date-fns:
+      specifier: ^4.1.0
+      version: 4.1.0
+    gray-matter:
+      specifier: ^4.0.3
+      version: 4.0.3
+    next:
+      specifier: ^15.1.6
+      version: 15.1.6
+    postcss:
+      specifier: ^8.5.1
+      version: 8.5.3
+    react:
+      specifier: ^19.0.0
+      version: 19.0.0
+    react-dom:
+      specifier: ^19.0.0
+      version: 19.0.0
+    remark:
+      specifier: ^15.0.1
+      version: 15.0.1
+    remark-html:
+      specifier: ^16.0.1
+      version: 16.0.1
+    tailwindcss:
+      specifier: ^4.0.4
+      version: 4.0.4
+  prod:
+    '@iconify-json/logos':
+      specifier: ^1.2.4
+      version: 1.2.4
+    '@iconify-json/ph':
+      specifier: ^1.2.2
+      version: 1.2.2
+    astro:
+      specifier: ^5.2.5
+      version: 5.3.0
+    astro-icon:
+      specifier: ^1.1.5
+      version: 1.1.5
+    mdast-util-to-string:
+      specifier: ^4.0.0
+      version: 4.0.0
+    unist-util-visit:
+      specifier: ^5.0.0
+      version: 5.0.0
     zod:
       specifier: ^3.24.1
       version: 3.24.2
@@ -102,49 +149,49 @@ importers:
   .:
     devDependencies:
       '@changesets/changelog-github':
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 0.5.1
       '@changesets/cli':
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 2.28.1
       '@luxass/eslint-config':
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 4.15.0(@eslint-react/eslint-plugin@1.26.1(eslint@9.20.1(jiti@2.4.2))(ts-api-utils@2.0.1(typescript@5.7.3))(typescript@5.7.3))(@typescript-eslint/utils@8.25.0(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3))(@unocss/eslint-plugin@65.5.0(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3))(@vue/compiler-sfc@3.5.13)(astro-eslint-parser@1.2.1)(eslint-plugin-astro@1.3.1(eslint@9.20.1(jiti@2.4.2)))(eslint-plugin-format@1.0.1(eslint@9.20.1(jiti@2.4.2)))(eslint-plugin-react-hooks@5.1.0(eslint@9.20.1(jiti@2.4.2)))(eslint-plugin-react-refresh@0.4.18(eslint@9.20.1(jiti@2.4.2)))(eslint-plugin-tailwindcss@3.18.0(tailwindcss@4.0.4))(eslint@9.20.1(jiti@2.4.2))(prettier-plugin-astro@0.14.1)(typescript@5.7.3)(vitest@3.0.6(@types/debug@4.1.12)(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0))
       '@manypkg/cli':
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 0.23.0
       '@types/node':
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 22.13.5
       eslint:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 9.20.1(jiti@2.4.2)
       tsup:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 8.3.6(jiti@2.4.2)(postcss@8.5.3)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.7.0)
       turbo:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 2.4.2
       typescript:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 5.7.3
       vitest:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 3.0.6(@types/debug@4.1.12)(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0)
 
   examples/minimal-astro:
     dependencies:
       '@astrojs/mdx':
-        specifier: ^4.0.8
+        specifier: catalog:example
         version: 4.0.8(astro@5.3.0(@types/node@22.13.5)(db0@0.2.3(better-sqlite3@11.8.1))(ioredis@5.4.2)(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.8)(terser@5.37.0)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.7.0))
       '@astrojs/rss':
-        specifier: ^4.0.11
+        specifier: catalog:example
         version: 4.0.11
       '@astrojs/sitemap':
-        specifier: ^3.2.1
+        specifier: catalog:example
         version: 3.2.1
       astro:
-        specifier: ^5.2.5
+        specifier: catalog:prod
         version: 5.3.0(@types/node@22.13.5)(db0@0.2.3(better-sqlite3@11.8.1))(ioredis@5.4.2)(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.8)(terser@5.37.0)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.7.0)
       remark-lesetid:
         specifier: workspace:*
@@ -153,71 +200,71 @@ importers:
   examples/nextjs:
     dependencies:
       classnames:
-        specifier: ^2.5.1
+        specifier: catalog:example
         version: 2.5.1
       date-fns:
-        specifier: ^4.1.0
+        specifier: catalog:example
         version: 4.1.0
       gray-matter:
-        specifier: ^4.0.3
+        specifier: catalog:example
         version: 4.0.3
       lesetid:
         specifier: workspace:*
         version: link:../../packages/lesetid
       next:
-        specifier: ^15.1.6
+        specifier: catalog:example
         version: 15.1.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
-        specifier: ^19.0.0
+        specifier: catalog:example
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: catalog:example
         version: 19.0.0(react@19.0.0)
       remark:
-        specifier: ^15.0.1
+        specifier: catalog:example
         version: 15.0.1
       remark-html:
-        specifier: ^16.0.1
+        specifier: catalog:example
         version: 16.0.1
     devDependencies:
       '@tailwindcss/postcss':
-        specifier: ^4.0.4
+        specifier: catalog:example
         version: 4.0.4
       '@types/node':
-        specifier: ^20.14.8
-        version: 20.17.19
+        specifier: catalog:dev
+        version: 22.13.5
       '@types/react':
-        specifier: ^19.0.8
+        specifier: catalog:example
         version: 19.0.8
       '@types/react-dom':
-        specifier: ^19.0.3
+        specifier: catalog:example
         version: 19.0.3(@types/react@19.0.8)
       postcss:
-        specifier: ^8.5.1
+        specifier: catalog:example
         version: 8.5.3
       tailwindcss:
-        specifier: ^4.0.4
+        specifier: catalog:example
         version: 4.0.4
       typescript:
-        specifier: ^5.7.3
+        specifier: catalog:dev
         version: 5.7.3
 
   packages/lesetid:
     devDependencies:
       '@luxass/eslint-config':
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 4.15.0(@eslint-react/eslint-plugin@1.26.1(eslint@9.20.1(jiti@2.4.2))(ts-api-utils@2.0.1(typescript@5.7.3))(typescript@5.7.3))(@typescript-eslint/utils@8.25.0(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3))(@unocss/eslint-plugin@65.5.0(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3))(@vue/compiler-sfc@3.5.13)(astro-eslint-parser@1.2.1)(eslint-plugin-astro@1.3.1(eslint@9.20.1(jiti@2.4.2)))(eslint-plugin-format@1.0.1(eslint@9.20.1(jiti@2.4.2)))(eslint-plugin-react-hooks@5.1.0(eslint@9.20.1(jiti@2.4.2)))(eslint-plugin-react-refresh@0.4.18(eslint@9.20.1(jiti@2.4.2)))(eslint-plugin-tailwindcss@3.18.0(tailwindcss@4.0.4))(eslint@9.20.1(jiti@2.4.2))(prettier-plugin-astro@0.14.1)(typescript@5.7.3)(vitest@3.0.6(@types/debug@4.1.12)(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0))
       '@types/node':
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 22.13.5
       eslint:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 9.20.1(jiti@2.4.2)
       typescript:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 5.7.3
       volapyk:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 1.6.3
 
   packages/remark-lesetid:
@@ -226,96 +273,96 @@ importers:
         specifier: workspace:*
         version: link:../lesetid
       mdast-util-to-string:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 4.0.0
       unist-util-visit:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 5.0.0
     devDependencies:
       '@luxass/eslint-config':
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 4.15.0(@eslint-react/eslint-plugin@1.26.1(eslint@9.20.1(jiti@2.4.2))(ts-api-utils@2.0.1(typescript@5.7.3))(typescript@5.7.3))(@typescript-eslint/utils@8.25.0(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3))(@unocss/eslint-plugin@65.5.0(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3))(@vue/compiler-sfc@3.5.13)(astro-eslint-parser@1.2.1)(eslint-plugin-astro@1.3.1(eslint@9.20.1(jiti@2.4.2)))(eslint-plugin-format@1.0.1(eslint@9.20.1(jiti@2.4.2)))(eslint-plugin-react-hooks@5.1.0(eslint@9.20.1(jiti@2.4.2)))(eslint-plugin-react-refresh@0.4.18(eslint@9.20.1(jiti@2.4.2)))(eslint-plugin-tailwindcss@3.18.0(tailwindcss@4.0.4))(eslint@9.20.1(jiti@2.4.2))(prettier-plugin-astro@0.14.1)(typescript@5.7.3)(vitest@3.0.6(@types/debug@4.1.12)(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0))
       '@types/mdast':
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 4.0.4
       '@types/node':
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 22.13.5
       eslint:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 9.20.1(jiti@2.4.2)
       remark:
-        specifier: 'catalog:'
+        specifier: catalog:example
         version: 15.0.1
       typescript:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 5.7.3
       unified:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 11.0.5
       vfile:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 6.0.3
       volapyk:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 1.6.3
 
   www:
     dependencies:
+      '@iconify-json/logos':
+        specifier: catalog:prod
+        version: 1.2.4
+      '@iconify-json/ph':
+        specifier: catalog:prod
+        version: 1.2.2
+      astro:
+        specifier: catalog:prod
+        version: 5.3.0(@types/node@22.13.5)(db0@0.2.3(better-sqlite3@11.8.1))(ioredis@5.4.2)(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.8)(terser@5.37.0)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.7.0)
+      astro-icon:
+        specifier: catalog:prod
+        version: 1.1.5
       lesetid:
         specifier: workspace:*
         version: link:../packages/lesetid
       zod:
-        specifier: 'catalog:'
+        specifier: catalog:prod
         version: 3.24.2
     devDependencies:
       '@astrojs/check':
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.4.2)(typescript@5.7.3)
-      '@iconify-json/logos':
-        specifier: 'catalog:'
-        version: 1.2.4
-      '@iconify-json/ph':
-        specifier: 'catalog:'
-        version: 1.2.2
       '@luxass/eslint-config':
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 4.15.0(@eslint-react/eslint-plugin@1.26.1(eslint@9.20.1(jiti@2.4.2))(ts-api-utils@2.0.1(typescript@5.7.3))(typescript@5.7.3))(@typescript-eslint/utils@8.25.0(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3))(@unocss/eslint-plugin@65.5.0(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3))(@vue/compiler-sfc@3.5.13)(astro-eslint-parser@1.2.1)(eslint-plugin-astro@1.3.1(eslint@9.20.1(jiti@2.4.2)))(eslint-plugin-format@1.0.1(eslint@9.20.1(jiti@2.4.2)))(eslint-plugin-react-hooks@5.1.0(eslint@9.20.1(jiti@2.4.2)))(eslint-plugin-react-refresh@0.4.18(eslint@9.20.1(jiti@2.4.2)))(eslint-plugin-tailwindcss@3.18.0(tailwindcss@4.0.4))(eslint@9.20.1(jiti@2.4.2))(prettier-plugin-astro@0.14.1)(typescript@5.7.3)(vitest@3.0.6(@types/debug@4.1.12)(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0))
       '@types/node':
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 22.13.5
       '@unocss/eslint-plugin':
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 65.5.0(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3)
       '@unocss/reset':
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 65.5.0
-      astro:
-        specifier: 'catalog:'
-        version: 5.2.5(@types/node@22.13.5)(db0@0.2.3(better-sqlite3@11.8.1))(ioredis@5.4.2)(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.8)(terser@5.37.0)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.7.0)
       astro-eslint-parser:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 1.2.1
-      astro-icon:
-        specifier: 'catalog:'
-        version: 1.1.5
       eslint:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 9.20.1(jiti@2.4.2)
       eslint-plugin-astro:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 1.3.1(eslint@9.20.1(jiti@2.4.2))
       eslint-plugin-format:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 1.0.1(eslint@9.20.1(jiti@2.4.2))
       prettier-plugin-astro:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 0.14.1
       typescript:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 5.7.3
       unocss:
-        specifier: 'catalog:'
+        specifier: catalog:dev
         version: 65.5.0(postcss@8.5.3)(vite@6.2.0(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3))
 
 packages:
@@ -1627,9 +1674,6 @@ packages:
   '@types/node@17.0.45':
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
 
-  '@types/node@20.17.19':
-    resolution: {integrity: sha512-LEwC7o1ifqg/6r2gn9Dns0f1rhK+fPFDoMiceTJ6kWmVk6bgXBI/9IOWfVan4WiAavK9pIVWdX0/e3J+eEUh5A==}
-
   '@types/node@22.13.5':
     resolution: {integrity: sha512-+lTU0PxZXn0Dr1NBtC7Y8cR21AJr87dLLU953CWA6pMxxv/UDc7jYAY90upcrie1nRcD6XNG5HOYEDtgW5TxAg==}
 
@@ -2006,11 +2050,6 @@ packages:
 
   astro-icon@1.1.5:
     resolution: {integrity: sha512-CJYS5nWOw9jz4RpGWmzNQY7D0y2ZZacH7atL2K9DeJXJVaz7/5WrxeyIxO8KASk1jCM96Q4LjRx/F3R+InjJrw==}
-
-  astro@5.2.5:
-    resolution: {integrity: sha512-AYXyYkc+c5xbKTm48FyQA91y81nXyNPAaoyafR0LUugE4lAwuvIUcXDBfMzmbuP1lGRvsE33G2oypv6gbGaPFg==}
-    engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
-    hasBin: true
 
   astro@5.3.0:
     resolution: {integrity: sha512-e88l/Yk/6enR/ZDddLbqtM+oblBFk5mneNSmNesyVYGL/6Dj4UA67GPAZOk79VxT5dbLlclZSyyw/wlxN1aj3A==}
@@ -4761,9 +4800,6 @@ packages:
   uncrypto@0.1.3:
     resolution: {integrity: sha512-Ql87qFHB3s/De2ClA9e0gsnS6zXG27SkTiSJwjCc9MebbfapQfuPzumMIUMi38ezPZVNFcHI9sUIepeQfw8J8Q==}
 
-  undici-types@6.19.8:
-    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
-
   undici-types@6.20.0:
     resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
 
@@ -6586,10 +6622,6 @@ snapshots:
 
   '@types/node@17.0.45': {}
 
-  '@types/node@20.17.19':
-    dependencies:
-      undici-types: 6.19.8
-
   '@types/node@22.13.5':
     dependencies:
       undici-types: 6.20.0
@@ -6606,11 +6638,11 @@ snapshots:
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 20.17.19
+      '@types/node': 22.13.5
 
   '@types/tar@6.1.13':
     dependencies:
-      '@types/node': 20.17.19
+      '@types/node': 22.13.5
       minipass: 4.2.8
 
   '@types/unist@2.0.11': {}
@@ -6619,7 +6651,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 20.17.19
+      '@types/node': 22.13.5
     optional: true
 
   '@typescript-eslint/eslint-plugin@8.21.0(@typescript-eslint/parser@8.21.0(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3))(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3)':
@@ -7145,103 +7177,6 @@ snapshots:
     transitivePeerDependencies:
       - debug
       - supports-color
-
-  astro@5.2.5(@types/node@22.13.5)(db0@0.2.3(better-sqlite3@11.8.1))(ioredis@5.4.2)(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.8)(terser@5.37.0)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.7.0):
-    dependencies:
-      '@astrojs/compiler': 2.10.4
-      '@astrojs/internal-helpers': 0.5.1
-      '@astrojs/markdown-remark': 6.1.0
-      '@astrojs/telemetry': 3.2.0
-      '@oslojs/encoding': 1.1.0
-      '@rollup/pluginutils': 5.1.4(rollup@4.34.8)
-      '@types/cookie': 0.6.0
-      acorn: 8.14.0
-      aria-query: 5.3.2
-      axobject-query: 4.1.0
-      boxen: 8.0.1
-      ci-info: 4.1.0
-      clsx: 2.1.1
-      common-ancestor-path: 1.0.1
-      cookie: 0.7.2
-      cssesc: 3.0.0
-      debug: 4.4.0
-      deterministic-object-hash: 2.0.2
-      devalue: 5.1.1
-      diff: 5.2.0
-      dlv: 1.1.3
-      dset: 3.1.4
-      es-module-lexer: 1.6.0
-      esbuild: 0.24.2
-      estree-walker: 3.0.3
-      fast-glob: 3.3.3
-      flattie: 1.1.1
-      github-slugger: 2.0.0
-      html-escaper: 3.0.3
-      http-cache-semantics: 4.1.1
-      js-yaml: 4.1.0
-      kleur: 4.1.5
-      magic-string: 0.30.17
-      magicast: 0.3.5
-      micromatch: 4.0.8
-      mrmime: 2.0.1
-      neotraverse: 0.6.18
-      p-limit: 6.2.0
-      p-queue: 8.1.0
-      preferred-pm: 4.1.1
-      prompts: 2.4.2
-      rehype: 13.0.2
-      semver: 7.7.1
-      shiki: 1.29.2
-      tinyexec: 0.3.2
-      tsconfck: 3.1.5(typescript@5.7.3)
-      ultrahtml: 1.5.3
-      unist-util-visit: 5.0.0
-      unstorage: 1.15.0(db0@0.2.3(better-sqlite3@11.8.1))(ioredis@5.4.2)
-      vfile: 6.0.3
-      vite: 6.2.0(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0)
-      vitefu: 1.0.6(vite@6.2.0(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.37.0)(tsx@4.19.2)(yaml@2.7.0))
-      which-pm: 3.0.1
-      xxhash-wasm: 1.1.0
-      yargs-parser: 21.1.1
-      yocto-spinner: 0.2.0
-      zod: 3.24.2
-      zod-to-json-schema: 3.24.3(zod@3.24.2)
-      zod-to-ts: 1.2.0(typescript@5.7.3)(zod@3.24.2)
-    optionalDependencies:
-      sharp: 0.33.5
-    transitivePeerDependencies:
-      - '@azure/app-configuration'
-      - '@azure/cosmos'
-      - '@azure/data-tables'
-      - '@azure/identity'
-      - '@azure/keyvault-secrets'
-      - '@azure/storage-blob'
-      - '@capacitor/preferences'
-      - '@deno/kv'
-      - '@netlify/blobs'
-      - '@planetscale/database'
-      - '@types/node'
-      - '@upstash/redis'
-      - '@vercel/blob'
-      - '@vercel/kv'
-      - aws4fetch
-      - db0
-      - idb-keyval
-      - ioredis
-      - jiti
-      - less
-      - lightningcss
-      - rollup
-      - sass
-      - sass-embedded
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
-      - tsx
-      - typescript
-      - uploadthing
-      - yaml
 
   astro@5.3.0(@types/node@22.13.5)(db0@0.2.3(better-sqlite3@11.8.1))(ioredis@5.4.2)(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.8)(terser@5.37.0)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.7.0):
     dependencies:
@@ -10713,8 +10648,6 @@ snapshots:
       jiti: 2.4.2
 
   uncrypto@0.1.3: {}
-
-  undici-types@6.19.8: {}
 
   undici-types@6.20.0: {}
 

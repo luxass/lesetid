@@ -38,20 +38,15 @@
     "clean": "turbo run clean && git clean -xdf node_modules"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "catalog:",
-    "@changesets/cli": "catalog:",
-    "@luxass/eslint-config": "catalog:",
-    "@manypkg/cli": "catalog:",
-    "@types/node": "catalog:",
-    "eslint": "catalog:",
-    "tsup": "catalog:",
-    "turbo": "catalog:",
-    "typescript": "catalog:",
-    "vitest": "catalog:"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ]
+    "@changesets/changelog-github": "catalog:dev",
+    "@changesets/cli": "catalog:dev",
+    "@luxass/eslint-config": "catalog:dev",
+    "@manypkg/cli": "catalog:dev",
+    "@types/node": "catalog:dev",
+    "eslint": "catalog:dev",
+    "tsup": "catalog:dev",
+    "turbo": "catalog:dev",
+    "typescript": "catalog:dev",
+    "vitest": "catalog:dev"
   }
 }

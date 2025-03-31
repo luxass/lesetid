@@ -2,35 +2,56 @@ packages:
   - www
   - packages/*
   - examples/*
-catalog:
-  "@astrojs/check": ^0.9.4
-  "@changesets/changelog-github": ^0.5.0
-  "@changesets/cli": ^2.27.12
-  "@iconify-json/logos": ^1.2.4
-  "@iconify-json/ph": ^1.2.2
-  "@luxass/eslint-config": ^4.15.0
-  "@manypkg/cli": ^0.23.0
-  "@types/mdast": ^4.0.4
-  "@types/node": ^22.0.0
-  "@unocss/eslint-plugin": ^65.4.3
-  "@unocss/reset": ^65.4.3
-  astro: ^5.2.5
-  astro-eslint-parser: ^1.2.1
-  astro-icon: ^1.1.5
-  eslint: ^9.20.0
-  eslint-plugin-astro: ^1.3.1
-  eslint-plugin-format: ^1.0.1
-  hastscript: ^9.0.0
-  mdast-util-to-string: ^4.0.0
-  prettier-plugin-astro: ^0.14.1
-  tsup: ^8.3.6
-  turbo: ^2.4.0
-  remark: ^15.0.1
-  typescript: ^5.7.3
-  unified: ^11.0.5
-  unist-util-visit: ^5.0.0
-  unocss: ^65.4.3
-  vfile: 6.0.3
-  vitest: ^3.0.5
-  volapyk: ^1.6.3
-  zod: ^3.24.1
+catalogs:
+  prod:
+    "@iconify-json/logos": ^1.2.4
+    "@iconify-json/ph": ^1.2.2
+    "astro": ^5.2.5
+    "astro-icon": ^1.1.5
+    "hastscript": ^9.0.0
+    "mdast-util-to-string": ^4.0.0
+    "unist-util-visit": ^5.0.0
+    "zod": ^3.24.1
+  dev:
+    "unified": ^11.0.5
+    "vfile": 6.0.3
+    "@astrojs/check": ^0.9.4
+    "@changesets/changelog-github": ^0.5.0
+    "@changesets/cli": ^2.27.12
+    "@luxass/eslint-config": ^4.15.0
+    "@manypkg/cli": ^0.23.0
+    "@types/mdast": ^4.0.4
+    "@types/node": ^22.0.0
+    "@unocss/eslint-plugin": ^65.4.3
+    "@unocss/reset": ^65.4.3
+    "astro-eslint-parser": ^1.2.1
+    "eslint": ^9.20.0
+    "eslint-plugin-astro": ^1.3.1
+    "eslint-plugin-format": ^1.0.1
+    "prettier-plugin-astro": ^0.14.1
+    "tsup": ^8.3.6
+    "turbo": ^2.4.0
+    "typescript": ^5.7.3
+    "unocss": ^65.4.3
+    "vitest": ^3.0.5
+    "volapyk": ^1.6.3
+  example:
+    "classnames": ^2.5.1
+    "date-fns": ^4.1.0
+    "gray-matter": ^4.0.3
+    "next": ^15.1.6
+    "react": ^19.0.0
+    "react-dom": ^19.0.0
+    "remark-html": ^16.0.1
+    "remark": ^15.0.1
+    "@tailwindcss/postcss": ^4.0.4
+    "@types/react": ^19.0.8
+    "@types/react-dom": ^19.0.3
+    "postcss": ^8.5.1
+    "tailwindcss": ^4.0.4
+    "@astrojs/mdx": ^4.0.8
+    "@astrojs/rss": ^4.0.11
+    "@astrojs/sitemap": ^3.2.1
+
+onlyBuiltDependencies:
+  - esbuild

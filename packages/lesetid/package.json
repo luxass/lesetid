@@ -80,10 +80,10 @@
     "clean": "git clean -xdf dist node_modules .turbo"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "catalog:",
-    "@types/node": "catalog:",
-    "eslint": "catalog:",
-    "typescript": "catalog:",
-    "volapyk": "catalog:"
+    "@luxass/eslint-config": "catalog:dev",
+    "@types/node": "catalog:dev",
+    "eslint": "catalog:dev",
+    "typescript": "catalog:dev",
+    "volapyk": "catalog:dev"
   }
 }
