@@ -22,7 +22,7 @@ catalogs:
     "@manypkg/cli": ^0.23.0
     "@types/mdast": ^4.0.4
     "@types/node": ^22.0.0
-    "@unocss/eslint-plugin": ^65.4.3
+    "@unocss/eslint-plugin": ^66.0.0
     "@unocss/reset": ^65.4.3
     "astro-eslint-parser": ^1.2.1
     "eslint": ^9.20.0
