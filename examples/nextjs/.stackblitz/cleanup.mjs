@@ -11,14 +11,13 @@ const catalogMatch = pnpmWorkspace.match(/catalogs:\s*([\s\S]*?)(?=\n\w|$)/);
 if (catalogMatch) {
   const catalogContent = catalogMatch[1];
   let currentCatalog = null;
-
   catalogContent.split('\n').forEach(line => {
-    const catalogNameMatch = line.match(/^(\w+):$/);
+    const catalogNameMatch = line.match(/^\s*(\w+):$/);
     if (catalogNameMatch) {
       currentCatalog = catalogNameMatch[1];
       catalogs[currentCatalog] = {};
     } else if (currentCatalog && line.trim()) {
-      const [packageName, version] = line.trim().split(': ');
+      const [packageName, version] = line.trim().replace(/"/g, "").split(': ');
       if (packageName && version) {
         catalogs[currentCatalog][packageName] = version;
       }
@@ -40,8 +39,7 @@ function updateDependencyLinksToLatest(filename) {
     contents = contents.replace(/"catalog:(\w+)"/gi, (match, catalogName) => {
       const catalog = catalogs[catalogName];
       if (!catalog) {
-        console.warn(`Warning: Catalog "${catalogName}" not found in workspace file`);
-        return match;
+        throw new Error(`Catalog "${catalogName}" not found in workspace file`);
       }
 
       // Find the package name in the current line
@@ -56,8 +54,7 @@ function updateDependencyLinksToLatest(filename) {
       const version = catalog[packageName];
 
       if (!version) {
-        console.warn(`Warning: Package "${packageName}" not found in catalog "${catalogName}"`);
-        return match;
+        throw new Error(`Package "${packageName}" not found in catalog "${catalogName}"`);
       }
 
       return `"${version}"`;
