@@ -1,7 +1,8 @@
+import type { Options } from "../src";
 import { remark } from "remark";
 import { expect, it } from "vitest";
 import { createVolapyk } from "volapyk";
-import remarkLesetid, { type Options } from "../src";
+import remarkLesetid from "../src";
 
 async function runRemark(input: string, options: Options) {
   return remark().use(remarkLesetid, options).process(input);
