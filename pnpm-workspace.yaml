@@ -19,7 +19,7 @@ catalogs:
     "@changesets/changelog-github": ^0.5.1
     "@changesets/cli": ^2.28.1
     "@luxass/eslint-config": ^4.18.1
-    "@manypkg/cli": ^0.23.0
+    "@manypkg/cli": ^0.24.0
     "@types/mdast": ^4.0.4
     "@types/node": ^22.0.0
     "@unocss/eslint-plugin": ^66.0.0
