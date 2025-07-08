@@ -4,10 +4,22 @@ import type { Options } from "./";
 import { Transform } from "node:stream";
 import { count, DEFAULT_OPTIONS } from "./";
 
-export function createReadingTimeStream(options: Options = DEFAULT_OPTIONS) {
+/**
+ * Creates a new reading time stream transform that calculates reading statistics.
+ *
+ * @param {Options} options - Configuration options for reading time calculation
+ * @returns {ReadingTimeStream} A new ReadingTimeStream instance
+ */
+export function createReadingTimeStream(options: Options = DEFAULT_OPTIONS): ReadingTimeStream {
   return new ReadingTimeStream(options);
 }
 
+/**
+ * A Transform stream that calculates reading time statistics from text data.
+ *
+ * This stream processes text chunks and accumulates word and character counts,
+ * then outputs the final reading statistics when the stream ends.
+ */
 export class ReadingTimeStream extends Transform {
   private reading = {
     words: 0,
