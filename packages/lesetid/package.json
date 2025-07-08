@@ -8,7 +8,7 @@
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@10.11.1",
+  "packageManager": "pnpm@10.12.4",
   "license": "MIT",
   "homepage": "https://github.com/luxass/lesetid",
   "repository": {
@@ -80,10 +80,10 @@
     "clean": "git clean -xdf dist node_modules .turbo"
   },
   "devDependencies": {
-    "@luxass/eslint-config": "catalog:dev",
-    "@types/node": "catalog:dev",
-    "eslint": "catalog:dev",
-    "typescript": "catalog:dev",
-    "volapyk": "catalog:dev"
+    "@luxass/eslint-config": "catalog:linting",
+    "@types/node": "catalog:lesetid",
+    "eslint": "catalog:linting",
+    "typescript": "catalog:monorepo",
+    "volapyk": "catalog:monorepo"
   }
 }

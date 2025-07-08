@@ -9,7 +9,7 @@
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@10.11.1",
+  "packageManager": "pnpm@10.12.4",
   "license": "MIT",
   "homepage": "https://github.com/luxass/lesetid",
   "repository": {
@@ -31,22 +31,21 @@
     "dev:all": "turbo run dev",
     "dev": "turbo run dev --filter=\"./packages/*\"",
     "dev:examples": "turbo run dev --filter=\"@lesetid-example/*\"",
-    "lint": "turbo run lint && manypkg check",
+    "lint": "turbo run lint",
     "test": "turbo run test",
     "test:watch": "turbo run test:watch",
     "typecheck": "turbo run typecheck",
     "clean": "turbo run clean && git clean -xdf node_modules"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "catalog:dev",
-    "@changesets/cli": "catalog:dev",
-    "@luxass/eslint-config": "catalog:dev",
-    "@manypkg/cli": "catalog:dev",
-    "@types/node": "catalog:dev",
-    "eslint": "catalog:dev",
-    "tsup": "catalog:dev",
-    "turbo": "catalog:dev",
-    "typescript": "catalog:dev",
-    "vitest": "catalog:dev"
+    "@changesets/changelog-github": "catalog:monorepo",
+    "@changesets/cli": "catalog:monorepo",
+    "@luxass/eslint-config": "catalog:linting",
+    "@types/node": "catalog:lesetid",
+    "eslint": "catalog:linting",
+    "tsup": "catalog:monorepo",
+    "turbo": "catalog:monorepo",
+    "typescript": "catalog:monorepo",
+    "vitest": "catalog:monorepo"
   }
 }

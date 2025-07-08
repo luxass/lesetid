@@ -1,4 +1,5 @@
 // @ts-check
+import cloudflare from "@astrojs/cloudflare";
 import icon from "astro-icon";
 import { defineConfig } from "astro/config";
 import unocss from "unocss/astro";
@@ -16,4 +17,9 @@ export default defineConfig({
       },
     }),
   ],
+  adapter: cloudflare({
+    platformProxy: {
+      enabled: true,
+    },
+  }),
 });

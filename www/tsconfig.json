@@ -4,7 +4,11 @@
     "paths": {
       "lesetid": ["../packages/lesetid/src/index.ts"],
       "lesetid/*": ["../packages/lesetid/src/*"]
-    }
+    },
+    "types": [
+      "./worker-configuration.d.ts",
+      "node"
+    ]
   },
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist"]

@@ -1,6 +1,14 @@
 import type { WordFN } from "./types";
 
-function isCharCodeIntersected(code: number, start: number, end: number) {
+/**
+ * Checks if a character code falls within a specified range (inclusive).
+ *
+ * @param {number} code - The character code to check.
+ * @param {number} start - The start of the range (inclusive).
+ * @param {number} end - The end of the range (inclusive).
+ * @returns {boolean} - true if the character code is within the range, false otherwise.
+ */
+function isCharCodeIntersected(code: number, start: number, end: number): boolean {
   return code >= start && code <= end;
 }
 
