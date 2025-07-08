@@ -20,5 +20,11 @@
   },
   "placement": {
     "mode": "smart"
-  }
+  },
+  "routes": [
+    {
+      "custom_domain": true,
+      "pattern": "lesetid.dev"
+    }
+  ]
 }
