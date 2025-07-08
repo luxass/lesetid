@@ -22,5 +22,6 @@ export default defineConfig({
       enabled: true,
       configPath: "./wrangler.jsonc",
     },
+    imageService: "cloudflare",
   }),
 });
