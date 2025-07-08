@@ -25,6 +25,14 @@
     {
       "custom_domain": true,
       "pattern": "lesetid.dev"
+    },
+    {
+      "custom_domain": true,
+      "pattern": "examples.lesetid.dev"
+    },
+    {
+      "custom_domain": true,
+      "pattern": "www.lesetid.dev"
     }
   ]
 }
