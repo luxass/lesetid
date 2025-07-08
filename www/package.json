@@ -10,7 +10,8 @@
     "astro": "astro",
     "lint": "eslint .",
     "clean": "git clean -xdf dist node_modules .astro",
-    "typecheck": "astro-check"
+    "typecheck": "astro-check",
+    "cf-typegen": "wrangler types"
   },
   "dependencies": {
     "@iconify-json/logos": "catalog:www",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "catalog:www",
+    "@astrojs/cloudflare": "catalog:www",
     "@luxass/eslint-config": "catalog:linting",
     "@types/node": "catalog:lesetid",
     "@unocss/eslint-plugin": "catalog:linting",
@@ -32,6 +34,7 @@
     "eslint-plugin-format": "catalog:linting",
     "prettier-plugin-astro": "catalog:linting",
     "typescript": "catalog:monorepo",
-    "unocss": "catalog:www"
+    "unocss": "catalog:www",
+    "wrangler": "catalog:www"
   }
 }

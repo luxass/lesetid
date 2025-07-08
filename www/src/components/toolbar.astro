@@ -23,7 +23,7 @@ const texts = await getTexts();
 <script id="texts" data-texts={JSON.stringify(texts)}></script>
 
 <script>
-  const textSelect = document.getElementById("text-select") as HTMLSelectElement;
+  const textSelect = document.getElementById("text-select") as unknown as HTMLSelectElement;
 
   const textarea = document.querySelector("textarea") as HTMLTextAreaElement;
 

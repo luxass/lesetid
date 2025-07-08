@@ -51,6 +51,8 @@ catalogs:
     "@astrojs/mdx": ^4.3.0
     "@astrojs/rss": ^4.0.12
     "@astrojs/sitemap": ^3.4.1
+    "@astrojs/cloudflare": ^12.6.0
+    wrangler: ^4.24.0
 
   example:
     "classnames": ^2.5.1
