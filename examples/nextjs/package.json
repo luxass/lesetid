@@ -21,12 +21,12 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "catalog:example",
-    "@types/node": "catalog:dev",
+    "@types/node": "catalog:lesetid",
     "@types/react": "catalog:example",
     "@types/react-dom": "catalog:example",
     "postcss": "catalog:example",
     "tailwindcss": "catalog:example",
-    "typescript": "catalog:dev"
+    "typescript": "catalog:monorepo"
   },
   "stackblitz": {
     "installDependencies": false,

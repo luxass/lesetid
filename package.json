@@ -38,14 +38,14 @@
     "clean": "turbo run clean && git clean -xdf node_modules"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "catalog:dev",
-    "@changesets/cli": "catalog:dev",
-    "@luxass/eslint-config": "catalog:dev",
-    "@types/node": "catalog:dev",
-    "eslint": "catalog:dev",
-    "tsup": "catalog:dev",
-    "turbo": "catalog:dev",
-    "typescript": "catalog:dev",
-    "vitest": "catalog:dev"
+    "@changesets/changelog-github": "catalog:monorepo",
+    "@changesets/cli": "catalog:monorepo",
+    "@luxass/eslint-config": "catalog:linting",
+    "@types/node": "catalog:lesetid",
+    "eslint": "catalog:linting",
+    "tsup": "catalog:monorepo",
+    "turbo": "catalog:monorepo",
+    "typescript": "catalog:monorepo",
+    "vitest": "catalog:monorepo"
   }
 }

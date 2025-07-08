@@ -11,10 +11,10 @@
     "typecheck": "astro check"
   },
   "dependencies": {
-    "@astrojs/mdx": "catalog:example",
-    "@astrojs/rss": "catalog:example",
-    "@astrojs/sitemap": "catalog:example",
-    "astro": "catalog:prod",
+    "@astrojs/mdx": "catalog:www",
+    "@astrojs/rss": "catalog:www",
+    "@astrojs/sitemap": "catalog:www",
+    "astro": "catalog:www",
     "remark-lesetid": "workspace:*"
   },
   "stackblitz": {
