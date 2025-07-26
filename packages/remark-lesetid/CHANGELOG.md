@@ -1,5 +1,20 @@
 # remark-lesetid
 
+## 2.0.0
+
+### Major Changes
+
+- [`2f69532`](https://github.com/luxass/lesetid/commit/2f69532e01ce7010858c8f97658e982c448e2b73) Thanks [@luxass](https://github.com/luxass)! - feat!: drop support for node 18
+
+### Patch Changes
+
+- [`4818dfd`](https://github.com/luxass/lesetid/commit/4818dfdedcfc21ce08bac8018697144aa144f42f) Thanks [@luxass](https://github.com/luxass)! - chore: update dependecies
+
+- [`3284141`](https://github.com/luxass/lesetid/commit/3284141feaa63f76856e8eb053c6f23f89006890) Thanks [@luxass](https://github.com/luxass)! - feat: switch to tsdown
+
+- Updated dependencies [[`4818dfd`](https://github.com/luxass/lesetid/commit/4818dfdedcfc21ce08bac8018697144aa144f42f), [`2f69532`](https://github.com/luxass/lesetid/commit/2f69532e01ce7010858c8f97658e982c448e2b73), [`3284141`](https://github.com/luxass/lesetid/commit/3284141feaa63f76856e8eb053c6f23f89006890)]:
+  - lesetid@2.0.0
+
 ## 1.4.0
 
 ### Minor Changes
