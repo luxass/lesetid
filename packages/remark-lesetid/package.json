@@ -43,13 +43,13 @@
     "dist"
   ],
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch",
     "test": "vitest run",
-    "lint": "eslint . --report-unused-disable-directives",
+    "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "clean": "git clean -xdf dist node_modules .turbo"
   },
