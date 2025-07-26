@@ -43,7 +43,6 @@
     "@luxass/eslint-config": "catalog:linting",
     "@types/node": "catalog:lesetid",
     "eslint": "catalog:linting",
-    "tsup": "catalog:monorepo",
     "turbo": "catalog:monorepo",
     "typescript": "catalog:monorepo",
     "vitest": "catalog:monorepo"

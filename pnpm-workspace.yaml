@@ -15,11 +15,12 @@ catalogs:
   monorepo:
     "@changesets/changelog-github": ^0.5.1
     "@changesets/cli": ^2.29.5
-    "tsup": ^8.5.0
-    "turbo": ^2.5.5
-    "typescript": ^5.8.3
-    "vitest": ^3.2.4
-    "volapyk": ^1.6.3
+    tsdown: ^0.13.0
+    turbo: ^2.5.5
+    typescript: ^5.8.3
+    vitest: ^3.2.4
+    volapyk: ^1.6.3
+    publint: ^0.3.12
 
   lesetid:
     "hastscript": ^9.0.1

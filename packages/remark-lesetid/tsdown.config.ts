@@ -1,4 +1,4 @@
-import { defineConfig } from "tsup";
+import { defineConfig } from "tsdown";
 
 export default defineConfig({
   entry: ["./src/index.ts", "./src/astro.ts"],
@@ -6,11 +6,18 @@ export default defineConfig({
   clean: true,
   dts: true,
   treeshake: true,
-  bundle: true,
-  outExtension(ctx) {
-    return {
-      js: ctx.format === "cjs" ? ".cjs" : ".mjs",
-    };
+  exports: true,
+  publint: true,
+  footer(ctx) {
+    if (ctx.format === "cjs") {
+      return {
+        // This will ensure we can continue writing this plugin
+        // as a modern ECMA module, while still publishing this as a CommonJS
+        // library with a default export, as that's how ESLint expects plugins to look.
+        // @see https://github.com/evanw/esbuild/issues/1182#issuecomment-1011414271
+        js: "module.exports = module.exports.default;",
+      };
+    }
   },
   esbuildOptions: (options) => {
     if (options.format === "cjs") {

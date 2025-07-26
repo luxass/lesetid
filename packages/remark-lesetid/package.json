@@ -27,30 +27,18 @@
   ],
   "exports": {
     ".": {
-      "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.mjs"
-      },
-      "require": {
-        "types": "./dist/index.d.cts",
-        "default": "./dist/index.cjs"
-      }
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     },
     "./astro": {
-      "import": {
-        "types": "./dist/astro.d.ts",
-        "default": "./dist/astro.mjs"
-      },
-      "require": {
-        "types": "./dist/astro.d.cts",
-        "default": "./dist/astro.cjs"
-      }
+      "import": "./dist/astro.js",
+      "require": "./dist/astro.cjs"
     },
     "./package.json": "./package.json"
   },
   "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.cts",
   "files": [
     "dist"
   ],
@@ -58,8 +46,8 @@
     "node": ">=18"
   },
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
     "test": "vitest run",
     "lint": "eslint . --report-unused-disable-directives",
     "typecheck": "tsc --noEmit",
@@ -75,7 +63,9 @@
     "@types/mdast": "catalog:remark-lesetid",
     "@types/node": "catalog:remark-lesetid",
     "eslint": "catalog:linting",
+    "publint": "catalog:monorepo",
     "remark": "catalog:example",
+    "tsdown": "catalog:monorepo",
     "typescript": "catalog:monorepo",
     "unified": "catalog:remark-lesetid",
     "vfile": "catalog:remark-lesetid",
