@@ -41,15 +41,11 @@ jobs:
         run: pnpm typecheck
 
   test:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
         node: [20, 22]
-        os:
-          - ubuntu-latest
-          - macos-latest
-          - windows-latest
       fail-fast: false
 
     steps:

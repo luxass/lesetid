@@ -1,62 +1,40 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "tasks": {
-    "topo": {
-      "dependsOn": [
-        "^topo"
-      ]
+     "topo": {
+      "dependsOn": ["^topo"]
     },
     "build": {
+      "dependsOn": ["^build"],
       "outputs": [
-        "dist/**",
-        ".nuxt/dist/**",
-        ".output/**",
-        ".next/**",
-        "!.next/cache/**",
-        ".vercel/**"
-      ],
-      "dependsOn": [
-        "^build"
+        "dist/**"
       ]
     },
-    "clean": {
-      "cache": false
+    "lint": {
+      "dependsOn": ["^topo", "^build"],
+      "outputs": []
     },
     "dev": {
       "cache": false,
       "persistent": true
     },
-    "lint": {
-      "dependsOn": [
-        "^topo",
-        "^build"
-      ],
-      "outputs": [
-        "node_modules/.cache/.eslintcache"
-      ]
-    },
-    "test": {
-      "outputs": [],
-      "dependsOn": [
-        "build"
-      ]
-    },
-    "test:watch": {
+    "clean": {
       "cache": false
     },
     "typecheck": {
-      "dependsOn": [
-        "^topo",
-        "^build"
-      ],
-      "outputs": [
-        "node_modules/.cache/tsbuildinfo.json"
-      ]
+      "dependsOn": ["^topo", "^build"]
+    },
+    "//#test": {
+      "dependsOn": []
+    },
+    "test": {
+      "cache": false,
+      "dependsOn": []
     }
   },
   "globalPassThroughEnv": [
+    "NODE",
     "NODE_ENV",
-    "CI",
-    "npm_lifecycle_event"
+    "CI"
   ]
 }

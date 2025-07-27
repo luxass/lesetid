@@ -17,6 +17,7 @@ export default defineConfig({
       },
     }),
   ],
+  trailingSlash: "never",
   adapter: cloudflare({
     platformProxy: {
       enabled: true,
