@@ -1,4 +1,5 @@
 {
   "extends": "@lesetid/tsconfig/base.build",
-  "include": ["src/**/*", "*.ts", "test"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["test"]
 }
