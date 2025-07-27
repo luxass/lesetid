@@ -1,4 +1,5 @@
 import { existsSync, readdirSync } from "node:fs";
+import { normalize } from "node:path";
 import { defineConfig, type TestProjectConfiguration } from "vitest/config";
 
 const pkgRoot = (pkg: string) =>
@@ -8,8 +9,8 @@ const alias = (pkg: string) => `${pkgRoot(pkg)}/src`;
 const dirUrl = new URL("./packages", import.meta.url).pathname
 console.error("Packages directory:", dirUrl);
 
-const aliases = readdirSync(dirUrl)
-  .filter((dir) => existsSync(pkgRoot(dir) + "/package.json"))
+const aliases = readdirSync(normalize(dirUrl))
+  .filter((dir) => existsSync(normalize(pkgRoot(dir) + "/package.json")))
   .reduce<Record<string, string>>(
     (acc, pkg) => {
       acc[pkg] = alias(pkg);
@@ -18,7 +19,7 @@ const aliases = readdirSync(dirUrl)
     {});
 
 const packageProjects = readdirSync(dirUrl)
-  .filter((dir) => existsSync(pkgRoot(dir) + "/package.json"))
+  .filter((dir) => existsSync(normalize(pkgRoot(dir) + "/package.json")))
   .map((dir) => {
     return {
       extends: true,
