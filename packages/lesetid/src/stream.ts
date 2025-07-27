@@ -26,7 +26,9 @@ export class ReadingTimeStream extends Transform {
     chars: 0,
   };
 
-  constructor(private options: Options = DEFAULT_OPTIONS) {
+  private options: Options;
+
+  constructor(options: Options = DEFAULT_OPTIONS) {
     super({
       objectMode: true,
     });
