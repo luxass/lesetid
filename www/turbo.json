@@ -10,7 +10,7 @@
       ]
     },
     "dev": {
-      "persistent": false
+      "persistent": true
     },
     "typecheck": {
       "outputs": [".cache/tsbuildinfo.json"]

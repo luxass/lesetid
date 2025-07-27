@@ -6,7 +6,7 @@
       "outputs": ["dist/**"]
     },
     "dev": {
-      "persistent": false
+      "persistent": true
     },
     "typecheck": {
       "outputs": [".cache/tsbuildinfo.json"]
