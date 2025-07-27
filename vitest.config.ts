@@ -5,7 +5,10 @@ const pkgRoot = (pkg: string) =>
   new URL(`./packages/${pkg}`, import.meta.url).pathname;
 const alias = (pkg: string) => `${pkgRoot(pkg)}/src`;
 
-const aliases = readdirSync(new URL("./packages", import.meta.url).pathname)
+const dirUrl = new URL("./packages", import.meta.url).pathname
+console.log("Packages directory:", dirUrl);
+
+const aliases = readdirSync(dirUrl)
   .filter((dir) => existsSync(pkgRoot(dir) + "/package.json"))
   .reduce<Record<string, string>>(
     (acc, pkg) => {
@@ -14,7 +17,7 @@ const aliases = readdirSync(new URL("./packages", import.meta.url).pathname)
     },
     {});
 
-const packageProjects = readdirSync(new URL("./packages", import.meta.url).pathname)
+const packageProjects = readdirSync(dirUrl)
   .filter((dir) => existsSync(pkgRoot(dir) + "/package.json"))
   .map((dir) => {
     return {
