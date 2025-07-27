@@ -6,7 +6,7 @@ const pkgRoot = (pkg: string) =>
 const alias = (pkg: string) => `${pkgRoot(pkg)}/src`;
 
 const dirUrl = new URL("./packages", import.meta.url).pathname
-console.log("Packages directory:", dirUrl);
+console.error("Packages directory:", dirUrl);
 
 const aliases = readdirSync(dirUrl)
   .filter((dir) => existsSync(pkgRoot(dir) + "/package.json"))
@@ -37,9 +37,7 @@ export default defineConfig({
     },
     environment: "node",
     mockReset: true,
-    projects: [
-      ...packageProjects,
-    ]
+    projects: packageProjects
   },
   esbuild: { target: "es2020" },
   resolve: { alias: aliases },
