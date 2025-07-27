@@ -13,7 +13,7 @@ const aliases = readdirSync(normalize(dirUrl))
   .filter((dir) => existsSync(normalize(pkgRoot(dir) + "/package.json")))
   .reduce<Record<string, string>>(
     (acc, pkg) => {
-      acc[pkg] = alias(pkg);
+      acc[pkg] = normalize(alias(pkg));
       return acc;
     },
     {});
@@ -26,7 +26,7 @@ const packageProjects = readdirSync(dirUrl)
     return {
       extends: true,
       test: {
-        include: [`./packages/${dir}/**/*.{test,spec}.?(c|m)[jt]s?(x)`],
+        include: [normalize(`./packages/${dir}/**/*.{test,spec}.?(c|m)[jt]s?(x)`)],
         name: dir,
       }
     } satisfies TestProjectConfiguration;
