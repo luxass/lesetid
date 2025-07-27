@@ -5,4 +5,9 @@ export default luxass({
   unocss: true,
   astro: true,
   formatters: true,
+  pnpm: true,
+}, {
+  ignores: [
+    "./worker-configuration.d.ts",
+  ],
 });
