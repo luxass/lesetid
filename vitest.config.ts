@@ -1,0 +1,43 @@
+import { existsSync, readdirSync } from "node:fs";
+import { defineConfig, type TestProjectConfiguration } from "vitest/config";
+
+const pkgRoot = (pkg: string) =>
+  new URL(`./packages/${pkg}`, import.meta.url).pathname;
+const alias = (pkg: string) => `${pkgRoot(pkg)}/src`;
+
+const aliases = readdirSync(new URL("./packages", import.meta.url).pathname)
+  .filter((dir) => existsSync(pkgRoot(dir) + "/package.json"))
+  .reduce<Record<string, string>>(
+    (acc, pkg) => {
+      acc[pkg] = alias(pkg);
+      return acc;
+    },
+    {});
+
+const packageProjects = readdirSync(new URL("./packages", import.meta.url).pathname)
+  .filter((dir) => existsSync(pkgRoot(dir) + "/package.json"))
+  .map((dir) => {
+    return {
+      extends: true,
+      test: {
+        include: [`./packages/${dir}/**/*.{test,spec}.?(c|m)[jt]s?(x)`],
+        name: dir,
+      }
+    } satisfies TestProjectConfiguration;
+  });
+
+export default defineConfig({
+  test: {
+    coverage: {
+      provider: "v8",
+      include: ["**/src/**"],
+    },
+    environment: "node",
+    mockReset: true,
+    projects: [
+      ...packageProjects,
+    ]
+  },
+  esbuild: { target: "es2020" },
+  resolve: { alias: aliases },
+})

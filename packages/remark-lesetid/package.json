@@ -48,10 +48,9 @@
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch",
-    "test": "vitest run",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "clean": "git clean -xdf dist node_modules .turbo"
+    "clean": "git clean -xdf dist node_modules"
   },
   "dependencies": {
     "lesetid": "workspace:*",
@@ -59,6 +58,7 @@
     "unist-util-visit": "catalog:remark-lesetid"
   },
   "devDependencies": {
+    "@lesetid/tsconfig": "workspace:*",
     "@luxass/eslint-config": "catalog:linting",
     "@types/mdast": "catalog:remark-lesetid",
     "@types/node": "catalog:remark-lesetid",

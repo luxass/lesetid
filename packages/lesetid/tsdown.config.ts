@@ -8,4 +8,5 @@ export default defineConfig({
   treeshake: true,
   exports: true,
   publint: true,
+  tsconfig: "./tsconfig.build.json",
 });
