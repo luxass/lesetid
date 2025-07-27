@@ -18,6 +18,8 @@ const aliases = readdirSync(normalize(dirUrl))
     },
     {});
 
+console.error("Aliases:", aliases);
+
 const packageProjects = readdirSync(dirUrl)
   .filter((dir) => existsSync(normalize(pkgRoot(dir) + "/package.json")))
   .map((dir) => {
@@ -29,6 +31,8 @@ const packageProjects = readdirSync(dirUrl)
       }
     } satisfies TestProjectConfiguration;
   });
+
+console.error("Package projects:", packageProjects);
 
 export default defineConfig({
   test: {
