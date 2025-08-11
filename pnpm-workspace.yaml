@@ -24,7 +24,7 @@ catalogs:
     tsdown: ^0.13.0
     turbo: ^2.5.5
     typescript: ^5.8.3
-    volapyk: ^1.6.3
+    volapyk: ^2.0.0
     publint: ^0.3.12
 
   lesetid:
