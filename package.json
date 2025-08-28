@@ -40,9 +40,9 @@
   },
   "devDependencies": {
     "@changesets/changelog-github": "catalog:monorepo",
-    "@vitest/coverage-v8": "catalog:testing",
     "@changesets/cli": "catalog:monorepo",
     "@types/node": "catalog:lesetid",
+    "@vitest/coverage-v8": "catalog:testing",
     "turbo": "catalog:monorepo",
     "typescript": "catalog:monorepo",
     "vitest": "catalog:testing"
