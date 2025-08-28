@@ -12,9 +12,9 @@ This repository contains the packages, docs and examples for lesetid
   remark plugin for calculating reading time
 - [Playground Site](https://github.com/luxass/lesetid/tree/main/www) - Source
   for lesetid.dev
-- [Next.JS](https://github.com/luxass/lesetid/tree/main/examples/with-next) -
+- [Next.JS](https://github.com/luxass/lesetid/tree/main/examples/nextjs) -
   A simple example using [Next.js](https://nextjs.org)
-- [Astro](https://github.com/luxass/lesetid/tree/main/examples/with-astro) -
+- [Astro](https://github.com/luxass/lesetid/tree/main/examples/minimal-astro) -
   A simple example using [Astro](https://astro.build)
 
 [Report an Issue](https://github.com/luxass/lesetid/issues/new)
