@@ -1,4 +1,5 @@
-name: Release
+name: release
+
 on:
   push:
     branches:
@@ -10,9 +11,10 @@ concurrency:
 
 jobs:
   release:
-    name: Changelog PR or Release
-    if: ${{ github.repository == 'luxass/lesetid' }}
+    name: Release
     runs-on: ubuntu-latest
+    if: ${{ github.repository == 'luxass/lesetid' }}
+    timeout-minutes: 10
     permissions:
       contents: write
       pull-requests: write
