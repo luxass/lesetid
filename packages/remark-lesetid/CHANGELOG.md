@@ -1,5 +1,12 @@
 # remark-lesetid
 
+## 2.0.5
+
+### Patch Changes
+
+- Updated dependencies [[`0cc1880`](https://github.com/luxass/lesetid/commit/0cc1880e8482f8f7d8015eaf706b58d8b5eda5f1)]:
+  - lesetid@2.0.5
+
 ## 2.0.4
 
 ### Patch Changes
