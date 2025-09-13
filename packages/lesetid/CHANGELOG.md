@@ -1,5 +1,11 @@
 # lesetid
 
+## 2.0.2
+
+### Patch Changes
+
+- [`b4f1dd3`](https://github.com/luxass/lesetid/commit/b4f1dd366efc9ec734c5268b964d7f3173b7e2ce) Thanks [@luxass](https://github.com/luxass)! - Updated dependencies
+
 ## 2.0.1
 
 ### Patch Changes
