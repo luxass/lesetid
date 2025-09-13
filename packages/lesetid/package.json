@@ -1,6 +1,6 @@
 {
   "name": "lesetid",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "A dead simple read time estimation",
   "type": "module",
   "author": {
