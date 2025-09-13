@@ -9,7 +9,7 @@
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@10.15.1",
+  "packageManager": "pnpm@10.16.0",
   "license": "MIT",
   "homepage": "https://github.com/luxass/lesetid",
   "repository": {
