@@ -1,5 +1,11 @@
 # lesetid
 
+## 2.0.3
+
+### Patch Changes
+
+- [`5646a55`](https://github.com/luxass/lesetid/commit/5646a55736f42248326944e8eea73f05f62c376f) Thanks [@luxass](https://github.com/luxass)! - chore: update dependencies
+
 ## 2.0.2
 
 ### Patch Changes
