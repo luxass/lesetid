@@ -25,7 +25,6 @@ jobs:
     outputs:
       published: ${{ steps.changeset.outputs.published }}
       hasChangesets: ${{ steps.changeset.outputs.hasChangesets }}
-      shouldPublish: ${{ steps.publish-check.outputs.should-publish }}
     steps:
       - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
@@ -54,15 +53,6 @@ jobs:
           title: "chore(release): 📦  version packages"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: check for packages to publish
-        id: publish-check
-        run: |
-          if npx changeset status --since=origin/main | grep -q "packages to be published"; then
-            echo "should-publish=true" >> $GITHUB_OUTPUT
-          else
-            echo "should-publish=false" >> $GITHUB_OUTPUT
-          fi
 
       - name: sync lockfile if necessary
         if: steps.changeset.outputs.hasChangesets == 'true'
