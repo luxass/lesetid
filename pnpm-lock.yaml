@@ -47,7 +47,7 @@ catalogs:
       version: 4.1.13
   lesetid:
     '@types/node':
-      specifier: ^22.0.0
+      specifier: ^22.18.1
       version: 22.18.1
   linting:
     '@luxass/eslint-config':
@@ -98,7 +98,7 @@ catalogs:
       specifier: ^4.0.4
       version: 4.0.4
     '@types/node':
-      specifier: ^22.0.0
+      specifier: ^22.18.1
       version: 22.18.1
     mdast-util-to-string:
       specifier: ^4.0.0
