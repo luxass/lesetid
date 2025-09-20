@@ -114,10 +114,10 @@ catalogs:
       version: 6.0.3
   testing:
     '@vitest/coverage-v8':
-      specifier: ^3.2.4
+      specifier: 3.2.4
       version: 3.2.4
     vitest:
-      specifier: ^3.2.4
+      specifier: 3.2.4
       version: 3.2.4
   www:
     '@astrojs/check':
