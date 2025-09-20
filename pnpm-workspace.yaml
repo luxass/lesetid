@@ -34,7 +34,7 @@ catalogs:
     "unified": 11.0.5
     "vfile": 6.0.3
     "@types/mdast": 4.0.4
-    "@types/node": 22.18.1
+    "@types/node": 22.18.3
 
   remark-lesetid:
     "hastscript": 9.0.1
@@ -43,7 +43,7 @@ catalogs:
     "unified": 11.0.5
     "vfile": 6.0.3
     "@types/mdast": 4.0.4
-    "@types/node": 22.18.1
+    "@types/node": 22.18.3
 
   www:
     "@iconify-json/logos": 1.2.9
