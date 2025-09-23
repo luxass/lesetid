@@ -34,7 +34,7 @@ catalogs:
     "unified": 11.0.5
     "vfile": 6.0.3
     "@types/mdast": 4.0.4
-    "@types/node": 22.18.3
+    "@types/node": 22.18.4
 
   remark-lesetid:
     "hastscript": 9.0.1
@@ -43,7 +43,7 @@ catalogs:
     "unified": 11.0.5
     "vfile": 6.0.3
     "@types/mdast": 4.0.4
-    "@types/node": 22.18.3
+    "@types/node": 22.18.4
 
   www:
     "@iconify-json/logos": 1.2.9
@@ -58,7 +58,7 @@ catalogs:
     "@astrojs/rss": 4.0.12
     "@astrojs/sitemap": 3.5.1
     "@astrojs/cloudflare": 12.6.8
-    wrangler: 4.36.0
+    wrangler: 4.37.0
 
   example:
     "classnames": 2.5.1
