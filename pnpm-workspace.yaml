@@ -25,7 +25,7 @@ catalogs:
     turbo: 2.5.6
     typescript: 5.9.2
     volapyk: 2.0.0
-    publint: 0.3.12
+    publint: 0.3.13
 
   lesetid:
     "hastscript": 9.0.1
@@ -34,7 +34,7 @@ catalogs:
     "unified": 11.0.5
     "vfile": 6.0.3
     "@types/mdast": 4.0.4
-    "@types/node": 22.18.5
+    "@types/node": 22.18.6
 
   remark-lesetid:
     "hastscript": 9.0.1
@@ -43,7 +43,7 @@ catalogs:
     "unified": 11.0.5
     "vfile": 6.0.3
     "@types/mdast": 4.0.4
-    "@types/node": 22.18.5
+    "@types/node": 22.18.6
 
   www:
     "@iconify-json/logos": 1.2.9
