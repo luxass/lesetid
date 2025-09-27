@@ -48,7 +48,7 @@ catalogs:
   www:
     "@iconify-json/logos": 1.2.9
     "@iconify-json/ph": 1.2.2
-    "astro": 5.13.8
+    "astro": 5.13.9
     "astro-icon": 1.1.5
     "zod": 3.25.76
     "@astrojs/check": 0.9.4
@@ -58,7 +58,7 @@ catalogs:
     "@astrojs/rss": 4.0.12
     "@astrojs/sitemap": 3.6.0
     "@astrojs/cloudflare": 12.6.8
-    wrangler: 4.37.1
+    wrangler: 4.38.0
 
   example:
     "classnames": 2.5.1
