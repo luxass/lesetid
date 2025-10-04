@@ -82,8 +82,8 @@ catalogs:
       specifier: 0.3.13
       version: 0.3.13
     tsdown:
-      specifier: 0.15.4
-      version: 0.15.4
+      specifier: 0.15.5
+      version: 0.15.5
     turbo:
       specifier: 2.5.8
       version: 2.5.8
@@ -275,7 +275,7 @@ importers:
         version: 0.3.13
       tsdown:
         specifier: catalog:monorepo
-        version: 0.15.4(publint@0.3.13)(typescript@5.9.2)
+        version: 0.15.5(publint@0.3.13)(typescript@5.9.2)
       typescript:
         specifier: catalog:monorepo
         version: 5.9.2
@@ -318,7 +318,7 @@ importers:
         version: 15.0.1
       tsdown:
         specifier: catalog:monorepo
-        version: 0.15.4(publint@0.3.13)(typescript@5.9.2)
+        version: 0.15.5(publint@0.3.13)(typescript@5.9.2)
       typescript:
         specifier: catalog:monorepo
         version: 5.9.2
@@ -4733,8 +4733,8 @@ packages:
       typescript:
         optional: true
 
-  tsdown@0.15.4:
-    resolution: {integrity: sha512-aoFE8disBg8BgYcOgradr/5Yd+QDBRQ+6z8mXo/Ib7+GIaJwJsI5l/ppve05CZGcSDqwdhF4gdrA0HPHBtbBqA==}
+  tsdown@0.15.5:
+    resolution: {integrity: sha512-2UP5hDBVYGHnnQSIYtDxMDjePmut7EDpvW5E2kVnjpZ17JgiPvRJPHwk5Dm045bC75+q8yxAlw/CMIELymTWaw==}
     engines: {node: '>=20.19.0'}
     hasBin: true
     peerDependencies:
@@ -10617,7 +10617,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.2
 
-  tsdown@0.15.4(publint@0.3.13)(typescript@5.9.2):
+  tsdown@0.15.5(publint@0.3.13)(typescript@5.9.2):
     dependencies:
       ansis: 4.2.0
       cac: 6.7.14
