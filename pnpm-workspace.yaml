@@ -25,7 +25,7 @@ catalogs:
     turbo: 2.5.8
     typescript: 5.9.3
     volapyk: 2.0.0
-    publint: 0.3.13
+    publint: 0.3.14
 
   lesetid:
     "hastscript": 9.0.1
@@ -58,7 +58,7 @@ catalogs:
     "@astrojs/rss": 4.0.12
     "@astrojs/sitemap": 3.6.0
     "@astrojs/cloudflare": 12.6.9
-    wrangler: 4.40.3
+    wrangler: 4.42.0
 
   example:
     "classnames": 2.5.1
@@ -70,7 +70,7 @@ catalogs:
     "remark-html": 16.0.1
     "remark": 15.0.1
     "@tailwindcss/postcss": 4.1.14
-    "@types/react": 19.2.0
+    "@types/react": 19.2.1
     "@types/react-dom": 19.2.0
     "postcss": 8.5.6
     "tailwindcss": 4.1.14
