@@ -21,7 +21,7 @@ catalogs:
   monorepo:
     "@changesets/changelog-github": 0.5.1
     "@changesets/cli": 2.29.7
-    tsdown: 0.15.7
+    tsdown: 0.15.8
     turbo: 2.5.8
     typescript: 5.9.3
     volapyk: 2.0.0
@@ -34,7 +34,7 @@ catalogs:
     "unified": 11.0.5
     "vfile": 6.0.3
     "@types/mdast": 4.0.4
-    "@types/node": 22.18.10
+    "@types/node": 22.18.11
 
   remark-lesetid:
     "hastscript": 9.0.1
@@ -43,12 +43,12 @@ catalogs:
     "unified": 11.0.5
     "vfile": 6.0.3
     "@types/mdast": 4.0.4
-    "@types/node": 22.18.10
+    "@types/node": 22.18.11
 
   www:
     "@iconify-json/logos": 1.2.9
     "@iconify-json/ph": 1.2.2
-    "astro": 5.14.5
+    "astro": 5.14.6
     "astro-icon": 1.1.5
     "zod": 3.25.76
     "@astrojs/check": 0.9.4
@@ -64,7 +64,7 @@ catalogs:
     "classnames": 2.5.1
     "date-fns": 4.1.0
     "gray-matter": 4.0.3
-    "next": 15.5.5
+    "next": 15.5.6
     "react": 19.2.0
     "react-dom": 19.2.0
     "remark-html": 16.0.1
