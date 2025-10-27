@@ -50,7 +50,7 @@ catalogs:
     "@iconify-json/ph": 1.2.2
     "astro": 5.15.1
     "astro-icon": 1.1.5
-    "zod": 4.1.12
+    "zod": 3.25.76
     "@astrojs/check": 0.9.5
     "@unocss/reset": 66.5.4
     "unocss": 66.5.4
