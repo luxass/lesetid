@@ -91,8 +91,8 @@ catalogs:
       specifier: 5.9.3
       version: 5.9.3
     volapyk:
-      specifier: 2.0.0
-      version: 2.0.0
+      specifier: 2.1.0
+      version: 2.1.0
   remark-lesetid:
     '@types/mdast':
       specifier: 4.0.4
@@ -281,7 +281,7 @@ importers:
         version: 5.9.3
       volapyk:
         specifier: catalog:monorepo
-        version: 2.0.0
+        version: 2.1.0
 
   packages/remark-lesetid:
     dependencies:
@@ -330,7 +330,7 @@ importers:
         version: 6.0.3
       volapyk:
         specifier: catalog:monorepo
-        version: 2.0.0
+        version: 2.1.0
 
   tooling/tsconfig: {}
 
@@ -5053,9 +5053,9 @@ packages:
       jsdom:
         optional: true
 
-  volapyk@2.0.0:
-    resolution: {integrity: sha512-hDiKUYmsR/PdYIfHrnp7OIboHQNR0xqKgtN6f64CyM6yXXCK7pbCev0peuIqK9VgkmBobiU/X+HrpCBCMc+ARw==}
-    engines: {node: '>=20'}
+  volapyk@2.1.0:
+    resolution: {integrity: sha512-CRyM8cGSEwQu7vjoGdkvmVBW10DjNTB7H1G1+EkGBJWyNRTu/bpPJKOVJRSNmwKM71cnubjmP1+q7We/4QCRpQ==}
+    engines: {node: '>=22'}
 
   volar-service-css@0.0.62:
     resolution: {integrity: sha512-JwNyKsH3F8PuzZYuqPf+2e+4CTU8YoyUHEHVnoXNlrLe7wy9U3biomZ56llN69Ris7TTy/+DEX41yVxQpM4qvg==}
@@ -10798,7 +10798,7 @@ snapshots:
       - tsx
       - yaml
 
-  volapyk@2.0.0: {}
+  volapyk@2.1.0: {}
 
   volar-service-css@0.0.62(@volar/language-service@2.4.20):
     dependencies:
