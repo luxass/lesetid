@@ -1,5 +1,14 @@
 # remark-lesetid
 
+## 2.0.7
+
+### Patch Changes
+
+- [`ce15365`](https://github.com/luxass/lesetid/commit/ce15365a36335db5d1d364c48292f2f1d4bad56d) Thanks [@luxass](https://github.com/luxass)! - Update package dependencies
+
+- Updated dependencies [[`ce15365`](https://github.com/luxass/lesetid/commit/ce15365a36335db5d1d364c48292f2f1d4bad56d)]:
+  - lesetid@2.0.7
+
 ## 2.0.6
 
 ### Patch Changes
