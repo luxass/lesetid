@@ -52,13 +52,13 @@ catalogs:
     "astro-icon": 1.1.5
     "zod": 3.25.76
     "@astrojs/check": 0.9.5
-    "@unocss/reset": 66.5.7
-    "unocss": 66.5.7
+    "@unocss/reset": 66.5.9
+    "unocss": 66.5.9
     "@astrojs/mdx": 4.3.12
     "@astrojs/rss": 4.0.14
     "@astrojs/sitemap": 3.6.0
     "@astrojs/cloudflare": 12.6.11
-    wrangler: 4.49.1
+    wrangler: 4.50.0
 
   example:
     "classnames": 2.5.1
