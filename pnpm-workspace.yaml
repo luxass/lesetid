@@ -19,9 +19,9 @@ catalogs:
     "@vitest/coverage-v8": 4.0.14
 
   monorepo:
-    "@changesets/changelog-github": 0.5.1
-    "@changesets/cli": 2.29.7
-    tsdown: 0.16.7
+    "@changesets/changelog-github": 0.5.2
+    "@changesets/cli": 2.29.8
+    tsdown: 0.16.8
     turbo: 2.6.1
     typescript: 5.9.3
     volapyk: 2.1.0
@@ -48,7 +48,7 @@ catalogs:
   www:
     "@iconify-json/logos": 1.2.10
     "@iconify-json/ph": 1.2.2
-    "astro": 5.16.1
+    "astro": 5.16.2
     "astro-icon": 1.1.5
     "zod": 3.25.76
     "@astrojs/check": 0.9.6
