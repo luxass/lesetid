@@ -6,7 +6,9 @@ export default defineConfig({
   clean: true,
   dts: true,
   treeshake: true,
-  exports: true,
+  exports: {
+    enabled: "local-only",
+  },
   publint: true,
   footer(ctx) {
     if (ctx.format === "cjs") {
