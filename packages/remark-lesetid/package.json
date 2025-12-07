@@ -27,12 +27,12 @@
   ],
   "exports": {
     ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     },
     "./astro": {
-      "require": "./dist/astro.cjs",
-      "import": "./dist/astro.mjs"
+      "import": "./dist/astro.mjs",
+      "require": "./dist/astro.cjs"
     },
     "./package.json": "./package.json"
   },
