@@ -21,7 +21,7 @@ catalogs:
   monorepo:
     "@changesets/changelog-github": 0.5.2
     "@changesets/cli": 2.29.8
-    tsdown: 0.17.2
+    tsdown: 0.18.0
     turbo: 2.6.3
     typescript: 5.9.3
     volapyk: 2.1.0
@@ -34,7 +34,7 @@ catalogs:
     "unified": 11.0.5
     "vfile": 6.0.3
     "@types/mdast": 4.0.4
-    "@types/node": 24.10.3
+    "@types/node": 24.10.4
 
   remark-lesetid:
     "hastscript": 9.0.1
@@ -43,7 +43,7 @@ catalogs:
     "unified": 11.0.5
     "vfile": 6.0.3
     "@types/mdast": 4.0.4
-    "@types/node": 24.10.3
+    "@types/node": 24.10.4
 
   www:
     "@iconify-json/logos": 1.2.10
