@@ -21,8 +21,8 @@ catalogs:
   monorepo:
     "@changesets/changelog-github": 0.5.2
     "@changesets/cli": 2.29.8
-    tsdown: 0.18.0
-    turbo: 2.6.3
+    tsdown: 0.18.1
+    turbo: 2.7.0
     typescript: 5.9.3
     volapyk: 2.1.0
     publint: 0.3.16
@@ -48,7 +48,7 @@ catalogs:
   www:
     "@iconify-json/logos": 1.2.10
     "@iconify-json/ph": 1.2.2
-    "astro": 5.16.5
+    "astro": 5.16.6
     "astro-icon": 1.1.5
     "zod": 3.25.76
     "@astrojs/check": 0.9.6
@@ -64,7 +64,7 @@ catalogs:
     "classnames": 2.5.1
     "date-fns": 4.1.0
     "gray-matter": 4.0.3
-    "next": 16.0.10
+    "next": 16.1.0
     "react": 19.2.3
     "react-dom": 19.2.3
     "remark-html": 16.0.1
