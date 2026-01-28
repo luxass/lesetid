@@ -58,7 +58,7 @@ catalogs:
     "@astrojs/rss": 4.0.15
     "@astrojs/sitemap": 3.7.0
     "@astrojs/cloudflare": 12.6.12
-    wrangler: 4.59.2
+    wrangler: 4.59.3
 
   example:
     "classnames": 2.5.1
@@ -70,7 +70,7 @@ catalogs:
     "remark-html": 16.0.1
     "remark": 15.0.1
     "@tailwindcss/postcss": 4.1.18
-    "@types/react": 19.2.8
+    "@types/react": 19.2.9
     "@types/react-dom": 19.2.3
     "postcss": 8.5.6
     "tailwindcss": 4.1.18
