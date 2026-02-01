@@ -12,7 +12,7 @@ function isCharCodeIntersected(code: number, start: number, end: number): boolea
   return code >= start && code <= end;
 }
 
-export const CJK_CODE_RANGES = [
+export const CJK_CODE_RANGES: [number, number][] = [
   [0x3040, 0x309F],
   // CJK Unified ideographs
   [0x4E00, 0x9FFF],
@@ -45,7 +45,7 @@ export const isCJK: WordFN = (char?: string): boolean => {
   return false;
 };
 
-export const PUNCTATION_CODE_RANGES = [
+export const PUNCTATION_CODE_RANGES: [number, number][] = [
   [0x21, 0x2F],
   [0x3A, 0x40],
   [0x5B, 0x60],
