@@ -1,5 +1,16 @@
 # remark-lesetid
 
+## 2.0.8
+
+### Patch Changes
+
+- [#301](https://github.com/luxass/lesetid/pull/301) [`2b15440`](https://github.com/luxass/lesetid/commit/2b1544021fb11b9744f8380d8403a340939f27d2) Thanks [@copilot-swe-agent](https://github.com/apps/copilot-swe-agent)! - chore: update dependencies
+
+- [`0caf9da`](https://github.com/luxass/lesetid/commit/0caf9da3a5cdc5b55f0c4d99e7e12d6a9df64d65) Thanks [@luxass](https://github.com/luxass)! - chore: update dependencies
+
+- Updated dependencies [[`2b15440`](https://github.com/luxass/lesetid/commit/2b1544021fb11b9744f8380d8403a340939f27d2), [`0caf9da`](https://github.com/luxass/lesetid/commit/0caf9da3a5cdc5b55f0c4d99e7e12d6a9df64d65)]:
+  - lesetid@2.0.8
+
 ## 2.0.7
 
 ### Patch Changes
