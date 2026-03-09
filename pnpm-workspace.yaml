@@ -52,6 +52,7 @@ catalogs:
     "astro-icon": 1.1.5
     "zod": 4.3.6
     "@astrojs/check": 0.9.6
+    "@unocss/astro": 66.6.6
     "@unocss/reset": 66.6.6
     "unocss": 66.6.6
     "@astrojs/mdx": 4.3.13

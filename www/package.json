@@ -26,6 +26,7 @@
     "@astrojs/cloudflare": "catalog:www",
     "@luxass/eslint-config": "catalog:linting",
     "@types/node": "catalog:lesetid",
+    "@unocss/astro": "catalog:www",
     "@unocss/eslint-plugin": "catalog:linting",
     "@unocss/reset": "catalog:www",
     "astro-eslint-parser": "catalog:linting",
