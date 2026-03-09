@@ -6,16 +6,18 @@ export default defineConfig({
   clean: true,
   dts: true,
   treeshake: true,
-  skipNodeModulesBundle: true,
   exports: {
     enabled: "local-only",
   },
-  // Ensure that these dependencies are treated as external
-  // this affects their type declarations as well
-  external: [
-    "unist",
-    "mdast",
-  ],
+  deps: {
+    // Ensure that these dependencies are treated as external
+    // this affects their type declarations as well
+    neverBundle: [
+      "unist",
+      "mdast",
+    ],
+    skipNodeModulesBundle: true,
+  },
   publint: true,
   footer(ctx) {
     if (ctx.format === "cjs") {
