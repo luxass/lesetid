@@ -6,12 +6,12 @@ packages:
 
 catalogs:
   linting:
-    "@luxass/eslint-config": 7.2.0
+    "@luxass/eslint-config": 7.2.1
     "eslint": 9.39.2
-    "eslint-plugin-format": 1.3.1
+    "eslint-plugin-format": 2.0.1
     "@unocss/eslint-plugin": 66.6.0
-    "astro-eslint-parser": 1.2.2
-    "eslint-plugin-astro": 1.5.0
+    "astro-eslint-parser": 1.3.0
+    "eslint-plugin-astro": 1.6.0
     "prettier-plugin-astro": 0.14.1
 
   testing:
@@ -19,13 +19,13 @@ catalogs:
     "@vitest/coverage-v8": 4.0.18
 
   monorepo:
-    "@changesets/changelog-github": 0.5.2
-    "@changesets/cli": 2.29.8
-    tsdown: 0.20.3
+    "@changesets/changelog-github": 0.6.0
+    "@changesets/cli": 2.30.0
+    tsdown: 0.21.0
     turbo: 2.8.10
     typescript: 5.9.3
     volapyk: 2.1.0
-    publint: 0.3.17
+    publint: 0.3.18
 
   lesetid:
     "hastscript": 9.0.1
@@ -34,7 +34,7 @@ catalogs:
     "unified": 11.0.5
     "vfile": 6.0.3
     "@types/mdast": 4.0.4
-    "@types/node": 24.10.13
+    "@types/node": 25.3.5
 
   remark-lesetid:
     "hastscript": 9.0.1
@@ -43,14 +43,14 @@ catalogs:
     "unified": 11.0.5
     "vfile": 6.0.3
     "@types/mdast": 4.0.4
-    "@types/node": 24.10.13
+    "@types/node": 25.3.5
 
   www:
     "@iconify-json/logos": 1.2.10
     "@iconify-json/ph": 1.2.2
-    "astro": 5.17.3
+    "astro": 5.18.0
     "astro-icon": 1.1.5
-    "zod": 3.25.76
+    "zod": 4.3.6
     "@astrojs/check": 0.9.6
     "@unocss/reset": 66.6.0
     "unocss": 66.6.0
@@ -58,7 +58,7 @@ catalogs:
     "@astrojs/rss": 4.0.15
     "@astrojs/sitemap": 3.7.0
     "@astrojs/cloudflare": 12.6.12
-    wrangler: 4.66.0
+    wrangler: 4.71.0
 
   example:
     "classnames": 2.5.1
@@ -69,11 +69,11 @@ catalogs:
     "react-dom": 19.2.4
     "remark-html": 16.0.1
     "remark": 15.0.1
-    "@tailwindcss/postcss": 4.2.0
+    "@tailwindcss/postcss": 4.2.1
     "@types/react": 19.2.14
     "@types/react-dom": 19.2.3
-    "postcss": 8.5.6
-    "tailwindcss": 4.2.0
+    "postcss": 8.5.8
+    "tailwindcss": 4.2.1
 
 onlyBuiltDependencies:
   - esbuild
