@@ -6,7 +6,7 @@ packages:
 
 catalogs:
   linting:
-    "@luxass/eslint-config": 7.2.1
+    "@luxass/eslint-config": 7.4.1
     "eslint": 10.0.3
     "eslint-plugin-format": 2.0.1
     "@unocss/eslint-plugin": 66.6.6
@@ -21,8 +21,8 @@ catalogs:
   monorepo:
     "@changesets/changelog-github": 0.6.0
     "@changesets/cli": 2.30.0
-    tsdown: 0.21.0
-    turbo: 2.8.14
+    tsdown: 0.21.7
+    turbo: 2.8.21
     typescript: 5.9.3
     volapyk: 2.1.0
     publint: 0.3.18
@@ -34,7 +34,7 @@ catalogs:
     "unified": 11.0.5
     "vfile": 6.0.3
     "@types/mdast": 4.0.4
-    "@types/node": 25.3.5
+    "@types/node": 25.5.0
 
   remark-lesetid:
     "hastscript": 9.0.1
@@ -43,38 +43,38 @@ catalogs:
     "unified": 11.0.5
     "vfile": 6.0.3
     "@types/mdast": 4.0.4
-    "@types/node": 25.3.5
+    "@types/node": 25.5.0
 
   www:
-    "@iconify-json/logos": 1.2.10
+    "@iconify-json/logos": 1.2.11
     "@iconify-json/ph": 1.2.2
     "astro": 5.18.0
     "astro-icon": 1.1.5
     "zod": 3.25.76
-    "@astrojs/check": 0.9.6
-    "@unocss/astro": 66.6.6
-    "@unocss/reset": 66.6.6
-    "unocss": 66.6.6
-    "@astrojs/mdx": 4.3.13
-    "@astrojs/rss": 4.0.15
-    "@astrojs/sitemap": 3.7.0
-    "@astrojs/cloudflare": 12.6.12
-    wrangler: 4.71.0
+    "@astrojs/check": 0.9.8
+    "@unocss/astro": 66.6.7
+    "@unocss/reset": 66.6.7
+    "unocss": 66.6.7
+    "@astrojs/mdx": 4.3.14
+    "@astrojs/rss": 4.0.18
+    "@astrojs/sitemap": 3.7.2
+    "@astrojs/cloudflare": 12.6.13
+    wrangler: 4.78.0
 
   example:
     "classnames": 2.5.1
     "date-fns": 4.1.0
     "gray-matter": 4.0.3
-    "next": 16.1.7
+    "next": 16.2.1
     "react": 19.2.4
     "react-dom": 19.2.4
     "remark-html": 16.0.1
     "remark": 15.0.1
-    "@tailwindcss/postcss": 4.2.1
+    "@tailwindcss/postcss": 4.2.2
     "@types/react": 19.2.14
     "@types/react-dom": 19.2.3
     "postcss": 8.5.8
-    "tailwindcss": 4.2.1
+    "tailwindcss": 4.2.2
 
 onlyBuiltDependencies:
   - esbuild
