@@ -15,8 +15,8 @@ catalogs:
     "prettier-plugin-astro": 0.14.1
 
   testing:
-    vitest: 4.0.18
-    "@vitest/coverage-v8": 4.0.18
+    vitest: 4.1.4
+    "@vitest/coverage-v8": 4.1.4
 
   monorepo:
     "@changesets/changelog-github": 0.6.0
