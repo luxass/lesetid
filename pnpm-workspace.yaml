@@ -1,3 +1,10 @@
+ignoreScripts: true
+catalogMode: prefer
+minimumReleaseAge: 5760
+trustPolicy: no-downgrade
+strictDepBuilds: true
+blockExoticSubdeps: true
+
 packages:
   - www
   - packages/*
