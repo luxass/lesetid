@@ -55,7 +55,7 @@ catalogs:
   www:
     "@iconify-json/logos": 1.2.11
     "@iconify-json/ph": 1.2.2
-    "astro": 5.18.0
+    "astro": 6.1.6
     "astro-icon": 1.1.5
     "zod": 3.25.76
     "@astrojs/check": 0.9.8
@@ -85,3 +85,6 @@ catalogs:
 
 onlyBuiltDependencies:
   - esbuild
+minimumReleaseAgeExclude:
+  # Renovate security update: astro@6.1.6
+  - astro@6.1.6
