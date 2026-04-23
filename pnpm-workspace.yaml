@@ -62,7 +62,7 @@ catalogs:
     "@unocss/astro": 66.6.8
     "@unocss/reset": 66.6.8
     "unocss": 66.6.8
-    "@astrojs/mdx": 4.3.14
+    "@astrojs/mdx": 5.0.3
     "@astrojs/rss": 4.0.18
     "@astrojs/sitemap": 3.7.2
     "@astrojs/cloudflare": 12.6.13
