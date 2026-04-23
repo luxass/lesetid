@@ -65,7 +65,7 @@ catalogs:
     "@astrojs/mdx": 4.3.14
     "@astrojs/rss": 4.0.18
     "@astrojs/sitemap": 3.7.2
-    "@astrojs/cloudflare": 12.6.13
+    "@astrojs/cloudflare": 13.1.10
     wrangler: 4.81.1
 
   example:
@@ -85,3 +85,6 @@ catalogs:
 
 onlyBuiltDependencies:
   - esbuild
+minimumReleaseAgeExclude:
+  # Renovate security update: @astrojs/cloudflare@13.1.10
+  - "@astrojs/cloudflare@13.1.10"
