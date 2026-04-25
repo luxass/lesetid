@@ -1,5 +1,11 @@
 # lesetid
 
+## 2.1.1
+
+### Patch Changes
+
+- [`f6d98a8`](https://github.com/luxass/lesetid/commit/f6d98a82cfea30e9ca35e3b1dc0860a892389c00) Thanks [@luxass](https://github.com/luxass)! - chore: publish
+
 ## 2.1.0
 
 ### Minor Changes
