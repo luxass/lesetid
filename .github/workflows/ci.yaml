@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+permissions: {}
+
+jobs:
+  ci:
+    uses: luxass/shared-workflows/.github/workflows/ci.yaml@36ff555d8540defbb303af3e544ed1bad1848fe4 # v0.4.4
+
+  test:
+    uses: luxass/shared-workflows/.github/workflows/test.yaml@36ff555d8540defbb303af3e544ed1bad1848fe4 # v0.4.4
