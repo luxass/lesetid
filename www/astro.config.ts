@@ -1,5 +1,4 @@
 // @ts-check
-import { fileURLToPath } from "node:url";
 import cloudflare from "@astrojs/cloudflare";
 import { defineConfig } from "astro/config";
 import unocss from "unocss/astro";

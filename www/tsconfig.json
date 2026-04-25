@@ -5,6 +5,7 @@
   "compilerOptions": {
     "types": [
       "./worker-configuration.d.ts",
+      "unplugin-icons/types/astro",
       "node"
     ]
   },
