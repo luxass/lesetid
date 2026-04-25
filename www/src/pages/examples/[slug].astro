@@ -1,9 +1,12 @@
 ---
-import type { GetStaticPaths } from "astro";
-import { Icon } from "astro-icon/components";
+import CodesandboxIcon from "~icons/logos/codesandbox-icon";
+import QuestionIcon from "~icons/ph/question";
+import StackblitzIcon from "~icons/logos/stackblitz-icon";
 import PageLayout from "../../layouts/page-layout.astro";
 
 import { getExamples } from "../../lib/examples";
+
+export const prerender = true;
 
 export async function getStaticPaths() {
   const examples = await getExamples();
@@ -16,12 +19,11 @@ export async function getStaticPaths() {
   }));
 }
 
-const { slug } = Astro.params;
 const { example } = Astro.props;
 
-const PROVIDER_ICONS: Record<string, string> = {
-  stackblitz: "logos:stackblitz-icon",
-  codesandbox: "logos:codesandbox-icon",
+const PROVIDER_ICONS = {
+  stackblitz: StackblitzIcon,
+  codesandbox: CodesandboxIcon,
 };
 
 const providers = Object.entries(example.providers);
@@ -33,7 +35,7 @@ const providers = Object.entries(example.providers);
       example.iconUrl ? (
         <img src={example.iconUrl} width="32" height="32" alt={`Icon for ${example.title}`} />
       ) : (
-        <Icon name="ph:question" size="32" />
+        <QuestionIcon width="32" height="32" />
       )
     }
     {example.title}
@@ -43,12 +45,16 @@ const providers = Object.entries(example.providers);
 
   <div class="mt-4 grid grid-cols-1 gap-4 sm:gap-3 md:grid-cols-2 lg:grid-cols-3">
     {
-      providers.map(([provider, url]) => (
-        <a href={url} class="border-card-border flex h-20 flex-row items-center gap-2 rounded border p-4 text-center">
-          <Icon name={PROVIDER_ICONS[provider]} size="32" />
-          <span class="flex-1 text-left capitalize">{provider}</span>
-        </a>
-      ))
+      providers.map(([provider, url]) => {
+        const ProviderIcon = PROVIDER_ICONS[provider as keyof typeof PROVIDER_ICONS];
+
+        return (
+          <a href={url} class="border-card-border flex h-20 flex-row items-center gap-2 rounded border p-4 text-center">
+            {ProviderIcon && <ProviderIcon width="32" height="32" />}
+            <span class="flex-1 text-left capitalize">{provider}</span>
+          </a>
+        );
+      })
     }
   </div>
 </PageLayout>

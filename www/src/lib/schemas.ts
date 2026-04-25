@@ -7,7 +7,7 @@ export const EXAMPLE_SCHEMA = z.object({
   title: z.string(),
   url: z.string(),
   handle: z.string(),
-  providers: z.record(z.string()),
+  providers: z.record(z.string(), z.string()),
 });
 
 export type Example = z.infer<typeof EXAMPLE_SCHEMA>;

@@ -1,5 +1,6 @@
 ---
-import { Icon } from "astro-icon/components";
+import PackageIcon from "~icons/ph/package";
+import QuestionIcon from "~icons/ph/question";
 import { getExamples } from "../lib/examples";
 
 const examples = await getExamples();
@@ -27,7 +28,7 @@ const examples = await getExamples();
           {example.iconUrl ? (
             <img src={example.iconUrl} width="32" height="32" alt={`Icon for ${example.title}`} />
           ) : (
-            <Icon name="ph:question" size="32" />
+            <QuestionIcon width="32" height="32" />
           )}
           <span class="flex-1 text-left">{example.title}</span>
         </a>
@@ -39,7 +40,7 @@ const examples = await getExamples();
       rel="noopener noreferrer"
       class="border-card-border flex h-20 items-center gap-2 rounded border border-dashed p-4 text-center hover:border-solid"
     >
-      <Icon name="ph:package" size="32" />
+      <PackageIcon width="32" height="32" />
       <span class="flex-1 text-left">Missing an example?</span>
     </a>
   </div>
