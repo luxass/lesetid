@@ -15,6 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.repository == 'luxass/lesetid' }}
     timeout-minutes: 10
+    environment:
+      name: npm-registry
+      deployment: false
     permissions:
       contents: write
       pull-requests: write
