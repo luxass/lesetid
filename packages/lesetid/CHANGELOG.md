@@ -1,5 +1,11 @@
 # lesetid
 
+## 2.1.0
+
+### Minor Changes
+
+- [#315](https://github.com/luxass/lesetid/pull/315) [`003bf15`](https://github.com/luxass/lesetid/commit/003bf15c2723010c5a829e1158e5d4bc159f68da) Thanks [@luxass](https://github.com/luxass)! - chore: update dependencies
+
 ## 2.0.8
 
 ### Patch Changes
