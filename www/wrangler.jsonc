@@ -1,8 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "lesetid",
-  "main": "./dist/_worker.js/index.js",
-  "compatibility_date": "2025-07-08",
+  "compatibility_date": "2026-04-25",
   "compatibility_flags": [
     "nodejs_compat",
     "global_fetch_strictly_public"

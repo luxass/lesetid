@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon/components";
+import AlarmIcon from "~icons/ph/alarm-duotone";
 import { getTexts } from "../lib/texts";
 
 const texts = await getTexts();
@@ -7,7 +7,7 @@ const texts = await getTexts();
 
 <div class="border-card-border flex flex-wrap justify-between gap-2 rounded border-2 p-2">
   <div class="flex items-center gap-2">
-    <Icon name="ph:alarm-duotone" size="24" />
+    <AlarmIcon width="24" height="24" />
     <span id="reading-time">0 min</span>
   </div>
   <select

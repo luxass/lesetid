@@ -46,10 +46,10 @@
     "node": ">=20"
   },
   "scripts": {
-    "build": "tsdown",
+    "build": "tsdown --tsconfig=tsconfig.build.json",
     "dev": "tsdown --watch",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --noEmit -p tsconfig.build.json",
     "clean": "git clean -xdf dist node_modules"
   },
   "dependencies": {

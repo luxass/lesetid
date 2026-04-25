@@ -2,9 +2,22 @@
   "$schema": "http://json.schemastore.org/tsconfig",
   "extends": "./base.build.json",
   "compilerOptions": {
-    "baseUrl": "../..",
     "paths": {
-
+      "lesetid": [
+        "../../packages/lesetid/src/index.ts"
+      ],
+      "lesetid/stream": [
+        "../../packages/lesetid/src/stream.ts"
+      ],
+      "lesetid/utils": [
+        "../../packages/lesetid/src/utils.ts"
+      ],
+      "remark-lesetid": [
+        "../../packages/remark-lesetid/src/index.ts"
+      ],
+      "remark-lesetid/astro": [
+        "../../packages/remark-lesetid/src/astro.ts"
+      ]
     }
   }
 }

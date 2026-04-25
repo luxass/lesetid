@@ -17,7 +17,6 @@
     "@iconify-json/logos": "catalog:www",
     "@iconify-json/ph": "catalog:www",
     "astro": "catalog:www",
-    "astro-icon": "catalog:www",
     "lesetid": "workspace:*",
     "zod": "catalog:www"
   },
@@ -36,6 +35,7 @@
     "prettier-plugin-astro": "catalog:linting",
     "typescript": "catalog:monorepo",
     "unocss": "catalog:www",
+    "unplugin-icons": "catalog:www",
     "wrangler": "catalog:www"
   }
 }

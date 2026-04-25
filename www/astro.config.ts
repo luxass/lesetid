@@ -1,8 +1,8 @@
 // @ts-check
 import cloudflare from "@astrojs/cloudflare";
-import icon from "astro-icon";
 import { defineConfig } from "astro/config";
 import unocss from "unocss/astro";
+import Icons from "unplugin-icons/vite";
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,19 +10,22 @@ export default defineConfig({
     unocss({
       injectReset: true,
     }),
-    icon({
-      include: {
-        ph: ["github-logo-duotone", "question", "package", "alarm-duotone"],
-        logos: ["stackblitz-icon", "codesandbox-icon"],
-      },
-    }),
   ],
   trailingSlash: "never",
   adapter: cloudflare({
-    platformProxy: {
-      enabled: true,
-      configPath: "./wrangler.jsonc",
-    },
-    imageService: "cloudflare",
+    imageService: "compile",
+    prerenderEnvironment: "node",
   }),
+  session: {
+    driver: {
+      entrypoint: "unstorage/drivers/null",
+    },
+  },
+  vite: {
+    plugins: [
+      Icons({
+        compiler: "astro",
+      }),
+    ],
+  },
 });
