@@ -19,10 +19,7 @@ export default defineConfig({
   ],
   trailingSlash: "never",
   adapter: cloudflare({
-    platformProxy: {
-      enabled: true,
-      configPath: "./wrangler.jsonc",
-    },
+    configPath: "./wrangler.jsonc",
     imageService: "cloudflare",
   }),
 });
