@@ -37,9 +37,6 @@
     "test:watch": "vitest",
     "typecheck": "turbo run typecheck",
     "release": "changeset",
-    "release:patch": "changeset add --message patch",
-    "release:minor": "changeset add --message minor",
-    "release:major": "changeset add --message major",
     "clean": "turbo run clean && git clean -xdf node_modules"
   },
   "devDependencies": {
