@@ -22,6 +22,6 @@ jobs:
       contents: read
       security-events: write
       id-token: write
-    uses: luxass/shared-workflows/.github/workflows/ci-security.yaml@36ff555d8540defbb303af3e544ed1bad1848fe4 # v0.4.4
+    uses: luxass/shared-workflows/.github/workflows/ci-security.yaml@495f6427f288e78bddfca573876da1357549379d # v0.8.3
     with:
       zizmor-version: v1.23.1

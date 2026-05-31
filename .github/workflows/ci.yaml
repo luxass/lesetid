@@ -15,9 +15,9 @@ jobs:
   ci:
     permissions:
       contents: read
-    uses: luxass/shared-workflows/.github/workflows/ci.yaml@36ff555d8540defbb303af3e544ed1bad1848fe4 # v0.4.4
+    uses: luxass/shared-workflows/.github/workflows/ci.yaml@495f6427f288e78bddfca573876da1357549379d # v0.8.3
 
   test:
     permissions:
       contents: read
-    uses: luxass/shared-workflows/.github/workflows/test.yaml@36ff555d8540defbb303af3e544ed1bad1848fe4 # v0.4.4
+    uses: luxass/shared-workflows/.github/workflows/test.yaml@495f6427f288e78bddfca573876da1357549379d # v0.8.3
