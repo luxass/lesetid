@@ -29,13 +29,13 @@ catalogs:
     "@vitest/coverage-v8": 4.1.4
 
   monorepo:
-    "@changesets/changelog-github": 0.6.0
+    "@changesets/changelog-github": 0.7.0
     "@changesets/cli": 2.31.0
-    tsdown: 0.21.10
+    tsdown: 0.22.1
     turbo: 2.9.7
     typescript: 6.0.3
     volapyk: 2.1.0
-    publint: 0.3.18
+    publint: 0.3.21
 
   lesetid:
     "hastscript": 9.0.1
@@ -44,7 +44,7 @@ catalogs:
     "unified": 11.0.5
     "vfile": 6.0.3
     "@types/mdast": 4.0.4
-    "@types/node": 25.6.0
+    "@types/node": 25.9.1
 
   remark-lesetid:
     "hastscript": 9.0.1
@@ -53,35 +53,35 @@ catalogs:
     "unified": 11.0.5
     "vfile": 6.0.3
     "@types/mdast": 4.0.4
-    "@types/node": 25.6.0
+    "@types/node": 25.9.1
 
   www:
     "@iconify-json/logos": 1.2.11
     "@iconify-json/ph": 1.2.2
-    "astro": 6.2.1
+    "astro": 6.4.2
     unplugin-icons: 23.0.1
-    "zod": 4.4.2
+    "zod": 4.4.3
     "@astrojs/check": 0.9.9
-    "@unocss/astro": 66.6.8
-    "@unocss/reset": 66.6.8
-    "unocss": 66.6.8
-    "@astrojs/mdx": 5.0.4
+    "@unocss/astro": 66.7.0
+    "@unocss/reset": 66.7.0
+    "unocss": 66.7.0
+    "@astrojs/mdx": 5.0.6
     "@astrojs/rss": 4.0.18
-    "@astrojs/sitemap": 3.7.2
-    "@astrojs/cloudflare": 13.3.0
-    wrangler: 4.87.0
+    "@astrojs/sitemap": 3.7.3
+    "@astrojs/cloudflare": 13.6.0
+    wrangler: 4.96.0
 
   example:
     "classnames": 2.5.1
-    "date-fns": 4.1.0
+    "date-fns": 4.4.0
     "gray-matter": 4.0.3
     "next": 16.2.4
-    "react": 19.2.5
-    "react-dom": 19.2.5
+    "react": 19.2.7
+    "react-dom": 19.2.7
     "remark-html": 16.0.1
     "remark": 15.0.1
-    "@tailwindcss/postcss": 4.2.4
-    "@types/react": 19.2.14
+    "@tailwindcss/postcss": 4.3.0
+    "@types/react": 19.2.16
     "@types/react-dom": 19.2.3
-    "postcss": 8.5.13
-    "tailwindcss": 4.2.4
+    "postcss": 8.5.15
+    "tailwindcss": 4.3.0
