@@ -1,14 +1,12 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "tasks": {
-     "topo": {
+    "topo": {
       "dependsOn": ["^topo"]
     },
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [
-        "dist/**"
-      ]
+      "outputs": ["dist/**"]
     },
     "lint": {
       "dependsOn": ["^topo", "^build"],
@@ -35,9 +33,5 @@
       "dependsOn": []
     }
   },
-  "globalPassThroughEnv": [
-    "NODE",
-    "NODE_ENV",
-    "CI"
-  ]
+  "globalPassThroughEnv": ["NODE", "NODE_ENV", "CI"]
 }

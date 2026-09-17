@@ -1,20 +1,7 @@
 import type { CountResult, Estimation, Options, WordFN } from "./types";
+import { CJK_CODE_RANGES, isAnsi, isCJK, isPunctuation, PUNCTATION_CODE_RANGES } from "./utils";
 
-import {
-  CJK_CODE_RANGES,
-  isAnsi,
-  isCJK,
-  isPunctuation,
-  PUNCTATION_CODE_RANGES,
-} from "./utils";
-
-export {
-  CJK_CODE_RANGES,
-  isAnsi,
-  isCJK,
-  isPunctuation,
-  PUNCTATION_CODE_RANGES,
-};
+export { CJK_CODE_RANGES, isAnsi, isCJK, isPunctuation, PUNCTATION_CODE_RANGES };
 
 export type { CountResult, Estimation, Options, WordFN };
 
@@ -31,10 +18,7 @@ export const DEFAULT_OPTIONS = {
  * @param {Options} [options] - the options to use.
  * @returns {CountResult} the result of words and characters.
  */
-export function count(
-  text?: string,
-  options: Options = DEFAULT_OPTIONS,
-): CountResult {
+export function count(text?: string, options: Options = DEFAULT_OPTIONS): CountResult {
   if (!text) {
     return { words: 0, chars: 0 };
   }
@@ -61,17 +45,13 @@ export function count(
     if (isCJK(char)) {
       chars++;
 
-      while (
-        i <= end
-        && !isPunctuationOrWord(nextChar, options.isWord || isAnsi)
-      ) {
+      while (i <= end && !isPunctuationOrWord(nextChar, options.isWord || isAnsi)) {
         i++;
         nextChar = normalizedText[i + 1];
       }
     } else if (
-      isPunctuationOrWord(char, options.isWord || isAnsi)
-      && (!isPunctuationOrWord(nextChar, options.isWord || isAnsi)
-        || isCJK(nextChar))
+      isPunctuationOrWord(char, options.isWord || isAnsi) &&
+      (!isPunctuationOrWord(nextChar, options.isWord || isAnsi) || isCJK(nextChar))
     ) {
       words++;
     }
@@ -91,10 +71,7 @@ function isPunctuationOrWord(char: string = "", isWordFn: WordFN): boolean {
  * @param {Options} [options] - the options to use.
  * @returns {Estimation} the estimation result.
  */
-export function estimate(
-  text?: string,
-  options: Options = DEFAULT_OPTIONS,
-): Estimation {
+export function estimate(text?: string, options: Options = DEFAULT_OPTIONS): Estimation {
   if (!text) {
     return { minutes: 0, time: 0, words: 0, chars: 0, text: "0 min read" };
   }

@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { createVolapyk } from "volapyk";
-import { count, estimate } from "../src";
 
+import { count, estimate } from "../src";
 import { CJK_CHARACTERS } from "./shared";
 
 describe("estimate", () => {
@@ -138,8 +138,7 @@ describe("estimate", () => {
     });
 
     it("handle markdown links", () => {
-      const text
-        = "this text has a markdown link to my [projects](https://luxass.dev/projects)";
+      const text = "this text has a markdown link to my [projects](https://luxass.dev/projects)";
 
       const { minutes, time } = estimate(text);
 
@@ -149,8 +148,8 @@ describe("estimate", () => {
   });
 
   it("handle texts with emojis", () => {
-    const text
-      = "this text has emojis 😎🤓🤩🥳🤯🤬🤮🤢🤧🥵🥶🥴😵🤪🤠🥳🥸🤏🤞🤟🤘🤙👈👉👆👇👍👎👊👋🤚🖐️✋🖖";
+    const text =
+      "this text has emojis 😎🤓🤩🥳🤯🤬🤮🤢🤧🥵🥶🥴😵🤪🤠🥳🥸🤏🤞🤟🤘🤙👈👉👆👇👍👎👊👋🤚🖐️✋🖖";
 
     const { minutes, time } = estimate(text);
 
@@ -417,8 +416,7 @@ describe("count", () => {
     });
 
     it("handle markdown links", () => {
-      const text
-        = "this text has a markdown link to my [projects](https://luxass.dev/projects)";
+      const text = "this text has a markdown link to my [projects](https://luxass.dev/projects)";
 
       const { chars, words } = count(text);
 
@@ -428,8 +426,8 @@ describe("count", () => {
   });
 
   it("handle texts with emojis", () => {
-    const text
-      = "this text has emojis 😎🤓🤩🥳🤯🤬🤮🤢🤧🥵🥶🥴😵🤪🤠🥳🥸🤏🤞🤟🤘🤙👈👉👆👇👍👎👊👋🤚🖐️✋🖖";
+    const text =
+      "this text has emojis 😎🤓🤩🥳🤯🤬🤮🤢🤧🥵🥶🥴😵🤪🤠🥳🥸🤏🤞🤟🤘🤙👈👉👆👇👍👎👊👋🤚🖐️✋🖖";
 
     const { chars, words } = count(text);
 

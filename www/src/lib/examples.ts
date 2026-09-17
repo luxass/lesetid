@@ -1,5 +1,6 @@
-import type { Example } from "./schemas";
 import { readdir, readFile } from "node:fs/promises";
+
+import type { Example } from "./schemas";
 import { EXAMPLE_SCHEMA } from "./schemas";
 
 export async function getExamples(): Promise<Example[]> {
@@ -9,7 +10,10 @@ export async function getExamples(): Promise<Example[]> {
 
   for (const example of files.filter((file) => file.isDirectory())) {
     try {
-      const exampleFile = await readFile(`../examples/${example.name}/.lesetid/example.json`, "utf-8");
+      const exampleFile = await readFile(
+        `../examples/${example.name}/.lesetid/example.json`,
+        "utf-8",
+      );
 
       if (exampleFile == null) {
         continue;
