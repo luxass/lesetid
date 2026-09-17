@@ -28,9 +28,7 @@
     /** Monorepo */
     "incremental": true,
     "tsBuildInfoFile": "${configDir}/.cache/tsbuildinfo.json",
-    "types": [
-      "node"
-    ]
+    "types": ["node"]
   },
   "include": ["${configDir}/src/**/*.ts", "${configDir}/src/**/*.tsx"],
   "exclude": ["${configDir}/node_modules/", "${configDir}/dist/", "${configDir}/eslint.config.js"]

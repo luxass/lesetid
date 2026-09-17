@@ -1,10 +1,8 @@
 import type { Estimation, Options } from "lesetid";
+import { estimate } from "lesetid";
 import type { Root } from "mdast";
-import type { Plugin } from "unified";
-import {
-  estimate,
-} from "lesetid";
 import { toString } from "mdast-util-to-string";
+import type { Plugin } from "unified";
 
 export type { Estimation, Options };
 
