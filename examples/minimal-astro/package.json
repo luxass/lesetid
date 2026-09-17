@@ -8,6 +8,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "sync": "astro sync",
     "typecheck": "astro check"
   },
   "dependencies": {
