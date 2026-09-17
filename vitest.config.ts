@@ -1,11 +1,13 @@
 import { existsSync, readdirSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 
 import { defineConfig, type TestProjectConfiguration } from "vitest/config";
 
-const pkgRoot = (pkg: string) => new URL(`./packages/${pkg}`, import.meta.url).pathname;
+// fileURLToPath (not .pathname) so paths are valid on Windows too.
+const pkgRoot = (pkg: string) => fileURLToPath(new URL(`./packages/${pkg}`, import.meta.url));
 const alias = (pkg: string) => `${pkgRoot(pkg)}/src`;
 
-const dirUrl = new URL("./packages", import.meta.url).pathname;
+const dirUrl = fileURLToPath(new URL("./packages", import.meta.url));
 
 const aliases = readdirSync(dirUrl)
   .filter((dir) => existsSync(pkgRoot(dir) + "/package.json"))
