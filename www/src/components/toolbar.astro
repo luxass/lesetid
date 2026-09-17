@@ -23,11 +23,11 @@ const texts = await getTexts();
 <script id="texts" data-texts={JSON.stringify(texts)}></script>
 
 <script>
-  const textSelect = document.getElementById("text-select") as unknown as HTMLSelectElement;
+  const textSelect = document.querySelector("#text-select") as unknown as HTMLSelectElement;
 
   const textarea = document.querySelector("textarea") as HTMLTextAreaElement;
 
-  const textsElement = document.getElementById("texts");
+  const textsElement = document.querySelector<HTMLElement>("#texts");
 
   if (textsElement == null) {
     // eslint-disable-next-line no-alert
@@ -35,7 +35,7 @@ const texts = await getTexts();
     throw new Error("no texts found");
   }
 
-  const texts: { file: string; content: string }[] = JSON.parse(textsElement.getAttribute("data-texts") as string);
+  const texts: { file: string; content: string }[] = JSON.parse(textsElement.dataset.texts as string);
 
   textSelect.addEventListener("change", async (e) => {
     if (e.target == null || !("value" in e.target) || typeof e.target.value !== "string") {
@@ -51,6 +51,6 @@ const texts = await getTexts();
     }
 
     textarea.value = found.content;
-    (window as any).__UPDATE_READING_TIME(found.content);
+    window.__UPDATE_READING_TIME(found.content);
   });
 </script>
