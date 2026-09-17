@@ -21,8 +21,8 @@ export const prerender = true;
   import { estimate } from "lesetid";
   import { debounce } from "../lib/utils";
 
-  const textarea = document.getElementById("text-input");
-  const readingTimeElement = document.getElementById("reading-time");
+  const textarea = document.querySelector("#text-input");
+  const readingTimeElement = document.querySelector("#reading-time");
 
   if (!textarea) {
     // eslint-disable-next-line no-alert
@@ -42,7 +42,7 @@ export const prerender = true;
 
   const updateReadingTime = debounce(calculateReadingTime, 300);
 
-  (window as any).__UPDATE_READING_TIME = calculateReadingTime;
+  window.__UPDATE_READING_TIME = calculateReadingTime;
 
   textarea.addEventListener("input", (e) => {
     if (e.target == null || !("value" in e.target) || typeof e.target.value !== "string") {
