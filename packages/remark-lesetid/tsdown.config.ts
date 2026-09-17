@@ -8,15 +8,19 @@ export default defineConfig({
   treeshake: true,
   exports: {
     enabled: "local-only",
+    // Keep package.json versions managed by pnpm catalogs;
+    // tsdown would otherwise write exact versions here on every build.
+    inlinedDependencies: false,
   },
   deps: {
-    // Ensure that these dependencies are treated as external
-    // this affects their type declarations as well
-    neverBundle: [
-      "unist",
-      "mdast",
-    ],
-    skipNodeModulesBundle: true,
+    // Ensure that dependencies are treated as external in the JavaScript
+    // output. `unified` and `mdast` stay external for type declarations
+    // as well, while the remaining types are bundled so consumers
+    // don't need them installed.
+    neverBundle: true,
+    dts: {
+      neverBundle: ["unist", "mdast"],
+    },
   },
   publint: true,
   footer(ctx) {
@@ -29,6 +33,7 @@ export default defineConfig({
         js: "module.exports = module.exports.default;",
       };
     }
+    return undefined;
   },
   tsconfig: "./tsconfig.build.json",
 });
