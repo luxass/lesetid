@@ -2,33 +2,38 @@
   "name": "lesetid",
   "version": "2.1.1",
   "description": "A dead simple read time estimation",
-  "type": "module",
+  "keywords": [
+    "character count",
+    "characters per minute",
+    "medium",
+    "read",
+    "read time",
+    "reading time",
+    "time",
+    "words per minute"
+  ],
+  "homepage": "https://github.com/luxass/lesetid",
+  "bugs": {
+    "url": "https://github.com/luxass/lesetid/issues"
+  },
+  "license": "MIT",
   "author": {
     "name": "Lucas Nørgård",
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@10.33.2",
-  "license": "MIT",
-  "homepage": "https://github.com/luxass/lesetid",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/luxass/lesetid.git",
     "directory": "packages/lesetid"
   },
-  "bugs": {
-    "url": "https://github.com/luxass/lesetid/issues"
-  },
-  "keywords": [
-    "read time",
-    "reading time",
-    "words per minute",
-    "read",
-    "time",
-    "medium",
-    "character count",
-    "characters per minute"
+  "files": [
+    "dist"
   ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
@@ -44,30 +49,28 @@
     },
     "./package.json": "./package.json"
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.cts",
-  "files": [
-    "dist"
-  ],
-  "engines": {
-    "node": ">=20"
-  },
   "scripts": {
     "build": "tsdown --tsconfig=tsconfig.build.json",
     "dev": "tsdown --watch",
-    "lint": "eslint .",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
     "typecheck": "tsc --noEmit -p tsconfig.build.json",
     "clean": "git clean -xdf dist node_modules"
   },
   "devDependencies": {
     "@lesetid/tsconfig": "workspace:*",
-    "@luxass/eslint-config": "catalog:linting",
-    "@types/node": "catalog:lesetid",
-    "eslint": "catalog:linting",
-    "publint": "catalog:monorepo",
-    "tsdown": "catalog:monorepo",
-    "typescript": "catalog:monorepo",
-    "volapyk": "catalog:monorepo"
-  }
+    "@types/node": "catalog:types",
+    "oxfmt": "catalog:dev",
+    "oxlint": "catalog:dev",
+    "publint": "catalog:dev",
+    "tsdown": "catalog:dev",
+    "typescript": "catalog:dev",
+    "volapyk": "catalog:dev"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@12.4.1"
 }

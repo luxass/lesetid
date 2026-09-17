@@ -1,23 +1,21 @@
 {
   "name": "lesetid-monorepo",
-  "description": "Monorepo for the lesetid packages",
-  "type": "module",
   "version": "0.0.0",
   "private": true,
+  "description": "Monorepo for the lesetid packages",
+  "homepage": "https://github.com/luxass/lesetid",
+  "bugs": {
+    "url": "https://github.com/luxass/lesetid/issues"
+  },
+  "license": "MIT",
   "author": {
     "name": "Lucas Nørgård",
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@10.33.2",
-  "license": "MIT",
-  "homepage": "https://github.com/luxass/lesetid",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/luxass/lesetid.git"
-  },
-  "bugs": {
-    "url": "https://github.com/luxass/lesetid/issues"
   },
   "workspaces": [
     "www",
@@ -25,6 +23,7 @@
     "examples/*",
     "tooling/*"
   ],
+  "type": "module",
   "scripts": {
     "build:all": "turbo run build",
     "build": "turbo run build --filter=\"./packages/*\"",
@@ -33,8 +32,11 @@
     "dev:all": "turbo run dev",
     "dev": "turbo run dev --filter=\"./packages/*\"",
     "dev:examples": "turbo run dev --filter=\"@lesetid-example/*\"",
-    "lint": "turbo run lint",
-    "test": "vitest run",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "test": "vitest --run",
     "test:watch": "vitest",
     "typecheck": "turbo run typecheck",
     "release": "changeset",
@@ -43,10 +45,14 @@
   "devDependencies": {
     "@changesets/changelog-github": "catalog:monorepo",
     "@changesets/cli": "catalog:monorepo",
-    "@types/node": "catalog:lesetid",
+    "@types/node": "catalog:types",
     "@vitest/coverage-v8": "catalog:testing",
+    "oxfmt": "catalog:dev",
+    "oxlint": "catalog:dev",
+    "oxlint-tsgolint": "catalog:dev",
     "turbo": "catalog:monorepo",
-    "typescript": "catalog:monorepo",
+    "typescript": "catalog:dev",
     "vitest": "catalog:testing"
-  }
+  },
+  "packageManager": "pnpm@12.4.1"
 }
