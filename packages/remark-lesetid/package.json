@@ -2,29 +2,34 @@
   "name": "remark-lesetid",
   "version": "2.1.1",
   "description": "A remark plugin to add reading time to your markdown files",
-  "type": "module",
+  "keywords": [
+    "read time",
+    "reading time",
+    "remark-plugin",
+    "words per minute"
+  ],
+  "homepage": "https://github.com/luxass/remark-lesetid",
+  "bugs": {
+    "url": "https://github.com/luxass/remark-lesetid/issues"
+  },
+  "license": "MIT",
   "author": {
     "name": "Lucas Nørgård",
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@10.33.2",
-  "license": "MIT",
-  "homepage": "https://github.com/luxass/remark-lesetid",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/luxass/lesetid.git",
     "directory": "packages/remark-lesetid"
   },
-  "bugs": {
-    "url": "https://github.com/luxass/remark-lesetid/issues"
-  },
-  "keywords": [
-    "remark-plugin",
-    "read time",
-    "reading time",
-    "words per minute"
+  "files": [
+    "dist"
   ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
@@ -36,39 +41,37 @@
     },
     "./package.json": "./package.json"
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.cts",
-  "files": [
-    "dist"
-  ],
-  "engines": {
-    "node": ">=20"
-  },
   "scripts": {
     "build": "tsdown --tsconfig=tsconfig.build.json",
     "dev": "tsdown --watch",
-    "lint": "eslint .",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
     "typecheck": "tsc --noEmit -p tsconfig.build.json",
     "clean": "git clean -xdf dist node_modules"
   },
   "dependencies": {
     "lesetid": "workspace:*",
-    "mdast-util-to-string": "catalog:remark-lesetid",
-    "unist-util-visit": "catalog:remark-lesetid"
+    "mdast-util-to-string": "catalog:runtime",
+    "unist-util-visit": "catalog:runtime"
   },
   "devDependencies": {
     "@lesetid/tsconfig": "workspace:*",
-    "@luxass/eslint-config": "catalog:linting",
-    "@types/mdast": "catalog:remark-lesetid",
-    "@types/node": "catalog:remark-lesetid",
-    "eslint": "catalog:linting",
-    "publint": "catalog:monorepo",
+    "@types/mdast": "catalog:types",
+    "@types/node": "catalog:types",
+    "oxfmt": "catalog:dev",
+    "oxlint": "catalog:dev",
+    "publint": "catalog:dev",
     "remark": "catalog:example",
-    "tsdown": "catalog:monorepo",
-    "typescript": "catalog:monorepo",
-    "unified": "catalog:remark-lesetid",
-    "vfile": "catalog:remark-lesetid",
-    "volapyk": "catalog:monorepo"
-  }
+    "tsdown": "catalog:dev",
+    "typescript": "catalog:dev",
+    "unified": "catalog:runtime",
+    "vfile": "catalog:runtime",
+    "volapyk": "catalog:dev"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@12.4.1"
 }
