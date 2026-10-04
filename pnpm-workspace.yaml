@@ -66,7 +66,7 @@ catalogs:
     "@unocss/reset": 66.6.8
     "unocss": 66.6.8
     "@astrojs/mdx": 5.0.4
-    "@astrojs/rss": 4.0.18
+    "@astrojs/rss": 4.0.19
     "@astrojs/sitemap": 3.7.2
     "@astrojs/cloudflare": 13.3.0
     wrangler: 4.87.0
@@ -88,3 +88,5 @@ catalogs:
 minimumReleaseAgeExclude:
   # Renovate security update: pnpm@10.34.5
   - pnpm@10.34.5
+  # Renovate security update: @astrojs/rss@4.0.19
+  - "@astrojs/rss@4.0.19"
