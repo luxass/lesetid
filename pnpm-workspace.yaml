@@ -85,3 +85,6 @@ catalogs:
     "@types/react-dom": 19.2.3
     "postcss": 8.5.13
     "tailwindcss": 4.2.4
+minimumReleaseAgeExclude:
+  # Renovate security update: pnpm@10.34.5
+  - pnpm@10.34.5
