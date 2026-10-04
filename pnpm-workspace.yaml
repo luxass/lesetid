@@ -25,7 +25,7 @@ catalogs:
     "prettier-plugin-astro": 0.14.1
 
   testing:
-    vitest: 4.1.4
+    vitest: 4.1.11
     "@vitest/coverage-v8": 4.1.4
 
   monorepo:
@@ -88,3 +88,5 @@ catalogs:
 minimumReleaseAgeExclude:
   # Renovate security update: pnpm@10.34.5
   - pnpm@10.34.5
+  # Renovate security update: vitest@4.1.11
+  - vitest@4.1.11
