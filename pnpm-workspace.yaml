@@ -26,7 +26,7 @@ catalogs:
 
   testing:
     vitest: 4.1.4
-    "@vitest/coverage-v8": 4.1.4
+    "@vitest/coverage-v8": 4.1.11
 
   monorepo:
     "@changesets/changelog-github": 0.6.0
