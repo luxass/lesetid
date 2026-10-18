@@ -25,6 +25,7 @@ export default defineConfig({
         js: "module.exports = module.exports.default;",
       };
     }
+    return undefined;
   },
   tsconfig: "./tsconfig.build.json",
 });

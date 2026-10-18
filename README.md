@@ -36,6 +36,8 @@ Oxfmt 0.72 does not format Astro, SVG, or XML files.
 These formats are explicitly excluded and need manual formatting.
 Generated files, build outputs, caches, and the lockfile are also excluded.
 
+Package tooling uses TypeScript 7. Astro and Next.js retain TypeScript 6 because their tools use its compiler API.
+
 The workspace and published packages require Node.js 24.11.0 or later.
 Use the latest Node.js 24 release for development.
 Run `pnpm test`, `pnpm typecheck`, and `pnpm build:all` after installation to check the migration.

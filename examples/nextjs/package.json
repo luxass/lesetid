@@ -10,8 +10,8 @@
     "clean": "git clean -xdf dist node_modules .next",
     "build": "next build",
     "start": "next start",
-    "lint": "oxlint -c ../../oxlint.config.ts --ext astro .",
-    "lint:fix": "oxlint -c ../../oxlint.config.ts --ext astro --fix .",
+    "lint": "oxlint -c ../../oxlint.config.ts .",
+    "lint:fix": "oxlint -c ../../oxlint.config.ts --fix .",
     "fmt": "oxfmt -c ../../oxfmt.config.ts .",
     "fmt:check": "oxfmt -c ../../oxfmt.config.ts --check ."
   },
@@ -33,7 +33,7 @@
     "@types/react-dom": "catalog:example",
     "postcss": "catalog:example",
     "tailwindcss": "catalog:example",
-    "typescript": "catalog:dev",
+    "typescript": "catalog:framework",
     "oxfmt": "catalog:dev",
     "oxlint": "catalog:dev",
     "oxlint-tsgolint": "catalog:dev"

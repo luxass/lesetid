@@ -48,10 +48,10 @@
   "scripts": {
     "build": "tsdown --tsconfig=tsconfig.build.json",
     "dev": "tsdown --watch",
-    "lint": "oxlint -c ../../oxlint.config.ts --ext astro .",
+    "lint": "oxlint -c ../../oxlint.config.ts .",
     "typecheck": "tsc --noEmit -p tsconfig.build.json",
     "clean": "git clean -xdf dist node_modules",
-    "lint:fix": "oxlint -c ../../oxlint.config.ts --ext astro --fix .",
+    "lint:fix": "oxlint -c ../../oxlint.config.ts --fix .",
     "fmt": "oxfmt -c ../../oxfmt.config.ts .",
     "fmt:check": "oxfmt -c ../../oxfmt.config.ts --check ."
   },
