@@ -11,10 +11,14 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint .",
+    "lint": "oxlint -c ../oxlint.config.ts --ext astro . && astro check",
     "clean": "git clean -xdf dist node_modules .astro",
     "typecheck": "astro-check",
-    "cf-typegen": "wrangler types"
+    "cf-typegen": "wrangler types",
+    "lint:fix": "oxlint -c ../oxlint.config.ts --ext astro --fix . && astro check",
+    "fmt": "oxfmt -c ../oxfmt.config.ts .",
+    "fmt:check": "oxfmt -c ../oxfmt.config.ts --check .",
+    "lint:astro": "astro check"
   },
   "dependencies": {
     "@iconify-json/logos": "catalog:www",
@@ -26,19 +30,15 @@
   "devDependencies": {
     "@astrojs/check": "catalog:www",
     "@astrojs/cloudflare": "catalog:www",
-    "@luxass/eslint-config": "catalog:linting",
     "@types/node": "catalog:types",
     "@unocss/astro": "catalog:www",
-    "@unocss/eslint-plugin": "catalog:linting",
     "@unocss/reset": "catalog:www",
-    "astro-eslint-parser": "catalog:linting",
-    "eslint": "catalog:linting",
-    "eslint-plugin-astro": "catalog:linting",
-    "eslint-plugin-format": "catalog:linting",
-    "prettier-plugin-astro": "catalog:linting",
     "typescript": "catalog:dev",
     "unocss": "catalog:www",
     "unplugin-icons": "catalog:www",
-    "wrangler": "catalog:www"
+    "wrangler": "catalog:www",
+    "oxfmt": "catalog:dev",
+    "oxlint": "catalog:dev",
+    "oxlint-tsgolint": "catalog:dev"
   }
 }

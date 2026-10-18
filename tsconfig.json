@@ -1,0 +1,8 @@
+{
+  "extends": "./tooling/tsconfig/base.build.json",
+  "compilerOptions": {
+    "moduleResolution": "Bundler"
+  },
+  "include": ["*.ts", "scripts/**/*.mjs"],
+  "exclude": ["node_modules", ".pnpm-store", "dist"]
+}

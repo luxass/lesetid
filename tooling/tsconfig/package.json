@@ -5,6 +5,17 @@
   "engines": {
     "node": ">=24.11.0"
   },
+  "scripts": {
+    "lint": "oxlint -c ../../oxlint.config.ts --ext astro .",
+    "lint:fix": "oxlint -c ../../oxlint.config.ts --ext astro --fix .",
+    "fmt": "oxfmt -c ../../oxfmt.config.ts .",
+    "fmt:check": "oxfmt -c ../../oxfmt.config.ts --check ."
+  },
+  "devDependencies": {
+    "oxfmt": "catalog:dev",
+    "oxlint": "catalog:dev",
+    "oxlint-tsgolint": "catalog:dev"
+  },
   "files": [
     "base.json",
     "base.build.json"

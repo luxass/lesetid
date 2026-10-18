@@ -33,5 +33,5 @@
     ]
   },
   "include": ["${configDir}/src/**/*.ts", "${configDir}/src/**/*.tsx"],
-  "exclude": ["${configDir}/node_modules/", "${configDir}/dist/", "${configDir}/eslint.config.js"]
+  "exclude": ["${configDir}/node_modules/", "${configDir}/dist/"]
 }
