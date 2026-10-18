@@ -42,7 +42,7 @@ export const prerender = true;
 
   const updateReadingTime = debounce(calculateReadingTime, 300);
 
-  (window as any).__UPDATE_READING_TIME = calculateReadingTime;
+  window.__UPDATE_READING_TIME = calculateReadingTime;
 
   textarea.addEventListener("input", (e) => {
     if (e.target == null || !("value" in e.target) || typeof e.target.value !== "string") {
