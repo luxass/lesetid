@@ -19,6 +19,11 @@ This repository contains the packages, docs and examples for lesetid
 
 [Report an Issue](https://github.com/luxass/lesetid/issues/new)
 
+## Requirements
+
+The workspace and published packages require Node.js 24.11.0 or later.
+Use the latest Node.js 24 release for development.
+
 ## 📄 License
 
 Published under [MIT License](./LICENSE).
