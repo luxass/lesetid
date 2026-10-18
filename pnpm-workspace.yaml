@@ -27,7 +27,7 @@ catalogs:
   dev:
     publint: 0.3.25
     tsdown: 0.23.1
-    typescript: 7.0.2
+    typescript: 6.0.3
 
   types:
     "@types/node": 26.6.5
