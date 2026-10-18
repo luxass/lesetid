@@ -1,7 +1,8 @@
 import type { Buffer } from "node:buffer";
 import type { TransformCallback } from "node:stream";
-import type { Options } from "./";
 import { Transform } from "node:stream";
+
+import type { Options } from "./";
 import { count, DEFAULT_OPTIONS } from "./";
 
 /**
@@ -36,11 +37,7 @@ export class ReadingTimeStream extends Transform {
     this.options = options;
   }
 
-  _transform(
-    chunk: Buffer,
-    encoding: BufferEncoding,
-    callback: TransformCallback,
-  ): void {
+  _transform(chunk: Buffer, encoding: BufferEncoding, callback: TransformCallback): void {
     const { words, chars } = count(chunk.toString(encoding), this.options);
     this.reading.words += words;
     this.reading.chars += chars;

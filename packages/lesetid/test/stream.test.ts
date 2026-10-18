@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { createVolapykChunks } from "volapyk";
+
 import { createReadingTimeStream } from "../src/stream";
 
 interface Expected {

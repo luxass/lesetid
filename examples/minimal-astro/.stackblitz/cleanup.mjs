@@ -2,7 +2,7 @@ import fs from "node:fs";
 
 // fetch the pnpm-workspace.yaml file from github
 const pnpmWorkspace = await fetch(
-  "https://raw.githubusercontent.com/luxass/lesetid/main/pnpm-workspace.yaml"
+  "https://raw.githubusercontent.com/luxass/lesetid/main/pnpm-workspace.yaml",
 ).then((res) => res.text());
 
 // parse the catalogs from the workspace file
@@ -11,13 +11,13 @@ const catalogMatch = pnpmWorkspace.match(/catalogs:\s*([\s\S]*?)(?=\n\w|$)/);
 if (catalogMatch) {
   const catalogContent = catalogMatch[1];
   let currentCatalog = null;
-  catalogContent.split('\n').forEach(line => {
+  catalogContent.split("\n").forEach((line) => {
     const catalogNameMatch = line.match(/^\s*(\w+):$/);
     if (catalogNameMatch) {
       currentCatalog = catalogNameMatch[1];
       catalogs[currentCatalog] = {};
     } else if (currentCatalog && line.trim()) {
-      const [packageName, version] = line.trim().replace(/"/g, "").split(': ');
+      const [packageName, version] = line.trim().replace(/"/g, "").split(": ");
       if (packageName && version) {
         catalogs[currentCatalog][packageName] = version;
       }
@@ -33,7 +33,7 @@ function updateDependencyLinksToLatest(filename) {
     let contents = fs.readFileSync(filename, "utf-8");
 
     // Replace workspace dependencies
-    contents = contents.replace(/"workspace:\*"/gi, "\"latest\"");
+    contents = contents.replace(/"workspace:\*"/gi, '"latest"');
 
     // Replace catalog dependencies
     contents = contents.replace(/"catalog:(\w+)"/gi, (match, catalogName) => {
@@ -43,8 +43,8 @@ function updateDependencyLinksToLatest(filename) {
       }
 
       // Find the package name in the current line
-      const lines = contents.split('\n');
-      const currentLine = lines.find(line => line.includes(match));
+      const lines = contents.split("\n");
+      const currentLine = lines.find((line) => line.includes(match));
       if (!currentLine) return match;
 
       const packageMatch = currentLine.match(/"([^"]+)":\s*"catalog:\w+"/);
