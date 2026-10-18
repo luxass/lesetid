@@ -48,6 +48,13 @@ export default defineConfig({
       env: { astro: true, browser: true, node: true },
     },
     {
+      files: ["www/**/*.astro", "www/src/env.d.ts"],
+      rules: {
+        // Keep the existing playground hook shared by its browser scripts.
+        "no-underscore-dangle": ["error", { allow: ["__UPDATE_READING_TIME"] }],
+      },
+    },
+    {
       files: ["scripts/**/*"],
       rules: {
         "no-console": "off",
