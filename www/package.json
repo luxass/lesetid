@@ -2,6 +2,9 @@
   "name": "@lesetid/www",
   "type": "module",
   "private": true,
+  "engines": {
+    "node": ">=24.11.0"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
