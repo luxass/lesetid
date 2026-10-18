@@ -20,6 +20,10 @@
     "astro": "catalog:www",
     "remark-lesetid": "workspace:*"
   },
+  "devDependencies": {
+    "@astrojs/check": "catalog:www",
+    "typescript": "catalog:dev"
+  },
   "stackblitz": {
     "installDependencies": false,
     "startCommand": "node .stackblitz/cleanup.mjs && npm install && npm run dev"

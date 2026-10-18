@@ -27,7 +27,7 @@
     "@astrojs/check": "catalog:www",
     "@astrojs/cloudflare": "catalog:www",
     "@luxass/eslint-config": "catalog:linting",
-    "@types/node": "catalog:lesetid",
+    "@types/node": "catalog:types",
     "@unocss/astro": "catalog:www",
     "@unocss/eslint-plugin": "catalog:linting",
     "@unocss/reset": "catalog:www",
@@ -36,7 +36,7 @@
     "eslint-plugin-astro": "catalog:linting",
     "eslint-plugin-format": "catalog:linting",
     "prettier-plugin-astro": "catalog:linting",
-    "typescript": "catalog:monorepo",
+    "typescript": "catalog:dev",
     "unocss": "catalog:www",
     "unplugin-icons": "catalog:www",
     "wrangler": "catalog:www"
