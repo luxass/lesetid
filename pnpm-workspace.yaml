@@ -21,6 +21,10 @@ catalogs:
     oxlint-tsgolint: 7.0.2004
     publint: 0.3.25
     tsdown: 0.23.1
+    typescript: 7.0.2
+
+  framework:
+    # Astro and Next.js still use the TypeScript compiler API.
     typescript: 6.0.3
 
   types:

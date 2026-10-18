@@ -12,8 +12,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "typecheck": "astro check",
-    "lint": "oxlint -c ../../oxlint.config.ts --ext astro . && astro check",
-    "lint:fix": "oxlint -c ../../oxlint.config.ts --ext astro --fix . && astro check",
+    "lint": "oxlint -c ../../oxlint.config.ts . && astro check",
+    "lint:fix": "oxlint -c ../../oxlint.config.ts --fix . && astro check",
     "fmt": "oxfmt -c ../../oxfmt.config.ts .",
     "fmt:check": "oxfmt -c ../../oxfmt.config.ts --check .",
     "lint:astro": "astro check"
@@ -30,7 +30,7 @@
     "oxlint": "catalog:dev",
     "oxlint-tsgolint": "catalog:dev",
     "@astrojs/check": "catalog:www",
-    "typescript": "catalog:dev"
+    "typescript": "catalog:framework"
   },
   "stackblitz": {
     "installDependencies": false,
