@@ -2,9 +2,10 @@
   "name": "@lesetid/tsconfig",
   "version": "1.0.0",
   "private": true,
-  "engines": {
-    "node": ">=24.11.0"
-  },
+  "files": [
+    "base.json",
+    "base.build.json"
+  ],
   "scripts": {
     "lint": "oxlint --no-error-on-unmatched-pattern -c ../../oxlint.config.ts .",
     "lint:fix": "oxlint --no-error-on-unmatched-pattern -c ../../oxlint.config.ts --fix .",
@@ -16,8 +17,7 @@
     "oxlint": "catalog:dev",
     "oxlint-tsgolint": "catalog:dev"
   },
-  "files": [
-    "base.json",
-    "base.build.json"
-  ]
+  "engines": {
+    "node": ">=24.11.0"
+  }
 }

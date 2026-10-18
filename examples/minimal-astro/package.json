@@ -1,10 +1,7 @@
 {
   "name": "@lesetid-example/minimal-astro",
-  "type": "module",
   "private": true,
-  "engines": {
-    "node": ">=24.11.0"
-  },
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "clean": "git clean -xdf dist node_modules .astro",
@@ -26,11 +23,14 @@
     "remark-lesetid": "workspace:*"
   },
   "devDependencies": {
+    "@astrojs/check": "catalog:www",
     "oxfmt": "catalog:dev",
     "oxlint": "catalog:dev",
     "oxlint-tsgolint": "catalog:dev",
-    "@astrojs/check": "catalog:www",
     "typescript": "catalog:framework"
+  },
+  "engines": {
+    "node": ">=24.11.0"
   },
   "stackblitz": {
     "installDependencies": false,

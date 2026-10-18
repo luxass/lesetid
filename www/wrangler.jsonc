@@ -2,32 +2,29 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "lesetid",
   "compatibility_date": "2026-04-25",
-  "compatibility_flags": [
-    "nodejs_compat",
-    "global_fetch_strictly_public"
-  ],
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "assets": {
     "binding": "ASSETS",
-    "directory": "./dist"
+    "directory": "./dist",
   },
   "observability": {
-    "enabled": true
+    "enabled": true,
   },
   "placement": {
-    "mode": "smart"
+    "mode": "smart",
   },
   "routes": [
     {
       "custom_domain": true,
-      "pattern": "lesetid.dev"
+      "pattern": "lesetid.dev",
     },
     {
       "custom_domain": true,
-      "pattern": "examples.lesetid.dev"
+      "pattern": "examples.lesetid.dev",
     },
     {
       "custom_domain": true,
-      "pattern": "www.lesetid.dev"
-    }
-  ]
+      "pattern": "www.lesetid.dev",
+    },
+  ],
 }

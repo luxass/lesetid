@@ -2,33 +2,38 @@
   "name": "lesetid",
   "version": "2.1.1",
   "description": "A dead simple read time estimation",
-  "type": "module",
+  "keywords": [
+    "character count",
+    "characters per minute",
+    "medium",
+    "read",
+    "read time",
+    "reading time",
+    "time",
+    "words per minute"
+  ],
+  "homepage": "https://github.com/luxass/lesetid",
+  "bugs": {
+    "url": "https://github.com/luxass/lesetid/issues"
+  },
+  "license": "MIT",
   "author": {
     "name": "Lucas Nørgård",
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@12.11.2",
-  "license": "MIT",
-  "homepage": "https://github.com/luxass/lesetid",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/luxass/lesetid.git",
     "directory": "packages/lesetid"
   },
-  "bugs": {
-    "url": "https://github.com/luxass/lesetid/issues"
-  },
-  "keywords": [
-    "read time",
-    "reading time",
-    "words per minute",
-    "read",
-    "time",
-    "medium",
-    "character count",
-    "characters per minute"
+  "files": [
+    "dist"
   ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
@@ -44,15 +49,6 @@
     },
     "./package.json": "./package.json"
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.cts",
-  "files": [
-    "dist"
-  ],
-  "engines": {
-    "node": ">=24.11.0"
-  },
   "scripts": {
     "build": "tsdown --tsconfig=tsconfig.build.json",
     "dev": "tsdown --watch",
@@ -66,12 +62,16 @@
   "devDependencies": {
     "@lesetid/tsconfig": "workspace:*",
     "@types/node": "catalog:types",
+    "oxfmt": "catalog:dev",
+    "oxlint": "catalog:dev",
+    "oxlint-tsgolint": "catalog:dev",
     "publint": "catalog:dev",
     "tsdown": "catalog:dev",
     "typescript": "catalog:dev",
-    "volapyk": "catalog:monorepo",
-    "oxfmt": "catalog:dev",
-    "oxlint": "catalog:dev",
-    "oxlint-tsgolint": "catalog:dev"
-  }
+    "volapyk": "catalog:monorepo"
+  },
+  "engines": {
+    "node": ">=24.11.0"
+  },
+  "packageManager": "pnpm@12.11.2"
 }

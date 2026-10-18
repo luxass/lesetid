@@ -43,12 +43,7 @@ export async function GET() {
           required: [],
         },
       },
-      required: [
-        "title",
-        "url",
-        "handle",
-        "providers",
-      ],
+      required: ["title", "url", "handle", "providers"],
     }),
     {
       status: 200,
