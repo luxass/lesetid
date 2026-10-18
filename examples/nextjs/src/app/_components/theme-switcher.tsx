@@ -1,7 +1,8 @@
 "use client";
 
-import styles from "./switch.module.css";
 import { memo, useEffect, useState } from "react";
+
+import styles from "./switch.module.css";
 
 declare global {
   var updateDOM: () => void;
@@ -20,6 +21,8 @@ export const NoFOUCScript = (storageKey: string) => {
   const [SYSTEM, DARK, LIGHT] = ["system", "dark", "light"];
 
   /** Modify transition globally to avoid patched transitions */
+  // This helper must stay inside the function serialized into the inline script.
+  // oxlint-disable-next-line unicorn/consistent-function-scoping
   const modifyTransition = () => {
     const css = document.createElement("style");
     css.textContent = "*,*:after,*:before{transition:none !important;}";
@@ -59,8 +62,7 @@ let updateDOM: () => void;
 const Switch = () => {
   const [mode, setMode] = useState<ColorSchemePreference>(
     () =>
-      ((typeof localStorage !== "undefined" &&
-        localStorage.getItem(STORAGE_KEY)) ??
+      ((typeof localStorage !== "undefined" && localStorage.getItem(STORAGE_KEY)) ??
         "system") as ColorSchemePreference,
   );
 
@@ -69,7 +71,9 @@ const Switch = () => {
     updateDOM = window.updateDOM;
     /** Sync the tabs */
     addEventListener("storage", (e: StorageEvent): void => {
-      e.key === STORAGE_KEY && setMode(e.newValue as ColorSchemePreference);
+      if (e.key === STORAGE_KEY) {
+        setMode(e.newValue as ColorSchemePreference);
+      }
     });
   }, []);
 
@@ -83,13 +87,7 @@ const Switch = () => {
     const index = modes.indexOf(mode);
     setMode(modes[(index + 1) % modes.length]);
   };
-  return (
-    <button
-      suppressHydrationWarning
-      className={styles.switch}
-      onClick={handleModeSwitch}
-    />
-  );
+  return <button suppressHydrationWarning className={styles.switch} onClick={handleModeSwitch} />;
 };
 
 const Script = memo(() => (

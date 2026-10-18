@@ -1,10 +1,7 @@
 {
   "name": "@lesetid/www",
-  "type": "module",
   "private": true,
-  "engines": {
-    "node": ">=24.11.0"
-  },
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -33,12 +30,15 @@
     "@types/node": "catalog:types",
     "@unocss/astro": "catalog:www",
     "@unocss/reset": "catalog:www",
+    "oxfmt": "catalog:dev",
+    "oxlint": "catalog:dev",
+    "oxlint-tsgolint": "catalog:dev",
     "typescript": "catalog:framework",
     "unocss": "catalog:www",
     "unplugin-icons": "catalog:www",
-    "wrangler": "catalog:www",
-    "oxfmt": "catalog:dev",
-    "oxlint": "catalog:dev",
-    "oxlint-tsgolint": "catalog:dev"
+    "wrangler": "catalog:www"
+  },
+  "engines": {
+    "node": ">=24.11.0"
   }
 }

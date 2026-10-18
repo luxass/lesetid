@@ -3,11 +3,7 @@
   "extends": ["//"],
   "tasks": {
     "build": {
-      "outputs": [
-        "dist/**",
-        ".wrangler/**",
-        ".astro/**"
-      ]
+      "outputs": ["dist/**", ".wrangler/**", ".astro/**"]
     },
     "dev": {
       "persistent": true

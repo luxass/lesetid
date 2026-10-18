@@ -13,13 +13,13 @@ function isCharCodeIntersected(code: number, start: number, end: number): boolea
 }
 
 export const CJK_CODE_RANGES: [number, number][] = [
-  [0x3040, 0x309F],
+  [0x3040, 0x309f],
   // CJK Unified ideographs
-  [0x4E00, 0x9FFF],
+  [0x4e00, 0x9fff],
   // Hangul
-  [0xAC00, 0xD7A3],
+  [0xac00, 0xd7a3],
   // CJK extensions
-  [0x20000, 0x2EBE0],
+  [0x20000, 0x2ebe0],
 ];
 
 /**
@@ -46,14 +46,14 @@ export const isCJK: WordFN = (char?: string): boolean => {
 };
 
 export const PUNCTATION_CODE_RANGES: [number, number][] = [
-  [0x21, 0x2F],
-  [0x3A, 0x40],
-  [0x5B, 0x60],
-  [0x7B, 0x7E],
+  [0x21, 0x2f],
+  [0x3a, 0x40],
+  [0x5b, 0x60],
+  [0x7b, 0x7e],
   // CJK Symbols and Punctuation
-  [0x3000, 0x303F],
+  [0x3000, 0x303f],
   // Full-width ASCII punctuation variants
-  [0xFF00, 0xFFEF],
+  [0xff00, 0xffef],
 ];
 
 /**
