@@ -1,21 +1,18 @@
 {
   "name": "@lesetid/www",
-  "type": "module",
   "private": true,
-  "engines": {
-    "node": ">=24.11.0"
-  },
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "oxlint -c ../oxlint.config.ts . && astro check",
+    "lint": "astro sync && oxlint -c ../oxlint.config.ts . && astro check",
     "clean": "git clean -xdf dist node_modules .astro",
     "typecheck": "astro-check",
     "cf-typegen": "wrangler types",
-    "lint:fix": "oxlint -c ../oxlint.config.ts --fix . && astro check",
+    "lint:fix": "astro sync && oxlint -c ../oxlint.config.ts --fix . && astro check",
     "fmt": "oxfmt -c ../oxfmt.config.ts .",
     "fmt:check": "oxfmt -c ../oxfmt.config.ts --check .",
     "lint:astro": "astro check"
@@ -33,12 +30,15 @@
     "@types/node": "catalog:types",
     "@unocss/astro": "catalog:www",
     "@unocss/reset": "catalog:www",
+    "oxfmt": "catalog:dev",
+    "oxlint": "catalog:dev",
+    "oxlint-tsgolint": "catalog:dev",
     "typescript": "catalog:framework",
     "unocss": "catalog:www",
     "unplugin-icons": "catalog:www",
-    "wrangler": "catalog:www",
-    "oxfmt": "catalog:dev",
-    "oxlint": "catalog:dev",
-    "oxlint-tsgolint": "catalog:dev"
+    "wrangler": "catalog:www"
+  },
+  "engines": {
+    "node": ">=24.11.0"
   }
 }

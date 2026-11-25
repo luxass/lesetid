@@ -1,10 +1,7 @@
 {
   "name": "@lesetid-example/minimal-astro",
-  "type": "module",
   "private": true,
-  "engines": {
-    "node": ">=24.11.0"
-  },
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "clean": "git clean -xdf dist node_modules .astro",
@@ -12,8 +9,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "typecheck": "astro check",
-    "lint": "oxlint -c ../../oxlint.config.ts . && astro check",
-    "lint:fix": "oxlint -c ../../oxlint.config.ts --fix . && astro check",
+    "lint": "astro sync && oxlint -c ../../oxlint.config.ts . && astro check",
+    "lint:fix": "astro sync && oxlint -c ../../oxlint.config.ts --fix . && astro check",
     "fmt": "oxfmt -c ../../oxfmt.config.ts .",
     "fmt:check": "oxfmt -c ../../oxfmt.config.ts --check .",
     "lint:astro": "astro check"
@@ -26,11 +23,14 @@
     "remark-lesetid": "workspace:*"
   },
   "devDependencies": {
+    "@astrojs/check": "catalog:www",
     "oxfmt": "catalog:dev",
     "oxlint": "catalog:dev",
     "oxlint-tsgolint": "catalog:dev",
-    "@astrojs/check": "catalog:www",
     "typescript": "catalog:framework"
+  },
+  "engines": {
+    "node": ">=24.11.0"
   },
   "stackblitz": {
     "installDependencies": false,

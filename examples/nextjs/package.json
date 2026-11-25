@@ -1,10 +1,7 @@
 {
   "name": "@lesetid-example/nextjs",
-  "type": "module",
   "private": true,
-  "engines": {
-    "node": ">=24.11.0"
-  },
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
     "clean": "git clean -xdf dist node_modules .next",
@@ -31,12 +28,15 @@
     "@types/node": "catalog:types",
     "@types/react": "catalog:example",
     "@types/react-dom": "catalog:example",
-    "postcss": "catalog:example",
-    "tailwindcss": "catalog:example",
-    "typescript": "catalog:framework",
     "oxfmt": "catalog:dev",
     "oxlint": "catalog:dev",
-    "oxlint-tsgolint": "catalog:dev"
+    "oxlint-tsgolint": "catalog:dev",
+    "postcss": "catalog:example",
+    "tailwindcss": "catalog:example",
+    "typescript": "catalog:framework"
+  },
+  "engines": {
+    "node": ">=24.11.0"
   },
   "stackblitz": {
     "installDependencies": false,

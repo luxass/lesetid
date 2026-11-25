@@ -2,29 +2,34 @@
   "name": "remark-lesetid",
   "version": "2.1.1",
   "description": "A remark plugin to add reading time to your markdown files",
-  "type": "module",
+  "keywords": [
+    "read time",
+    "reading time",
+    "remark-plugin",
+    "words per minute"
+  ],
+  "homepage": "https://github.com/luxass/remark-lesetid",
+  "bugs": {
+    "url": "https://github.com/luxass/remark-lesetid/issues"
+  },
+  "license": "MIT",
   "author": {
     "name": "Lucas Nørgård",
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@12.11.2",
-  "license": "MIT",
-  "homepage": "https://github.com/luxass/remark-lesetid",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/luxass/lesetid.git",
     "directory": "packages/remark-lesetid"
   },
-  "bugs": {
-    "url": "https://github.com/luxass/remark-lesetid/issues"
-  },
-  "keywords": [
-    "remark-plugin",
-    "read time",
-    "reading time",
-    "words per minute"
+  "files": [
+    "dist"
   ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
@@ -35,15 +40,6 @@
       "require": "./dist/astro.cjs"
     },
     "./package.json": "./package.json"
-  },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.cts",
-  "files": [
-    "dist"
-  ],
-  "engines": {
-    "node": ">=24.11.0"
   },
   "scripts": {
     "build": "tsdown --tsconfig=tsconfig.build.json",
@@ -64,15 +60,19 @@
     "@lesetid/tsconfig": "workspace:*",
     "@types/mdast": "catalog:remark-lesetid",
     "@types/node": "catalog:types",
+    "oxfmt": "catalog:dev",
+    "oxlint": "catalog:dev",
+    "oxlint-tsgolint": "catalog:dev",
     "publint": "catalog:dev",
     "remark": "catalog:example",
     "tsdown": "catalog:dev",
     "typescript": "catalog:dev",
     "unified": "catalog:remark-lesetid",
     "vfile": "catalog:remark-lesetid",
-    "volapyk": "catalog:monorepo",
-    "oxfmt": "catalog:dev",
-    "oxlint": "catalog:dev",
-    "oxlint-tsgolint": "catalog:dev"
-  }
+    "volapyk": "catalog:monorepo"
+  },
+  "engines": {
+    "node": ">=24.11.0"
+  },
+  "packageManager": "pnpm@12.11.2"
 }

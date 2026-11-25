@@ -3,21 +3,11 @@
   "extends": "./base.build.json",
   "compilerOptions": {
     "paths": {
-      "lesetid": [
-        "../../packages/lesetid/src/index.ts"
-      ],
-      "lesetid/stream": [
-        "../../packages/lesetid/src/stream.ts"
-      ],
-      "lesetid/utils": [
-        "../../packages/lesetid/src/utils.ts"
-      ],
-      "remark-lesetid": [
-        "../../packages/remark-lesetid/src/index.ts"
-      ],
-      "remark-lesetid/astro": [
-        "../../packages/remark-lesetid/src/astro.ts"
-      ]
+      "lesetid": ["../../packages/lesetid/src/index.ts"],
+      "lesetid/stream": ["../../packages/lesetid/src/stream.ts"],
+      "lesetid/utils": ["../../packages/lesetid/src/utils.ts"],
+      "remark-lesetid": ["../../packages/remark-lesetid/src/index.ts"],
+      "remark-lesetid/astro": ["../../packages/remark-lesetid/src/astro.ts"]
     }
   }
 }

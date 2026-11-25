@@ -51,6 +51,6 @@ const texts = await getTexts();
     }
 
     textarea.value = found.content;
-    (window as any).__UPDATE_READING_TIME(found.content);
+    window.__UPDATE_READING_TIME(found.content);
   });
 </script>

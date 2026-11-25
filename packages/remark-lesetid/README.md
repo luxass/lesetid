@@ -21,7 +21,7 @@ import remarkLesetid from "remark-lesetid/astro";
 // https://astro.build/config
 export default defineConfig({
   markdown: {
-    remarkPlugins: [remarkLesetid]
+    remarkPlugins: [remarkLesetid],
   },
 });
 ```

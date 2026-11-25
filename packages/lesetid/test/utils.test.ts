@@ -1,4 +1,5 @@
 import { expect, it } from "vitest";
+
 import { isAnsi, isCJK, isPunctuation } from "../src/utils";
 
 it("returns true for punctuation characters", () => {
