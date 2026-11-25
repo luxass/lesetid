@@ -72,7 +72,7 @@
     "volapyk": "catalog:monorepo"
   },
   "engines": {
-    "node": ">=24.11.0"
+    "node": ">=22"
   },
   "packageManager": "pnpm@12.11.2"
 }
