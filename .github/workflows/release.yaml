@@ -5,23 +5,24 @@ on:
     branches:
       - main
 
+permissions: {}
+
+# Never cancel a run that waits for npm approval.
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
-  release:
-    name: Release
+  version:
+    name: Version
     runs-on: ubuntu-latest
     if: ${{ github.repository == 'luxass/lesetid' }}
     timeout-minutes: 10
-    environment:
-      name: npm-registry
-      deployment: false
+    outputs:
+      has-changesets: ${{ steps.changeset.outputs.hasChangesets }}
     permissions:
       contents: write
       pull-requests: write
-      id-token: write
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -36,25 +37,20 @@ jobs:
         with:
           node-version: "24"
 
-      - name: update npm (oidc)
-        run: npm install -g npm@latest
-
       - name: install
         run: pnpm install --frozen-lockfile
 
       - name: check packages for common errors
         run: pnpm turbo --filter "./packages/*" build lint test typecheck
 
-      - name: create release
+      - name: create or update version PR
         id: changeset
         uses: changesets/action@6a0a831ff30acef54f2c6aa1cbbc1096b066edaf # v1.7.0
         with:
           commit: "chore(release): version packages"
           title: "chore(release): version packages"
-          publish: npx changeset publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_CONFIG_PROVENANCE: true
 
       - name: sync lockfile if necessary
         if: steps.changeset.outputs.hasChangesets == 'true'
@@ -70,3 +66,12 @@ jobs:
             git commit -m "chore(release): 📦 sync lockfile"
             git push origin changeset-release/main
           fi
+
+  # Stage each unpublished package, and tag and release it only after npm serves the approved tarball.
+  publish:
+    needs: version
+    if: ${{ needs.version.outputs.has-changesets == 'false' }}
+    permissions:
+      contents: write
+      id-token: write
+    uses: luxass/shared-workflows/.github/workflows/reusable-release-npm-staged-workspace.yaml@411fe8f8a0a53eab5153356ac5e0f174cd245eb2 # v0.17.1
