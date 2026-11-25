@@ -10,6 +10,8 @@ This repository contains the packages, docs and examples for lesetid
   core package for calculating reading time
 - [remark-lesetid](https://github.com/luxass/lesetid/tree/main/packages/remark-lesetid) - a
   remark plugin for calculating reading time
+- [satteri-lesetid](https://github.com/luxass/lesetid/tree/main/packages/satteri-lesetid) - a
+  Sätteri plugin for calculating reading time, for Astro 7 and later
 - [Playground Site](https://github.com/luxass/lesetid/tree/main/www) - Source
   for lesetid.dev
 - [Next.JS](https://github.com/luxass/lesetid/tree/main/examples/nextjs) -

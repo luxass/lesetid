@@ -1,0 +1,5 @@
+{
+  "extends": "@lesetid/tsconfig/base.build",
+  "include": ["src/**/*.ts"],
+  "exclude": ["test"]
+}
