@@ -1,6 +1,6 @@
 ignoreScripts: true
 catalogMode: prefer
-minimumReleaseAge: 5760
+minimumReleaseAge: 7200
 trustPolicy: no-downgrade
 strictDepBuilds: true
 blockExoticSubdeps: true
@@ -24,18 +24,23 @@ catalogs:
     "eslint-plugin-astro": 1.7.0
     "prettier-plugin-astro": 0.14.1
 
+  dev:
+    publint: 0.3.25
+    tsdown: 0.23.1
+    typescript: 6.0.3
+
+  types:
+    "@types/node": 26.6.5
+
   testing:
-    vitest: 4.1.4
-    "@vitest/coverage-v8": 4.1.4
+    vitest: 5.0.3
+    "@vitest/coverage-v8": 5.0.3
 
   monorepo:
     "@changesets/changelog-github": 0.6.0
     "@changesets/cli": 2.31.0
-    tsdown: 0.21.10
     turbo: 2.9.7
-    typescript: 6.0.3
     volapyk: 2.1.0
-    publint: 0.3.18
 
   lesetid:
     "hastscript": 9.0.1
@@ -44,7 +49,6 @@ catalogs:
     "unified": 11.0.5
     "vfile": 6.0.3
     "@types/mdast": 4.0.4
-    "@types/node": 25.6.0
 
   remark-lesetid:
     "hastscript": 9.0.1
@@ -53,7 +57,6 @@ catalogs:
     "unified": 11.0.5
     "vfile": 6.0.3
     "@types/mdast": 4.0.4
-    "@types/node": 25.6.0
 
   www:
     "@iconify-json/logos": 1.2.11

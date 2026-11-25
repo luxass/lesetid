@@ -9,7 +9,7 @@
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@10.34.5",
+  "packageManager": "pnpm@12.11.2",
   "license": "MIT",
   "homepage": "https://github.com/luxass/lesetid",
   "repository": {
@@ -46,10 +46,10 @@
   "devDependencies": {
     "@changesets/changelog-github": "catalog:monorepo",
     "@changesets/cli": "catalog:monorepo",
-    "@types/node": "catalog:lesetid",
+    "@types/node": "catalog:types",
     "@vitest/coverage-v8": "catalog:testing",
     "turbo": "catalog:monorepo",
-    "typescript": "catalog:monorepo",
+    "typescript": "catalog:dev",
     "vitest": "catalog:testing"
   }
 }

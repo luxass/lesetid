@@ -11,13 +11,8 @@ export default defineConfig({
     enabled: "local-only",
   },
   deps: {
-    // Ensure that these dependencies are treated as external
-    // this affects their type declarations as well
-    neverBundle: [
-      "unist",
-      "mdast",
-    ],
-    skipNodeModulesBundle: true,
+    // Keep dependencies external in JavaScript and declaration files.
+    neverBundle: true,
   },
   publint: true,
   footer(ctx) {
