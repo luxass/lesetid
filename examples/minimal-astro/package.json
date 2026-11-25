@@ -2,6 +2,9 @@
   "name": "@lesetid-example/minimal-astro",
   "type": "module",
   "private": true,
+  "engines": {
+    "node": ">=24.11.0"
+  },
   "scripts": {
     "dev": "astro dev",
     "clean": "git clean -xdf dist node_modules .astro",

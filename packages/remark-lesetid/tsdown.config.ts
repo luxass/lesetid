@@ -3,6 +3,7 @@ import { defineConfig } from "tsdown";
 export default defineConfig({
   entry: ["./src/index.ts", "./src/astro.ts"],
   format: ["cjs", "esm"],
+  target: "node24",
   clean: true,
   dts: true,
   treeshake: true,

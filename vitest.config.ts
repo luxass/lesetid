@@ -38,6 +38,6 @@ export default defineConfig({
     mockReset: true,
     projects: packageProjects
   },
-  esbuild: { target: "es2020" },
+  esbuild: { target: "node24" },
   resolve: { alias: aliases },
 })

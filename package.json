@@ -25,6 +25,9 @@
     "examples/*",
     "tooling/*"
   ],
+  "engines": {
+    "node": ">=24.11.0"
+  },
   "scripts": {
     "build:all": "turbo run build",
     "build": "turbo run build --filter=\"./packages/*\"",
