@@ -79,7 +79,7 @@ catalogs:
     "classnames": 2.5.1
     "date-fns": 4.1.0
     "gray-matter": 4.0.3
-    "next": 16.2.4
+    "next": 16.4.5
     "react": 19.2.5
     "react-dom": 19.2.5
     "remark-html": 16.0.1
@@ -96,3 +96,5 @@ minimumReleaseAgeExclude:
   - zod@4.6.6
   # Renovate security update: @astrojs/rss@4.0.19
   - "@astrojs/rss@4.0.19"
+  # Renovate security update: next@16.4.5
+  - next@16.4.5
