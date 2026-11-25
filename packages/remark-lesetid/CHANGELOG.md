@@ -1,5 +1,18 @@
 # remark-lesetid
 
+## 3.0.0
+
+### Major Changes
+
+- [#353](https://github.com/luxass/lesetid/pull/353) [`5f8cf1f`](https://github.com/luxass/lesetid/commit/5f8cf1fc93a1b1ad57b39ffae25a497c4da78ebc) Thanks [@luxass](https://github.com/luxass)! - Publish `remark-lesetid` as ESM only, like remark and unified. Load it with `import`. The CommonJS build never worked in 2.x, because `require("remark-lesetid")` returned `undefined`. On Node.js 22.12 or later, `require("remark-lesetid").default` loads the plugin from the ESM build.
+
+- [#353](https://github.com/luxass/lesetid/pull/353) [`5f8cf1f`](https://github.com/luxass/lesetid/commit/5f8cf1fc93a1b1ad57b39ffae25a497c4da78ebc) Thanks [@luxass](https://github.com/luxass)! - Require Node.js 22 or later. Node.js 20 reached its end of life in April 2026.
+
+### Patch Changes
+
+- Updated dependencies [[`5f8cf1f`](https://github.com/luxass/lesetid/commit/5f8cf1fc93a1b1ad57b39ffae25a497c4da78ebc)]:
+  - lesetid@3.0.0
+
 ## 2.1.1
 
 ### Patch Changes
