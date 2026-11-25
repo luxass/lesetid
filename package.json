@@ -36,12 +36,15 @@
     "dev:all": "turbo run dev",
     "dev": "turbo run dev --filter=\"./packages/*\"",
     "dev:examples": "turbo run dev --filter=\"@lesetid-example/*\"",
-    "lint": "turbo run lint",
+    "lint": "turbo run lint && oxlint *.ts scripts",
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "turbo run typecheck",
     "release": "changeset",
-    "clean": "turbo run clean && git clean -xdf node_modules"
+    "clean": "turbo run clean && git clean -xdf node_modules",
+    "lint:fix": "turbo run lint:fix && oxlint --fix *.ts scripts",
+    "fmt": "oxfmt .",
+    "fmt:check": "oxfmt --check ."
   },
   "devDependencies": {
     "@changesets/changelog-github": "catalog:monorepo",
@@ -50,6 +53,9 @@
     "@vitest/coverage-v8": "catalog:testing",
     "turbo": "catalog:monorepo",
     "typescript": "catalog:dev",
-    "vitest": "catalog:testing"
+    "vitest": "catalog:testing",
+    "oxfmt": "catalog:dev",
+    "oxlint": "catalog:dev",
+    "oxlint-tsgolint": "catalog:dev"
   }
 }

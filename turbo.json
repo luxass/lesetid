@@ -1,5 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["oxlint.config.ts", "oxfmt.config.ts", "tsconfig.json"],
   "tasks": {
      "topo": {
       "dependsOn": ["^topo"]
@@ -12,6 +13,20 @@
     },
     "lint": {
       "dependsOn": ["^topo", "^build"],
+      "outputs": []
+    },
+    "lint:fix": {
+      "dependsOn": ["^topo", "^build"],
+      "cache": false
+    },
+    "lint:astro": {
+      "dependsOn": ["^build"],
+      "outputs": []
+    },
+    "fmt": {
+      "cache": false
+    },
+    "fmt:check": {
       "outputs": []
     },
     "dev": {

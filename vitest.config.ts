@@ -38,6 +38,6 @@ export default defineConfig({
     mockReset: true,
     projects: packageProjects
   },
-  oxc: { target: "node24" },
+  esbuild: { target: "node24" },
   resolve: { alias: aliases },
 })
