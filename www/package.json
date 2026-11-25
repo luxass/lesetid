@@ -8,11 +8,11 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "oxlint -c ../oxlint.config.ts . && astro check",
+    "lint": "astro sync && oxlint -c ../oxlint.config.ts . && astro check",
     "clean": "git clean -xdf dist node_modules .astro",
     "typecheck": "astro-check",
     "cf-typegen": "wrangler types",
-    "lint:fix": "oxlint -c ../oxlint.config.ts --fix . && astro check",
+    "lint:fix": "astro sync && oxlint -c ../oxlint.config.ts --fix . && astro check",
     "fmt": "oxfmt -c ../oxfmt.config.ts .",
     "fmt:check": "oxfmt -c ../oxfmt.config.ts --check .",
     "lint:astro": "astro check"
