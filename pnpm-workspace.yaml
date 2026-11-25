@@ -87,7 +87,7 @@ catalogs:
     "@tailwindcss/postcss": 4.2.4
     "@types/react": 19.2.14
     "@types/react-dom": 19.2.3
-    "postcss": 8.5.13
+    "postcss": 8.5.23
     "tailwindcss": 4.2.4
 minimumReleaseAgeExclude:
   # Renovate security update: pnpm@10.34.5
@@ -96,3 +96,5 @@ minimumReleaseAgeExclude:
   - zod@4.6.6
   # Renovate security update: @astrojs/rss@4.0.19
   - "@astrojs/rss@4.0.19"
+  # Renovate security update: postcss@8.5.23
+  - postcss@8.5.23
