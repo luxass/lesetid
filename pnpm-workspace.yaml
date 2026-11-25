@@ -56,6 +56,9 @@ catalogs:
     "vfile": 6.0.3
     "@types/mdast": 4.0.4
 
+  satteri-lesetid:
+    satteri: 0.11.7
+
   www:
     "@iconify-json/logos": 1.2.11
     "@iconify-json/ph": 1.2.2
