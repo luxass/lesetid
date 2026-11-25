@@ -31,8 +31,8 @@ catalogs:
     "@types/node": 26.6.5
 
   testing:
-    vitest: 5.0.3
-    "@vitest/coverage-v8": 5.0.3
+    vitest: 5.1.1
+    "@vitest/coverage-v8": 5.1.1
 
   monorepo:
     "@changesets/changelog-github": 0.6.0
