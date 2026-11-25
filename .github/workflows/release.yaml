@@ -18,11 +18,13 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.repository == 'luxass/lesetid' }}
     timeout-minutes: 10
+    environment:
+      name: release
+      deployment: false
     outputs:
       has-changesets: ${{ steps.changeset.outputs.hasChangesets }}
     permissions:
-      contents: write
-      pull-requests: write
+      contents: read
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -43,6 +45,18 @@ jobs:
       - name: check packages for common errors
         run: pnpm turbo --filter "./packages/*" build lint test typecheck
 
+      # Workflow tokens may not open pull requests, and PRs they open run no CI.
+      - name: generate release app token
+        id: app-token
+        uses: actions/create-github-app-token@f418cff399f7aef4c2f0ad47e25ca7a6abbdd6fc # v3.4.0
+        with:
+          client-id: ${{ secrets.RELEASE_APP_ID }}
+          private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
+          owner: luxass
+          repositories: ${{ github.event.repository.name }}
+          permission-contents: write
+          permission-pull-requests: write
+
       - name: create or update version PR
         id: changeset
         uses: changesets/action@6a0a831ff30acef54f2c6aa1cbbc1096b066edaf # v1.7.0
@@ -50,7 +64,7 @@ jobs:
           commit: "chore(release): version packages"
           title: "chore(release): version packages"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
 
       - name: sync lockfile if necessary
         if: steps.changeset.outputs.hasChangesets == 'true'
