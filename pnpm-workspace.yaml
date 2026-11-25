@@ -18,9 +18,9 @@ catalogs:
   dev:
     oxfmt: 0.72.0
     oxlint: 1.87.0
-    oxlint-tsgolint: 7.0.2004
+    oxlint-tsgolint: 7.0.2007
     publint: 0.3.25
-    tsdown: 0.23.1
+    tsdown: 0.23.7
     typescript: 7.0.2
 
   framework:
@@ -28,30 +28,30 @@ catalogs:
     typescript: 6.0.3
 
   types:
-    "@types/node": 26.6.5
+    "@types/node": 26.6.6
 
   testing:
-    vitest: 5.0.3
-    "@vitest/coverage-v8": 5.0.3
+    vitest: 5.1.0
+    "@vitest/coverage-v8": 5.1.0
 
   monorepo:
     "@changesets/changelog-github": 0.6.0
     "@changesets/cli": 2.31.0
-    turbo: 2.9.7
-    volapyk: 2.1.0
+    turbo: 2.9.14
+    volapyk: 2.2.0
 
   lesetid:
-    "hastscript": 9.0.1
+    "hastscript": 9.0.3
     "mdast-util-to-string": 4.0.0
-    "unist-util-visit": 5.1.0
+    "unist-util-visit": 5.2.0
     "unified": 11.0.5
     "vfile": 6.0.3
     "@types/mdast": 4.0.4
 
   remark-lesetid:
-    "hastscript": 9.0.1
+    "hastscript": 9.0.3
     "mdast-util-to-string": 4.0.0
-    "unist-util-visit": 5.1.0
+    "unist-util-visit": 5.2.0
     "unified": 11.0.5
     "vfile": 6.0.3
     "@types/mdast": 4.0.4
@@ -60,39 +60,32 @@ catalogs:
     satteri: 0.11.7
 
   www:
-    "@iconify-json/logos": 1.2.11
+    "@iconify-json/logos": 1.2.20
     "@iconify-json/ph": 1.2.2
-    "astro": 6.2.1
+    "astro": 6.4.8
     unplugin-icons: 23.0.1
-    "zod": 4.6.6
-    "@astrojs/check": 0.9.9
-    "@unocss/astro": 66.6.8
-    "@unocss/reset": 66.6.8
-    "unocss": 66.6.8
-    "@astrojs/mdx": 5.0.4
+    "zod": 4.6.7
+    "@astrojs/check": 0.9.12
+    "@unocss/astro": 66.13.0
+    "@unocss/reset": 66.13.0
+    "unocss": 66.13.0
+    "@astrojs/mdx": 5.0.6
     "@astrojs/rss": 4.0.19
-    "@astrojs/sitemap": 3.7.2
-    "@astrojs/cloudflare": 13.3.0
-    wrangler: 4.87.0
+    "@astrojs/sitemap": 3.7.5
+    "@astrojs/cloudflare": 13.7.0
+    wrangler: 4.164.0
 
   example:
     "classnames": 2.5.1
-    "date-fns": 4.1.0
+    "date-fns": 4.4.0
     "gray-matter": 4.0.3
-    "next": 16.2.4
-    "react": 19.2.5
-    "react-dom": 19.2.5
+    "next": 16.4.5
+    "react": 19.3.1
+    "react-dom": 19.3.1
     "remark-html": 16.0.1
     "remark": 15.0.1
-    "@tailwindcss/postcss": 4.2.4
-    "@types/react": 19.2.14
-    "@types/react-dom": 19.2.3
-    "postcss": 8.5.13
-    "tailwindcss": 4.2.4
-minimumReleaseAgeExclude:
-  # Renovate security update: pnpm@10.34.5
-  - pnpm@10.34.5
-  # Renovate security update: zod@4.6.6
-  - zod@4.6.6
-  # Renovate security update: @astrojs/rss@4.0.19
-  - "@astrojs/rss@4.0.19"
+    "@tailwindcss/postcss": 4.3.5
+    "@types/react": 19.3.0
+    "@types/react-dom": 19.3.0
+    "postcss": 8.5.23
+    "tailwindcss": 4.3.5
