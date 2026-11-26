@@ -62,17 +62,18 @@ catalogs:
   www:
     "@iconify-json/logos": 1.2.20
     "@iconify-json/ph": 1.2.2
-    "astro": 6.4.8
+    "astro": 7.4.13
     unplugin-icons: 23.0.1
     "zod": 4.6.7
     "@astrojs/check": 0.9.12
     "@unocss/astro": 66.13.0
     "@unocss/reset": 66.13.0
     "unocss": 66.13.0
-    "@astrojs/mdx": 5.0.6
+    "@astrojs/mdx": 8.1.6
+    "@astrojs/markdown-satteri": 0.4.10
     "@astrojs/rss": 4.0.19
     "@astrojs/sitemap": 3.7.6
-    "@astrojs/cloudflare": 13.7.0
+    "@astrojs/cloudflare": 14.4.9
     wrangler: 4.165.0
 
   example:
