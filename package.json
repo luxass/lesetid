@@ -37,6 +37,7 @@
     "test:watch": "vitest",
     "typecheck": "turbo run typecheck",
     "release": "changeset",
+    "release:version": "changeset version && pnpm install --lockfile-only",
     "clean": "turbo run clean && git clean -xdf node_modules",
     "lint:fix": "turbo run lint:fix && oxlint --fix *.ts scripts",
     "fmt": "oxfmt .",
