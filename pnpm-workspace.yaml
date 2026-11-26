@@ -69,10 +69,10 @@ catalogs:
     "@unocss/astro": 66.13.0
     "@unocss/reset": 66.13.0
     "unocss": 66.13.0
-    "@astrojs/mdx": 5.0.6
+    "@astrojs/mdx": 8.1.6
     "@astrojs/rss": 4.0.19
     "@astrojs/sitemap": 3.7.6
-    "@astrojs/cloudflare": 13.7.0
+    "@astrojs/cloudflare": 14.4.9
     wrangler: 4.165.0
 
   example:
