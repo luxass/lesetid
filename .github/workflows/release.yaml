@@ -13,37 +13,42 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  version:
-    name: Version
+  select-mode:
+    name: Select mode
     runs-on: ubuntu-latest
     if: ${{ github.repository == 'luxass/lesetid' }}
-    timeout-minutes: 10
-    environment:
-      name: release
-      deployment: false
+    timeout-minutes: 20
     outputs:
-      has-changesets: ${{ steps.changeset.outputs.hasChangesets }}
+      mode: ${{ steps.select-mode.outputs.mode }}
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          fetch-depth: 0
-          persist-credentials: false
-
-      - name: setup pnpm
-        uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
-
-      - name: setup node
-        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+      - name: set up workspace
+        uses: luxass/shared-workflows/actions/setup@8e84402c426badbcb2e7db5a88fd69eb41b5313f # actions/setup/v0.1.6
         with:
           node-version: "24"
 
-      - name: install
-        run: pnpm install --frozen-lockfile
+      - name: select Changesets mode
+        id: select-mode
+        uses: changesets/action/select-mode@ae32849d5ba541f9ae29e40e22a623bc13562f51 # v2.1.2
 
-      - name: check packages for common errors
-        run: pnpm turbo --filter "./packages/*" build lint test typecheck
+  version:
+    name: Version
+    needs: select-mode
+    if: ${{ needs.select-mode.outputs.mode == 'version' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: release
+      deployment: false
+    permissions:
+      contents: read
+    steps:
+      - name: set up workspace
+        uses: luxass/shared-workflows/actions/setup@8e84402c426badbcb2e7db5a88fd69eb41b5313f # actions/setup/v0.1.6
+        with:
+          node-version: "24"
+          fetch-depth: 0
 
       # Workflow tokens may not open pull requests, and PRs they open run no CI.
       - name: generate release app token
@@ -58,33 +63,19 @@ jobs:
           permission-pull-requests: write
 
       - name: create or update version PR
-        id: changeset
-        uses: changesets/action@6a0a831ff30acef54f2c6aa1cbbc1096b066edaf # v1.7.0
+        uses: changesets/action/version@ae32849d5ba541f9ae29e40e22a623bc13562f51 # v2.1.2
         with:
-          commit: "chore(release): version packages"
-          title: "chore(release): version packages"
+          github-token: ${{ steps.app-token.outputs.token }}
+          script: pnpm release:version
+          commit-message: "chore(release): version packages"
+          pr-title: "chore(release): version packages"
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
 
-      - name: sync lockfile if necessary
-        if: steps.changeset.outputs.hasChangesets == 'true'
-        run: |
-          git checkout changeset-release/main
-          pnpm install --no-frozen-lockfile
-
-          # Check for changes and only commit if there are any
-          if git diff --exit-code; then
-            echo "No changes to commit."
-          else
-            git add .
-            git commit -m "chore(release): 📦 sync lockfile"
-            git push origin changeset-release/main
-          fi
-
   # Stage each unpublished package, and tag and release it only after npm serves the approved tarball.
   publish:
-    needs: version
-    if: ${{ needs.version.outputs.has-changesets == 'false' }}
+    needs: select-mode
+    if: ${{ needs.select-mode.outputs.mode == 'publish' }}
     permissions:
       contents: write
       id-token: write
