@@ -16,8 +16,8 @@ overrides:
 
 catalogs:
   dev:
-    oxfmt: 0.72.0
-    oxlint: 1.87.0
+    oxfmt: 0.79.0
+    oxlint: 1.94.0
     oxlint-tsgolint: 7.0.2007
     publint: 0.3.25
     tsdown: 0.23.7
