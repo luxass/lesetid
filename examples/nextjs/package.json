@@ -37,9 +37,5 @@
   },
   "engines": {
     "node": ">=24.11.0"
-  },
-  "stackblitz": {
-    "installDependencies": false,
-    "startCommand": "node .stackblitz/cleanup.mjs && npm install && npm run dev"
   }
 }
