@@ -18,7 +18,7 @@ catalogs:
   dev:
     oxfmt: 0.79.0
     oxlint: 1.94.0
-    oxlint-tsgolint: 7.0.2007
+    oxlint-tsgolint: 7.0.2008
     publint: 0.3.25
     tsdown: 0.23.7
     typescript: 7.0.2
@@ -74,7 +74,7 @@ catalogs:
     "@astrojs/rss": 4.0.19
     "@astrojs/sitemap": 3.7.6
     "@astrojs/cloudflare": 14.4.9
-    wrangler: 4.165.0
+    wrangler: 4.166.0
 
   example:
     "classnames": 2.5.1
