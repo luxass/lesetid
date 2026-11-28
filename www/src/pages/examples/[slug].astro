@@ -1,7 +1,6 @@
 ---
 import CodesandboxIcon from "~icons/logos/codesandbox-icon";
 import QuestionIcon from "~icons/ph/question";
-import StackblitzIcon from "~icons/logos/stackblitz-icon";
 import PageLayout from "../../layouts/page-layout.astro";
 
 import { getExamples } from "../../lib/examples";
@@ -22,7 +21,6 @@ export async function getStaticPaths() {
 const { example } = Astro.props;
 
 const PROVIDER_ICONS = {
-  stackblitz: StackblitzIcon,
   codesandbox: CodesandboxIcon,
 };
 
