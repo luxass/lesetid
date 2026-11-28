@@ -28,11 +28,6 @@ export async function GET() {
         providers: {
           type: "object",
           properties: {
-            stackblitz: {
-              description: "The url to StackBlitz",
-              format: "uri",
-              type: "string",
-            },
             codesandbox: {
               description: "The url to CodeSandbox",
               format: "uri",
