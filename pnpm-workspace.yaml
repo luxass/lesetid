@@ -25,7 +25,7 @@ catalogs:
 
   framework:
     # Astro and Next.js still use the TypeScript compiler API.
-    typescript: 6.0.3
+    typescript: 7.0.2
 
   types:
     "@types/node": 26.6.6
