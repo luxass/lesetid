@@ -16,11 +16,12 @@
     "lint:astro": "astro check"
   },
   "dependencies": {
+    "@astrojs/markdown-satteri": "catalog:www",
     "@astrojs/mdx": "catalog:www",
     "@astrojs/rss": "catalog:www",
     "@astrojs/sitemap": "catalog:www",
     "astro": "catalog:www",
-    "remark-lesetid": "workspace:*"
+    "satteri-lesetid": "workspace:*"
   },
   "devDependencies": {
     "@astrojs/check": "catalog:www",
